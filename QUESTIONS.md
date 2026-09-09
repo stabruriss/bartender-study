@@ -127,6 +127,28 @@ in local scope records. No task has been created or changed: the current
 `kota-ember list --json` remains empty, and the first/next scheduled UTC check is
 unset. The prior launchd-to-Ember draft remains inactive.
 
+Native scheduler verified | 2026-09-09T07:25:17Z: The owner created the native
+Ember task for the execution agent and explicitly chose a total of five runs.
+The CLI `list` and `show` both report `status=scheduled`, `repeatEnabled=true`,
+`repeatKind=fixed`, `repeatEveryMinutes=120`, `endMode=after`, `endAfterCount=5`,
+and `runCount=0`. The first and next scheduled UTC check is
+`2026-09-09T08:20:00Z`. This resolves the earlier absence of an installed timer;
+no runner-created launchd fallback was enabled. The five-run limit is the
+owner's explicit operational override of the prior unbounded proposal; the
+runner must not automatically extend or recreate it. This reminder series is
+expected to finish before the evening execution/maintainer polling schedule in
+ANSWERS.md, so it is not evidence of coverage of that later period.
+
+The saved prompt ends mid-sentence and retains the earlier unbounded wording.
+The runner preserved its actual content and settings under ignored
+`local-logs/scheduler-proposal/owner-created-20260909T072207Z.json`, prepared a
+complete bounded replacement in `poll-prompt-five-runs.txt` in that directory,
+and requested specific permission to update only the text while preserving all
+timing, target, and count fields. No task update has been made at this observation.
+The owner was also asked whether to retain the documented evening start or
+explicitly move it earlier; no timing override is inferred from preparing the
+machine or scheduler. No formal scan or additional conformance action has begun.
+
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
 Observed: `validation/conformance-version-m4.json` records the actual running
