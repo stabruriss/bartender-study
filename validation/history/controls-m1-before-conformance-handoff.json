@@ -14,7 +14,7 @@
   },
   "error_ids": [],
   "failure_ids": [],
-  "protocol_sha256": "f7e0530b35d4aae962a2a60cf7c2e3f329aaa06d455871d994b51bbd2c0c5215",
+  "protocol_sha256": "8b0d82c1a7e548de33264320d89c9d6201c6d40abbca00dcfa803e3329940759",
   "skipped_ids": [],
   "status": "pass",
   "tests_run": 28

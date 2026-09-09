@@ -1,0 +1,49 @@
+{
+  "app_dispatches": 0,
+  "constructor_sha256": "305b43b8f105a89a7623526fc141a5e0fecdc6994aa30d09a46791866a9aaf34",
+  "fixture_checks": [
+    {
+      "case": "single-clean",
+      "repeat": 1,
+      "status": "pass"
+    },
+    {
+      "case": "single-clean",
+      "repeat": 2,
+      "status": "pass"
+    },
+    {
+      "case": "multiple-clean",
+      "repeat": 1,
+      "status": "pass"
+    },
+    {
+      "case": "multiple-clean",
+      "repeat": 2,
+      "status": "pass"
+    },
+    {
+      "case": "one-conflict",
+      "repeat": 1,
+      "status": "pass"
+    },
+    {
+      "case": "one-conflict",
+      "repeat": 2,
+      "status": "pass"
+    },
+    {
+      "case": "multiple-conflicts",
+      "repeat": 1,
+      "status": "pass"
+    },
+    {
+      "case": "multiple-conflicts",
+      "repeat": 2,
+      "status": "pass"
+    }
+  ],
+  "runbook_sha256": "578f8db156fdec18d88ee77da0c40874cf7caee206528fb29d8fe25da275eaa5",
+  "scope": "Documentation construction and Git patch preconditions only; no app loaded and no dispatch sent",
+  "status": "pass"
+}

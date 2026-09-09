@@ -2,7 +2,8 @@
 
 The execution agent adds one dated entry per question on `run-m4`, then commits
 and pushes. Maintainers answer the same id in `ANSWERS.md` on `simulation-pilot`.
-Follow `RUNBOOK.md`; technical content only, with repository-relative paths.
+Follow `RUNBOOK.md` or `RUNBOOK-CONFORMANCE.md`; name the runbook and step in
+each question. Technical content only, with repository-relative paths.
 
 No questions have been submitted yet.
 

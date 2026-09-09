@@ -11,23 +11,64 @@ messages before copying them. The repository remains private until the complete
 manuscript and research artifacts are released together; the runner must not
 change its visibility, create a public release, or submit the manuscript.
 
+## Division of work
+
+The execution agent has only three responsibilities in this scheduling study:
+
+1. Execute the supplied scripts exactly as this runbook instructs.
+2. Monitor process liveness, progress/error counts, and available disk space.
+3. Organize, check, and commit the generated delivery files.
+
+The scripts perform all data generation and result computation. **Do not write
+or run agent-authored simulation logic, manually generate or alter data, compute
+results outside the supplied scripts, or interpret or "summarize" results using
+your own judgment.** Every numerical result in a delivery or status report must
+come directly from output files produced by `handoff.py`; quote the file and
+field rather than recomputing it. Do not add an analysis script, notebook,
+spreadsheet calculation, inferred trend, or narrative explanation of an outcome.
+If a required number is absent, ask through `QUESTIONS.md`. The only manual
+report addition is a factual account of an execution deviation and its Q/A id.
+
+## Two-machine communication: start here
+
+All coordination between the execution agent and maintainers uses repository
+files. Use this index for the scheduling study:
+
+| Situation | File and action |
+|---|---|
+| A question, uncertainty, or confirmation is needed | Add one dated entry to `QUESTIONS.md` on `run-m4`, commit, and push. |
+| Waiting for an answer | Fetch, merge `origin/simulation-pilot`, then read the matching entry in `ANSWERS.md`; use the execution-time deferral rule below. |
+| Checking approval | Read only the configuration's `approval` block and `RUN_APPROVAL.json`. A chat message or silence does not replace these files. |
+| Returning a delivery | Commit generated artifacts under `deliverables/` and `validation/` to `run-m4`, then push. |
+
+Do not use chat, agent bus, bulletin boards, or another communication channel to
+coordinate between the machines. The detailed dated Q/A and two-hour recurring
+task procedure is at the end of this runbook. Application conformance has its
+separate approval procedure in `RUNBOOK-CONFORMANCE.md`.
+
 ## Purpose and current state
 
 Measure how synchronization frequency and post-dispatch repair delay affect
 integration in a declared synthetic worktree model, retaining every planned
 outcome, including unfavorable and unfinished cases.
 
-The formal parameter plan and this runbook are **awaiting approval**. A new runner
-may prepare the environment, run controls, and run the bounded three-seed
+The formal parameter plan is **approved**; this runbook's final execution protocol
+is **awaiting approval**. A new runner may prepare the environment, run controls,
+and run the bounded three-seed
 reproducibility check. It must stop before formal execution until the approved
 configuration, approved protocol digest, and matching M1/M4 check are present.
-An architectural decision to use an M4 machine is not parameter approval.
+Parameter approval alone does not authorize formal execution.
 
-The proposed study has 990 cells and seeds 1000–1029 for each cell: 29,700 runs.
+The approved plan has 990 cells and seeds 1000–1029 for each cell: 29,700 runs.
 The scientific definitions are in [README.md](README.md); the sole formal
 parameter file is [configs/study-draft.json](configs/study-draft.json). Its filename
-stays unchanged when its approval metadata is filled. The runner does not infer
-missing choices from previous conversations and does not edit the model or plan.
+and descriptive title remain unchanged to preserve its parameter digest. The
+runner does not infer missing choices from previous conversations and does not
+edit the model or plan.
+
+Application conformance is a separate, independently approved procedure in
+[RUNBOOK-CONFORMANCE.md](RUNBOOK-CONFORMANCE.md). Simulation approval does not
+authorize those application scenarios, or vice versa.
 
 ## Environment
 
@@ -184,7 +225,9 @@ To receive a reviewed answer or approval, with local records already committed:
 
 ```sh
 git fetch origin
-git merge --no-edit origin/simulation-pilot
+env GIT_AUTHOR_NAME='Study Runner' GIT_AUTHOR_EMAIL='study-runner@example.invalid' \
+    GIT_COMMITTER_NAME='Study Runner' GIT_COMMITTER_EMAIL='study-runner@example.invalid' \
+    git merge --no-edit origin/simulation-pilot
 git push origin run-m4
 PYTHONHASHSEED=0 .venv/bin/python handoff.py fingerprints
 PYTHONHASHSEED=0 .venv/bin/python handoff.py preflight --run-id study-01
@@ -268,18 +311,17 @@ creating them is not permission to upload them publicly.
 | `deliverables/study-01/summary.csv` and `paired-differences.csv` | Yes; all cells, including null/negative entries |
 | `deliverables/study-01/config.json`, `cells.json`, `manifest.json`, `execution.json`, `RUN_APPROVAL.json` | Yes; exact plan, source, timing, environment, approval and checks |
 | `deliverables/study-01/verification.json`, `artifact-index.json`, `RUN_REPORT.md` | Yes; acceptance, archive inventory, deviations |
-| Root `RUN_REPORT.md`, `QUESTIONS.md`, `ANSWERS.md` | Yes; technical records only |
+| Root `QUESTIONS.md` and `ANSWERS.md` | Technical coordination only; not delivery artifacts |
 | `outputs/study-01/`, including `summaries.jsonl`, `runs/`, `flows/` | No; retained on M4 and in the archive |
 | `archives/study-01/`, virtual environment, terminal logs | No |
 
 Complete the deviations line in the generated report with either `None observed`
 or the actual interruption/change and its question/answer ids. Do not report
-scientific success based on a successful execution. Then copy the completed
-report to the root template and review the exact staged files:
+scientific success based on a successful execution. Keep the completed report
+inside the delivery directory and review the exact staged files:
 
 ```sh
-cp deliverables/study-01/RUN_REPORT.md RUN_REPORT.md
-git add -- deliverables/study-01 RUN_REPORT.md
+git add -- deliverables/study-01
 git diff --cached --stat
 git diff --cached --check
 env GIT_AUTHOR_NAME='Study Runner' GIT_AUTHOR_EMAIL='study-runner@example.invalid' \
@@ -323,6 +365,16 @@ is part of this execution protocol.
 Maintainers inspect `origin/run-m4:QUESTIONS.md`, answer the same id in
 `ANSWERS.md` on `simulation-pilot`, and push. The runner fetches and merges that
 branch before acting, then records acknowledgment under the original question.
+Set a recurring task on the execution platform every **two hours** to fetch,
+merge `origin/simulation-pilot`, push `run-m4`, and read `ANSWERS.md`, using that
+platform's scheduler and the commit identity above. Commit reviewed local records
+first; during a simulation run or conformance observation, fetch and read answers
+with `git show origin/simulation-pilot:ANSWERS.md`, then defer the merge and push
+until execution ends. Record the first/next UTC check and scheduler status in a
+technical question entry; remove the task after both deliveries are accepted or
+the maintainers close the execution. The timer exchanges repository files; it
+does not trigger application syncs or study runs.
+
 Answers cannot silently override frozen parameters or protocol approval. A
 scientific/protocol change requires updated files and approval before a new run.
 Do not resolve merge conflicts by replacing entire files; ask if ownership is

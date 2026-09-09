@@ -4,8 +4,9 @@ Maintainers add one dated response for each question id, commit on
 `simulation-pilot`, and push. The execution agent fetches and merges that branch
 before acting. Neither silence nor a technical answer constitutes run approval.
 
-No questions have been answered yet. Formal approval remains pending in the
-configuration and `RUN_APPROVAL.json`.
+No questions have been answered yet. Parameters are approved in the configuration;
+execution protocol approval remains pending in `RUN_APPROVAL.json`. Application
+conformance requires its separate `CONFORMANCE_APPROVAL.json`.
 
 Entry format:
 

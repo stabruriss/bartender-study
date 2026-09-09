@@ -1,18 +1,23 @@
 # Bartender scheduling study
 
 This repository contains a synthetic discrete-event model of continuous worktree
-integration and author repair. It does not run Kota, Git conflict resolution, or
-an LLM. Product verification and deployment observations are separate studies.
+integration and author repair. The simulator does not run Kota, Git conflict
+resolution, or an LLM. A separate application conformance procedure is described
+in [RUNBOOK-CONFORMANCE.md](RUNBOOK-CONFORMANCE.md); deployment observations are
+outside both execution procedures.
 
 Status: implementation draft with deterministic control tests. The study
-configuration is **proposed, not approved or run**. This is an internal parameter
-plan, not a public preregistration. Code, configurations, seeds, and the complete
-scan record are intended for release with the full manuscript submission.
+parameters are **approved; formal execution is not yet approved or run**. This is
+an internal parameter plan, not a public preregistration. Code, configurations,
+seeds, and the complete scan record are intended for release with the full
+manuscript submission.
 
 For execution on the separate M4 machine, start with [RUNBOOK.md](RUNBOOK.md).
 It specifies the pinned environment, file-only communication, cross-machine
 checks, approval gates, raw-data retention, and required delivery. The handoff
-is still awaiting review and formal approval.
+is still awaiting formal approval. Application conformance has its own pending
+`CONFORMANCE_APPROVAL.json` and first requires the M4 application's version,
+binary provenance, and corresponding public source commit.
 
 ## Inspect and test
 
@@ -29,8 +34,8 @@ derived response delays and observation windows. Planning generates no edit
 stream and performs no simulation. Tests use hand-constructed streams, finite
 control models, and a temporary zero-edit output check; they are not study runs.
 
-After the study owner approves the exact parameters, maintainers record that
-approval in the configuration's `approval` object: status `approved`, role, timestamp, and
+Maintainers have recorded study-owner parameter approval in the configuration's
+`approval` object: status `approved`, role, timestamp, and
 the `parameters_sha256` printed by `plan`. A change to the parameter plan or seeds
 invalidates that approval. The M4 operator also needs the runbook/protocol approval
 and cross-machine check in `RUNBOOK.md`; use its guarded entry point:
@@ -40,21 +45,22 @@ PYTHONHASHSEED=0 .venv/bin/python handoff.py preflight --run-id study-01
 caffeinate -i env PYTHONHASHSEED=0 .venv/bin/python handoff.py run --run-id study-01
 ```
 
-The output directory must be new. The current draft is rejected before any output
-directory is created. Approval metadata records a decision; it is not proof of
-when a researcher first saw data. No command changes repository visibility.
+The output directory must be new. Execution with the currently pending protocol
+approval is rejected before any output directory is created. Approval metadata
+records a decision; it is not proof of when a researcher first saw data. No command
+changes repository visibility.
 
 A separate [timing diagnostic](benchmarks/README.md) estimates the proposed full
 scan at roughly 5.8 hours on an M1 MacBook Air, with an 8–10 hour planning allowance.
 Its 90 reserved-seed invocations retain timing only, not scientific outcomes;
 they do not approve or replace the study runs.
 
-## Proposed numerical plan
+## Approved numerical plan
 
 Time is measured in units of one agent's mean inter-edit time. It is not a
 calibrated number of minutes. The edit rate is 1 per agent per unit time.
 
-| Quantity | Proposed values |
+| Quantity | Approved values |
 |---|---|
 | Agents | 2, 4, 8 |
 | Geometry | 8 files, 256 lines each; edit lengths 4, 16, 64 |
@@ -90,8 +96,8 @@ The plan uses declared slices rather than a full factorial over every parameter:
   This gives 360 cells. The zero-delay kick-back point is clean-first;
   deterministic tests check exact equality rather than counting it twice.
 
-Total: **990 cells, 29,700 planned runs**. The longest proposed window is
-9315.693 model time units. These are proposed coverage choices, not results.
+Total: **990 cells, 29,700 planned runs**. The longest observation window is
+9315.693 model time units. These are approved coverage choices, not results.
 `mu_nominal = p_nominal (n-1) rate` assumes prompt background landing only for
 axis scaling. Actual landings are endogenous and are recorded.
 

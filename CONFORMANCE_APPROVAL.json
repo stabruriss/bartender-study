@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "pending",
+  "approved_by": null,
+  "approved_at": null,
+  "run_id": null,
+  "protocol_sha256": null,
+  "version_report_sha256": null,
+  "public_commit": null,
+  "source_review_status": "pending",
+  "source_review_answer_id": null
+}
