@@ -1,6 +1,6 @@
 {
-  "approved_at": null,
-  "approved_by": null,
+  "approved_at": "2026-09-09T17:57:31+00:00",
+  "approved_by": "study owner",
   "artifact_index_sha256": "8d88dbe050a3d9428e4cd0720c429cbed9a67734de64ff5eac0992f41d8ffa70",
   "controls_record": "validation/controls-m4-revalidation-01.json",
   "execution_approval_sha256": "9ed6604c4df2958eaa340f4e4760c804d1cc32ac6a540ede2f627dbb1c278075",
@@ -12,6 +12,6 @@
   "run_id": "study-01",
   "schema_version": 1,
   "scope": "collect-only",
-  "status": "pending",
+  "status": "approved",
   "verification_id": "verify-02"
 }

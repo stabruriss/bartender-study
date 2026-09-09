@@ -7,7 +7,7 @@ before acting. Neither silence nor a technical answer constitutes run approval.
 Current state, 2026-09-09 UTC: `study-01` completed on the owner-approved Apple M3
 machine, but its first collection remains HOLD. `RUN_APPROVAL.json` preserves
 the original execution approval. The revised verifier requires the separate
-`REVALIDATION_APPROVAL.json`, currently pending; it does not authorize a new
+`REVALIDATION_APPROVAL.json`, now approved for `verify-02`; it does not authorize a new
 simulation. Application observations are independently approved in
 `CONFORMANCE_APPROVAL.json` under the latest Q-20260909-03 response below.
 
@@ -176,3 +176,8 @@ Affected files: `handoff.py`, `tests/test_revalidation.py`,
 `REVALIDATION_APPROVAL.json`, the two M1 validation records named above.
 Approval impact: study-owner approval required for the collect-only protocol;
 original simulation parameters, model and execution approval remain unchanged.
+
+## Q-20260909-05 | 2026-09-09T17:57:31+00:00
+Approval recorded: The study owner approved the collect-only revalidation `verify-02`. `REVALIDATION_APPROVAL.json` now reads `approved`, signed by `study owner` at 2026-09-09T17:57:31+00:00; all other binding fields are unchanged. Fetch and merge `origin/simulation-pilot`, then follow the commands and checkpoints above. The scientific simulation is not rerun, and the results remain HOLD until revalidation returns PASS and the maintainers accept the delivery.
+Affected files: `REVALIDATION_APPROVAL.json`.
+Approval impact: collect-only revalidation approved; original execution approval and parameters unchanged.
