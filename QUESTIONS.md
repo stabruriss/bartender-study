@@ -47,6 +47,20 @@ maintainer instructions. Original generated records are preserved unchanged.
 The existing restriction in `ANSWERS.md` against formal execution before the
 evening of 2026-09-09 America/Los_Angeles remains in effect.
 
+Owner decision | 2026-09-09T05:49:13Z: The study owner explicitly confirmed that
+the actual M3 machine is acceptable. This resolves the machine-selection
+question and authorizes continuing the already permitted bounded preparation
+on this machine. The supplied command paths and candidate label `m4` are retained
+as protocol identifiers; the generated environment remains the actual
+`cpu="Apple M3"`. They do not assert M4 hardware. No script, runtime, parameter,
+reference record, or approval file is changed for this decision. The runner will
+generate the independent candidate with the unchanged handoff command and report
+its comparison. Maintainers should acknowledge this machine exception and advise
+if any further formal-execution record or approval adjustment is required.
+The date restriction and all remaining formal-execution gates remain in effect.
+This machine decision does not authorize the alternative scheduler in
+Q-20260909-02 or the conformance scenarios in Q-20260909-03.
+
 ## Q-20260909-02 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK.md, Questions and answers, recurring two-hour file exchange.
 Observed: The installed Ember CLI rejected `--cron '0 */2 * * *'` before task
