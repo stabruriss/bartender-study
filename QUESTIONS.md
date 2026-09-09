@@ -61,6 +61,13 @@ The date restriction and all remaining formal-execution gates remain in effect.
 This machine decision does not authorize the alternative scheduler in
 Q-20260909-02 or the conformance scenarios in Q-20260909-03.
 
+Execution follow-up | 2026-09-09T05:50:26Z: The unchanged `handoff.py determinism`
+command independently generated `validation/determinism-m4.json` on the approved
+M3 machine, retaining `environment.cpu="Apple M3"`. The unchanged `handoff.py
+compare` command generated `validation/determinism-comparison.json` with
+`status="pass"` and `records_compared=18`. Both generated files are preserved
+without manual data changes. No formal scan or application fixture was started.
+
 ## Q-20260909-02 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK.md, Questions and answers, recurring two-hour file exchange.
 Observed: The installed Ember CLI rejected `--cron '0 */2 * * *'` before task
