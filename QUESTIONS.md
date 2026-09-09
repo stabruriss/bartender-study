@@ -95,6 +95,26 @@ two-hour file exchange, or which supported scheduler procedure should be used?
 Acknowledgment: Awaiting the owner's specific permission and the maintainer
 response; preserve the failed creation as an operational deviation.
 
+CLI clarification | 2026-09-09T05:57:47Z: Rechecked installed `--help`,
+`add --help`, and `update --help`, plus the public release's argument parser.
+Ember does support recurring schedules. The CLI's supported cron forms create
+daily, weekly, or monthly recurrence. `--end-after` and `--end-at` bound an
+existing recurring schedule; they do not enable interval recurrence for
+`--in 2h`, which remains one-shot. No `--repeat` or interval-repeat CLI option
+is present in this version. The specific missing operation is direct CLI
+creation of a single every-two-hours recurring task, not recurrence generally.
+The native application UI exposes fixed-interval Repeat settings with hours
+and minutes, and the backend supports that interval. A native UI-created
+two-hour schedule is therefore the preferred proposed setup; the launchd
+fallback remains inactive. After the owner creates the intended native task,
+the runner can inspect it with `list`/`show` and update its reviewed prompt via
+CLI without passing a timing option, preserving the recurrence. No schedule
+has been created, changed, or enabled during this recheck.
+Source references:
+- https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/ember.rs#L2030
+- https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/ember.rs#L2173
+- https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src/chrome/EmberScheduleInstrument.tsx#L1047
+
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
 Observed: `validation/conformance-version-m4.json` records the actual running
@@ -113,3 +133,31 @@ separate conformance approval after the machine issue is resolved, or what
 additional evidence/procedure is required?
 Acknowledgment: Awaiting source/setup review and the separate approval file;
 application scenario execution remains on HOLD.
+
+Owner-assisted workspace proposal | 2026-09-09T05:55:53Z: The study owner
+offered to create the required application workspaces if the count is at most
+eight and explicitly authorized the execution agent to operate the seven other
+owner-designated test workspaces directly using scripts, without asking their
+resident agents to perform the operations. This is scoped cross-workspace
+authorization, not permission to operate unrelated workspaces. No external
+workspace has yet been identified, edited, created, or synchronized by the runner.
+
+The unchanged conformance plan requires eight fresh application workspaces:
+`single-clean`, `multiple-clean`, `one-conflict`, and `multiple-conflicts`, each
+with independent repetitions `r1` and `r2`. Each fixture has its own ordinary
+source checkout and respectively one, three, two, or three linked role worktrees.
+The research workspace cannot serve as a fixture under the current procedure;
+the eight test workspaces are additional to it and are operated sequentially.
+Clarification requested from the owner: whether the offered workspace limit
+includes the current research workspace or permits eight additional fixtures.
+
+Precreating workspaces through the app changes the supplied construction
+procedure, which asserts that each fixture workspace does not already exist.
+An owner-created setup therefore needs a reviewed preparation adaptation, with
+concrete fixture identities, clean initial Git state, and the existing
+`conformance-disabled` role behavior retained unless explicitly revised and
+approved. Resident agents must not introduce concurrent changes during an
+observation. The owner's offer and scoped script-operation authorization are
+recorded here for maintainer review of that adaptation; no constructor,
+runbook, approval record, resident-agent configuration, or other workspace
+has been changed. Separate conformance approval remains pending.
