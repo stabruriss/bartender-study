@@ -243,3 +243,27 @@ Additional source references:
 - https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/lib.rs#L2012
 - https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/lib.rs#L12444
 - https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/bartender.rs#L359
+
+Owner scope clarification | 2026-09-09T06:32:43Z: The owner explicitly permits
+Kota's normal scanning/loading of the excluded unrelated project. The restriction
+is against runner-issued instructions that modify that project's content; the
+runner will not direct edits, Git mutations, sync requests, fixture preparation,
+or agent messages at it. Ordinary application discovery and associated metadata
+preparation are not a reason to block the owner's local-registration/restart
+proposal. The previous zero-access interpretation was too broad and is
+superseded by this clarification. The isolation question immediately above no
+longer blocks setup on that basis.
+
+The proposed next sequence is to use the unchanged constructor for the first
+fresh `conformance-01-single-clean-r1` fixture after the separate source/setup
+approval; restart/load the app under the owner's proposed method; verify the
+fixture source, role mapping, clean Git state, and unchanged initial records;
+then invoke the bundled CLI with the fixture's explicit `--project-root` and
+retain the matching application receipt. Startup source initializes Bartender
+watchers for registered projects, so a target outside the runner's current CWD
+has a source-supported dispatch path. The remaining pending approval should
+address this precise local loading sequence and the existing disabled-provider
+fixture behavior, without requiring remote repositories or a separate account
+merely to prevent normal project scanning. No app restart, fixture registration,
+sync request, product-code modification, or approval-record modification has
+occurred in this clarification step.
