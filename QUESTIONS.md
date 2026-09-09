@@ -226,6 +226,22 @@ owner-set five-run cap. Evidence is retained under ignored
 file exchange only. No script or timer was changed and no experiment, fixture,
 sync, dummy provider, or application restart was initiated.
 
+Fourth recurring exchange | 2026-09-09T14:21:05Z: Both worktrees were clean,
+with no active simulation, collection, or conformance process. Fetch and the
+explicit neutral-identity merge found `origin/simulation-pilot` already current
+at `ca8b062`. ANSWERS.md contains no new dated answer, acceptance, or closure.
+Q-20260909-05 remains open with the original study-01 HOLD, and
+CONFORMANCE_APPROVAL.json remains pending. There is no new answer to acknowledge.
+
+Ember reports `status=scheduled`, `runCount=4`, `error=null`,
+`lastRunAt=2026-09-09T14:20:27.600661Z`, and
+`nextRunAt=2026-09-09T16:20:27.600661Z`. Its 120-minute interval and owner-set
+five-run cap are unchanged; the next scheduled check is the final one under
+that cap. No extension or replacement is authorized. Evidence is retained under
+ignored `local-logs/study-01-execution/poll-04/`. This exchange updates only the
+technical question record; no script, timer, experiment, fixture, sync, dummy
+provider, or app restart was changed or initiated.
+
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
 Observed: `validation/conformance-version-m4.json` records the actual running
