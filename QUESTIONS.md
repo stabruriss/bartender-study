@@ -68,6 +68,14 @@ compare` command generated `validation/determinism-comparison.json` with
 `status="pass"` and `records_compared=18`. Both generated files are preserved
 without manual data changes. No formal scan or application fixture was started.
 
+Owner execution-time update | 2026-09-09T07:28:41Z: The owner explicitly permits
+the formal work to begin now, superseding the prior not-before-evening timing
+instruction in ANSWERS.md. The supplied scientific configuration, runtime,
+protocol digest, and approval files remain unchanged. The owner requested that
+the remaining local fixtures be prepared before an owner-performed app restart;
+the formal scan will begin only after that restart and manual session recovery,
+with a fresh successful preflight and unchanged output-preservation rules.
+
 ## Q-20260909-02 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK.md, Questions and answers, recurring two-hour file exchange.
 Observed: The installed Ember CLI rejected `--cron '0 */2 * * *'` before task
@@ -359,6 +367,47 @@ The role remains `conformance-disabled`; it must not be awakened or replaced
 with a real provider. This is local setup/loading evidence, not a formal
 conformance pass. The separate pending approval and startup-mutation review
 remain with maintainers. Q-20260909-04 records a restart-helper deviation.
+
+Owner-authorized batch preparation | 2026-09-09T07:28:41Z: After the successful
+single-fixture loading probe, the owner instructed the runner to prepare the
+remaining repositories before one owner-performed app restart and manual
+execution-session recovery. This explicitly authorizes preparing the remaining
+seven planned fixtures together, retaining the existing first fixture, despite
+the still-pending general conformance approval. It is a recorded operational
+exception to individual creation/loading, not a change to scenario contents or
+an approved-conformance claim. Each new fixture will use the same unchanged
+constructor from RUNBOOK-CONFORMANCE.md, verified against its extracted copy,
+with disabled dummy providers. No sync is included in this preparation.
+
+The runner will preserve before-restart observations for all eight fixtures,
+then hand control to the owner without restarting the app or using the prior
+restart helper. Formal simulation starts after manual session recovery so this
+restart cannot interrupt its non-resumable execution. The conformance source/
+setup review should address this batch-loading sequence and the previously
+observed size-only metadata changes before accepting the prepared fixtures for
+formal observations. Approval records remain unmodified.
+
+Batch preparation observation | 2026-09-09T07:31:58Z: The remaining seven
+constructor invocations completed successfully. All eight planned fixture
+projects are now present. The extracted constructor still matches the supplied
+runbook block byte for byte, SHA-256
+`da822ddde40adf0848fe5097e93f8faa792bbe806af56b584423f010c516b8db`.
+Each source/role HEAD, branch, and tracked file matches its initial record and
+the specified fixture content. Indexes/worktrees are clean, with no unmerged
+entries or active Git-operation markers. Ordered role mappings and disabled
+provider/identity files match the constructor. No request files were present.
+The previously loaded first fixture has a Bartender outbox; the seven new
+fixtures do not yet have one and await the owner-performed app restart.
+
+Local additions under this authorization are the seven fixture source/role
+repositories and workspace registrations, read-only before-state snapshots in
+`local-logs/setup-probe/batch-before-owner-restart/`, and the continuation note
+`local-logs/setup-probe/NEXT-AFTER-OWNER-RESTART.md`. The original first fixture
+was preserved. No research or product script, scientific setting, approval file,
+or scheduled task was changed. No app restart, sync, or formal scan was issued
+by the runner during this preparation. The continuation note separates the
+authorized simulation start after manual session recovery from the still-pending
+independent conformance approval.
 
 ## Q-20260909-04 | 2026-09-09T07:06:16Z | OPEN
 Step: Owner-authorized single-fixture setup and application restart.
