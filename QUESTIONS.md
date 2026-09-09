@@ -76,6 +76,10 @@ the remaining local fixtures be prepared before an owner-performed app restart;
 the formal scan will begin only after that restart and manual session recovery,
 with a fresh successful preflight and unchanged output-preservation rules.
 
+Acknowledgment | 2026-09-09T18:10:58Z: Received and merged the maintainer's
+2026-09-09T15:30:48Z answer. The M3 machine decision and retained m4 labels are
+accepted without changing the original execution approval. This resolves Q01.
+
 ## Q-20260909-02 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK.md, Questions and answers, recurring two-hour file exchange.
 Observed: The installed Ember CLI rejected `--cron '0 */2 * * *'` before task
@@ -241,6 +245,19 @@ that cap. No extension or replacement is authorized. Evidence is retained under
 ignored `local-logs/study-01-execution/poll-04/`. This exchange updates only the
 technical question record; no script, timer, experiment, fixture, sync, dummy
 provider, or app restart was changed or initiated.
+
+Acknowledgment and owner scheduler update | 2026-09-09T18:10:58Z: Received the
+2026-09-09T15:30:48Z answer accepting the owner-created native task and excluding
+an automatic replacement or launchd fallback. The owner now reports creating
+two hourly reminders. The actual CLI list contains one new human-created task
+with `repeatEveryMinutes=60`, `endAfterCount=2`, `runCount=0`,
+`status=scheduled`, `error=null`, and first/next UTC check
+`2026-09-09T18:54:00Z`. Its older prompt wording does not override these explicit
+owner settings. The previous five-run task is absent from this list; the runner
+does not infer its final delivery history from absence. No runner scheduler
+change was made. The actual snapshot is retained under ignored
+`local-logs/revalidation-verify-02/schedules-before.json`. File exchange still
+defers merge/push during execution or collection.
 
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
@@ -511,6 +528,16 @@ approval remains pending. The owner's immediate-start authorization now permits
 proceeding to the separately approved formal simulation after fresh preflight;
 no further app restart is needed for that command.
 
+Acknowledgment | 2026-09-09T18:10:58Z: Received the interim answer and the
+2026-09-09T15:47:28Z source/setup approval. The revised conformance runbook and
+retained version report hashes match CONFORMANCE_APPROVAL.json, whose status
+and source review are approved for conformance-01 and the recorded public
+commit. The existing eight loaded fixtures will be used sequentially in the
+specified order after retained-output revalidation has ended, with fresh
+pre-request checks, disabled providers, and the exact fixture target. The
+accepted size-field-only metadata exception and stop-on-first-failure rules
+are acknowledged. No conformance request or further restart has been issued.
+
 ## Q-20260909-04 | 2026-09-09T07:06:16Z | OPEN
 Step: Owner-authorized single-fixture setup and application restart.
 Observed: The temporary `launchctl submit` job intended to survive application
@@ -546,6 +573,11 @@ confirmation before closing the current application instance. Prior permission,
 silence, or a successful relaunch does not satisfy this requirement. The local
 scope and recovery notes and the proposed reminder prompt now record this
 constraint. No additional restart or schedule mutation occurred in this update.
+
+Acknowledgment | 2026-09-09T18:10:58Z: Received the 2026-09-09T15:30:48Z
+answer accepting the cleanup. The preferred future mechanism is an owner-led
+manual restart after fresh attendance confirmation; the defective helper stays
+unused. The approved current fixture procedure requires no further restart.
 
 ## Q-20260909-05 | 2026-09-09T09:28:18Z | OPEN
 Step: RUNBOOK.md, step 6, supplied collection and verification for study-01.
@@ -611,3 +643,28 @@ paths before another command is authorized.
 Acknowledgment: HOLD; original data and generated delivery preserved, awaiting
 maintainer instructions through ANSWERS.md. Separate application conformance
 also remains pending its own approval; no fixture sync has been issued.
+
+Acknowledgment and diagnostic transfer | 2026-09-09T18:10:58Z: Received all
+dated Q05 answers through the study-owner approval at 2026-09-09T17:57:31Z and
+merged simulation-pilot at `b1c6a31`. Maintainer commit `f9d2acd` changes the
+verifier to compare exact grid/CSV contents with multiplicities while ignoring
+row order, adds preserved-output collect-only checks and controls, and revises
+the separately approved conformance loading procedure. Commit `b1c6a31` records
+the owner's approval of `study-01` / `verify-02`, scope `collect-only`. These
+are supplied, reviewed changes; the runner authored no verification or model
+code. The original execution approval, data, CSVs, archive and HOLD remain.
+
+The retained execution receipt, execution approval, first verification and
+artifact index hashes match their REVALIDATION_APPROVAL.json bindings. The
+original summaries.jsonl hash and the decompressed new diagnostic copy both
+equal `47693e36f4b1fc449674337176cf15281c6d0f38153486714364b02ae24c3bfb`.
+The authorized copy is `deliverables/study-01/diagnostics/summaries.jsonl.gz`,
+created with `gzip -n -c` at a fresh destination. This is a byte-preserving
+transfer for independent review, not regenerated scientific data.
+
+After committing and pushing this transfer, the runner will follow the stated
+fingerprint, fresh controls and `collect --verification-id verify-02` checkpoints
+in order. The original execution protocol remains `f7e0530b35d4aae962a2a60cf7c2e3f329aaa06d455871d994b51bbd2c0c5215`;
+the approved verification protocol is `fce2615ee240633100a05d5c3c9f69eeff1c4f4a275668c5abf0081dc5bafc2d`.
+No simulation rerun, original-data repair, replacement CSV/archive, concurrent
+conformance request, or scientific acceptance is implied by this approval.
