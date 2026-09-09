@@ -161,3 +161,20 @@ observation. The owner's offer and scoped script-operation authorization are
 recorded here for maintainer review of that adaptation; no constructor,
 runbook, approval record, resident-agent configuration, or other workspace
 has been changed. Separate conformance approval remains pending.
+
+Terminology correction | 2026-09-09T06:04:23Z: The owner clarified that
+"workspace" in the preceding offer means one agent's workspace, containing
+one `project-files` checkout. The runner had used the same word for the
+runbook's larger application/project workspace. These are different levels.
+The constructor creates one fixture project root with `workspace.json` and
+one to three `.agent-workspaces/<role>/project-files` linked worktrees, each
+inside its own agent workspace and linked to the fixture's ordinary source
+checkout. It does not put several worktrees inside one agent workspace.
+The original plan requires eight independent fixture projects across its
+repetitions, with at most three role agent workspaces per fixture. The owner's
+stated agent-workspace count must not be interpreted as a limit or approval
+for eight new application projects. The specific permission to operate the
+other seven workspaces concerns owner-designated agent workspaces, not seven
+unspecified project roots. The earlier count clarification conflated these
+levels and is superseded by this correction. No other workspace has been
+modified; the concrete fixture/setup mapping remains to be established.
