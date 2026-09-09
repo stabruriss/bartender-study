@@ -7,16 +7,19 @@ in [RUNBOOK-CONFORMANCE.md](RUNBOOK-CONFORMANCE.md); deployment observations are
 outside both execution procedures.
 
 Status: implementation draft with deterministic control tests. The study
-parameters are **approved; formal execution is not yet approved or run**. This is
-an internal parameter plan, not a public preregistration. Code, configurations,
+parameters and execution protocol are **approved; the formal scan has not run**.
+This is an internal parameter plan, not a public preregistration. Code, configurations,
 seeds, and the complete scan record are intended for release with the full
 manuscript submission.
 
 For execution on the separate M4 machine, start with [RUNBOOK.md](RUNBOOK.md).
 It specifies the pinned environment, file-only communication, cross-machine
 checks, approval gates, raw-data retention, and required delivery. The handoff
-is still awaiting formal approval. Application conformance has its own pending
-`CONFORMANCE_APPROVAL.json` and first requires the M4 application's version,
+has received formal approval in `RUN_APPROVAL.json`; independent M4 controls and
+the cross-machine comparison are still required. The runbook's draft-status
+paragraph is retained as part of the frozen approved document; approval status
+comes from the configuration and `RUN_APPROVAL.json`. Application conformance
+has its own pending `CONFORMANCE_APPROVAL.json` and first requires the M4 application's version,
 binary provenance, and corresponding public source commit.
 
 ## Inspect and test
@@ -45,9 +48,9 @@ PYTHONHASHSEED=0 .venv/bin/python handoff.py preflight --run-id study-01
 caffeinate -i env PYTHONHASHSEED=0 .venv/bin/python handoff.py run --run-id study-01
 ```
 
-The output directory must be new. Execution with the currently pending protocol
-approval is rejected before any output directory is created. Approval metadata
-records a decision; it is not proof of when a researcher first saw data. No command
+The output directory must be new. Missing or mismatched approvals, controls, or
+cross-machine checks are rejected before any output directory is created.
+Approval metadata records a decision; it is not proof of when a researcher first saw data. No command
 changes repository visibility.
 
 A separate [timing diagnostic](benchmarks/README.md) estimates the proposed full
