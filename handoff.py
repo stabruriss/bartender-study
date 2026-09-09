@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+import csv
 from dataclasses import asdict
 from datetime import datetime, timezone
 import gzip
@@ -34,6 +35,7 @@ CONFIG = Path("configs/study-draft.json")
 REFERENCE = Path("validation/determinism-m1.json")
 CANDIDATE = Path("validation/determinism-m4.json")
 CONTROLS = Path("validation/controls-m4.json")
+REVALIDATION_APPROVAL = Path("REVALIDATION_APPROVAL.json")
 
 
 def canonical(value) -> bytes:
@@ -214,7 +216,14 @@ def execute(run_id: str) -> int:
                 stream.write(approval_snapshot)
 
 
-def verify_output(output: Path) -> dict:
+def csv_contents(path: Path) -> tuple:
+    """Preserve every field and duplicate row, but ignore CSV row order."""
+    with path.open(newline="") as stream:
+        rows = csv.reader(stream)
+        return tuple(next(rows, [])), Counter(tuple(row) for row in rows)
+
+
+def verify_output(output: Path, *, execution_protocol_sha256: str | None = None) -> dict:
     """Check full membership, parse every raw file, and regenerate aggregate CSVs."""
     config = read(output / "config.json")
     grid = cells(config)
@@ -233,7 +242,9 @@ def verify_output(output: Path) -> dict:
         issues.append("run incomplete or contains failures")
     if manifest["completed_runs"] != len(expected):
         issues.append("completed run count differs from the plan")
-    if read(output / "cells.json") != grid or manifest["parameters_sha256"] != parameters_digest(config):
+    saved_grid = read(output / "cells.json")
+    if (Counter(canonical(c) for c in saved_grid) != Counter(canonical(c) for c in grid)
+            or manifest["parameters_sha256"] != parameters_digest(config)):
         issues.append("saved grid or parameter digest mismatch")
     if config != load_config(CONFIG):
         issues.append("saved configuration differs from the current approved configuration")
@@ -244,7 +255,7 @@ def verify_output(output: Path) -> dict:
     receipt = read(output / "execution.json")
     approval = read(output / "RUN_APPROVAL.json")
     if (receipt.get("status") != "complete" or receipt.get("exit_code") != 0
-            or receipt.get("protocol_sha256") != protocol_hash()
+            or receipt.get("protocol_sha256") != (execution_protocol_sha256 or protocol_hash())
             or receipt.get("approval_sha256") != file_hash(output / "RUN_APPROVAL.json")
             or approval.get("status") != "approved" or not approval.get("approved_by")
             or not approval.get("approved_at") or approval.get("run_id") != output.name
@@ -293,7 +304,7 @@ def verify_output(output: Path) -> dict:
         for name, rows in (("summary.csv", aggregates), ("paired-differences.csv", contrasts)):
             path = Path(temporary) / name
             write_csv(path, rows)
-            if path.read_bytes() != (output / name).read_bytes():
+            if csv_contents(path) != csv_contents(output / name):
                 issues.append(f"{name} does not match the per-seed records")
     return {"status": "pass" if not issues else "hold", "planned_runs": len(expected),
             "records_seen": len(records), "raw_run_files": len(actual), "unique_flows": len(flows),
@@ -360,7 +371,93 @@ def archive(output: Path, directory: Path, *, part_bytes=1024 ** 3) -> dict:
             "archive_bytes": sum(p["bytes"] for p in parts.parts)}
 
 
-def collect(run_id: str) -> int:
+def retained_files_match(output: Path, inventory: dict) -> bool:
+    """Bind revalidation to the exact raw bytes indexed by the first collection."""
+    expected = inventory["files"]
+    actual = []
+    for path in sorted(output.rglob("*")):
+        if path.is_symlink():
+            return False
+        if path.is_file():
+            actual.append({"path": f"{output.name}/{path.relative_to(output).as_posix()}",
+                           "bytes": path.stat().st_size, "sha256": file_hash(path)})
+    return Counter(canonical(f) for f in actual) == Counter(canonical(f) for f in expected)
+
+
+def recollect(run_id: str, verification_id: str) -> int:
+    """Recheck retained outputs under a separate approval; never regenerate data."""
+    require_environment()
+    output, original = Path("outputs", run_id), Path("deliverables", run_id)
+    destination = original / "rechecks" / verification_id
+    if destination.exists():
+        raise ValueError("verification record already exists; preserve it and use a newly approved id")
+    approval = read(REVALIDATION_APPROVAL)
+    receipt = read(output / "execution.json")
+    config = load_config(CONFIG)
+    require_approval(config)
+    if (approval.get("status") != "approved" or approval.get("scope") != "collect-only"
+            or not approval.get("approved_by") or not approval.get("approved_at")
+            or approval.get("run_id") != run_id or approval.get("verification_id") != verification_id
+            or approval.get("parameters_sha256") != parameters_digest(config)
+            or approval.get("protocol_sha256") != protocol_hash()
+            or approval.get("execution_protocol_sha256") != receipt.get("protocol_sha256")
+            or approval.get("execution_receipt_sha256") != file_hash(output / "execution.json")
+            or approval.get("execution_approval_sha256") != file_hash(output / "RUN_APPROVAL.json")
+            or approval.get("artifact_index_sha256") != file_hash(original / "artifact-index.json")
+            or approval.get("original_verification_sha256") != file_hash(original / "verification.json")):
+        raise ValueError("separate collect-only approval is missing or does not match the retained run")
+    controls = read(relative(approval["controls_record"]))
+    if (controls.get("status") != "pass" or not controls.get("tests_run")
+            or controls.get("failure_ids") or controls.get("error_ids") or controls.get("skipped_ids")
+            or controls.get("protocol_sha256") != protocol_hash()
+            or controls.get("environment", {}).get("python") != "3.12.4"
+            or controls.get("environment", {}).get("python_hash_seed") != "0"):
+        raise ValueError("passing controls for the revised verification protocol are required")
+    start = time.perf_counter()
+    started_at = datetime.now(timezone.utc).isoformat()
+    inventory = read(original / "artifact-index.json")
+    try:
+        validation = verify_output(output, execution_protocol_sha256=approval["execution_protocol_sha256"])
+        unchanged = retained_files_match(output, inventory)
+        if not unchanged:
+            validation["issues"].append("raw files differ from the original archive inventory")
+            validation["status"] = "hold"
+    except Exception as exc:
+        unchanged = False
+        validation = {"status": "hold", "issues": [f"validation could not complete: {type(exc).__name__}"]}
+    validation.update(run_id=run_id, verification_id=verification_id,
+                      scope="collect-only", raw_files_match_original_inventory=unchanged,
+                      execution_protocol_sha256=approval["execution_protocol_sha256"],
+                      verification_protocol_sha256=protocol_hash(),
+                      revalidation_approval_sha256=file_hash(REVALIDATION_APPROVAL),
+                      artifact_index_sha256=approval["artifact_index_sha256"],
+                      original_verification_sha256=approval["original_verification_sha256"],
+                      controls_sha256=file_hash(relative(approval["controls_record"])),
+                      environment=environment(), started_at=started_at,
+                      finished_at=datetime.now(timezone.utc).isoformat(),
+                      verification_wall_seconds=time.perf_counter() - start)
+    destination.mkdir(parents=True, exist_ok=False)
+    write(destination / "verification.json", validation)
+    shutil.copyfile(REVALIDATION_APPROVAL, destination / "REVALIDATION_APPROVAL.json")
+    (destination / "REVALIDATION_REPORT.md").write_text(f"""# Revalidation: {run_id} / {verification_id}
+
+Status: {validation['status'].upper()}; verification only, with no scientific interpretation.
+
+- Original execution: `deliverables/{run_id}/execution.json`.
+- Original verification and report remain unchanged in `deliverables/{run_id}/`.
+- Verification details, environment, timestamps and wall time: `verification.json`.
+- Raw files match the original archive inventory: {unchanged}.
+- Original archive SHA-256: `{inventory['archive_sha256']}`.
+- Execution protocol SHA-256: `{approval['execution_protocol_sha256']}`.
+- Verification protocol SHA-256: `{validation['verification_protocol_sha256']}`.
+- No simulation, CSV replacement, raw-data change, or new archive was produced.
+""")
+    return 0 if validation["status"] == "pass" else 1
+
+
+def collect(run_id: str, verification_id: str | None = None) -> int:
+    if verification_id is not None:
+        return recollect(run_id, verification_id)
     output, delivery = Path("outputs", run_id), Path("deliverables", run_id)
     if not output.is_dir():
         raise ValueError("no raw output directory exists for this run")
@@ -417,8 +514,11 @@ def main() -> int:
         if command == "compare":
             p.add_argument("--reference", default=str(REFERENCE))
             p.add_argument("--candidate", default=str(CANDIDATE))
-    for command in ("preflight", "run", "collect"):
+    for command in ("preflight", "run"):
         sub.add_parser(command).add_argument("--run-id", default="study-01")
+    p = sub.add_parser("collect")
+    p.add_argument("--run-id", default="study-01")
+    p.add_argument("--verification-id", help="recheck retained outputs under separate collect-only approval")
     args = parser.parse_args()
     if Path.cwd().resolve() != ROOT:
         parser.exit(2, "error: run from the repository root\n")
@@ -442,7 +542,8 @@ def main() -> int:
         elif args.command == "run":
             return execute(run_name(args.run_id))
         else:
-            return collect(run_name(args.run_id))
+            return collect(run_name(args.run_id),
+                           run_name(args.verification_id) if args.verification_id else None)
         if hasattr(args, "output"):
             write(relative(args.output), value)
         print(json.dumps(value if args.command in {"fingerprints", "preflight", "compare"}

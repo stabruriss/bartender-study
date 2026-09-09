@@ -15,8 +15,8 @@ worktrees while returning unresolved conflicts and recording the first author's
 repair notice. The CLI queues a request for the app; it is not a standalone
 implementation of synchronization.
 
-This procedure is **pending independent approval**. Reporting the installed
-version is allowed now. Scenario execution requires `CONFORMANCE_APPROVAL.json`;
+This procedure has an **independent approval gate**. Reporting the installed
+version is allowed before approval. Scenario execution requires `CONFORMANCE_APPROVAL.json`;
 `RUN_APPROVAL.json` and simulation parameter approval do not approve it. Use
 `run-m4` and the file question/answer protocol in [RUNBOOK.md](RUNBOOK.md).
 Do not run conformance observations during the timed simulation scan.
@@ -104,7 +104,7 @@ manual gate, not a command enforced by `handoff.py`. Do not fill approval fields
 yourself. A changed document, app, CLI, source binding, or fixture plan requires
 renewed review before another execution.
 
-## 3. Create one disposable workspace at a time
+## 3. Prepare and load the disposable workspaces
 
 Use the existing running app after its version and setup path pass review.
 The reference implementation reads workspace metadata from the app account's
@@ -136,6 +136,21 @@ other fixtures, select the case names in step 5 and repetitions `1` and `2`.
 If the actual app uses another workspace registry, obtain a reviewed setup
 instruction; changing `KOTA_HOME` or the shell's current directory does not
 isolate or redirect the reference app's registry.
+
+Prepare all four cases with repetitions 1 and 2 using the unchanged constructor
+below, before one owner-performed app restart. Each invocation still creates a
+distinct, fresh fixture. Preserve source/role HEADs, branches, contents, clean
+Git status, operation-marker checks, ordered mappings, identity/provider files,
+and project metadata before loading. No sync is part of preparation.
+
+For `conformance-01`, Q-20260909-03 records that these eight fixtures are already
+prepared and loaded. Use those retained fixtures only after their pre-request
+state passes the checks below. Do not recreate them or restart the app again.
+For a future separately approved execution, local registration is loaded by app
+startup: checkpoint first, obtain an explicit human-attendance confirmation,
+let the owner quit/reopen the same app, and wait for manual session recovery.
+Do not use an automated restart helper. Normal app discovery of other registered
+projects is allowed; direct no edits, sync requests, or messages to those projects.
 
 ```sh
 .venv/bin/python - <<'PY'
@@ -236,13 +251,26 @@ with a real agent. The observations cover routing/recording, not successful
 terminal delivery or author repair. If the reviewed app cannot load this setup,
 report HOLD instead of changing its code or substituting a real provider.
 
-Select only the new fixture in the app and open its Bartender status/card so
-the app establishes the dispatch watcher. Do not click sync yet. Check that
-`workspace.json` still names exactly the fixture source and roles, in the listed
-order, and that every Git HEAD/branch matches `initial.json`. The source and all
-worktrees must be clean, with no merge/rebase/cherry-pick in progress. A startup
-change, reordered/missing role, or automatic sync invalidates the fixture; retain
-it and ask. Do not restore it silently and reuse the same execution id.
+After loading, confirm each fixture is available in the app and has its
+Bartender outbox directory. Startup establishes the watcher for registered
+workspaces; existence of the directory is a setup observation, not evidence
+that a request was consumed. If needed, select only that fixture and open its
+Bartender status/card. Do not click sync yet.
+
+Immediately before the first request on each fixture, check that `workspace.json`
+still names exactly its source and roles, in the listed order, and that every
+Git HEAD/branch and tracked file matches `initial.json` and the retained initial
+snapshot. The source and all worktrees must be clean, with no merge/rebase/
+cherry-pick in progress. Identity and disabled-provider files must be unchanged;
+no earlier request, automatic sync, or concurrent writer may have affected it.
+
+The only accepted project-metadata differences are addition or changes of
+`localRootBytes` and `sourceDirBytes` to nonnegative integers, provided all source,
+role, Git, content, and provider checks above pass. These size fields are outside
+the scenario's integration assertions. Preserve both metadata versions and
+their hashes; never reset them to hide a startup change. Any other metadata
+change, reordered/missing role, Git/content change, or automatic sync invalidates
+the fixture: retain it and ask. Do not silently restore and reuse its execution id.
 
 ## 4. Trigger through the CLI and observe the app's receipt
 
@@ -340,7 +368,9 @@ files must still contain `baseline` plus newline. In every case require:
    HEAD key. Other status/progress records may still be emitted.
 
 Run `single-clean`, `multiple-clean`, `one-conflict`, `multiple-conflicts`, first
-with repetition 1 and then repetition 2, creating a new fixture each time.
+with repetition 1 and then repetition 2, using the separately prepared fresh
+fixture for each execution. Loading all eight together does not authorize
+concurrent requests or skipping the immediate pre-request checks.
 Do not infer internal pass counts, full worktree atomicity, successful repair,
 or coverage of the larger scenario catalog from these external observations.
 
@@ -389,6 +419,13 @@ to the manuscript's claims.
 ## Fixed source references
 
 These are static anchors for the reference implementation, not execution results:
+
+- For the reviewed release commit `75eb8fda2b1040c0f1822e0403321a105fec4f6c`:
+  [initial workspace loading](https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src/App.tsx#L1613),
+  [registry enumeration](https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/integrations/mod.rs#L583),
+  [size-field schema](https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/integrations/mod.rs#L199),
+  [startup dispatch watchers](https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/lib.rs#L12444),
+  [explicit target resolution](https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/lib.rs#L2012).
 
 - [CLI dispatch and result waiting](https://github.com/stabruriss/kota-app/blob/b3db3c8290d8dae5a1ee5f7f40222d3dcf77f1b7/app-v2/src-tauri/src/bartender.rs#L1726),
   [app consumer](https://github.com/stabruriss/kota-app/blob/b3db3c8290d8dae5a1ee5f7f40222d3dcf77f1b7/app-v2/src-tauri/src/bartender.rs#L425).

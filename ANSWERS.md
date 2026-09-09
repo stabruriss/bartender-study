@@ -4,13 +4,15 @@ Maintainers add one dated response for each question id, commit on
 `simulation-pilot`, and push. The execution agent fetches and merges that branch
 before acting. Neither silence nor a technical answer constitutes run approval.
 
-No questions have been answered yet. Parameters and the execution protocol are
-approved in the configuration and `RUN_APPROVAL.json`. The frozen runbook retains
-its drafting-time pending-status paragraph; these approval files determine the
-current status. M4 must still complete its independent controls and comparison.
-Application conformance remains pending in `CONFORMANCE_APPROVAL.json`.
+Current state, 2026-09-09 UTC: `study-01` completed on the owner-approved Apple M3
+machine, but its first collection remains HOLD. `RUN_APPROVAL.json` preserves
+the original execution approval. The revised verifier requires the separate
+`REVALIDATION_APPROVAL.json`, currently pending; it does not authorize a new
+simulation. Application observations are independently approved in
+`CONFORMANCE_APPROVAL.json` under the latest Q-20260909-03 response below.
 
-Execution timing, recorded 2026-09-09 UTC: the study owner schedules the formal
+Initial timing instruction, superseded by the owner's immediate-start decision
+recorded in Q-20260909-01 at 2026-09-09T07:28:41Z: the study owner schedules the formal
 M4 scan for the evening of **2026-09-09, America/Los_Angeles**. Environment setup,
 controls, and the cross-machine check may be prepared earlier; do not start the
 formal scan before that evening. All execution gates still apply. Maintainer
@@ -50,3 +52,127 @@ Approval impact: pending
 Answer (interim): HOLD confirmed, and your disposition is correct: keep every original output, archive part, and generated delivery file unchanged; do not rerun, regenerate, or repair anything. Maintainers are reproducing the two verification issues on the reference machine against the retained pilot data and the delivered CSVs. Your static observations about `sort_keys=True` versus insertion-ordered traversal in `plan.cells` and `report.summarize` are the first hypothesis under test. If the discrepancy is confined to ordering inside the verification tool, the disposition will be a reviewed correction to the verification code only, re-approved with a new protocol digest, followed by a re-run of `collect` against the preserved originals under a distinct verification record name; the scientific outputs would not be regenerated. If the issue is in the outputs themselves, a new run id will be approved. Take no action before that dated answer.
 Affected files: None yet
 Approval impact: pending
+
+## Q-20260909-03 | 2026-09-09T15:47:28Z
+Answer (source/setup decision): Approved for the eight planned fixture
+observations, under the revised `RUNBOOK-CONFORMANCE.md` and the independent
+`CONFORMANCE_APPROVAL.json` signed by the study maintainer. This is permission
+to observe the fixed assertions, not a conformance PASS.
+
+The public release asset digest agrees with the reported binding; tag v0.1.10
+resolves to `75eb8fda2b1040c0f1822e0403321a105fec4f6c`, and comparison with
+`b3db3c8290d8dae5a1ee5f7f40222d3dcf77f1b7` is empty across `app-v2`. Source
+supports registry loading at startup, dispatch-watcher creation, and explicit
+CLI target resolution. The installed-binary comparison and before/after loading
+observations remain your reported evidence, with originals retained locally;
+this is release-distribution provenance, not a reproducible-build claim.
+The review is recorded in `validation/conformance-review-m1.json`.
+
+The constructor is unchanged, SHA-256
+`da822ddde40adf0848fe5097e93f8faa792bbe806af56b584423f010c516b8db`.
+Use the eight fixtures already loaded by the owner-performed restart reported
+at 07:38:10Z. No further restart or reconstruction is needed. Immediately before
+each first request, recheck its original Git HEADs/branches/content, clean
+state, absent operation markers, role order/mappings, and disabled-provider
+files. No prior sync or concurrent writes may have affected it. Only
+`localRootBytes` and `sourceDirBytes` additions/changes to nonnegative integers
+are accepted as metadata differences, with both original versions preserved;
+all other differences mean HOLD. Do not launch a real provider.
+
+Include a technical setup projection and hashes of the retained before/after
+originals in the conformance delivery; exclude absolute paths and unrelated
+project records. Use the explicit fixture `--project-root` in every request.
+Run the cases sequentially in the documented order. Do not overlap them with
+collection/revalidation, and stop at the first failed or unobservable assertion.
+
+Affected files: `RUNBOOK-CONFORMANCE.md`, `CONFORMANCE_APPROVAL.json`,
+`validation/conformance-review-m1.json`.
+Approval impact: independent conformance observation approved; runbook SHA-256
+`e5144353270d4833c494e47cb6c69c2200e3a3ed48e1038baf6763120bba640e`.
+
+## Q-20260909-05 | 2026-09-09T15:47:28Z
+Answer (verification disposition): Keep the original HOLD record and every
+original scientific output unchanged. The verifier correction is ready, with
+34 passing controls, but revalidation still needs the study owner's approval
+in `REVALIDATION_APPROVAL.json`. Do not rerun the simulation.
+Do not claim that the study results are usable until the complete retained-output
+revalidation returns PASS and the maintainers accept that delivery.
+
+On M1 the delivered 990 grid rows match the regenerated rows field for field
+and with the same multiplicities; only list order differs. The parameter digest,
+current configuration and model-file hashes are unchanged. The timing pilot
+retained timing/size records only, as documented in `benchmarks/README.md`; its
+full results were temporary. A separate zero-edit diagnostic using seeds
+800001–800030 reproduced exactly both reported HOLD issues. After the verifier
+correction it passes, with every diagnostic file hash unchanged. This control
+does not constitute a study sample. See `validation/study-01-order-review-m1.json`
+and `validation/controls-m1-revalidation-01.json`.
+
+The correction compares grid-row multisets and CSV fields with their duplicate
+counts, without a numerical tolerance. It ignores row order, retains the exact
+CSV header and field strings, and still rejects changed values, missing rows,
+duplicates, altered raw data and unapproved execution provenance. M1 does not
+yet have the formal per-seed summaries: their numeric agreement with the formal
+paired CSV is not claimed until the complete retained-output check passes.
+
+**Authorized diagnostic delivery now, without running collection:** when no
+simulation, collection or fixture observation is active, transfer a compressed
+copy of the existing per-seed summary through this branch. First confirm that
+`outputs/study-01/summaries.jsonl` has SHA-256
+`47693e36f4b1fc449674337176cf15281c6d0f38153486714364b02ae24c3bfb`, matching the
+first artifact index. Preserve the original. If the destination already exists,
+do not overwrite it; inspect its decompressed hash instead.
+
+```sh
+shasum -a 256 outputs/study-01/summaries.jsonl
+mkdir -p deliverables/study-01/diagnostics
+gzip -n -c outputs/study-01/summaries.jsonl > deliverables/study-01/diagnostics/summaries.jsonl.gz
+gzip -dc deliverables/study-01/diagnostics/summaries.jsonl.gz | shasum -a 256
+```
+
+Both displayed content hashes must match the value above. Compression is a byte
+transfer, not data generation or outcome calculation. Commit/push only the new
+compressed copy and a dated Q-05 acknowledgment using the documented Git
+identity. Do not regenerate or edit either CSV, and do not add other raw runs.
+This transfer lets M1 independently check the delivered CSV against every
+original summary while the separate revalidation approval is pending.
+
+**After `REVALIDATION_APPROVAL.json` reads approved:** verify it binds
+`run_id=study-01`, `verification_id=verify-02`, `scope=collect-only`, original
+execution protocol `f7e0530b35d4aae962a2a60cf7c2e3f329aaa06d455871d994b51bbd2c0c5215`,
+and new verification protocol
+`fce2615ee240633100a05d5c3c9f69eeff1c4f4a275668c5abf0081dc5bafc2d`.
+It also binds the original execution receipt, execution approval, first
+verification record and artifact index by hash. Then run, in order:
+
+```sh
+git status --short
+git fetch origin
+env GIT_AUTHOR_NAME='Study Runner' GIT_AUTHOR_EMAIL='study-runner@example.invalid' \
+    GIT_COMMITTER_NAME='Study Runner' GIT_COMMITTER_EMAIL='study-runner@example.invalid' \
+    git merge --no-edit origin/simulation-pilot
+git push origin run-m4
+PYTHONHASHSEED=0 .venv/bin/python handoff.py fingerprints
+PYTHONHASHSEED=0 .venv/bin/python handoff.py controls --output validation/controls-m4-revalidation-01.json
+PYTHONHASHSEED=0 .venv/bin/python handoff.py collect --run-id study-01 --verification-id verify-02
+```
+
+Start the exchange on `run-m4` with reviewed local records committed and no
+active execution. After merge, reread the approval and this answer and compare
+the fingerprints before running controls or collection. These commands are
+sequential checkpoints, not permission to continue after a failed check.
+
+If the controls path already exists, inspect it: a matching PASS for this exact
+protocol may be used, but never overwrite it. If the verification destination
+already exists, stop and request another approved verification id. The command
+parses all original run and flow records, checks both CSVs, and hashes every raw
+file against the first artifact index. It creates only
+`deliverables/study-01/rechecks/verify-02/verification.json`, an approval snapshot,
+and `REVALIDATION_REPORT.md`. It produces no replacement CSVs or archive and does
+not modify the original HOLD report. Commit/push the new controls and recheck
+directory with a dated Q-05 acknowledgment; preserve any further HOLD exactly.
+
+Affected files: `handoff.py`, `tests/test_revalidation.py`,
+`REVALIDATION_APPROVAL.json`, the two M1 validation records named above.
+Approval impact: study-owner approval required for the collect-only protocol;
+original simulation parameters, model and execution approval remain unchanged.

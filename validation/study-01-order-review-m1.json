@@ -1,0 +1,90 @@
+{
+  "formal_grid": {
+    "cells": 990,
+    "current_config_equal": true,
+    "exact_row_multiset_equal": true,
+    "model_files_unchanged": true,
+    "ordered_equal": false,
+    "parameter_digest_equal": true
+  },
+  "formal_per_seed_review": {
+    "expected_summary_file": {
+      "bytes": 56231286,
+      "path": "study-01/summaries.jsonl",
+      "sha256": "47693e36f4b1fc449674337176cf15281c6d0f38153486714364b02ae24c3bfb"
+    },
+    "reason": "Full summaries.jsonl remains on execution machine; formal CSV numbers are not independently verified here.",
+    "status": "pending"
+  },
+  "original_delivery_files_sha256": {
+    "RUN_APPROVAL.json": "9ed6604c4df2958eaa340f4e4760c804d1cc32ac6a540ede2f627dbb1c278075",
+    "RUN_REPORT.md": "0961b918a7e7e225281e3b541fcc0d8152303901b619c85dbb13bdaa338108d1",
+    "artifact-index.json": "8d88dbe050a3d9428e4cd0720c429cbed9a67734de64ff5eac0992f41d8ffa70",
+    "cells.json": "086034341ac0f852c2a6fcb69ec68e2113652b7c74c62a48ad7ff7f71f98ef48",
+    "config.json": "daa128c596a52cf2f91b690b87d7004e305a54c6b0c504e666453e1c09956542",
+    "execution.json": "0b61a48b47a62dc35002e473ae75a7bf2053522b63a8fdf981b1db4b74aed46b",
+    "manifest.json": "c6fc456d870436d1f8bc372da850122018def2a433ee26ec057575c58189089c",
+    "paired-differences.csv": "e703f0a7cacdbf4b7f38a82fbb83ed6fd9dd96096495be52ec6208b842327056",
+    "summary.csv": "5209b6b2f833ff958bc9320af9d577cef3453eb94ff185822028da80be7e5505",
+    "verification.json": "367c3f5f68a191044e7da2e3776ac4b85521e9c5a5d5daf5049e184f219f8141"
+  },
+  "parameters_sha256": "92dc23981ddd5628761f9c88967a408836c68185110469f7fe82f463155145c0",
+  "reviewed_at": "2026-09-09T15:42:52.696856+00:00",
+  "serialization_control": {
+    "after": {
+      "issues": [],
+      "planned_runs": 120,
+      "raw_run_files": 120,
+      "records_seen": 120,
+      "status": "pass",
+      "unique_flows": 1
+    },
+    "before": {
+      "issues": [
+        "paired-differences.csv does not match the per-seed records",
+        "saved grid or parameter digest mismatch"
+      ],
+      "planned_runs": 120,
+      "raw_run_files": 120,
+      "records_seen": 120,
+      "status": "hold",
+      "unique_flows": 1
+    },
+    "kind": "zero-edit diagnostic only; not a study sample",
+    "retained_fixture_files_unchanged": true,
+    "seeds": [
+      800001,
+      800002,
+      800003,
+      800004,
+      800005,
+      800006,
+      800007,
+      800008,
+      800009,
+      800010,
+      800011,
+      800012,
+      800013,
+      800014,
+      800015,
+      800016,
+      800017,
+      800018,
+      800019,
+      800020,
+      800021,
+      800022,
+      800023,
+      800024,
+      800025,
+      800026,
+      800027,
+      800028,
+      800029,
+      800030
+    ]
+  },
+  "status": "hold_pending_full_raw_revalidation",
+  "verification_protocol_sha256": "fce2615ee240633100a05d5c3c9f69eeff1c4f4a275668c5abf0081dc5bafc2d"
+}
