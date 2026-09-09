@@ -1,0 +1,47 @@
+{
+  "approval_sha256": "9ed6604c4df2958eaa340f4e4760c804d1cc32ac6a540ede2f627dbb1c278075",
+  "controls_sha256": "cf3eaad30623adb2a4412ff5b2e711a86881e345b37dbf1e2551205dd49aaacf",
+  "determinism": {
+    "payload_sha256": "7cb9843dd040993c65d0be444f71701ddf4d38bbdab73c5ec057de6d4dac4748",
+    "records_compared": 18,
+    "status": "pass"
+  },
+  "environment": {
+    "architecture": "arm64",
+    "cpu": "Apple M3",
+    "implementation": "CPython",
+    "logical_cpus": 8,
+    "os": "Darwin",
+    "os_version": "26.2",
+    "python": "3.12.4",
+    "python_hash_seed": "0",
+    "ram_bytes": 17179869184,
+    "third_party_runtime_dependencies": [],
+    "workers": 1
+  },
+  "exit_code": 0,
+  "finished_at": "2026-09-09T09:19:56.255898+00:00",
+  "plan": {
+    "cells": 990,
+    "horizon_max": 9315.693007390562,
+    "horizon_min": 256.0,
+    "p_by_length": {
+      "16": 0.01556231814190527,
+      "4": 0.003435063819150432,
+      "64": 0.06872332143144783
+    },
+    "parameters_sha256": "92dc23981ddd5628761f9c88967a408836c68185110469f7fe82f463155145c0",
+    "planned_runs": 29700,
+    "seeds_per_cell": 30,
+    "status": "approved",
+    "suites": {
+      "repair_delay": 360,
+      "sync_interval": 630
+    }
+  },
+  "protocol_sha256": "f7e0530b35d4aae962a2a60cf7c2e3f329aaa06d455871d994b51bbd2c0c5215",
+  "run_id": "study-01",
+  "started_at": "2026-09-09T07:40:10.976022+00:00",
+  "status": "complete",
+  "wall_seconds": 5985.214742040727
+}

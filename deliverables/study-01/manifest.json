@@ -1,0 +1,38 @@
+{
+  "cells": 990,
+  "completed_runs": 29700,
+  "failed_runs": 0,
+  "finished_at": "2026-09-09T09:19:56.207163+00:00",
+  "horizon_max": 9315.693007390562,
+  "horizon_min": 256.0,
+  "interval_method": "mean +/- 1.96 * across-seed standard error (normal approximation)",
+  "p_by_length": {
+    "16": 0.01556231814190527,
+    "4": 0.003435063819150432,
+    "64": 0.06872332143144783
+  },
+  "parameters_sha256": "92dc23981ddd5628761f9c88967a408836c68185110469f7fe82f463155145c0",
+  "planned_runs": 29700,
+  "seeds_per_cell": 30,
+  "source": {
+    "files_sha256": {
+      "bartender_sim/__init__.py": "2beaa8c0337d185ee1c791d0897b23f95870df6b10705db975c381155c8a87d8",
+      "bartender_sim/__main__.py": "4d76d1195857d0a9b4455820429b68468886b61054d6d589ba4c624366e5baec",
+      "bartender_sim/controls.py": "48762d4ce36118a8516088016bb0581e5a53cbc30c66b7ebd6bce637f4b7f295",
+      "bartender_sim/model.py": "462dbdff6cf42bd3b5cfe6c5a7253b5c7df06cee8ee741d403140d583fac54c8",
+      "bartender_sim/plan.py": "6cd9f5334bdb8ec5e331cc36d2538a05d22901947ea968ba6f01423d3edc1c42",
+      "bartender_sim/report.py": "87dc19b2148805ca924cc344907e368779fe1aec89cdca7ec5274845bed0b481"
+    },
+    "git_dirty": false,
+    "git_head": "7b29d562cf15e2071f1874dd48a5fdb254586c0b",
+    "machine": "arm64",
+    "python": "3.12.4",
+    "system": "Darwin"
+  },
+  "started_at": "2026-09-09T07:40:10.989604+00:00",
+  "status": "complete",
+  "suites": {
+    "repair_delay": 360,
+    "sync_interval": 630
+  }
+}

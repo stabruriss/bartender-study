@@ -1,0 +1,40 @@
+{
+  "app_build": "0.1.10",
+  "app_executable_sha256": "f458f54ae851f646e7f41686ba1a96022e832c3c7c1366d5be15fd8cf8863e6d",
+  "app_version": "0.1.10",
+  "architecture": "arm64",
+  "backend_tree": "147cbc348cd1e3aa8a90d4f0c67e3652798b083a",
+  "binary_source_basis": {
+    "asset_matches_release_metadata_digest": true,
+    "asset_sha256": "acfc6b583256be3a4a8536c27e954dafe7684ef2eaf47cfe3e58996845e0903f",
+    "asset_url": "https://github.com/stabruriss/kota-app/releases/download/v0.1.10/Kota-0.1.10-arm64.dmg",
+    "installed_app_matches_release_app": true,
+    "kind": "installed binaries match public release asset",
+    "limit": "Release-distribution provenance; no independent reproducible-build claim.",
+    "method": "Identify the running app bundle; explicitly select its bundled CLI. Hash both installed binaries and the corresponding files in a read-only mounted release asset. Resolve the release tag in the public source checkout. No app installation, replacement, rebuild, or fixture execution.",
+    "release_app_executable_sha256": "f458f54ae851f646e7f41686ba1a96022e832c3c7c1366d5be15fd8cf8863e6d",
+    "release_cli_executable_sha256": "50d942c9e542c3213999488928f2b7e3fd9f665c163ff2f020b4aeeef558b1a4",
+    "release_metadata_url": "https://api.github.com/repos/stabruriss/kota-app/releases/tags/v0.1.10",
+    "release_url": "https://github.com/stabruriss/kota-app/releases/tag/v0.1.10",
+    "selected_cli_matches_release_cli": true,
+    "tag": "v0.1.10",
+    "tag_commit": "75eb8fda2b1040c0f1822e0403321a105fec4f6c"
+  },
+  "cli_executable_sha256": "50d942c9e542c3213999488928f2b7e3fd9f665c163ff2f020b4aeeef558b1a4",
+  "git_version": "git version 2.39.5 (Apple Git-154)",
+  "os_version": "26.2",
+  "public_commit": "75eb8fda2b1040c0f1822e0403321a105fec4f6c",
+  "public_repository": "https://github.com/stabruriss/kota-app",
+  "reference_comparison": "same",
+  "reported_at": "2026-09-09T05:41:16+00:00",
+  "workspace_setup_basis": {
+    "method": "The source enumerates the workspace registry, loads workspace.json, and discovers role metadata under .agent-workspaces while preserving existing role order. Opening Bartender status resolves the selected workspace and refreshes its dispatch watcher. Fixture preparation and disabled-provider behavior remain subject to separate approval.",
+    "source_references": [
+      "https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/integrations/mod.rs#L583",
+      "https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/integrations/mod.rs#L2478",
+      "https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/integrations/mod.rs#L2716",
+      "https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/lib.rs#L1787"
+    ],
+    "status": "public source inspected; pending maintainer approval before fixture setup"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "issues": [
+    "paired-differences.csv does not match the per-seed records",
+    "saved grid or parameter digest mismatch"
+  ],
+  "planned_runs": 29700,
+  "raw_run_files": 29700,
+  "records_seen": 29700,
+  "status": "hold",
+  "unique_flows": 300
+}

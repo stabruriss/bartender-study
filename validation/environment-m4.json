@@ -1,0 +1,13 @@
+{
+  "architecture": "arm64",
+  "cpu": "Apple M3",
+  "implementation": "CPython",
+  "logical_cpus": 8,
+  "os": "Darwin",
+  "os_version": "26.2",
+  "python": "3.12.4",
+  "python_hash_seed": "0",
+  "ram_bytes": 17179869184,
+  "third_party_runtime_dependencies": [],
+  "workers": 1
+}
