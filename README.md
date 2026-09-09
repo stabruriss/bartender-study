@@ -6,21 +6,30 @@ resolution, or an LLM. A separate application conformance procedure is described
 in [RUNBOOK-CONFORMANCE.md](RUNBOOK-CONFORMANCE.md); deployment observations are
 outside both execution procedures.
 
-Status: implementation draft with deterministic control tests. The study
-parameters and execution protocol are **approved; the formal scan has not run**.
-This is an internal parameter plan, not a public preregistration. Code, configurations,
-seeds, and the complete scan record are intended for release with the full
-manuscript submission.
+Status, 2026-09-09: **study-01 and conformance-01 are accepted**. The formal
+scan completed 29,700 runs without failure on the approved Apple M3 machine.
+The original collection HOLD is preserved; independently approved collect-only
+`verify-02` passed with original data unchanged. Maintainer acceptance checked
+the delivered summaries and application evidence in
+[the acceptance record](validation/delivery-acceptance-m1.json).
+The three draft result figures, complete tables and numerical summary are in
+[analysis/](analysis/README.md). Repository visibility remains private; code,
+configurations, seeds and the complete scan record are intended for release
+with the full manuscript submission.
 
-For execution on the separate M4 machine, start with [RUNBOOK.md](RUNBOOK.md).
+The completed execution procedure is [RUNBOOK.md](RUNBOOK.md).
 It specifies the pinned environment, file-only communication, cross-machine
 checks, approval gates, raw-data retention, and required delivery. The handoff
-has received formal approval in `RUN_APPROVAL.json`; independent M4 controls and
-the cross-machine comparison are still required. The runbook's draft-status
+received formal approval in `RUN_APPROVAL.json`; independent controls and
+the cross-machine comparison passed. The `m4` file/branch labels were retained
+after approval of the actual M3 machine. The runbook's draft-status
 paragraph is retained as part of the frozen approved document; approval status
 comes from the configuration and `RUN_APPROVAL.json`. Application conformance
-has its own pending `CONFORMANCE_APPROVAL.json` and first requires the M4 application's version,
-binary provenance, and corresponding public source commit.
+has its own approved `CONFORMANCE_APPROVAL.json` and accepted fixed observations
+at v0.1.10 / public commit `75eb8fda2b1040c0f1822e0403321a105fec4f6c`.
+The observations do not establish real-agent repair, performance, or wider
+scenario coverage. Execution and its recurring file exchange are closed;
+the dated dispositions and retained-original requirements are in `ANSWERS.md`.
 
 ## Inspect and test
 

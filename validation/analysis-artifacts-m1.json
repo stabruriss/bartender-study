@@ -1,0 +1,45 @@
+{
+  "analysis_bytes": 12115199,
+  "analysis_manifest_sha256": "553668e6ec59bbef3eecb0eac987443be5c19b6960ab5602ae14f0cea7dc7182",
+  "analysis_script_sha256": "d64a628279eab3d33a0204d4a4eb740e6a52538625e534fcb5dd1a6a6103ee0f",
+  "editable_svg_count": 4,
+  "input_and_output_hashes_match": true,
+  "issues": [],
+  "original_csv_fields_and_multiplicities_preserved": true,
+  "pdfs": {
+    "NUMERIC_SUMMARY.pdf": {
+      "grayscale_pages_rendered": 1,
+      "pages": 1
+    },
+    "f1_repairs_overlap.pdf": {
+      "grayscale_pages_rendered": 1,
+      "pages": 1
+    },
+    "f2_sync_interval.pdf": {
+      "grayscale_pages_rendered": 1,
+      "pages": 1
+    },
+    "f3_attempts_and_landings.pdf": {
+      "grayscale_pages_rendered": 1,
+      "pages": 1
+    },
+    "supplement_f1_all_sync_slices.pdf": {
+      "grayscale_pages_rendered": 21,
+      "pages": 21
+    },
+    "supplement_f2_all_agents_dependencies_policies.pdf": {
+      "grayscale_pages_rendered": 10,
+      "pages": 10
+    },
+    "supplement_f3_all_delay_slices.pdf": {
+      "grayscale_pages_rendered": 10,
+      "pages": 10
+    },
+    "table1_reference.pdf": {
+      "grayscale_pages_rendered": 1,
+      "pages": 1
+    }
+  },
+  "review_scope": "Original aggregate fields, manifest hashes, every PDF page rendered to grayscale, text page bounds, embedded fonts and editable SVG text; not a new scientific run.",
+  "status": "pass"
+}
