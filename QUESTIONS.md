@@ -194,6 +194,23 @@ Ember still reports `status=scheduled`, `runCount=1`, no error, the unchanged
 execution remains on HOLD pending the Q-20260909-05 disposition; fixture sync
 still requires the separate conformance approval.
 
+Second recurring exchange | 2026-09-09T10:21:02Z: The runner and managed
+worktree were clean, with no active simulation, collection, or conformance
+process. Fetch and the explicit neutral-identity merge found
+`origin/simulation-pilot` already current at `ca8b062`. ANSWERS.md has no new
+dated responses to Q-20260909-01 through Q-20260909-05. The study-01 verification
+remains HOLD pending Q-20260909-05, and CONFORMANCE_APPROVAL.json remains pending.
+There is no new answer to acknowledge and no delivery-acceptance or closure
+instruction that would stop the reminder.
+
+Ember reports `status=scheduled`, `runCount=2`, `error=null`,
+`lastRunAt=2026-09-09T10:20:17.068312Z`, and
+`nextRunAt=2026-09-09T12:20:17.068312Z`. The 120-minute interval and owner-set
+five-run cap remain in force. The answer, remote commit, check time, and actual
+schedule snapshot are retained under ignored `local-logs/study-01-execution/poll-02/`.
+This exchange changed only the technical question record; no script, timer,
+experiment, fixture, sync, dummy provider, or application restart was triggered.
+
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
 Observed: `validation/conformance-version-m4.json` records the actual running
