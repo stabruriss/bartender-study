@@ -1,0 +1,1359 @@
+{
+  "checks": [
+    {
+      "check": "approved collect-only scope and ids",
+      "status": "pass"
+    },
+    {
+      "check": "exact delivered approval snapshot",
+      "status": "pass"
+    },
+    {
+      "check": "approval binding: artifact_index_sha256",
+      "status": "pass"
+    },
+    {
+      "check": "approval binding: execution_approval_sha256",
+      "status": "pass"
+    },
+    {
+      "check": "approval binding: execution_receipt_sha256",
+      "status": "pass"
+    },
+    {
+      "check": "approval binding: original_verification_sha256",
+      "status": "pass"
+    },
+    {
+      "check": "current approved verification protocol",
+      "status": "pass"
+    },
+    {
+      "check": "verification binding: verification_protocol_sha256",
+      "status": "pass"
+    },
+    {
+      "check": "verification binding: execution_protocol_sha256",
+      "status": "pass"
+    },
+    {
+      "check": "verification binding: artifact_index_sha256",
+      "status": "pass"
+    },
+    {
+      "check": "verification binding: original_verification_sha256",
+      "status": "pass"
+    },
+    {
+      "check": "verification binds approved receipt",
+      "status": "pass"
+    },
+    {
+      "check": "verification binds controls",
+      "status": "pass"
+    },
+    {
+      "check": "34 revised controls pass without skips",
+      "status": "pass"
+    },
+    {
+      "check": "retained-output verification passes",
+      "status": "pass"
+    },
+    {
+      "check": "complete original run, before approved revalidation",
+      "status": "pass"
+    },
+    {
+      "check": "original HOLD remains historical",
+      "status": "pass"
+    },
+    {
+      "check": "original delivered bytes: RUN_APPROVAL.json",
+      "status": "pass"
+    },
+    {
+      "check": "original delivered bytes: cells.json",
+      "status": "pass"
+    },
+    {
+      "check": "original delivered bytes: config.json",
+      "status": "pass"
+    },
+    {
+      "check": "original delivered bytes: execution.json",
+      "status": "pass"
+    },
+    {
+      "check": "original delivered bytes: manifest.json",
+      "status": "pass"
+    },
+    {
+      "check": "original delivered bytes: summary.csv",
+      "status": "pass"
+    },
+    {
+      "check": "original delivered bytes: paired-differences.csv",
+      "status": "pass"
+    },
+    {
+      "check": "transferred per-seed summary matches original hash and size",
+      "status": "pass"
+    },
+    {
+      "check": "approved scientific parameters",
+      "status": "pass"
+    },
+    {
+      "check": "990 saved cells exactly match approved grid",
+      "status": "pass"
+    },
+    {
+      "check": "29700 unique successful seed/cell records",
+      "status": "pass"
+    },
+    {
+      "check": "every record matches its approved scenario and suite",
+      "status": "pass"
+    },
+    {
+      "check": "independently reproduced exact fields and multiplicities: summary.csv",
+      "status": "pass"
+    },
+    {
+      "check": "independently reproduced exact fields and multiplicities: paired-differences.csv",
+      "status": "pass"
+    },
+    {
+      "check": "conformance approval exact snapshot",
+      "status": "pass"
+    },
+    {
+      "check": "conformance separately approved at exact runbook",
+      "status": "pass"
+    },
+    {
+      "check": "version report and source review snapshots",
+      "status": "pass"
+    },
+    {
+      "check": "actual public commit and both reported binary hashes",
+      "status": "pass"
+    },
+    {
+      "check": "exact eight-case order",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: fresh setup and only approved metadata differences",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: initial source and role identities match retained setup",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: exact initial source content",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: before_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: after_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: pre-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: after-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: no actor notice in clean case",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 01: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: pre-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: after-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: no actor notice in clean case",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r1: 02: unedited repeat and no extra notices",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: fresh setup and only approved metadata differences",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: initial source and role identities match retained setup",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: exact initial source content",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: before_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: after_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: c git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: pre-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: after-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: no actor notice in clean case",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 01: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: c git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: pre-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: after-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: no actor notice in clean case",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r1: 02: unedited repeat and no extra notices",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: fresh setup and only approved metadata differences",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: initial source and role identities match retained setup",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: exact initial source content",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: before_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: after_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: pre-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: after-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: first blocked role notice and delivery-skipped",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 01: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: pre-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: after-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: first blocked role notice and delivery-skipped",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r1: 02: unedited repeat and no extra notices",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: fresh setup and only approved metadata differences",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: initial source and role identities match retained setup",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: exact initial source content",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: before_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: after_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: c git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: pre-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: after-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: first blocked role notice and delivery-skipped",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 01: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: c git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: pre-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: after-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: first blocked role notice and delivery-skipped",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r1: 02: unedited repeat and no extra notices",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: fresh setup and only approved metadata differences",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: initial source and role identities match retained setup",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: exact initial source content",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: before_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: after_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: pre-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: after-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: no actor notice in clean case",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 01: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: pre-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: after-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: no actor notice in clean case",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "single-clean-r2: 02: unedited repeat and no extra notices",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: fresh setup and only approved metadata differences",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: initial source and role identities match retained setup",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: exact initial source content",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: before_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: after_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: c git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: pre-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: after-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: no actor notice in clean case",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 01: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: c git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: pre-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: after-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: no actor notice in clean case",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-clean-r2: 02: unedited repeat and no extra notices",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: fresh setup and only approved metadata differences",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: initial source and role identities match retained setup",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: exact initial source content",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: before_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: after_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: pre-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: after-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: first blocked role notice and delivery-skipped",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 01: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: pre-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: after-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: first blocked role notice and delivery-skipped",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "one-conflict-r2: 02: unedited repeat and no extra notices",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: fresh setup and only approved metadata differences",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: initial source and role identities match retained setup",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: exact initial source content",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: before_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: after_reload retained Git and identity state",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: c git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: pre-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: after-01 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: first blocked role notice and delivery-skipped",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 01: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: request within observation timeout",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: native sync receipt, transport and fixed counts",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: summary agrees with native receipt",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: clean source and all expected file contents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: source ancestry and count",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: a git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: b git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: c git state and identity",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: pre-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: after-02 stable disabled roles and metadata",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: only intended request files, empty queues",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: unique actor events with only expected intents",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: first blocked role notice and delivery-skipped",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: all supplied assertions observable and passing",
+      "status": "pass"
+    },
+    {
+      "check": "multiple-conflicts-r2: 02: unedited repeat and no extra notices",
+      "status": "pass"
+    },
+    {
+      "check": "16 distinct requests after verification, no request overlap",
+      "status": "pass"
+    }
+  ],
+  "checks_passed": 297,
+  "checks_total": 297,
+  "conformance": {
+    "cases": 8,
+    "distinct_requests": 16,
+    "public_commit": "75eb8fda2b1040c0f1822e0403321a105fec4f6c"
+  },
+  "delivery_sha256": {
+    "deliverables/conformance-01/CONFORMANCE_APPROVAL.json": "e229637f4316b358d95922091e094c8a4294ebf763051323dca83bb7ed1ed299",
+    "deliverables/conformance-01/CONFORMANCE_REPORT.md": "59d1c328af58b2cf41c9182fe3f13b8ec5bc712ed44f50fda8da9a97f97a1625",
+    "deliverables/conformance-01/conformance-review-m1.json": "3b95e480623c0132883a2385e9fa7794a0f0cde911770ace9d03a952b82b3483",
+    "deliverables/conformance-01/conformance-version-m4.json": "09a92e703f03063c7a46c7214e7ee6f54f8039b3831933b4321f5fc2af580547",
+    "deliverables/conformance-01/environment-check.json": "cdb5541ccc1c1973687a7c80a65792ed765b988627c8ff690d35efc408690dc4",
+    "deliverables/conformance-01/multiple-clean-r1/actor-events-01.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "deliverables/conformance-01/multiple-clean-r1/actor-events-02.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "deliverables/conformance-01/multiple-clean-r1/after-01.json": "575906be092886960fb694c9036828a877ed83b40a536f925b5562e4d9f78835",
+    "deliverables/conformance-01/multiple-clean-r1/after-02.json": "e34e3018e96bc08524e56dd81e92ddaf299850315ad57ffe94122993910353df",
+    "deliverables/conformance-01/multiple-clean-r1/assertions-01.json": "6b6914a32196e6a1f1f9529621c2623cbcf78998f95d811fe90ea9a96fda9300",
+    "deliverables/conformance-01/multiple-clean-r1/assertions-02.json": "37b4092f6d1966b916d87c4a84b4310ed5014f0853dcccaec53a8a68b4a031dd",
+    "deliverables/conformance-01/multiple-clean-r1/evidence-01.json": "94572c29a14ac6ef4b6c663c6a29c6c9546aaf4da894feee85078b2ee913c78e",
+    "deliverables/conformance-01/multiple-clean-r1/evidence-02.json": "fe0895c030bf742d7f9293c8f1ccb02a67a784fa127fb89753e45a726400ab41",
+    "deliverables/conformance-01/multiple-clean-r1/pre-01.json": "c5be8dcd3dddf1a1c699c2576e619663955e41e800e5fb1a6ccc8fa92a390449",
+    "deliverables/conformance-01/multiple-clean-r1/pre-02.json": "3d343843af689c5f385ef4edfa13bce7b74f3241b438b530143d2ff450901733",
+    "deliverables/conformance-01/multiple-clean-r1/request-01.json": "cc130ce19e8de5c4bfaba813c0792fba76b0f47f7f344e3844066617c3d0d17f",
+    "deliverables/conformance-01/multiple-clean-r1/request-02.json": "083dae2defa54c04a214c8d8044968a5b8cc47a0911cb647d611b3ec90722283",
+    "deliverables/conformance-01/multiple-clean-r1/response-01.json": "313450e3cdd96d4092bae5e1e278fd9edbabb88518218e7676bfbee99912453e",
+    "deliverables/conformance-01/multiple-clean-r1/response-02.json": "fb16c1d759723c8ef2e3f7ee2d7b04b395dc30f68288f81cc6e6a8d2d063ea8e",
+    "deliverables/conformance-01/multiple-clean-r1/setup.json": "ba381254d1b685b77c35040448f06ca465834c96b7719d25d0c6b8d8b48062b6",
+    "deliverables/conformance-01/multiple-clean-r2/actor-events-01.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "deliverables/conformance-01/multiple-clean-r2/actor-events-02.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "deliverables/conformance-01/multiple-clean-r2/after-01.json": "0b9549474f666c56c39fa30d8765c3055fd729f9f1a82dd1727cfe91c2ffd439",
+    "deliverables/conformance-01/multiple-clean-r2/after-02.json": "f37aad359447d68d90a81530a6b616211fbe3187e44ca3ee23fe472d66e80b99",
+    "deliverables/conformance-01/multiple-clean-r2/assertions-01.json": "007b1fa04d8fbaee2589e833db012232685fbde84b83508511c5bc1131a74540",
+    "deliverables/conformance-01/multiple-clean-r2/assertions-02.json": "14719171f418405759ec06732f65aba4578ec5385ed0bbc8dc77bf6e478ed6c2",
+    "deliverables/conformance-01/multiple-clean-r2/evidence-01.json": "6adae3f9bae694e39912c1f2c9569e102085c9443a75a2d01e82563bac670d98",
+    "deliverables/conformance-01/multiple-clean-r2/evidence-02.json": "eb987c9b94d064329c3973d34c5a577b76f598eba40116feff47b674cf7e4464",
+    "deliverables/conformance-01/multiple-clean-r2/pre-01.json": "9845e5537d6723c69e02016ab70e343c76e5f2fd40a6b5cecd4c7915d7d3a641",
+    "deliverables/conformance-01/multiple-clean-r2/pre-02.json": "2b535027c8963224eb6ee03caef6992379439d63c90019f2eec8731709baf1d2",
+    "deliverables/conformance-01/multiple-clean-r2/request-01.json": "2bf3abd2f2da242f86e0ec99b429bf57f9bdef4d671a1655109cb5eec2645fca",
+    "deliverables/conformance-01/multiple-clean-r2/request-02.json": "ef0fc939ff5ce583ad9eb14986d4ab2e2e692b49aebea916e3a50878c19b2c78",
+    "deliverables/conformance-01/multiple-clean-r2/response-01.json": "c10c2590da7f3b207eb38286817d5c5ecefd3078a97e37a0788ba9b2269fb4ed",
+    "deliverables/conformance-01/multiple-clean-r2/response-02.json": "c0cc995d1f4f97b4fb996d7151ca80f1bd4f20bf148e6e3c0b9a2f46d6524a1c",
+    "deliverables/conformance-01/multiple-clean-r2/setup.json": "9a6378c95e435ce8e1c3b8eb279199bd6d05bdf6da11d91ed3e2550774c83fe7",
+    "deliverables/conformance-01/multiple-conflicts-r1/actor-events-01.json": "73e8558d85dddda5e66c3cc59ee942ea32cc6afc79af82965e9286ba2f434fa0",
+    "deliverables/conformance-01/multiple-conflicts-r1/actor-events-02.json": "73e8558d85dddda5e66c3cc59ee942ea32cc6afc79af82965e9286ba2f434fa0",
+    "deliverables/conformance-01/multiple-conflicts-r1/after-01.json": "c6be649eab394228e35350275fa6be3c567df4b06d484ad2f5e5b68425fbf51b",
+    "deliverables/conformance-01/multiple-conflicts-r1/after-02.json": "b7adbc989c00c32928d20d2da78dce7dac219333471f8cc3fe2750cf1468d842",
+    "deliverables/conformance-01/multiple-conflicts-r1/assertions-01.json": "7e9f6135827bef9d393ba33994321d995eebcd9d6fbed5f0e026729863ff3906",
+    "deliverables/conformance-01/multiple-conflicts-r1/assertions-02.json": "b5ad0d9d189b52722ca774ede49a1e141437f52aa13a51367b8463c3197b3fcd",
+    "deliverables/conformance-01/multiple-conflicts-r1/evidence-01.json": "106c21824894484a8729523aaed6b5407ddd9d67cb024a05d9f9ca331e77857d",
+    "deliverables/conformance-01/multiple-conflicts-r1/evidence-02.json": "66a7524d1af5e9ea478aaa3ffc5b809dc93577cf3abd357412a634939a0bbfd5",
+    "deliverables/conformance-01/multiple-conflicts-r1/pre-01.json": "776e104e894da6e544359160d6ce0a1c8aeaabe92ff2f912453a1b20423b7386",
+    "deliverables/conformance-01/multiple-conflicts-r1/pre-02.json": "2f3b45f0c64336dac3d01bca1c252287decc69ea6db1cb7f1940d9a16e526d64",
+    "deliverables/conformance-01/multiple-conflicts-r1/request-01.json": "bd4d9a027bbec9b329afdbb209d76d182203515c191190d1f5d7b11a7052a087",
+    "deliverables/conformance-01/multiple-conflicts-r1/request-02.json": "a0c19042d4272bd1242d49ba7aa5689d7357f13c49a9677a1922bdb91bccdd75",
+    "deliverables/conformance-01/multiple-conflicts-r1/response-01.json": "0dab4557df121d039ec5477c6d46e9dcca52b793c1085bdcd3d86378df9cdf7e",
+    "deliverables/conformance-01/multiple-conflicts-r1/response-02.json": "f6fc5111e78653558e46cb78fdd4c94ebe11fe204c45d37e6540f27c55c1f99f",
+    "deliverables/conformance-01/multiple-conflicts-r1/setup.json": "149d38876f3b32bef76af62a2d2d161b552e8f0b64cffca97d3436d6e9499ee8",
+    "deliverables/conformance-01/multiple-conflicts-r2/actor-events-01.json": "0b8972a0acefc74332990ced9a97c5c99b262f254f1b6138a141a0d4fb8afeab",
+    "deliverables/conformance-01/multiple-conflicts-r2/actor-events-02.json": "0b8972a0acefc74332990ced9a97c5c99b262f254f1b6138a141a0d4fb8afeab",
+    "deliverables/conformance-01/multiple-conflicts-r2/after-01.json": "e4c329e7b6bd012da1f33b5f48be7cdff059e560b17fa0a3d8173abcff66cc38",
+    "deliverables/conformance-01/multiple-conflicts-r2/after-02.json": "ec7e752c2eeae00f20f27ffd1ef3af706769833d5335eda09d391359e6ffd457",
+    "deliverables/conformance-01/multiple-conflicts-r2/assertions-01.json": "a82aed0cf5092521d660d0e727f9f2beebab9871464471caf748709a979a062d",
+    "deliverables/conformance-01/multiple-conflicts-r2/assertions-02.json": "45d79eb07f945a2fc9b24f9c8be385a06d8bc82411945959dad0d34739c23f88",
+    "deliverables/conformance-01/multiple-conflicts-r2/evidence-01.json": "012f20c7c225b206364470d4cc51840553c378e509e909767949085c2256dbea",
+    "deliverables/conformance-01/multiple-conflicts-r2/evidence-02.json": "7c82f2946c831a4828581af0198fd2881f67554140ad701aaa6d684a2472c82c",
+    "deliverables/conformance-01/multiple-conflicts-r2/pre-01.json": "498a684c1a50c83e258ad9dea47fd4243863881e31d1e824f2e2416176261c80",
+    "deliverables/conformance-01/multiple-conflicts-r2/pre-02.json": "f83690c705620a182130106c3da98244613a2b1a7438621e72cc01bf2a45a2af",
+    "deliverables/conformance-01/multiple-conflicts-r2/request-01.json": "79a30a538231df1791cd62f02037c822bcdca1207a251a5143b1d02e972b23ed",
+    "deliverables/conformance-01/multiple-conflicts-r2/request-02.json": "b3f758f7a963df8e8aa8fc094adec50b2a92b3a8f722855bc3801578460eece4",
+    "deliverables/conformance-01/multiple-conflicts-r2/response-01.json": "539f493611880086a3e8a68f64036056f4ba0c1dd7f92dbf95a41d5d1dbf75e4",
+    "deliverables/conformance-01/multiple-conflicts-r2/response-02.json": "184d17db860d931e996e398ad4d415eeda7c701160388ff24ae9eb0f5fb84fde",
+    "deliverables/conformance-01/multiple-conflicts-r2/setup.json": "0fa82593688af4531159b4bf17360df2b725317d3d6db323fa8f76662d1d14de",
+    "deliverables/conformance-01/one-conflict-r1/actor-events-01.json": "6ae1f31871a858da402dd2fbb66e582153289ae633fffab4afcfa58d95a62c67",
+    "deliverables/conformance-01/one-conflict-r1/actor-events-02.json": "6ae1f31871a858da402dd2fbb66e582153289ae633fffab4afcfa58d95a62c67",
+    "deliverables/conformance-01/one-conflict-r1/after-01.json": "5dc4649dd2dc7af4ccf4ee310225f2fff900045f4987593f511d823c41136603",
+    "deliverables/conformance-01/one-conflict-r1/after-02.json": "88bdfe019c620e0552b1686d3db1d22a41867b6d93ffb159eb0bb1a327061405",
+    "deliverables/conformance-01/one-conflict-r1/assertions-01.json": "69536906f3dae42bf0d8a06f0f5bf887efc1df2075440f906fbd3ed3c59c832d",
+    "deliverables/conformance-01/one-conflict-r1/assertions-02.json": "9520df616e9ec4eb4a178ff0c8b5034737cfedf2a85263f1c5a12d3aa83f834f",
+    "deliverables/conformance-01/one-conflict-r1/evidence-01.json": "92a3653070ed3deeb78d63fe77142446430fda5fcce9122b3889eddee2581baf",
+    "deliverables/conformance-01/one-conflict-r1/evidence-02.json": "ed7647d3bf54cd50af40576263d898fce62b18285a0e5bb52e0dabee99e2052f",
+    "deliverables/conformance-01/one-conflict-r1/pre-01.json": "d6694579fd6c203138d5acea66c92ed3554fb954dfe8ca63fd7f78c6a49862bf",
+    "deliverables/conformance-01/one-conflict-r1/pre-02.json": "0c94547cd77f2917cf57ded666c3aaa84ebc4a2b31f2fb81e612458e8cf5f0b7",
+    "deliverables/conformance-01/one-conflict-r1/request-01.json": "ecdbbf2672a013cb1a9f366f09774713a9cb4cf98a08e9a8b4774ed79a3023b4",
+    "deliverables/conformance-01/one-conflict-r1/request-02.json": "e62b5d4815da6fb2921e55c67f522c37c7f5b70d3f3632ac8d20c4e8ca7265f2",
+    "deliverables/conformance-01/one-conflict-r1/response-01.json": "9d7696323f471ff9e157b786cd6c60e7e5e01459e585873967c2addcf10153f4",
+    "deliverables/conformance-01/one-conflict-r1/response-02.json": "539c71440111b78f0bf2a961e2af7566df90bae482301e434802b632f9e868cb",
+    "deliverables/conformance-01/one-conflict-r1/setup.json": "54a4aa09795821e0967f671e0f4afa3adbaf74e9c9f9b7f4e04a23eb020cd850",
+    "deliverables/conformance-01/one-conflict-r2/actor-events-01.json": "c319b32e13db13782b205ce0e61678c33f8a560a2bdd9cc212a9900650e387be",
+    "deliverables/conformance-01/one-conflict-r2/actor-events-02.json": "c319b32e13db13782b205ce0e61678c33f8a560a2bdd9cc212a9900650e387be",
+    "deliverables/conformance-01/one-conflict-r2/after-01.json": "cb6a9bf4c2a723038e4b4fc710a82c561261ba7363c8f2537f4af7e9e5da5dbf",
+    "deliverables/conformance-01/one-conflict-r2/after-02.json": "5fdc76c1fbc91bc1e8daba42d429c60732dc33de9ed4dde79c6154cac4d37cec",
+    "deliverables/conformance-01/one-conflict-r2/assertions-01.json": "c37279cdd9031ae17efd48f4df73b006266c276ed86008d08658b8a7d97d8211",
+    "deliverables/conformance-01/one-conflict-r2/assertions-02.json": "df390f08718f30bd90db7a8f71d0390dc9975158473ef1373032e6f87fc567db",
+    "deliverables/conformance-01/one-conflict-r2/evidence-01.json": "8dc6f37c4c3f4ae9b42a0cefba2052bb00ab064fadab50f2515a1d6d22f926aa",
+    "deliverables/conformance-01/one-conflict-r2/evidence-02.json": "628bccb171450a905c224ed2f1f11d4a49b86d1d28a2430896136a0f26edf692",
+    "deliverables/conformance-01/one-conflict-r2/pre-01.json": "bb640144f658e060d0e2917ca6259abc804fcc4bd31bb5d0d0fe8c945e9df7cf",
+    "deliverables/conformance-01/one-conflict-r2/pre-02.json": "2a82f9d671b9705c8e26f6b2214cdc067477975eea4b040fad49a0699f57a88e",
+    "deliverables/conformance-01/one-conflict-r2/request-01.json": "9aeaccf51baad4f3910527fe10fd76683b48c7f617ad86e2263c174bfae79502",
+    "deliverables/conformance-01/one-conflict-r2/request-02.json": "18385e165d202654ef61c5f17e66336c5c098a7b7d5424a414a219ab9f83d013",
+    "deliverables/conformance-01/one-conflict-r2/response-01.json": "a0d238221c9296047379a1f7600419bd2441eabdc82dc10d85723eac9ea86183",
+    "deliverables/conformance-01/one-conflict-r2/response-02.json": "8032cb871de510d0717a56275e5ddbaf552435533e36d850ab1ff399f8959fed",
+    "deliverables/conformance-01/one-conflict-r2/setup.json": "78a794d7f6d11ef3a1bd8e2db989663604e4d6253c3cab821a9316337ffc2e4b",
+    "deliverables/conformance-01/scheduler-state.json": "0876a72b44e16f4245b0fe9a9f2a9984b75eef61cf02da2ae5a7cff152c774ba",
+    "deliverables/conformance-01/single-clean-r1/actor-events-01.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "deliverables/conformance-01/single-clean-r1/actor-events-02.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "deliverables/conformance-01/single-clean-r1/after-01.json": "c4696e484f8e9292921b4261e42664dc103354cdd5bc71e26a82e9746f1494d1",
+    "deliverables/conformance-01/single-clean-r1/after-02.json": "e574630131e943499d29ee1ec21a28fdbad086d0c21e211ed4972f3c5222c6a8",
+    "deliverables/conformance-01/single-clean-r1/assertions-01.json": "189727bc7f1b1ce1ef7122e30ae7d2274970a34ac2d9343565e43ea7c4a94642",
+    "deliverables/conformance-01/single-clean-r1/assertions-02.json": "62e427764b4c9c6f2e9972acaaf970b21270879d1d790cece05efa1bf5189b7e",
+    "deliverables/conformance-01/single-clean-r1/evidence-01.json": "4acafe3abe99b57a1b713b9cf51f11ee645b2de56671475f3eb46979a92e9886",
+    "deliverables/conformance-01/single-clean-r1/evidence-02.json": "826c835036d808879993e2364b77ef13540b82d9513c367f11003214c324292c",
+    "deliverables/conformance-01/single-clean-r1/pre-01.json": "867f309e984d04f6ab932c5550b62a1de823a873cac4a69829406b1ed6ae7181",
+    "deliverables/conformance-01/single-clean-r1/pre-02.json": "63c67fb890f392c86dd0c2b6794ce4db57bfa77cb5cba601dcf1a1c8028325bd",
+    "deliverables/conformance-01/single-clean-r1/request-01.json": "f775b218a1b3fab4e3a1fe6cda72a3109c732eded65c2b2c96f1c6f2acec287a",
+    "deliverables/conformance-01/single-clean-r1/request-02.json": "a0054e96169723a45ea705120a17af9dcf25ebd3f7a80453fb5db2128a5c1bbd",
+    "deliverables/conformance-01/single-clean-r1/response-01.json": "94868fce90f0c298923a28479603bef42fb49b6a0d499d602113150217f2ad0f",
+    "deliverables/conformance-01/single-clean-r1/response-02.json": "bab3581da15de2318e2b04614981303a1d38058abd7063544c260438005b6cfd",
+    "deliverables/conformance-01/single-clean-r1/setup.json": "7d8353ca08d95bc70769c9dc5b6047a21db029e00ea95d45dce4f9cab0aca6c0",
+    "deliverables/conformance-01/single-clean-r2/actor-events-01.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "deliverables/conformance-01/single-clean-r2/actor-events-02.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "deliverables/conformance-01/single-clean-r2/after-01.json": "02a95a8484b508ef4f490f09c9ae2727bbd5ea4266a3c3f51050152b1929e1ef",
+    "deliverables/conformance-01/single-clean-r2/after-02.json": "18771e83a72e511939e8ec9e2b189c53ec928045394afc8cc055fafe7357ac33",
+    "deliverables/conformance-01/single-clean-r2/assertions-01.json": "d7200b459f4eeaf1bcd890ae0af75b016606af65f94c6689b60deaaa4cd47a8e",
+    "deliverables/conformance-01/single-clean-r2/assertions-02.json": "ecc9e63d60a026db3fcc008f4f2409403e00430e09be75bea68758b850f73b71",
+    "deliverables/conformance-01/single-clean-r2/evidence-01.json": "0e148c1814f364e7836a5297999df22f27598af520f90940419e7a89fcae59e2",
+    "deliverables/conformance-01/single-clean-r2/evidence-02.json": "4264195c4445c8b41632f3719e508f0a6ba9b9d687995596725ade7224513b39",
+    "deliverables/conformance-01/single-clean-r2/pre-01.json": "182c613fc87df07a0057fbd43b3d977dcd1822ba9a6189636c94cd96233f5864",
+    "deliverables/conformance-01/single-clean-r2/pre-02.json": "26d29740f12f06c74758b716aa5ec7f9866c7e17ee81ccb9d6de0a30000c2a96",
+    "deliverables/conformance-01/single-clean-r2/request-01.json": "0cc5ef23f1e0b3d0b44ea67d554bea08febf2f9b5b840ae8cc7b2a8df888c165",
+    "deliverables/conformance-01/single-clean-r2/request-02.json": "0a3025fd4f0fe049cd44a753ce55e101f358a2ecade8b08fea994f24bad7dbdc",
+    "deliverables/conformance-01/single-clean-r2/response-01.json": "45ee0a6ea6bb3965778cb3b33fccef70c5808b52390d7360b86de34f6b659f1b",
+    "deliverables/conformance-01/single-clean-r2/response-02.json": "698d8beeff10b89d49b09cb7e39c3279c3ba676384615fe4727186ff9cb9b7b5",
+    "deliverables/conformance-01/single-clean-r2/setup.json": "3880aa9c73cbd076d8e699b794495cc88fb69f8a2f58877a0bef84dfda334930",
+    "deliverables/conformance-01/summary.csv": "1fc1291c1e49cc2b92c31ef952abc6a56f12e5f4a056d94b79f70bef0732dfb7",
+    "deliverables/study-01/RUN_APPROVAL.json": "9ed6604c4df2958eaa340f4e4760c804d1cc32ac6a540ede2f627dbb1c278075",
+    "deliverables/study-01/RUN_REPORT.md": "0961b918a7e7e225281e3b541fcc0d8152303901b619c85dbb13bdaa338108d1",
+    "deliverables/study-01/artifact-index.json": "8d88dbe050a3d9428e4cd0720c429cbed9a67734de64ff5eac0992f41d8ffa70",
+    "deliverables/study-01/cells.json": "086034341ac0f852c2a6fcb69ec68e2113652b7c74c62a48ad7ff7f71f98ef48",
+    "deliverables/study-01/config.json": "daa128c596a52cf2f91b690b87d7004e305a54c6b0c504e666453e1c09956542",
+    "deliverables/study-01/diagnostics/summaries.jsonl.gz": "2a5e212a174c6527ec30936e57fb27ee520c9fd7c7ae8838035a63a79b5c6e39",
+    "deliverables/study-01/execution.json": "0b61a48b47a62dc35002e473ae75a7bf2053522b63a8fdf981b1db4b74aed46b",
+    "deliverables/study-01/manifest.json": "c6fc456d870436d1f8bc372da850122018def2a433ee26ec057575c58189089c",
+    "deliverables/study-01/paired-differences.csv": "e703f0a7cacdbf4b7f38a82fbb83ed6fd9dd96096495be52ec6208b842327056",
+    "deliverables/study-01/rechecks/verify-02/REVALIDATION_APPROVAL.json": "826ec383a99f9a7ddce58786e9077b1a41619fd3f46e0394330d89d9c655a72a",
+    "deliverables/study-01/rechecks/verify-02/REVALIDATION_REPORT.md": "da14ab1d61057a650fb764fa113b1b6c46d45ce0ec313ce7fc9cd10db38e2534",
+    "deliverables/study-01/rechecks/verify-02/verification.json": "bcb21b8e7883a97f887792df532a9de9e6bbdfa8eb35017e87dd1ae6affcfeb6",
+    "deliverables/study-01/summary.csv": "5209b6b2f833ff958bc9320af9d577cef3453eb94ff185822028da80be7e5505",
+    "deliverables/study-01/verification.json": "367c3f5f68a191044e7da2e3776ac4b85521e9c5a5d5daf5049e184f219f8141"
+  },
+  "issues": [],
+  "limits": [
+    "M1 independently verified delivered summaries and projected observations; original raw run/flow archives and native fixture originals remain on the execution machine.",
+    "Raw-file identity is evidenced by the separately approved execution-machine revalidation, not by rehashing the archive on M1.",
+    "Conformance covers four fixed cases repeated twice and the unedited second sync, with disabled providers; not real-agent delivery/repair, internal pass count, performance or full worktree atomicity.",
+    "Binary/source binding is release-distribution provenance, not an independently reproducible build."
+  ],
+  "reviewed_at": "2026-09-09T19:06:39.677887+00:00",
+  "reviewer_role": "study maintainer",
+  "schema_version": 1,
+  "status": "accepted",
+  "study": {
+    "cells": 990,
+    "paired_rows": 11010,
+    "records": 29700,
+    "summary_rows": 34650
+  }
+}

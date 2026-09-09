@@ -4,20 +4,23 @@ Maintainers add one dated response for each question id, commit on
 `simulation-pilot`, and push. The execution agent fetches and merges that branch
 before acting. Neither silence nor a technical answer constitutes run approval.
 
-Current state, 2026-09-09 UTC: `study-01` completed on the owner-approved Apple M3
-machine, but its first collection remains HOLD. `RUN_APPROVAL.json` preserves
-the original execution approval. The revised verifier requires the separate
-`REVALIDATION_APPROVAL.json`, now approved for `verify-02`; it does not authorize a new
-simulation. Application observations are independently approved in
-`CONFORMANCE_APPROVAL.json` under the latest Q-20260909-03 response below.
+Current state, 2026-09-09 19:06 UTC: **both deliveries are accepted by the
+study maintainer**. `study-01` passed approved collect-only `verify-02`;
+`conformance-01` passed its four fixed cases, two repetitions and sixteen
+requests. The original HOLD remains a historical record. Execution is closed;
+the runner stops this run's polling and does not renew it. Preserve the raw
+archive and fixture originals. Analysis is now a maintainer responsibility.
+The dated acceptance and scope limits are below; no further simulation,
+collection, fixture request or cleanup is authorized by acceptance.
 
 Initial timing instruction, superseded by the owner's immediate-start decision
 recorded in Q-20260909-01 at 2026-09-09T07:28:41Z: the study owner schedules the formal
 M4 scan for the evening of **2026-09-09, America/Los_Angeles**. Environment setup,
 controls, and the cross-machine check may be prepared earlier; do not start the
 formal scan before that evening. All execution gates still apply. Maintainer
-question polling starts at **2026-09-09 20:00 America/Los_Angeles** and continues
-every two hours. This schedule does not approve application conformance.
+question polling was planned to start at **2026-09-09 20:00 America/Los_Angeles**
+and continue every two hours. That future task was cancelled when both
+deliveries were accepted. This historical schedule is no longer active.
 
 Entry format:
 
@@ -181,3 +184,67 @@ original simulation parameters, model and execution approval remain unchanged.
 Approval recorded: The study owner approved the collect-only revalidation `verify-02`. `REVALIDATION_APPROVAL.json` now reads `approved`, signed by `study owner` at 2026-09-09T17:57:31+00:00; all other binding fields are unchanged. Fetch and merge `origin/simulation-pilot`, then follow the commands and checkpoints above. The scientific simulation is not rerun, and the results remain HOLD until revalidation returns PASS and the maintainers accept the delivery.
 Affected files: `REVALIDATION_APPROVAL.json`.
 Approval impact: collect-only revalidation approved; original execution approval and parameters unchanged.
+
+## Q-20260909-05 | 2026-09-09T19:06:41Z
+Answer (formal acceptance): **ACCEPT `study-01` / `verify-02`.** The delivered
+revalidation has no issues, records 29,700 successful retained run files and
+300 flows, and verifies every original file against the first inventory. Its
+approval, execution receipt, original approval/HOLD, inventory, new protocol and
+34 passing controls match the approved bindings. It ran from 18:14:22 through
+18:19:30 UTC, wall time 307.707 seconds, without a simulation rerun.
+
+M1 independently checked the compressed diagnostic transfer against the original
+uncompressed hash and size, all 990 approved cells and all 29,700 unique
+cell/seed records. Reapplying the unchanged summary function reproduces all
+34,650 summary rows and 11,010 paired rows with exact headers, field strings
+and multiplicities. Both original CSV hashes are unchanged. The original HOLD
+and its report remain untouched; this accepted revalidation is the current
+verification conclusion. The data may now enter maintainer analysis.
+
+Evidence: `validation/review_delivery.py` and
+`validation/delivery-acceptance-m1.json` (297 checks across both deliveries,
+all passing). The script performs read-only verification, never simulation.
+M1 verified the transferred summaries, not the multi-part raw archive itself;
+raw run/flow identity rests on the approved execution-machine revalidation.
+Retain that archive and its recorded hashes for release. This is data acceptance,
+not a claim about any scientific hypothesis or publication approval.
+Affected files: `ANSWERS.md`, `validation/review_delivery.py`,
+`validation/delivery-acceptance-m1.json`.
+Approval impact: existing approvals unchanged; accepted execution closed.
+
+## Q-20260909-03 | 2026-09-09T19:06:41Z
+Answer (formal acceptance): **ACCEPT `conformance-01` within the fixed scope.**
+The four cases, each repeated in a fresh fixture, and all sixteen distinct
+requests pass independent review of the delivered projections. The review
+checks unchanged pre/post loading Git and role identities, permitted metadata
+changes only, source content and commit ancestry, clean/blocked role states,
+native receipt/request matching, conflict order, first-role notice binding,
+and unchanged second-sync state with no duplicate notice. All requests occurred
+after revalidation and sequentially. Version and approval snapshots are bound
+to v0.1.10, public commit `75eb8fda2b1040c0f1822e0403321a105fec4f6c`.
+
+The observations support the documented routing/recording assertions with
+`conformance-disabled` providers. They do not demonstrate delivery to a real
+repair agent, successful author repair, internal pass counts, full worktree
+atomicity, performance or wider scenario coverage. M1 reviewed technical
+projections with retained-original hashes; native fixture originals remain on
+the execution machine. The binary/source binding is release-distribution
+provenance, not an independent reproducible build. These limits are retained in
+the acceptance record and must remain in the paper.
+Affected files: `ANSWERS.md`, `validation/delivery-acceptance-m1.json`.
+Approval impact: independent observation accepted and closed; no more requests.
+
+## Q-20260909-02 | 2026-09-09T19:06:41Z
+Answer (execution closure): Both deliveries are accepted and Q-01 through Q-05
+are resolved by the dated answers. Stop this run's repository polling; do not
+renew or recreate it. On reading this closure, inspect your scheduler and cancel
+only the remaining task for this run's repository exchange, if it is still
+scheduled. Leave unrelated tasks unchanged. Record the observed cancellation or
+already-exhausted state once in QUESTIONS.md and push `run-m4`; no new polling
+series is needed. The maintainer's future polling task has been cancelled.
+
+Preserve the originals and fixtures. Acceptance does not authorize workspace
+removal, app restart or artifact cleanup. Analysis is performed by maintainers;
+the execution agent has no remaining calculation or interpretation work.
+Affected files: `ANSWERS.md`; runner acknowledgment in `QUESTIONS.md`.
+Approval impact: execution and its scheduled exchange closed by owner direction.
