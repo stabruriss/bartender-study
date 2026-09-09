@@ -63,8 +63,12 @@ it does not start a study run, fixture, or application sync. The study owner has
 been asked for specific permission to enable this alternative; none is recorded
 yet. No installer, research script, or existing scheduled task was modified.
 Scheduler status: BLOCKED; no recurring task installed. Next scheduled UTC check:
-unset until an approved scheduler is enabled. Initial manual check timing is
-recorded in the repository-exchange acknowledgment below after submission.
+unset until an approved scheduler is enabled. The initial post-submission manual
+exchange began at `2026-09-09T05:42:35Z`: generated records and questions were
+committed and pushed first, then fetch, neutral-identity merge, push, and
+`ANSWERS.md` inspection completed. `origin/simulation-pilot` was already merged;
+no responses to Q-20260909-01 through Q-20260909-03 were present. The scheduler
+list remained empty. This does not claim an automatic check is scheduled.
 Question: Is this launchd-to-Ember implementation acceptable for the required
 two-hour file exchange, or which supported scheduler procedure should be used?
 Acknowledgment: Awaiting the owner's specific permission and the maintainer
