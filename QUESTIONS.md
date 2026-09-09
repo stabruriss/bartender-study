@@ -668,3 +668,24 @@ in order. The original execution protocol remains `f7e0530b35d4aae962a2a60cf7c2e
 the approved verification protocol is `fce2615ee240633100a05d5c3c9f69eeff1c4f4a275668c5abf0081dc5bafc2d`.
 No simulation rerun, original-data repair, replacement CSV/archive, concurrent
 conformance request, or scientific acceptance is implied by this approval.
+
+Revalidation result | 2026-09-09T18:21:33Z: The owner explicitly directed
+immediate continuation without waiting for a reminder. The supplied fingerprints
+matched the approved verification protocol. The new generated controls record
+`validation/controls-m4-revalidation-01.json` reports `status=pass`, `tests_run=34`,
+and no failures, errors, or skips. The approved collect-only command then
+completed with exit code 0. Its generated
+`deliverables/study-01/rechecks/verify-02/verification.json` reports `status=pass`,
+`issues=[]`, `records_seen=29700`, `raw_run_files=29700`, `unique_flows=300`, and
+`raw_files_match_original_inventory=true`. It records
+`started_at=2026-09-09T18:14:22.677032+00:00` and
+`finished_at=2026-09-09T18:19:30.385972+00:00`.
+
+The new approval snapshot and REVALIDATION_REPORT.md are returned unchanged
+with that verification record and the controls. The original HOLD record and
+artifact index still match their approved hashes; the original summary content
+hash also remains unchanged. No original scientific file, report, archive, or
+CSV was replaced. Maintainer acceptance of this PASS delivery remains pending.
+No conformance observation overlapped collection. The actual app and bundled
+CLI hashes and version were rechecked afterward and match the independently
+approved conformance version report; the retained-fixture procedure may proceed.
