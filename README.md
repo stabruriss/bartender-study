@@ -36,6 +36,11 @@ The output directory must be new. The current draft is rejected before any outpu
 directory is created. Approval metadata records a decision; it is not proof of
 when a researcher first saw data. No command changes repository visibility.
 
+A separate [timing diagnostic](benchmarks/README.md) estimates the proposed full
+scan at roughly 5.8 hours on an M1 MacBook Air, with an 8–10 hour planning allowance.
+Its 90 reserved-seed invocations retain timing only, not scientific outcomes;
+they do not approve or replace the study runs.
+
 ## Proposed numerical plan
 
 Time is measured in units of one agent's mean inter-edit time. It is not a
