@@ -157,6 +157,14 @@ The owner was also asked whether to retain the documented evening start or
 explicitly move it earlier; no timing override is inferred from preparing the
 machine or scheduler. No formal scan or additional conformance action has begun.
 
+Post-restart scheduler check | 2026-09-09T07:38:10Z: The same native task now
+contains the complete reminder text. Ember attributes its update at
+`2026-09-09T07:27:27Z` to the human actor. Its execution target, first/next UTC
+time, 120-minute interval, five-run limit, and scheduled status remain unchanged.
+The runner has not modified this task. The owner's explicit five-run limit
+continues to govern despite the older unbounded wording in its text; no further
+text replacement is needed to repair the previously incomplete final sentence.
+
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
 Observed: `validation/conformance-version-m4.json` records the actual running
@@ -408,6 +416,23 @@ or scheduled task was changed. No app restart, sync, or formal scan was issued
 by the runner during this preparation. The continuation note separates the
 authorized simulation start after manual session recovery from the still-pending
 independent conformance approval.
+
+Owner-performed restart verified | 2026-09-09T07:38:10Z: The owner confirmed
+completion of the app restart and manually resumed the execution session.
+The running process identifies the same installed application bundle. All
+eight prepared fixtures now have Bartender outbox directories. Source/role
+HEADs, branches, indexes/worktrees, all tracked contents, operation markers,
+role order/mappings, identity files, and disabled provider files match their
+before-restart records. Workspace metadata has no changed keys in this
+comparison; the first fixture's earlier size-field change remains part of its
+retained history. No request files were present and no runner sync was issued.
+
+The separate after-restart snapshots are retained under ignored
+`local-logs/setup-probe/batch-after-owner-restart/`, with the original before
+records preserved. These are loading observations only. Independent conformance
+approval remains pending. The owner's immediate-start authorization now permits
+proceeding to the separately approved formal simulation after fresh preflight;
+no further app restart is needed for that command.
 
 ## Q-20260909-04 | 2026-09-09T07:06:16Z | OPEN
 Step: Owner-authorized single-fixture setup and application restart.
