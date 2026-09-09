@@ -85,6 +85,11 @@ of creating it. If it already exists locally, use `git switch run-m4` and
 `git pull --ff-only origin run-m4`. Never reset, force-push, or discard unknown
 edits. Do not create a second execution branch for the same run.
 
+Application sessions may inject Git author/committer environment variables that
+override repository config. For every commit, use the explicit four-variable
+identity prefix shown below; do not rely on `git config` alone. This applies to
+question commits as well as validation and delivery commits.
+
 ## 2. Prepare Python and run all control tests
 
 ```sh
@@ -122,7 +127,9 @@ the M1 values to create a candidate.
 PYTHONHASHSEED=0 .venv/bin/python handoff.py determinism --label m4 --output validation/determinism-m4.json
 PYTHONHASHSEED=0 .venv/bin/python handoff.py compare --output validation/determinism-comparison.json
 git add -- validation/environment-m4.json validation/controls-m4.json validation/determinism-m4.json validation/determinism-comparison.json
-git commit -m 'Record M4 controls and cross-machine determinism check'
+env GIT_AUTHOR_NAME='Study Runner' GIT_AUTHOR_EMAIL='study-runner@example.invalid' \
+    GIT_COMMITTER_NAME='Study Runner' GIT_COMMITTER_EMAIL='study-runner@example.invalid' \
+    git commit -m 'Record M4 controls and cross-machine determinism check'
 git push origin run-m4
 ```
 
@@ -242,7 +249,9 @@ cp deliverables/study-01/RUN_REPORT.md RUN_REPORT.md
 git add -- deliverables/study-01 RUN_REPORT.md
 git diff --cached --stat
 git diff --cached --check
-git commit -m 'Deliver complete study-01 execution records and archive hashes'
+env GIT_AUTHOR_NAME='Study Runner' GIT_AUTHOR_EMAIL='study-runner@example.invalid' \
+    GIT_COMMITTER_NAME='Study Runner' GIT_COMMITTER_EMAIL='study-runner@example.invalid' \
+    git commit -m 'Deliver complete study-01 execution records and archive hashes'
 git push origin run-m4
 ```
 
