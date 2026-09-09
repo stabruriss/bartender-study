@@ -177,6 +177,23 @@ commit, and check time are retained under ignored
 until execution/collection ends. No scheduler mutation, app sync, fixture action,
 restart, or additional study process was triggered by this reminder.
 
+Deferred exchange completed | 2026-09-09T09:38:36Z: Formal execution and
+collection have both ended; no study or conformance process is active. The
+pending reminder entry, Q-20260909-05, and reviewed HOLD delivery were committed
+in `3af1cfe`. The runner then fetched origin and ran the neutral-identity merge
+of `origin/simulation-pilot`, which was already up to date at `ca8b062`.
+ANSWERS.md still contains no dated responses to Q-20260909-01 through
+Q-20260909-05, and CONFORMANCE_APPROVAL.json remains pending. No answer has
+been inferred or acknowledged as approval. The current answer, remote commit,
+check time, and Ember snapshot are retained under ignored
+`local-logs/study-01-execution/post-collection-exchange/`.
+
+Ember still reports `status=scheduled`, `runCount=1`, no error, the unchanged
+120-minute interval and five-run cap, and next check
+`2026-09-09T10:20:07.633070Z`. No scheduler changes were made. Further scientific
+execution remains on HOLD pending the Q-20260909-05 disposition; fixture sync
+still requires the separate conformance approval.
+
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
 Observed: `validation/conformance-version-m4.json` records the actual running
