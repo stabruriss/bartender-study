@@ -211,6 +211,21 @@ schedule snapshot are retained under ignored `local-logs/study-01-execution/poll
 This exchange changed only the technical question record; no script, timer,
 experiment, fixture, sync, dummy provider, or application restart was triggered.
 
+Third recurring exchange | 2026-09-09T12:21:05Z: Both worktrees were clean and
+no simulation, collection, or conformance process was active. Fetch and the
+explicit neutral-identity merge found `origin/simulation-pilot` already current
+at `ca8b062`. ANSWERS.md still has no dated responses, acceptance, or closure
+instruction. Q-20260909-05 remains open with the original study-01 HOLD, and
+CONFORMANCE_APPROVAL.json remains pending; no new answer can be acknowledged.
+
+Ember reports `status=scheduled`, `runCount=3`, `error=null`,
+`lastRunAt=2026-09-09T12:20:27.284070Z`, and
+`nextRunAt=2026-09-09T14:20:27.284070Z`, retaining the 120-minute interval and
+owner-set five-run cap. Evidence is retained under ignored
+`local-logs/study-01-execution/poll-03/`. This reminder performed repository
+file exchange only. No script or timer was changed and no experiment, fixture,
+sync, dummy provider, or application restart was initiated.
+
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
 Observed: `validation/conformance-version-m4.json` records the actual running
