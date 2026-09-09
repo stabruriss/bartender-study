@@ -259,6 +259,24 @@ change was made. The actual snapshot is retained under ignored
 `local-logs/revalidation-verify-02/schedules-before.json`. File exchange still
 defers merge/push during execution or collection.
 
+First exchange of the owner-created hourly series | 2026-09-09T18:54:20Z:
+Both worktrees were clean and no simulation, collection or conformance process
+was active. Fetch and the explicit four-variable neutral-identity merge found
+`origin/simulation-pilot` already current at `b1c6a31`. ANSWERS.md has no new
+dated answer, delivery acceptance or execution closure. There is no new answer
+to acknowledge. The PASS revalidation delivered in `6a57254` and the PASS
+conformance delivery in `24f314e` remain pending maintainer acceptance.
+
+Ember reports `status=scheduled`, `runCount=1`, `error=null`,
+`lastRunAt=2026-09-09T18:54:07.842531Z`, and
+`nextRunAt=2026-09-09T19:54:07.842531Z`. The owner-set 60-minute interval and
+two-run cap remain unchanged; the next check is the final one under that cap.
+No reminder deletion condition has been met. Do not extend or recreate the
+task automatically. The actual schedule, fetched answer, commit and check time
+are retained under ignored `local-logs/repository-checks/20260909T185420Z/`.
+This reminder changes only technical exchange records. No script or timer was
+modified and no experiment, fixture, sync, dummy provider or restart was begun.
+
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
 Observed: `validation/conformance-version-m4.json` records the actual running
