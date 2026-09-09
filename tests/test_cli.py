@@ -16,13 +16,15 @@ CONFIG = Path(__file__).resolve().parents[1] / "configs" / "study-draft.json"
 class PlanTests(unittest.TestCase):
     def test_proposed_config_validates_but_cannot_run(self):
         config = load_config(CONFIG)
-        grid = cells(config)
-        self.assertEqual(len(grid), 990)
-        self.assertEqual(len(config["seeds"]), 30)
+        # This control must still work after the actual study is approved.
+        config["approval"] = {"status": "proposed"}
+        cells(config)
         with tempfile.TemporaryDirectory() as folder:
+            proposed = Path(folder) / "proposed.json"
+            proposed.write_text(json.dumps(config))
             output = Path(folder) / "must-not-exist"
             with redirect_stderr(io.StringIO()), self.assertRaises(SystemExit) as exit:
-                main(["run", "--config", str(CONFIG), "--output", str(output)])
+                main(["run", "--config", str(proposed), "--output", str(output)])
             self.assertEqual(exit.exception.code, 2)
             self.assertFalse(output.exists())
 

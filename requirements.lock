@@ -1,0 +1,2 @@
+# Runtime and tests use only the CPython 3.12.4 standard library.
+# Intentionally no third-party packages. Do not add dependencies on the runner.

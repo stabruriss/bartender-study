@@ -1,0 +1,138 @@
+{
+  "environment": {
+    "architecture": "arm64",
+    "cpu": "Apple M1",
+    "implementation": "CPython",
+    "logical_cpus": 8,
+    "os": "Darwin",
+    "os_version": "26.5.2",
+    "python": "3.12.4",
+    "python_hash_seed": "0",
+    "ram_bytes": 17179869184,
+    "third_party_runtime_dependencies": [],
+    "workers": 1
+  },
+  "label": "m1",
+  "payload": {
+    "fixture_sha256": "856bd9115d6d8e3752a866d957702d5498c083780df2dffcd24cf0a92836aac8",
+    "model_files_sha256": {
+      "bartender_sim/__init__.py": "2beaa8c0337d185ee1c791d0897b23f95870df6b10705db975c381155c8a87d8",
+      "bartender_sim/__main__.py": "4d76d1195857d0a9b4455820429b68468886b61054d6d589ba4c624366e5baec",
+      "bartender_sim/controls.py": "48762d4ce36118a8516088016bb0581e5a53cbc30c66b7ebd6bce637f4b7f295",
+      "bartender_sim/model.py": "462dbdff6cf42bd3b5cfe6c5a7253b5c7df06cee8ee741d403140d583fac54c8",
+      "bartender_sim/plan.py": "6cd9f5334bdb8ec5e331cc36d2538a05d22901947ea968ba6f01423d3edc1c42",
+      "bartender_sim/report.py": "87dc19b2148805ca924cc344907e368779fe1aec89cdca7ec5274845bed0b481"
+    },
+    "records": [
+      {
+        "case": "clean-first",
+        "flow_sha256": "214d71bb34b2edabde29ad6b09afe6fa036c5fb0fe337dde25f4b52fbb8bc1b8",
+        "result_sha256": "e369ce4064c6e82f485725abc8a24750d83e8bc958df87f6ce80de0a2c2ac6f4",
+        "seed": 910001
+      },
+      {
+        "case": "clean-first",
+        "flow_sha256": "5183532a39e207ba437d06fcdbd4f13916a67e1cdfa62637e39aa7cc77db1441",
+        "result_sha256": "2952bff4a72a5bbb1d86757e641784e9fe0a77a9cb2ae5769059d74e8dea2b37",
+        "seed": 910002
+      },
+      {
+        "case": "clean-first",
+        "flow_sha256": "dad7968c8789d5cfb1e2698f68dc1f8efe9b6281d88f04563d2699913c417170",
+        "result_sha256": "8c203772c67cd63eb3b64a7c87b4b4c658a2b8c257629dd5884f020577f491ec",
+        "seed": 910003
+      },
+      {
+        "case": "in-place",
+        "flow_sha256": "214d71bb34b2edabde29ad6b09afe6fa036c5fb0fe337dde25f4b52fbb8bc1b8",
+        "result_sha256": "0e5c15cf961d2d7d3f8a50e43ee1b181d8ce6f9d91d6e1958beff7f84e653d8b",
+        "seed": 910001
+      },
+      {
+        "case": "in-place",
+        "flow_sha256": "5183532a39e207ba437d06fcdbd4f13916a67e1cdfa62637e39aa7cc77db1441",
+        "result_sha256": "2aed7d238889ca8d52cd737849dbf290fe3ca9adf6bf4d8b9c8fb36376991ba2",
+        "seed": 910002
+      },
+      {
+        "case": "in-place",
+        "flow_sha256": "dad7968c8789d5cfb1e2698f68dc1f8efe9b6281d88f04563d2699913c417170",
+        "result_sha256": "a01c0712274401a1986d0e432beef09f9536f280909c17125dd533b7184bb544",
+        "seed": 910003
+      },
+      {
+        "case": "delay-dispatch-fixed",
+        "flow_sha256": "214d71bb34b2edabde29ad6b09afe6fa036c5fb0fe337dde25f4b52fbb8bc1b8",
+        "result_sha256": "d44343fa14b2eeda4d5ba40dca378edc44800df357254138ebec062a5ad9a716",
+        "seed": 910001
+      },
+      {
+        "case": "delay-dispatch-fixed",
+        "flow_sha256": "5183532a39e207ba437d06fcdbd4f13916a67e1cdfa62637e39aa7cc77db1441",
+        "result_sha256": "4d2b55f6c12259f248da6a53a6aa8e8127f540053bec6f7fd05ce606caa62eed",
+        "seed": 910002
+      },
+      {
+        "case": "delay-dispatch-fixed",
+        "flow_sha256": "dad7968c8789d5cfb1e2698f68dc1f8efe9b6281d88f04563d2699913c417170",
+        "result_sha256": "c9daad64cbfa611f86445de27fb94936a08a7eba500479bd37d1b98985b93ab7",
+        "seed": 910003
+      },
+      {
+        "case": "delay-start-fixed",
+        "flow_sha256": "214d71bb34b2edabde29ad6b09afe6fa036c5fb0fe337dde25f4b52fbb8bc1b8",
+        "result_sha256": "4509741ad393162746e5e55970e092cd735faff5c84a809e73779ad1715d29b9",
+        "seed": 910001
+      },
+      {
+        "case": "delay-start-fixed",
+        "flow_sha256": "5183532a39e207ba437d06fcdbd4f13916a67e1cdfa62637e39aa7cc77db1441",
+        "result_sha256": "2f12ddb748fb3ecfd1afc0acfcf179c0cde0769576184e086676078550441530",
+        "seed": 910002
+      },
+      {
+        "case": "delay-start-fixed",
+        "flow_sha256": "dad7968c8789d5cfb1e2698f68dc1f8efe9b6281d88f04563d2699913c417170",
+        "result_sha256": "dfa8664a98bc2b380592429db7c2d7135304a177ce7b594125f4575f6f7a6d22",
+        "seed": 910003
+      },
+      {
+        "case": "delay-dispatch-context",
+        "flow_sha256": "214d71bb34b2edabde29ad6b09afe6fa036c5fb0fe337dde25f4b52fbb8bc1b8",
+        "result_sha256": "445d0b3e9dc00e3aae0ec6af0bd70bad82e038c6ec73bf38ff2af07cd4f34462",
+        "seed": 910001
+      },
+      {
+        "case": "delay-dispatch-context",
+        "flow_sha256": "5183532a39e207ba437d06fcdbd4f13916a67e1cdfa62637e39aa7cc77db1441",
+        "result_sha256": "acb3b3557d4eca02a73c7521ed63a3273461cd934f6ecfd9a1c764c10632f846",
+        "seed": 910002
+      },
+      {
+        "case": "delay-dispatch-context",
+        "flow_sha256": "dad7968c8789d5cfb1e2698f68dc1f8efe9b6281d88f04563d2699913c417170",
+        "result_sha256": "87a44d0afa1654687b1042f0df23e7c71c24e4edc5db1ed37d072a2edfd51cb3",
+        "seed": 910003
+      },
+      {
+        "case": "delay-start-context",
+        "flow_sha256": "214d71bb34b2edabde29ad6b09afe6fa036c5fb0fe337dde25f4b52fbb8bc1b8",
+        "result_sha256": "910fc815392e4bdc610dee0ee611e35ebe3ed7f38de714d45ff2649e6a1613a3",
+        "seed": 910001
+      },
+      {
+        "case": "delay-start-context",
+        "flow_sha256": "5183532a39e207ba437d06fcdbd4f13916a67e1cdfa62637e39aa7cc77db1441",
+        "result_sha256": "072766750be0a5950fa779741c0718d8a548008dd426ed5de071239a8c10c5df",
+        "seed": 910002
+      },
+      {
+        "case": "delay-start-context",
+        "flow_sha256": "dad7968c8789d5cfb1e2698f68dc1f8efe9b6281d88f04563d2699913c417170",
+        "result_sha256": "e908fdaa77070fa5166f1705e252002c53f4e29c3051a54a62d65233868ac965",
+        "seed": 910003
+      }
+    ]
+  },
+  "payload_sha256": "7cb9843dd040993c65d0be444f71701ddf4d38bbdab73c5ec057de6d4dac4748"
+}

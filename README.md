@@ -9,9 +9,15 @@ configuration is **proposed, not approved or run**. This is an internal paramete
 plan, not a public preregistration. Code, configurations, seeds, and the complete
 scan record are intended for release with the full manuscript submission.
 
+For execution on the separate M4 machine, start with [RUNBOOK.md](RUNBOOK.md).
+It specifies the pinned environment, file-only communication, cross-machine
+checks, approval gates, raw-data retention, and required delivery. The handoff
+is still awaiting review and formal approval.
+
 ## Inspect and test
 
-Python 3.10 or later; standard library only. Tested with Python 3.12.4.
+The current execution handoff requires CPython 3.12.4 and the standard library
+only. `requirements.lock` records that there are no third-party dependencies.
 
 ```sh
 python3 -m bartender_sim plan --config configs/study-draft.json
@@ -23,13 +29,15 @@ derived response delays and observation windows. Planning generates no edit
 stream and performs no simulation. Tests use hand-constructed streams, finite
 control models, and a temporary zero-edit output check; they are not study runs.
 
-After the study owner approves the exact parameters, record that approval in the
-configuration's `approval` object: status `approved`, approver, timestamp, and
+After the study owner approves the exact parameters, maintainers record that
+approval in the configuration's `approval` object: status `approved`, role, timestamp, and
 the `parameters_sha256` printed by `plan`. A change to the parameter plan or seeds
-invalidates that approval. The command then becomes:
+invalidates that approval. The M4 operator also needs the runbook/protocol approval
+and cross-machine check in `RUNBOOK.md`; use its guarded entry point:
 
 ```sh
-python3 -m bartender_sim run --config configs/study-draft.json --output outputs/study-01
+PYTHONHASHSEED=0 .venv/bin/python handoff.py preflight --run-id study-01
+caffeinate -i env PYTHONHASHSEED=0 .venv/bin/python handoff.py run --run-id study-01
 ```
 
 The output directory must be new. The current draft is rejected before any output

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "pending",
+  "approved_by": null,
+  "approved_at": null,
+  "run_id": null,
+  "parameters_sha256": null,
+  "protocol_sha256": null
+}

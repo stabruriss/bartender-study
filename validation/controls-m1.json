@@ -1,0 +1,21 @@
+{
+  "environment": {
+    "architecture": "arm64",
+    "cpu": "Apple M1",
+    "implementation": "CPython",
+    "logical_cpus": 8,
+    "os": "Darwin",
+    "os_version": "26.5.2",
+    "python": "3.12.4",
+    "python_hash_seed": "0",
+    "ram_bytes": 17179869184,
+    "third_party_runtime_dependencies": [],
+    "workers": 1
+  },
+  "error_ids": [],
+  "failure_ids": [],
+  "protocol_sha256": "ca6887c988989f1c63fc3bfcaf6d6b1c3170b1449f04b779a66a1e43201e0329",
+  "skipped_ids": [],
+  "status": "pass",
+  "tests_run": 28
+}

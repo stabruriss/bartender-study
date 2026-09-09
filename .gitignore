@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 outputs/
 .DS_Store
+.venv/
+archives/
+local-logs/

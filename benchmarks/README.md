@@ -63,6 +63,15 @@ Run records alone extrapolate to about 3.85 GB compressed. Repeated flow writes
 would add about 11.54 GB, though the formal runner deduplicates them. These are
 timing-sample storage estimates, not observed full-study artifact sizes.
 
+For the M4 handoff, deduplication gives a more relevant storage estimate. The
+current plan has ten unique combinations of actor count and observation window,
+with all other proposal-generation settings fixed. At 30 seeds each this gives
+300 unique flows. Averaging the measured compressed flow sizes within those ten
+groups and multiplying each mean by 30 estimates **0.227 GB** of input flows.
+Together with the estimated run records, raw storage is approximately **4.08 GB
+plus metadata and per-seed/aggregate summaries**. This is comfortably over the
+100 MB Git-delivery budget; raw files must remain in the execution archive.
+
 ## Reproduce the timing diagnostic
 
 On macOS, from the repository root, choose a new log path:

@@ -1,0 +1,25 @@
+{
+  "purpose": "Cross-machine reproducibility control; excluded from study results",
+  "seeds": [910001, 910002, 910003],
+  "common": {
+    "n": 4,
+    "rate": 1.0,
+    "files": 8,
+    "lines": 256,
+    "length": 64,
+    "horizon": 16.0,
+    "tau": 0.5,
+    "dependency": 0.1,
+    "avoidance": 0.5,
+    "repair_time": 0.25,
+    "context_weight": 0.05
+  },
+  "cases": [
+    {"name": "clean-first", "policy": "clean_first", "delta": 0.0, "refresh_at": "start", "repair_clock": "fixed"},
+    {"name": "in-place", "policy": "in_place", "delta": 0.0, "refresh_at": "start", "repair_clock": "fixed"},
+    {"name": "delay-dispatch-fixed", "policy": "kick_back", "delta": 2.0, "refresh_at": "dispatch", "repair_clock": "fixed"},
+    {"name": "delay-start-fixed", "policy": "kick_back", "delta": 2.0, "refresh_at": "start", "repair_clock": "fixed"},
+    {"name": "delay-dispatch-context", "policy": "kick_back", "delta": 2.0, "refresh_at": "dispatch", "repair_clock": "context"},
+    {"name": "delay-start-context", "policy": "kick_back", "delta": 2.0, "refresh_at": "start", "repair_clock": "context"}
+  ]
+}
