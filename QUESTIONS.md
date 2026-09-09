@@ -267,3 +267,45 @@ fixture behavior, without requiring remote repositories or a separate account
 merely to prevent normal project scanning. No app restart, fixture registration,
 sync request, product-code modification, or approval-record modification has
 occurred in this clarification step.
+
+Owner-authorized setup probe | 2026-09-09T06:39:08Z: The owner explicitly
+instructed the runner to create one local temporary repository first and then
+restart Kota to try loading it. This authorizes the single-fixture preparation
+and app restart despite the still-pending general conformance approval. It does
+not fill or replace that approval record or authorize a completed-conformance
+claim. The selected fixture is `conformance-01-single-clean-r1`, using the
+unchanged constructor from this runbook with one disabled-provider role. All
+other fixtures remain uncreated. The owner's unrelated-project exclusion and
+permission for normal app discovery remain in force.
+
+Operational additions for this action will remain under ignored
+`local-logs/setup-probe/`: an exact extracted copy of the supplied constructor,
+a one-shot app-restart helper, and restart/recovery diagnostics. The helper will
+request an orderly quit of the identified Kota app, wait for that app process
+to exit, and reopen the same installed bundle. It will not force-kill processes,
+issue a sync, modify product code, or create a recurring task. A transient
+launchd job is used solely so reopening can survive the current app/session
+exiting. Research scripts, runtime locks, configurations, and approval files
+remain unchanged. Resulting preparation and restart observations will be
+appended after execution; any startup mutation will be preserved and reported.
+
+Preparation observation | 2026-09-09T06:42:39Z: The unchanged runbook constructor
+created the single selected fixture and its `conformance-disabled` role. The
+ordinary source checkout is on `main`; source and role Git HEADs match the
+constructor's `initial.json`, both worktrees are clean, and the role contains
+the prescribed unmerged clean-file edit. The fixture's Bartender outbox does not
+yet exist. No sync or other fixture was created. Pre-restart project/role
+metadata copies and Git observations are retained under ignored
+`local-logs/setup-probe/before-restart/` and `before-restart.json`; the source
+and original initial record remain under
+`local-logs/conformance/conformance-01-single-clean-r1/`.
+
+The exact constructor copy is `local-logs/setup-probe/construct-from-runbook.py`.
+The newly authored operational helper is
+`local-logs/setup-probe/restart-kota-once.sh`; it only requests app quit, reopens
+the same bundle, and observes process/outbox existence. Its shell syntax was
+checked before launch. `local-logs/setup-probe/RECOVERY.md` records how to inspect
+the restart and preserve any startup changes if the current session ends.
+These are the concrete local additions under the owner's create-one-and-restart
+authorization; no research or application code was changed. Restart completion
+is not yet claimed by this preparation entry.
