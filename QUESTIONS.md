@@ -115,6 +115,18 @@ Source references:
 - https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/ember.rs#L2173
 - https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src/chrome/EmberScheduleInstrument.tsx#L1047
 
+Owner-requested prompt clarification | 2026-09-09T07:06:16Z: A copyable native
+Ember prompt is prepared in ignored `local-logs/scheduler-proposal/poll-prompt.txt`.
+The proposed target is the execution agent, at a fixed interval of two hours,
+with no preset repeat count. RUNBOOK.md requires removing the task after both
+deliveries are accepted or the maintainers close execution. The prompt performs
+repository file exchange only, defers merge/push during execution, retains
+neutral Git identity and reviewed records, and does not start a study, fixture,
+application sync, or dummy provider. Owner-specific execution boundaries remain
+in local scope records. No task has been created or changed: the current
+`kota-ember list --json` remains empty, and the first/next scheduled UTC check is
+unset. The prior launchd-to-Ember draft remains inactive.
+
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
 Observed: `validation/conformance-version-m4.json` records the actual running
@@ -309,3 +321,55 @@ the restart and preserve any startup changes if the current session ends.
 These are the concrete local additions under the owner's create-one-and-restart
 authorization; no research or application code was changed. Restart completion
 is not yet claimed by this preparation entry.
+
+Restart/loading observation | 2026-09-09T07:06:16Z: The owner-authorized restart
+reopened the same installed application at `2026-09-09T06:44:14Z`. The fixture
+Bartender outbox appeared at `2026-09-09T06:44:15Z`, and the owner subsequently
+confirmed that the local fixture loaded in the application. The post-restart
+record in ignored `local-logs/setup-probe/after-restart.json`, observed at
+`2026-09-09T07:01:55Z`, preserves source/role HEAD and content matches to the
+initial fixture, clean worktrees, unchanged role identity/provider files, and
+unchanged source/role mappings. The only changed project-metadata keys were
+`localRootBytes` and `sourceDirBytes`, consistent with normal application size
+bookkeeping; they have been preserved rather than reset. No Git operation
+markers or fixture request files were present, and the runner issued no sync.
+The role remains `conformance-disabled`; it must not be awakened or replaced
+with a real provider. This is local setup/loading evidence, not a formal
+conformance pass. The separate pending approval and startup-mutation review
+remain with maintainers. Q-20260909-04 records a restart-helper deviation.
+
+## Q-20260909-04 | 2026-09-09T07:06:16Z | OPEN
+Step: Owner-authorized single-fixture setup and application restart.
+Observed: The temporary `launchctl submit` job intended to survive application
+exit was configured with keepalive behavior and repeatedly reentered the restart
+helper. The log contains only the initial actual quit/reopen sequence; later
+invocations exited when the original app process could not be found by `ps`
+under `set -e`, before any further quit command. The runner removed the job after
+preserving diagnostics, verified that its label was absent, and confirmed that
+the reopened app remained running. The last helper entry is dated
+`2026-09-09T07:01:47Z`; no later entries appeared at the follow-up check.
+
+Authorization and concrete changes: The owner explicitly permitted creating one
+local temporary repository and restarting the app. The local constructor copy,
+restart helper, and recovery records were added under that scope as documented
+in Q-20260909-03. Removing the accidentally recurring restart job restores the
+authorized one-time operation; it does not install a replacement or change an
+Ember reminder. The runner corrected the local recovery/scope notes and retained
+the original helper and logs under ignored `local-logs/setup-probe/`. Research
+and product code and approval files remain unchanged. The helper/job will not be
+reused as a schedule. This operational reentry is distinct from the uncreated
+two-hour file-poll task in Q-20260909-02.
+
+Question: For any future separately authorized app restart, which reviewed
+one-shot launch mechanism should be used in place of this `launchctl submit`
+invocation? The defective job is already removed and no retry is pending.
+Acknowledgment: Awaiting a maintainer recommendation; cleanup is complete.
+
+Owner-specified operational constraint | 2026-09-09T07:08:52Z: Application
+relaunch does not restore the execution session; a human must manually wake the
+session before work can continue. For any restart during ongoing work, the
+runner must preserve a checkpoint and receive a fresh explicit human-attendance
+confirmation before closing the current application instance. Prior permission,
+silence, or a successful relaunch does not satisfy this requirement. The local
+scope and recovery notes and the proposed reminder prompt now record this
+constraint. No additional restart or schedule mutation occurred in this update.
