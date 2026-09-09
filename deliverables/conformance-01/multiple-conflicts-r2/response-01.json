@@ -1,0 +1,57 @@
+{
+  "message": "2 changes need agent conflict resolution.",
+  "ok": false,
+  "requestId": "sync-9c8bd43f1f0345ae8399255af9b9a895",
+  "result": {
+    "conflicts": [
+      {
+        "agentId": "conformance-01-multiple-conflicts-r2-a",
+        "commit": "5a54cab3126e88b46526de1207d9d69a41e8f621",
+        "message": "git -C source/ cherry-pick 5a54cab3126e88b46526de1207d9d69a41e8f621 failed: error: could not apply 5a54cab... Synthetic multiple-conflicts role a\nhint: After resolving the conflicts, mark them with\nhint: \"git add/rm <pathspec>\", then run\nhint: \"git cherry-pick --continue\".\nhint: You can instead skip this commit with \"git cherry-pick --skip\".\nhint: To abort and get back to the state before \"git cherry-pick\",\nhint: run \"git cherry-pick --abort\"."
+      },
+      {
+        "agentId": "conformance-01-multiple-conflicts-r2-b",
+        "commit": "e57eed71ed1a61073498771c04833b36f53caf2e",
+        "message": "git -C source/ cherry-pick e57eed71ed1a61073498771c04833b36f53caf2e failed: error: could not apply e57eed7... Synthetic multiple-conflicts role b\nhint: After resolving the conflicts, mark them with\nhint: \"git add/rm <pathspec>\", then run\nhint: \"git cherry-pick --continue\".\nhint: You can instead skip this commit with \"git cherry-pick --skip\".\nhint: To abort and get back to the state before \"git cherry-pick\",\nhint: run \"git cherry-pick --abort\"."
+      }
+    ],
+    "message": "2 changes need agent conflict resolution.",
+    "ok": false,
+    "publishedAgents": [
+      {
+        "agentId": "conformance-01-multiple-conflicts-r2-c",
+        "commitCount": 1
+      }
+    ],
+    "publishedCommitCount": 1,
+    "snapshotCount": 0,
+    "status": {
+      "checkedAt": "2026-09-09T18:32:50.015698+00:00",
+      "defaultBranch": "main",
+      "dirtyAgents": [
+        {
+          "agentId": "conformance-01-multiple-conflicts-r2-a",
+          "changeCount": 1,
+          "path": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-a/project-files",
+          "pendingCommitCount": 1
+        },
+        {
+          "agentId": "conformance-01-multiple-conflicts-r2-b",
+          "changeCount": 1,
+          "path": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-b/project-files",
+          "pendingCommitCount": 1
+        }
+      ],
+      "githubBehindCount": 0,
+      "githubChangeCount": 0,
+      "githubInitialPushCommitCount": 0,
+      "githubNeedsInitialPush": false,
+      "message": "2 changed files waiting in agent worktrees.",
+      "projectId": "conformance-01-multiple-conflicts-r2",
+      "roomChangeCount": 2,
+      "sourceChangeCount": 0,
+      "sourceDir": "source/",
+      "state": "roomDiff"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "message": "Synced 1 change.",
+  "ok": true,
+  "requestId": "sync-77fe69b7030b4088bdccb395ed97cfe2",
+  "result": {
+    "conflicts": [],
+    "message": "Synced 1 change.",
+    "ok": true,
+    "publishedAgents": [
+      {
+        "agentId": "conformance-01-single-clean-r2-a",
+        "commitCount": 1
+      }
+    ],
+    "publishedCommitCount": 1,
+    "snapshotCount": 0,
+    "status": {
+      "checkedAt": "2026-09-09T18:32:34.407545+00:00",
+      "defaultBranch": "main",
+      "dirtyAgents": [],
+      "githubBehindCount": 0,
+      "githubChangeCount": 0,
+      "githubInitialPushCommitCount": 0,
+      "githubNeedsInitialPush": false,
+      "message": "Room is in sync.",
+      "projectId": "conformance-01-single-clean-r2",
+      "roomChangeCount": 0,
+      "sourceChangeCount": 0,
+      "sourceDir": "source/",
+      "state": "idle"
+    }
+  }
+}

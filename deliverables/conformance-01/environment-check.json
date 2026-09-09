@@ -1,0 +1,12 @@
+{
+  "app_build": "0.1.10",
+  "app_executable_sha256": "f458f54ae851f646e7f41686ba1a96022e832c3c7c1366d5be15fd8cf8863e6d",
+  "app_version": "0.1.10",
+  "approved_version_report_sha256": "09a92e703f03063c7a46c7214e7ee6f54f8039b3831933b4321f5fc2af580547",
+  "binary_hashes_match_approval": true,
+  "cli_executable_sha256": "50d942c9e542c3213999488928f2b7e3fd9f665c163ff2f020b4aeeef558b1a4",
+  "observations": "Actual installed app and bundled CLI were checked after revalidation and again after all fixture observations.",
+  "public_commit": "75eb8fda2b1040c0f1822e0403321a105fec4f6c",
+  "reported_at": "2026-09-09T18:37:12.971732+00:00",
+  "runbook_sha256": "e5144353270d4833c494e47cb6c69c2200e3a3ed48e1038baf6763120bba640e"
+}

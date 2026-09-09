@@ -1,0 +1,102 @@
+{
+  "actor_original_sha256": null,
+  "assertions": [
+    {
+      "assertion": "matching delivered native request and result",
+      "observed": "sync-77fe69b7030b4088bdccb395ed97cfe2",
+      "status": "pass"
+    },
+    {
+      "assertion": "CLI transport completed",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "no generic snapshot or metadata issues",
+      "observed": [],
+      "status": "pass"
+    },
+    {
+      "assertion": "ordered conflict set",
+      "observed": [],
+      "status": "pass"
+    },
+    {
+      "assertion": "conflicts identify the original failed commits",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "snapshotCount is zero",
+      "observed": 0,
+      "status": "pass"
+    },
+    {
+      "assertion": "publishedCommitCount matches the fixed assertion",
+      "observed": 1,
+      "status": "pass"
+    },
+    {
+      "assertion": "result.ok matches the expected conflict state",
+      "observed": true,
+      "status": "pass"
+    },
+    {
+      "assertion": "result identifies the fixture source",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "source remains clean on main",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "all source file contents match the fixed scenario",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "source ancestry and number of new commits",
+      "observed": "1",
+      "status": "pass"
+    },
+    {
+      "assertion": "a: clean role reaches final source state",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "actor records are observable and unambiguous",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "clean scenario records no resolve-conflict event",
+      "observed": [],
+      "status": "pass"
+    },
+    {
+      "assertion": "only the intended requests were processed and queues are empty",
+      "observed": null,
+      "status": "pass"
+    }
+  ],
+  "case": "single-clean",
+  "cli_exit_code": 0,
+  "conflict_agent_ids": [],
+  "finished_at": "2026-09-09T18:32:34Z",
+  "fixture_id": "conformance-01-single-clean-r2",
+  "observed_at": "2026-09-09T18:32:35.053296+00:00",
+  "original_hashes": {
+    "sync-01.stdout.json": "62814c14f4921987ea9f2e15a09ca7293af16f59dfe2e9b433f4c02e77277806",
+    "sync-77fe69b7030b4088bdccb395ed97cfe2.json": "b32c11c00f0766df159c6c4498d5920a924158b9a7843e424e0882b032524368",
+    "sync-77fe69b7030b4088bdccb395ed97cfe2.result.json": "0af390182333a78cebe763d2144652f6fbf2f3b386ba537674702b833f26c731"
+  },
+  "published_commit_count": 1,
+  "repeat": 2,
+  "request_id": "sync-77fe69b7030b4088bdccb395ed97cfe2",
+  "request_number": 1,
+  "started_at": "2026-09-09T18:32:33Z",
+  "status": "pass"
+}

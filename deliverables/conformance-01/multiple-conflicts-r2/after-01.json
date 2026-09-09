@@ -1,0 +1,225 @@
+{
+  "actor_record": {
+    "exists": true,
+    "retained_copy": "actor-bartender.original.md",
+    "sha256": "488faa6848169940fae720cd25f6ed90ad3ba2e0fbf7ba2e727b0fdb700fbc87"
+  },
+  "bartender_outbox_exists": true,
+  "case": "multiple-conflicts",
+  "changed_metadata_keys": [],
+  "fixture_id": "conformance-01-multiple-conflicts-r2",
+  "initial_sha256": "a4c0e41c1dffb60ee9c2921fc7b6545d96024267cda6b08b9f373860dd5c803e",
+  "issues": [],
+  "observation_original_sha256": "79d2661d46367ff009efc55530549b1a07392b65471e669f15ab9e5336789341",
+  "observed_at": "2026-09-09T18:32:50.587687+00:00",
+  "phase": "after-01",
+  "repeat": 2,
+  "request_file_names": {
+    "delivered": [
+      "sync-9c8bd43f1f0345ae8399255af9b9a895.json",
+      "sync-9c8bd43f1f0345ae8399255af9b9a895.result.json"
+    ],
+    "failed": [],
+    "outbox": [],
+    "processing": []
+  },
+  "retained_workspace_sha256": "008a826699867139aa1073b66678ccf9c2571d153b5a16bfd28249bcbf2faf14",
+  "roles": [
+    {
+      "agent_id": "conformance-01-multiple-conflicts-r2-a",
+      "git": {
+        "branch": "fixture/conformance-01-multiple-conflicts-r2/a",
+        "contents": {
+          "clean-one.txt": "baseline\n",
+          "clean-three.txt": "baseline\n",
+          "clean-two.txt": "baseline\n",
+          "shared-one.txt": "agent-a\n",
+          "shared-two.txt": "baseline\n"
+        },
+        "head": "5a54cab3126e88b46526de1207d9d69a41e8f621",
+        "log": [
+          "5a54cab3126e88b46526de1207d9d69a41e8f621 870c3ea5cb9c70bc88587d635044c43686b59c70 Synthetic multiple-conflicts role a",
+          "870c3ea5cb9c70bc88587d635044c43686b59c70  Synthetic fixture base"
+        ],
+        "operation_markers": {
+          "CHERRY_PICK_HEAD": false,
+          "MERGE_HEAD": false,
+          "rebase-apply": false,
+          "rebase-merge": false
+        },
+        "status": "",
+        "tracked_files": [
+          "clean-one.txt",
+          "clean-three.txt",
+          "clean-two.txt",
+          "shared-one.txt",
+          "shared-two.txt"
+        ],
+        "unmerged": ""
+      },
+      "identity_sha256": "55612da155a71091a7e56034e9083ead09a38b1501e320dfdd135964f6d588f4",
+      "role": "a",
+      "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "agent_id": "conformance-01-multiple-conflicts-r2-b",
+      "git": {
+        "branch": "fixture/conformance-01-multiple-conflicts-r2/b",
+        "contents": {
+          "clean-one.txt": "baseline\n",
+          "clean-three.txt": "baseline\n",
+          "clean-two.txt": "baseline\n",
+          "shared-one.txt": "baseline\n",
+          "shared-two.txt": "agent-b\n"
+        },
+        "head": "e57eed71ed1a61073498771c04833b36f53caf2e",
+        "log": [
+          "e57eed71ed1a61073498771c04833b36f53caf2e 870c3ea5cb9c70bc88587d635044c43686b59c70 Synthetic multiple-conflicts role b",
+          "870c3ea5cb9c70bc88587d635044c43686b59c70  Synthetic fixture base"
+        ],
+        "operation_markers": {
+          "CHERRY_PICK_HEAD": false,
+          "MERGE_HEAD": false,
+          "rebase-apply": false,
+          "rebase-merge": false
+        },
+        "status": "",
+        "tracked_files": [
+          "clean-one.txt",
+          "clean-three.txt",
+          "clean-two.txt",
+          "shared-one.txt",
+          "shared-two.txt"
+        ],
+        "unmerged": ""
+      },
+      "identity_sha256": "239064e846f5b1c9cf483f56bda6e5db15c8c88d1d615fedaf37f709e73e10d3",
+      "role": "b",
+      "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "agent_id": "conformance-01-multiple-conflicts-r2-c",
+      "git": {
+        "branch": "fixture/conformance-01-multiple-conflicts-r2/c",
+        "contents": {
+          "clean-one.txt": "landed-c\n",
+          "clean-three.txt": "baseline\n",
+          "clean-two.txt": "baseline\n",
+          "shared-one.txt": "source-one\n",
+          "shared-two.txt": "source-two\n"
+        },
+        "head": "5807527d0d4d71f3629d404e6d310ded7d0498a1",
+        "log": [
+          "5807527d0d4d71f3629d404e6d310ded7d0498a1 529009a130c461c5e405780c4fb6c61f33ea7b6c Synthetic multiple-conflicts role c",
+          "529009a130c461c5e405780c4fb6c61f33ea7b6c 870c3ea5cb9c70bc88587d635044c43686b59c70 Synthetic source divergence",
+          "870c3ea5cb9c70bc88587d635044c43686b59c70  Synthetic fixture base"
+        ],
+        "operation_markers": {
+          "CHERRY_PICK_HEAD": false,
+          "MERGE_HEAD": false,
+          "rebase-apply": false,
+          "rebase-merge": false
+        },
+        "status": "",
+        "tracked_files": [
+          "clean-one.txt",
+          "clean-three.txt",
+          "clean-two.txt",
+          "shared-one.txt",
+          "shared-two.txt"
+        ],
+        "unmerged": ""
+      },
+      "identity_sha256": "e1bcf04a22b72924c8764bb657a95a5d3d7d831f70674fe1db7c1416e473da4d",
+      "role": "c",
+      "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "branch": "main",
+    "contents": {
+      "clean-one.txt": "landed-c\n",
+      "clean-three.txt": "baseline\n",
+      "clean-two.txt": "baseline\n",
+      "shared-one.txt": "source-one\n",
+      "shared-two.txt": "source-two\n"
+    },
+    "head": "5807527d0d4d71f3629d404e6d310ded7d0498a1",
+    "log": [
+      "5807527d0d4d71f3629d404e6d310ded7d0498a1 529009a130c461c5e405780c4fb6c61f33ea7b6c Synthetic multiple-conflicts role c",
+      "529009a130c461c5e405780c4fb6c61f33ea7b6c 870c3ea5cb9c70bc88587d635044c43686b59c70 Synthetic source divergence",
+      "870c3ea5cb9c70bc88587d635044c43686b59c70  Synthetic fixture base"
+    ],
+    "operation_markers": {
+      "CHERRY_PICK_HEAD": false,
+      "MERGE_HEAD": false,
+      "rebase-apply": false,
+      "rebase-merge": false
+    },
+    "status": "",
+    "tracked_files": [
+      "clean-one.txt",
+      "clean-three.txt",
+      "clean-two.txt",
+      "shared-one.txt",
+      "shared-two.txt"
+    ],
+    "unmerged": ""
+  },
+  "workspace_metadata": {
+    "agents": [
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-conflicts-r2-a",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-a",
+        "projectBaseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+        "projectId": "conformance-01-multiple-conflicts-r2",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-a/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-conflicts-r2-b",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-b",
+        "projectBaseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+        "projectId": "conformance-01-multiple-conflicts-r2",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-b/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-conflicts-r2-c",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-c",
+        "projectBaseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+        "projectId": "conformance-01-multiple-conflicts-r2",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-c/project-files"
+      }
+    ],
+    "archived": false,
+    "baseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+    "defaultBranch": "main",
+    "githubHtmlUrl": "",
+    "localRoot": "workspace/",
+    "projectId": "conformance-01-multiple-conflicts-r2",
+    "remoteUrl": "",
+    "repoFullName": "conformance-01-multiple-conflicts-r2",
+    "rulesDir": "workspace/project-rules",
+    "sharedDir": "workspace/project-memory",
+    "sourceDir": "source/"
+  },
+  "workspace_sha256": "008a826699867139aa1073b66678ccf9c2571d153b5a16bfd28249bcbf2faf14"
+}

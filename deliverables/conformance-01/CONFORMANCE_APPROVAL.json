@@ -1,0 +1,12 @@
+{
+  "approved_at": "2026-09-09T15:44:55.689769+00:00",
+  "approved_by": "study maintainer",
+  "protocol_sha256": "e5144353270d4833c494e47cb6c69c2200e3a3ed48e1038baf6763120bba640e",
+  "public_commit": "75eb8fda2b1040c0f1822e0403321a105fec4f6c",
+  "run_id": "conformance-01",
+  "schema_version": 1,
+  "source_review_answer_id": "Q-20260909-03",
+  "source_review_status": "approved",
+  "status": "approved",
+  "version_report_sha256": "09a92e703f03063c7a46c7214e7ee6f54f8039b3831933b4321f5fc2af580547"
+}

@@ -1,0 +1,27 @@
+{
+  "accepted_metadata_keys": [
+    "localRootBytes",
+    "sourceDirBytes"
+  ],
+  "app_v2_source_diff": "empty",
+  "backend_tree": "147cbc348cd1e3aa8a90d4f0c67e3652798b083a",
+  "binding_limit": "Release-distribution provenance; installed-binary comparisons and restart observations are execution-agent reports, not independent M1 observations.",
+  "constructor_sha256": "da822ddde40adf0848fe5097e93f8faa792bbe806af56b584423f010c516b8db",
+  "execution_scope": {
+    "concurrent_execution": false,
+    "fresh_fixtures": 8,
+    "requests_per_fixture": 2
+  },
+  "public_commit": "75eb8fda2b1040c0f1822e0403321a105fec4f6c",
+  "reference_commit": "b3db3c8290d8dae5a1ee5f7f40222d3dcf77f1b7",
+  "release_asset_metadata_digest_matches_report": true,
+  "release_metadata_url": "https://api.github.com/repos/stabruriss/kota-app/releases/tags/v0.1.10",
+  "required_state": "Immediately before each first request, all other metadata, ordered roles, providers, Git HEADs/branches/content and clean states must match the retained initial records; no prior sync or concurrent writer.",
+  "review_role": "study maintainer",
+  "reviewed_at": "2026-09-09T15:44:55.689769+00:00",
+  "runbook_sha256": "e5144353270d4833c494e47cb6c69c2200e3a3ed48e1038baf6763120bba640e",
+  "scientific_conformance_result": "not yet observed",
+  "setup_evidence": "Q-20260909-03: single-fixture probe and owner-performed batch restart; eight fixtures reported loaded at 2026-09-09T07:38:10Z. Retained local snapshots must be projected with original hashes into the final delivery.",
+  "status": "approved_for_observation",
+  "version_report_sha256": "09a92e703f03063c7a46c7214e7ee6f54f8039b3831933b4321f5fc2af580547"
+}

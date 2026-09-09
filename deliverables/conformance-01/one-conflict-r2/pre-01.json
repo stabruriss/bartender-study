@@ -1,0 +1,171 @@
+{
+  "actor_record": {
+    "exists": false,
+    "retained_copy": null,
+    "sha256": null
+  },
+  "bartender_outbox_exists": true,
+  "case": "one-conflict",
+  "changed_metadata_keys": [],
+  "fixture_id": "conformance-01-one-conflict-r2",
+  "initial_sha256": "48e76fb9bdf8facf8ed4629770f02572b9a636abc03162832721d01492ea8c5b",
+  "issues": [],
+  "observation_original_sha256": "00c6fef6d46affaf0818ce0505c229d02164213042bd65c34c60eaa946328f58",
+  "observed_at": "2026-09-09T18:32:44.406648+00:00",
+  "phase": "pre-01",
+  "repeat": 2,
+  "request_file_names": {
+    "delivered": [],
+    "failed": [],
+    "outbox": [],
+    "processing": []
+  },
+  "retained_workspace_sha256": "aa939dbb8cf5329d160b150b3e38223f63ad0bd75a049e72732305c12309b9c8",
+  "roles": [
+    {
+      "agent_id": "conformance-01-one-conflict-r2-a",
+      "git": {
+        "branch": "fixture/conformance-01-one-conflict-r2/a",
+        "contents": {
+          "clean-one.txt": "baseline\n",
+          "clean-three.txt": "baseline\n",
+          "clean-two.txt": "baseline\n",
+          "shared-one.txt": "agent-a\n",
+          "shared-two.txt": "baseline\n"
+        },
+        "head": "e6cfd3ce8446f56a2ed4681bf8f033a9777b5793",
+        "log": [
+          "e6cfd3ce8446f56a2ed4681bf8f033a9777b5793 f708977b34e528c0fb23b5b50be745b18a8f8f25 Synthetic one-conflict role a",
+          "f708977b34e528c0fb23b5b50be745b18a8f8f25  Synthetic fixture base"
+        ],
+        "operation_markers": {
+          "CHERRY_PICK_HEAD": false,
+          "MERGE_HEAD": false,
+          "rebase-apply": false,
+          "rebase-merge": false
+        },
+        "status": "",
+        "tracked_files": [
+          "clean-one.txt",
+          "clean-three.txt",
+          "clean-two.txt",
+          "shared-one.txt",
+          "shared-two.txt"
+        ],
+        "unmerged": ""
+      },
+      "identity_sha256": "d7b550f26afb70482e49d7ef70fdcb39958bbaa2aa022cad605569f527e066eb",
+      "role": "a",
+      "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "agent_id": "conformance-01-one-conflict-r2-b",
+      "git": {
+        "branch": "fixture/conformance-01-one-conflict-r2/b",
+        "contents": {
+          "clean-one.txt": "landed-b\n",
+          "clean-three.txt": "baseline\n",
+          "clean-two.txt": "baseline\n",
+          "shared-one.txt": "baseline\n",
+          "shared-two.txt": "baseline\n"
+        },
+        "head": "71cac97194150ed3a0e2d6f701945173e2a25a9a",
+        "log": [
+          "71cac97194150ed3a0e2d6f701945173e2a25a9a f708977b34e528c0fb23b5b50be745b18a8f8f25 Synthetic one-conflict role b",
+          "f708977b34e528c0fb23b5b50be745b18a8f8f25  Synthetic fixture base"
+        ],
+        "operation_markers": {
+          "CHERRY_PICK_HEAD": false,
+          "MERGE_HEAD": false,
+          "rebase-apply": false,
+          "rebase-merge": false
+        },
+        "status": "",
+        "tracked_files": [
+          "clean-one.txt",
+          "clean-three.txt",
+          "clean-two.txt",
+          "shared-one.txt",
+          "shared-two.txt"
+        ],
+        "unmerged": ""
+      },
+      "identity_sha256": "9764f9ea9f15cd0e037623d574a425f9b3325c13071ccb6dfa492f3269add2a8",
+      "role": "b",
+      "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "branch": "main",
+    "contents": {
+      "clean-one.txt": "baseline\n",
+      "clean-three.txt": "baseline\n",
+      "clean-two.txt": "baseline\n",
+      "shared-one.txt": "source-one\n",
+      "shared-two.txt": "baseline\n"
+    },
+    "head": "9f97894d979eb30f66ed51ce33d3b4871c2ba8a1",
+    "log": [
+      "9f97894d979eb30f66ed51ce33d3b4871c2ba8a1 f708977b34e528c0fb23b5b50be745b18a8f8f25 Synthetic source divergence",
+      "f708977b34e528c0fb23b5b50be745b18a8f8f25  Synthetic fixture base"
+    ],
+    "operation_markers": {
+      "CHERRY_PICK_HEAD": false,
+      "MERGE_HEAD": false,
+      "rebase-apply": false,
+      "rebase-merge": false
+    },
+    "status": "",
+    "tracked_files": [
+      "clean-one.txt",
+      "clean-three.txt",
+      "clean-two.txt",
+      "shared-one.txt",
+      "shared-two.txt"
+    ],
+    "unmerged": ""
+  },
+  "workspace_metadata": {
+    "agents": [
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-one-conflict-r2-a",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-one-conflict-r2-a",
+        "projectBaseRef": "f708977b34e528c0fb23b5b50be745b18a8f8f25",
+        "projectId": "conformance-01-one-conflict-r2",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-one-conflict-r2-a/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-one-conflict-r2-b",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-one-conflict-r2-b",
+        "projectBaseRef": "f708977b34e528c0fb23b5b50be745b18a8f8f25",
+        "projectId": "conformance-01-one-conflict-r2",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-one-conflict-r2-b/project-files"
+      }
+    ],
+    "archived": false,
+    "baseRef": "f708977b34e528c0fb23b5b50be745b18a8f8f25",
+    "defaultBranch": "main",
+    "githubHtmlUrl": "",
+    "localRoot": "workspace/",
+    "projectId": "conformance-01-one-conflict-r2",
+    "remoteUrl": "",
+    "repoFullName": "conformance-01-one-conflict-r2",
+    "rulesDir": "workspace/project-rules",
+    "sharedDir": "workspace/project-memory",
+    "sourceDir": "source/"
+  },
+  "workspace_sha256": "aa939dbb8cf5329d160b150b3e38223f63ad0bd75a049e72732305c12309b9c8"
+}

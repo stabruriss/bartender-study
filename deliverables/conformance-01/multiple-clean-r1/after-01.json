@@ -1,0 +1,231 @@
+{
+  "actor_record": {
+    "exists": false,
+    "retained_copy": null,
+    "sha256": null
+  },
+  "bartender_outbox_exists": true,
+  "case": "multiple-clean",
+  "changed_metadata_keys": [],
+  "fixture_id": "conformance-01-multiple-clean-r1",
+  "initial_sha256": "41d0d1ed4e000b85abb9744e8050709df4a06ea409dbaaae8fa2b4bbdcd03379",
+  "issues": [],
+  "observation_original_sha256": "a5b0cf8e9ee69066f7947d3667cfb514a0f7b48c198c189df0e6e3fefd3ccd27",
+  "observed_at": "2026-09-09T18:30:31.135685+00:00",
+  "phase": "after-01",
+  "repeat": 1,
+  "request_file_names": {
+    "delivered": [
+      "sync-faf61cf5967d44c2ad32103fa74a0a1d.json",
+      "sync-faf61cf5967d44c2ad32103fa74a0a1d.result.json"
+    ],
+    "failed": [],
+    "outbox": [],
+    "processing": []
+  },
+  "retained_workspace_sha256": "36d395495557e87c0564830cd5a4b384a6fe097857a04d9e55cf40915882cf95",
+  "roles": [
+    {
+      "agent_id": "conformance-01-multiple-clean-r1-a",
+      "git": {
+        "branch": "fixture/conformance-01-multiple-clean-r1/a",
+        "contents": {
+          "clean-one.txt": "landed-a\n",
+          "clean-three.txt": "landed-c\n",
+          "clean-two.txt": "landed-b\n",
+          "shared-one.txt": "baseline\n",
+          "shared-two.txt": "baseline\n"
+        },
+        "head": "6034b83ef419d50bdd3dc9e94196684145efc521",
+        "log": [
+          "6034b83ef419d50bdd3dc9e94196684145efc521 aafd0a28b7db21bb9e8dfe996dc0b3ea7139b882 Synthetic multiple-clean role c",
+          "aafd0a28b7db21bb9e8dfe996dc0b3ea7139b882 1fc780a87c1c3e5e99c893f9f240ece462f4b4a5 Synthetic multiple-clean role b",
+          "1fc780a87c1c3e5e99c893f9f240ece462f4b4a5 ddb202608f44492baacec01ff09f2571c9be7d4a Synthetic multiple-clean role a",
+          "ddb202608f44492baacec01ff09f2571c9be7d4a  Synthetic fixture base"
+        ],
+        "operation_markers": {
+          "CHERRY_PICK_HEAD": false,
+          "MERGE_HEAD": false,
+          "rebase-apply": false,
+          "rebase-merge": false
+        },
+        "status": "",
+        "tracked_files": [
+          "clean-one.txt",
+          "clean-three.txt",
+          "clean-two.txt",
+          "shared-one.txt",
+          "shared-two.txt"
+        ],
+        "unmerged": ""
+      },
+      "identity_sha256": "bfb960f02b15976367fea2c4a0cfa31128cc1d5849e49a0fb67907c396405fe4",
+      "role": "a",
+      "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "agent_id": "conformance-01-multiple-clean-r1-b",
+      "git": {
+        "branch": "fixture/conformance-01-multiple-clean-r1/b",
+        "contents": {
+          "clean-one.txt": "landed-a\n",
+          "clean-three.txt": "landed-c\n",
+          "clean-two.txt": "landed-b\n",
+          "shared-one.txt": "baseline\n",
+          "shared-two.txt": "baseline\n"
+        },
+        "head": "6034b83ef419d50bdd3dc9e94196684145efc521",
+        "log": [
+          "6034b83ef419d50bdd3dc9e94196684145efc521 aafd0a28b7db21bb9e8dfe996dc0b3ea7139b882 Synthetic multiple-clean role c",
+          "aafd0a28b7db21bb9e8dfe996dc0b3ea7139b882 1fc780a87c1c3e5e99c893f9f240ece462f4b4a5 Synthetic multiple-clean role b",
+          "1fc780a87c1c3e5e99c893f9f240ece462f4b4a5 ddb202608f44492baacec01ff09f2571c9be7d4a Synthetic multiple-clean role a",
+          "ddb202608f44492baacec01ff09f2571c9be7d4a  Synthetic fixture base"
+        ],
+        "operation_markers": {
+          "CHERRY_PICK_HEAD": false,
+          "MERGE_HEAD": false,
+          "rebase-apply": false,
+          "rebase-merge": false
+        },
+        "status": "",
+        "tracked_files": [
+          "clean-one.txt",
+          "clean-three.txt",
+          "clean-two.txt",
+          "shared-one.txt",
+          "shared-two.txt"
+        ],
+        "unmerged": ""
+      },
+      "identity_sha256": "37ca279595173039c8aa25669647ae9430e879145667c917e3511f6249110bf8",
+      "role": "b",
+      "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "agent_id": "conformance-01-multiple-clean-r1-c",
+      "git": {
+        "branch": "fixture/conformance-01-multiple-clean-r1/c",
+        "contents": {
+          "clean-one.txt": "landed-a\n",
+          "clean-three.txt": "landed-c\n",
+          "clean-two.txt": "landed-b\n",
+          "shared-one.txt": "baseline\n",
+          "shared-two.txt": "baseline\n"
+        },
+        "head": "6034b83ef419d50bdd3dc9e94196684145efc521",
+        "log": [
+          "6034b83ef419d50bdd3dc9e94196684145efc521 aafd0a28b7db21bb9e8dfe996dc0b3ea7139b882 Synthetic multiple-clean role c",
+          "aafd0a28b7db21bb9e8dfe996dc0b3ea7139b882 1fc780a87c1c3e5e99c893f9f240ece462f4b4a5 Synthetic multiple-clean role b",
+          "1fc780a87c1c3e5e99c893f9f240ece462f4b4a5 ddb202608f44492baacec01ff09f2571c9be7d4a Synthetic multiple-clean role a",
+          "ddb202608f44492baacec01ff09f2571c9be7d4a  Synthetic fixture base"
+        ],
+        "operation_markers": {
+          "CHERRY_PICK_HEAD": false,
+          "MERGE_HEAD": false,
+          "rebase-apply": false,
+          "rebase-merge": false
+        },
+        "status": "",
+        "tracked_files": [
+          "clean-one.txt",
+          "clean-three.txt",
+          "clean-two.txt",
+          "shared-one.txt",
+          "shared-two.txt"
+        ],
+        "unmerged": ""
+      },
+      "identity_sha256": "72aa28bbf324f03bc69b096689ac7198b0e92306ac8ce0cfabb9a75c0f54adfe",
+      "role": "c",
+      "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "branch": "main",
+    "contents": {
+      "clean-one.txt": "landed-a\n",
+      "clean-three.txt": "landed-c\n",
+      "clean-two.txt": "landed-b\n",
+      "shared-one.txt": "baseline\n",
+      "shared-two.txt": "baseline\n"
+    },
+    "head": "6034b83ef419d50bdd3dc9e94196684145efc521",
+    "log": [
+      "6034b83ef419d50bdd3dc9e94196684145efc521 aafd0a28b7db21bb9e8dfe996dc0b3ea7139b882 Synthetic multiple-clean role c",
+      "aafd0a28b7db21bb9e8dfe996dc0b3ea7139b882 1fc780a87c1c3e5e99c893f9f240ece462f4b4a5 Synthetic multiple-clean role b",
+      "1fc780a87c1c3e5e99c893f9f240ece462f4b4a5 ddb202608f44492baacec01ff09f2571c9be7d4a Synthetic multiple-clean role a",
+      "ddb202608f44492baacec01ff09f2571c9be7d4a  Synthetic fixture base"
+    ],
+    "operation_markers": {
+      "CHERRY_PICK_HEAD": false,
+      "MERGE_HEAD": false,
+      "rebase-apply": false,
+      "rebase-merge": false
+    },
+    "status": "",
+    "tracked_files": [
+      "clean-one.txt",
+      "clean-three.txt",
+      "clean-two.txt",
+      "shared-one.txt",
+      "shared-two.txt"
+    ],
+    "unmerged": ""
+  },
+  "workspace_metadata": {
+    "agents": [
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-clean-r1-a",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-a",
+        "projectBaseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+        "projectId": "conformance-01-multiple-clean-r1",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-a/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-clean-r1-b",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-b",
+        "projectBaseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+        "projectId": "conformance-01-multiple-clean-r1",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-b/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-clean-r1-c",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-c",
+        "projectBaseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+        "projectId": "conformance-01-multiple-clean-r1",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-c/project-files"
+      }
+    ],
+    "archived": false,
+    "baseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+    "defaultBranch": "main",
+    "githubHtmlUrl": "",
+    "localRoot": "workspace/",
+    "projectId": "conformance-01-multiple-clean-r1",
+    "remoteUrl": "",
+    "repoFullName": "conformance-01-multiple-clean-r1",
+    "rulesDir": "workspace/project-rules",
+    "sharedDir": "workspace/project-memory",
+    "sourceDir": "source/"
+  },
+  "workspace_sha256": "36d395495557e87c0564830cd5a4b384a6fe097857a04d9e55cf40915882cf95"
+}

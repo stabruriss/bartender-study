@@ -1,0 +1,449 @@
+{
+  "after_reload": {
+    "bartender_outbox_exists": true,
+    "changed_metadata_keys": [],
+    "fixture_id": "conformance-01-multiple-clean-r1",
+    "ordered_role_mapping_unchanged": true,
+    "request_file_names": {
+      "delivered": [],
+      "failed": [],
+      "outbox": [],
+      "processing": []
+    },
+    "roles": [
+      {
+        "agent_id": "conformance-01-multiple-clean-r1-a",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-clean-r1/a",
+          "contents": {
+            "clean-one.txt": "landed-a\n",
+            "clean-three.txt": "baseline\n",
+            "clean-two.txt": "baseline\n",
+            "shared-one.txt": "baseline\n",
+            "shared-two.txt": "baseline\n"
+          },
+          "head": "a466e84b2c0ab218a483bc6ae1a0cdd3cdc4711f",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "bfb960f02b15976367fea2c4a0cfa31128cc1d5849e49a0fb67907c396405fe4",
+        "role": "a",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      },
+      {
+        "agent_id": "conformance-01-multiple-clean-r1-b",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-clean-r1/b",
+          "contents": {
+            "clean-one.txt": "baseline\n",
+            "clean-three.txt": "baseline\n",
+            "clean-two.txt": "landed-b\n",
+            "shared-one.txt": "baseline\n",
+            "shared-two.txt": "baseline\n"
+          },
+          "head": "3c84d009d439cbdd0950e5902d6b189431dc8830",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "37ca279595173039c8aa25669647ae9430e879145667c917e3511f6249110bf8",
+        "role": "b",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      },
+      {
+        "agent_id": "conformance-01-multiple-clean-r1-c",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-clean-r1/c",
+          "contents": {
+            "clean-one.txt": "baseline\n",
+            "clean-three.txt": "landed-c\n",
+            "clean-two.txt": "baseline\n",
+            "shared-one.txt": "baseline\n",
+            "shared-two.txt": "baseline\n"
+          },
+          "head": "30dafe6f84cc8bc4f7a3e9f74d431d368d3c358e",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "72aa28bbf324f03bc69b096689ac7198b0e92306ac8ce0cfabb9a75c0f54adfe",
+        "role": "c",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      }
+    ],
+    "source": {
+      "branch": "main",
+      "contents": {
+        "clean-one.txt": "baseline\n",
+        "clean-three.txt": "baseline\n",
+        "clean-two.txt": "baseline\n",
+        "shared-one.txt": "baseline\n",
+        "shared-two.txt": "baseline\n"
+      },
+      "head": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+      "operation_markers": {
+        "CHERRY_PICK_HEAD": false,
+        "MERGE_HEAD": false,
+        "rebase-apply": false,
+        "rebase-merge": false
+      },
+      "status": "",
+      "unmerged": ""
+    },
+    "workspace_sha256": "36d395495557e87c0564830cd5a4b384a6fe097857a04d9e55cf40915882cf95"
+  },
+  "after_workspace_metadata": {
+    "agents": [
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-clean-r1-a",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-a",
+        "projectBaseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+        "projectId": "conformance-01-multiple-clean-r1",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-a/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-clean-r1-b",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-b",
+        "projectBaseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+        "projectId": "conformance-01-multiple-clean-r1",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-b/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-clean-r1-c",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-c",
+        "projectBaseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+        "projectId": "conformance-01-multiple-clean-r1",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-c/project-files"
+      }
+    ],
+    "archived": false,
+    "baseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+    "defaultBranch": "main",
+    "githubHtmlUrl": "",
+    "localRoot": "workspace/",
+    "projectId": "conformance-01-multiple-clean-r1",
+    "remoteUrl": "",
+    "repoFullName": "conformance-01-multiple-clean-r1",
+    "rulesDir": "workspace/project-rules",
+    "sharedDir": "workspace/project-memory",
+    "sourceDir": "source/"
+  },
+  "before_reload": {
+    "bartender_outbox_exists": false,
+    "case": "multiple-clean",
+    "fixture_id": "conformance-01-multiple-clean-r1",
+    "initial_sha256": "41d0d1ed4e000b85abb9744e8050709df4a06ea409dbaaae8fa2b4bbdcd03379",
+    "repeat": 1,
+    "request_file_names": {
+      "delivered": [],
+      "failed": [],
+      "outbox": [],
+      "processing": []
+    },
+    "roles": [
+      {
+        "agent_id": "conformance-01-multiple-clean-r1-a",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-clean-r1/a",
+          "contents": {
+            "clean-one.txt": "landed-a\n",
+            "clean-three.txt": "baseline\n",
+            "clean-two.txt": "baseline\n",
+            "shared-one.txt": "baseline\n",
+            "shared-two.txt": "baseline\n"
+          },
+          "head": "a466e84b2c0ab218a483bc6ae1a0cdd3cdc4711f",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "bfb960f02b15976367fea2c4a0cfa31128cc1d5849e49a0fb67907c396405fe4",
+        "role": "a",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      },
+      {
+        "agent_id": "conformance-01-multiple-clean-r1-b",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-clean-r1/b",
+          "contents": {
+            "clean-one.txt": "baseline\n",
+            "clean-three.txt": "baseline\n",
+            "clean-two.txt": "landed-b\n",
+            "shared-one.txt": "baseline\n",
+            "shared-two.txt": "baseline\n"
+          },
+          "head": "3c84d009d439cbdd0950e5902d6b189431dc8830",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "37ca279595173039c8aa25669647ae9430e879145667c917e3511f6249110bf8",
+        "role": "b",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      },
+      {
+        "agent_id": "conformance-01-multiple-clean-r1-c",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-clean-r1/c",
+          "contents": {
+            "clean-one.txt": "baseline\n",
+            "clean-three.txt": "landed-c\n",
+            "clean-two.txt": "baseline\n",
+            "shared-one.txt": "baseline\n",
+            "shared-two.txt": "baseline\n"
+          },
+          "head": "30dafe6f84cc8bc4f7a3e9f74d431d368d3c358e",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "72aa28bbf324f03bc69b096689ac7198b0e92306ac8ce0cfabb9a75c0f54adfe",
+        "role": "c",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      }
+    ],
+    "source": {
+      "branch": "main",
+      "contents": {
+        "clean-one.txt": "baseline\n",
+        "clean-three.txt": "baseline\n",
+        "clean-two.txt": "baseline\n",
+        "shared-one.txt": "baseline\n",
+        "shared-two.txt": "baseline\n"
+      },
+      "head": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+      "operation_markers": {
+        "CHERRY_PICK_HEAD": false,
+        "MERGE_HEAD": false,
+        "rebase-apply": false,
+        "rebase-merge": false
+      },
+      "status": "",
+      "unmerged": ""
+    },
+    "workspace_keys": [
+      "agents",
+      "archived",
+      "baseRef",
+      "defaultBranch",
+      "githubHtmlUrl",
+      "localRoot",
+      "projectId",
+      "remoteUrl",
+      "repoFullName",
+      "rulesDir",
+      "sharedDir",
+      "sourceDir"
+    ],
+    "workspace_sha256": "36d395495557e87c0564830cd5a4b384a6fe097857a04d9e55cf40915882cf95"
+  },
+  "before_workspace_metadata": {
+    "agents": [
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-clean-r1-a",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-a",
+        "projectBaseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+        "projectId": "conformance-01-multiple-clean-r1",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-a/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-clean-r1-b",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-b",
+        "projectBaseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+        "projectId": "conformance-01-multiple-clean-r1",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-b/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-clean-r1-c",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-c",
+        "projectBaseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+        "projectId": "conformance-01-multiple-clean-r1",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-clean-r1-c/project-files"
+      }
+    ],
+    "archived": false,
+    "baseRef": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+    "defaultBranch": "main",
+    "githubHtmlUrl": "",
+    "localRoot": "workspace/",
+    "projectId": "conformance-01-multiple-clean-r1",
+    "remoteUrl": "",
+    "repoFullName": "conformance-01-multiple-clean-r1",
+    "rulesDir": "workspace/project-rules",
+    "sharedDir": "workspace/project-memory",
+    "sourceDir": "source/"
+  },
+  "case": "multiple-clean",
+  "fixture_id": "conformance-01-multiple-clean-r1",
+  "initial": {
+    "agents": [
+      {
+        "agent_id": "conformance-01-multiple-clean-r1-a",
+        "branch": "fixture/conformance-01-multiple-clean-r1/a",
+        "changed_file": "clean-one.txt",
+        "content": "landed-a\n",
+        "head": "a466e84b2c0ab218a483bc6ae1a0cdd3cdc4711f",
+        "role": "a"
+      },
+      {
+        "agent_id": "conformance-01-multiple-clean-r1-b",
+        "branch": "fixture/conformance-01-multiple-clean-r1/b",
+        "changed_file": "clean-two.txt",
+        "content": "landed-b\n",
+        "head": "3c84d009d439cbdd0950e5902d6b189431dc8830",
+        "role": "b"
+      },
+      {
+        "agent_id": "conformance-01-multiple-clean-r1-c",
+        "branch": "fixture/conformance-01-multiple-clean-r1/c",
+        "changed_file": "clean-three.txt",
+        "content": "landed-c\n",
+        "head": "30dafe6f84cc8bc4f7a3e9f74d431d368d3c358e",
+        "role": "c"
+      }
+    ],
+    "base": "ddb202608f44492baacec01ff09f2571c9be7d4a",
+    "case": "multiple-clean",
+    "fixture_id": "conformance-01-multiple-clean-r1",
+    "repeat": 1,
+    "source_head": "ddb202608f44492baacec01ff09f2571c9be7d4a"
+  },
+  "repetition": 1,
+  "retained_originals": [
+    {
+      "reference": "local-logs/conformance/conformance-01-multiple-clean-r1/initial.json",
+      "sha256": "41d0d1ed4e000b85abb9744e8050709df4a06ea409dbaaae8fa2b4bbdcd03379"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/observations.json",
+      "sha256": "2c2f19a80973cee1a7c09eeb0875b0ee8d52408662e0f5cf14267e66751afcfa"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-clean-r1/workspace.json",
+      "sha256": "36d395495557e87c0564830cd5a4b384a6fe097857a04d9e55cf40915882cf95"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-clean-r1/a-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-clean-r1/a-agent.yaml",
+      "sha256": "bfb960f02b15976367fea2c4a0cfa31128cc1d5849e49a0fb67907c396405fe4"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-clean-r1/b-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-clean-r1/b-agent.yaml",
+      "sha256": "37ca279595173039c8aa25669647ae9430e879145667c917e3511f6249110bf8"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-clean-r1/c-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-clean-r1/c-agent.yaml",
+      "sha256": "72aa28bbf324f03bc69b096689ac7198b0e92306ac8ce0cfabb9a75c0f54adfe"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/observations.json",
+      "sha256": "5df980aedc11897b2619cdf3cbca8e57560d890fe27dec9719a6fdb4546b8180"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-clean-r1/workspace.json",
+      "sha256": "36d395495557e87c0564830cd5a4b384a6fe097857a04d9e55cf40915882cf95"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-clean-r1/a-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-clean-r1/a-agent.yaml",
+      "sha256": "bfb960f02b15976367fea2c4a0cfa31128cc1d5849e49a0fb67907c396405fe4"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-clean-r1/b-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-clean-r1/b-agent.yaml",
+      "sha256": "37ca279595173039c8aa25669647ae9430e879145667c917e3511f6249110bf8"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-clean-r1/c-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-clean-r1/c-agent.yaml",
+      "sha256": "72aa28bbf324f03bc69b096689ac7198b0e92306ac8ce0cfabb9a75c0f54adfe"
+    }
+  ]
+}

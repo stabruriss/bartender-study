@@ -1,0 +1,15 @@
+{
+  "actor_events": "actor-events-02.json",
+  "app_consumption_observed_via": "matching delivered request and result files",
+  "cli_exit_code": 0,
+  "cli_stderr_empty": true,
+  "cli_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cli_stdout_sha256": "f521797b9056f8471d37db1eb646ae8dd90edf45cff57befed345c1ef71f5c22",
+  "creation_observed_via": "matching native delivered dispatch schema/action/project/request id",
+  "finished_at": "2026-09-09T18:32:42Z",
+  "integration_result": "response-02.json",
+  "request_id": "sync-23c246b59bbe4192a8fb2b9211acf0ad",
+  "started_at": "2026-09-09T18:32:41Z",
+  "time_resolution_seconds": 1,
+  "wall_seconds": 1.0
+}

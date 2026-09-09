@@ -1,0 +1,138 @@
+{
+  "actor_original_sha256": "73b0981074abaf08ac5ca0f59d7dff218f05c7f527ce30b3f3510d3190d62471",
+  "assertions": [
+    {
+      "assertion": "matching delivered native request and result",
+      "observed": "sync-541126a4dd4a4e2ab796bc64915b4fc4",
+      "status": "pass"
+    },
+    {
+      "assertion": "CLI transport completed",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "no generic snapshot or metadata issues",
+      "observed": [],
+      "status": "pass"
+    },
+    {
+      "assertion": "ordered conflict set",
+      "observed": [
+        "conformance-01-one-conflict-r2-a"
+      ],
+      "status": "pass"
+    },
+    {
+      "assertion": "conflicts identify the original failed commits",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "snapshotCount is zero",
+      "observed": 0,
+      "status": "pass"
+    },
+    {
+      "assertion": "publishedCommitCount matches the fixed assertion",
+      "observed": 0,
+      "status": "pass"
+    },
+    {
+      "assertion": "result.ok matches the expected conflict state",
+      "observed": false,
+      "status": "pass"
+    },
+    {
+      "assertion": "result identifies the fixture source",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "source remains clean on main",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "all source file contents match the fixed scenario",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "source ancestry and number of new commits",
+      "observed": "0",
+      "status": "pass"
+    },
+    {
+      "assertion": "a: blocked role retains its initial state",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "b: clean role reaches final source state",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "actor records are observable and unambiguous",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "one resolve-conflict notice for first blocked role",
+      "observed": [
+        "bartender-conflict:conformance-01-one-conflict-r2-a:e6cfd3ce8446f56a2ed4681bf8f033a9777b5793:135171884fd1fdda360384e8ba86e4b394d5f5a9"
+      ],
+      "status": "pass"
+    },
+    {
+      "assertion": "notice binds failed commit, final source HEAD and repair/retry instructions",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "disabled-provider delivery-skipped recorded",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "second request id is distinct",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "second unedited sync leaves all Git states unchanged",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "second sync creates no additional unique conflict notice",
+      "observed": null,
+      "status": "pass"
+    },
+    {
+      "assertion": "only the intended requests were processed and queues are empty",
+      "observed": null,
+      "status": "pass"
+    }
+  ],
+  "case": "one-conflict",
+  "cli_exit_code": 0,
+  "conflict_agent_ids": [
+    "conformance-01-one-conflict-r2-a"
+  ],
+  "finished_at": "2026-09-09T18:32:47Z",
+  "fixture_id": "conformance-01-one-conflict-r2",
+  "observed_at": "2026-09-09T18:32:48.138810+00:00",
+  "original_hashes": {
+    "sync-02.stdout.json": "b0cfb056bb00ad02fbbfb43efa436e4e1358c2dc9bd3c44b7ecb9181c515c533",
+    "sync-541126a4dd4a4e2ab796bc64915b4fc4.json": "0e577cc602abaf414d0bc878e0f101bae29cd8e9a538f413f4bd0e285a042e4e",
+    "sync-541126a4dd4a4e2ab796bc64915b4fc4.result.json": "3869344ac7ec44cf8615dc488d63803d15481945ee5cc43fd32dfe2c93784e54"
+  },
+  "published_commit_count": 0,
+  "repeat": 2,
+  "request_id": "sync-541126a4dd4a4e2ab796bc64915b4fc4",
+  "request_number": 2,
+  "started_at": "2026-09-09T18:32:46Z",
+  "status": "pass"
+}

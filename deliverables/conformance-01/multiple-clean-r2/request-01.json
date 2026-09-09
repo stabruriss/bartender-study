@@ -1,0 +1,7 @@
+{
+  "action": "sync",
+  "createdAt": "2026-09-09T18:32:37.721931+00:00",
+  "projectRoot": "workspace/",
+  "requestId": "sync-00430771a65c445089015cac11360ff0",
+  "schema": "kota.bartender.dispatch.v1"
+}

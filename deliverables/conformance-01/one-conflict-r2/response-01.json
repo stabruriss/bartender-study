@@ -1,0 +1,46 @@
+{
+  "message": "1 change need agent conflict resolution.",
+  "ok": false,
+  "requestId": "sync-47f038e7b91b43f687366d1bca05cb3b",
+  "result": {
+    "conflicts": [
+      {
+        "agentId": "conformance-01-one-conflict-r2-a",
+        "commit": "e6cfd3ce8446f56a2ed4681bf8f033a9777b5793",
+        "message": "git -C source/ cherry-pick e6cfd3ce8446f56a2ed4681bf8f033a9777b5793 failed: error: could not apply e6cfd3c... Synthetic one-conflict role a\nhint: After resolving the conflicts, mark them with\nhint: \"git add/rm <pathspec>\", then run\nhint: \"git cherry-pick --continue\".\nhint: You can instead skip this commit with \"git cherry-pick --skip\".\nhint: To abort and get back to the state before \"git cherry-pick\",\nhint: run \"git cherry-pick --abort\"."
+      }
+    ],
+    "message": "1 change need agent conflict resolution.",
+    "ok": false,
+    "publishedAgents": [
+      {
+        "agentId": "conformance-01-one-conflict-r2-b",
+        "commitCount": 1
+      }
+    ],
+    "publishedCommitCount": 1,
+    "snapshotCount": 0,
+    "status": {
+      "checkedAt": "2026-09-09T18:32:45.482591+00:00",
+      "defaultBranch": "main",
+      "dirtyAgents": [
+        {
+          "agentId": "conformance-01-one-conflict-r2-a",
+          "changeCount": 1,
+          "path": "workspace/.agent-workspaces/conformance-01-one-conflict-r2-a/project-files",
+          "pendingCommitCount": 1
+        }
+      ],
+      "githubBehindCount": 0,
+      "githubChangeCount": 0,
+      "githubInitialPushCommitCount": 0,
+      "githubNeedsInitialPush": false,
+      "message": "1 changed file waiting in agent worktrees.",
+      "projectId": "conformance-01-one-conflict-r2",
+      "roomChangeCount": 1,
+      "sourceChangeCount": 0,
+      "sourceDir": "source/",
+      "state": "roomDiff"
+    }
+  }
+}

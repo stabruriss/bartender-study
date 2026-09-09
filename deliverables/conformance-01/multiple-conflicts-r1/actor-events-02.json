@@ -1,0 +1,20 @@
+[
+  {
+    "event_id": "bartender-conflict:conformance-01-multiple-conflicts-r1-a:77b33b72463032a816b0de39bc2f72649079e3a4:d5a3a2308b856ea64600030fa0459fa1cf05df57",
+    "intent": "resolve-conflict",
+    "target_agent_ids": [
+      "conformance-01-multiple-conflicts-r1-a"
+    ],
+    "text": "Inspect the conflict state, explain the competing changes, and resolve only files owned by your current task.\n\nYour commit `77b33b72463032a816b0de39bc2f72649079e3a4` conflicts while I sync `conformance-01-multiple-conflicts-r1` into room HEAD `d5a3a2308b856ea64600030fa0459fa1cf05df57`.\n\nRebase your agent branch onto the exact room HEAD `d5a3a2308b856ea64600030fa0459fa1cf05df57`, resolving conflicts during the rebase \u2014 do not merge the room HEAD into your branch; Bartender can only replay a linear history. Leave the worktree clean, then retry sync. If the rebase cannot safely preserve the intended result, stop and reply with the product decision you need. Never edit the room/source worktree.\n\nGit said:\ngit -C source/ cherry-pick 77b33b72463032a816b0de39bc2f72649079e3a4 failed: error: could not apply 77b33b7... Synthetic multiple-conflicts role a\nhint: After resolving the conflicts, mark them with\nhint: \"git add/rm <pathspec>\", then run\nhint: \"git cherry-pick --continue\".\nhint: You can instead skip this commit with \"git cherry-pick --skip\".\nhint: To abort and get back to the state before \"git cherry-pick\",\nhint: run \"git cherry-pick --abort\".",
+    "timestamp": "2026-09-09T18:31:57.573507+00:00"
+  },
+  {
+    "event_id": "bartender-conflict:conformance-01-multiple-conflicts-r1-a:77b33b72463032a816b0de39bc2f72649079e3a4:d5a3a2308b856ea64600030fa0459fa1cf05df57:skipped",
+    "intent": "delivery-skipped",
+    "target_agent_ids": [
+      "conformance-01-multiple-conflicts-r1-a"
+    ],
+    "text": "conformance-01-multiple-conflicts-r1-a is not responding. Let's skip this for now.",
+    "timestamp": "2026-09-09T18:31:57.577432+00:00"
+  }
+]

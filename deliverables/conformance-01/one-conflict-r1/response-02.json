@@ -1,0 +1,41 @@
+{
+  "message": "1 change need agent conflict resolution.",
+  "ok": false,
+  "requestId": "sync-1cfc8baaf3d941a68003a6905b16bef3",
+  "result": {
+    "conflicts": [
+      {
+        "agentId": "conformance-01-one-conflict-r1-a",
+        "commit": "cd41e668ea5cff211d501e55c89f07612194dee5",
+        "message": "git -C source/ cherry-pick cd41e668ea5cff211d501e55c89f07612194dee5 failed: error: could not apply cd41e66... Synthetic one-conflict role a\nhint: After resolving the conflicts, mark them with\nhint: \"git add/rm <pathspec>\", then run\nhint: \"git cherry-pick --continue\".\nhint: You can instead skip this commit with \"git cherry-pick --skip\".\nhint: To abort and get back to the state before \"git cherry-pick\",\nhint: run \"git cherry-pick --abort\"."
+      }
+    ],
+    "message": "1 change need agent conflict resolution.",
+    "ok": false,
+    "publishedAgents": [],
+    "publishedCommitCount": 0,
+    "snapshotCount": 0,
+    "status": {
+      "checkedAt": "2026-09-09T18:31:14.267409+00:00",
+      "defaultBranch": "main",
+      "dirtyAgents": [
+        {
+          "agentId": "conformance-01-one-conflict-r1-a",
+          "changeCount": 1,
+          "path": "workspace/.agent-workspaces/conformance-01-one-conflict-r1-a/project-files",
+          "pendingCommitCount": 1
+        }
+      ],
+      "githubBehindCount": 0,
+      "githubChangeCount": 0,
+      "githubInitialPushCommitCount": 0,
+      "githubNeedsInitialPush": false,
+      "message": "1 changed file waiting in agent worktrees.",
+      "projectId": "conformance-01-one-conflict-r1",
+      "roomChangeCount": 1,
+      "sourceChangeCount": 0,
+      "sourceDir": "source/",
+      "state": "roomDiff"
+    }
+  }
+}

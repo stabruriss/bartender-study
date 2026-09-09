@@ -1,0 +1,449 @@
+{
+  "after_reload": {
+    "bartender_outbox_exists": true,
+    "changed_metadata_keys": [],
+    "fixture_id": "conformance-01-multiple-conflicts-r2",
+    "ordered_role_mapping_unchanged": true,
+    "request_file_names": {
+      "delivered": [],
+      "failed": [],
+      "outbox": [],
+      "processing": []
+    },
+    "roles": [
+      {
+        "agent_id": "conformance-01-multiple-conflicts-r2-a",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-conflicts-r2/a",
+          "contents": {
+            "clean-one.txt": "baseline\n",
+            "clean-three.txt": "baseline\n",
+            "clean-two.txt": "baseline\n",
+            "shared-one.txt": "agent-a\n",
+            "shared-two.txt": "baseline\n"
+          },
+          "head": "5a54cab3126e88b46526de1207d9d69a41e8f621",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "55612da155a71091a7e56034e9083ead09a38b1501e320dfdd135964f6d588f4",
+        "role": "a",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      },
+      {
+        "agent_id": "conformance-01-multiple-conflicts-r2-b",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-conflicts-r2/b",
+          "contents": {
+            "clean-one.txt": "baseline\n",
+            "clean-three.txt": "baseline\n",
+            "clean-two.txt": "baseline\n",
+            "shared-one.txt": "baseline\n",
+            "shared-two.txt": "agent-b\n"
+          },
+          "head": "e57eed71ed1a61073498771c04833b36f53caf2e",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "239064e846f5b1c9cf483f56bda6e5db15c8c88d1d615fedaf37f709e73e10d3",
+        "role": "b",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      },
+      {
+        "agent_id": "conformance-01-multiple-conflicts-r2-c",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-conflicts-r2/c",
+          "contents": {
+            "clean-one.txt": "landed-c\n",
+            "clean-three.txt": "baseline\n",
+            "clean-two.txt": "baseline\n",
+            "shared-one.txt": "baseline\n",
+            "shared-two.txt": "baseline\n"
+          },
+          "head": "725583912c0c3fa039e6442a923c14c01415ffa7",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "e1bcf04a22b72924c8764bb657a95a5d3d7d831f70674fe1db7c1416e473da4d",
+        "role": "c",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      }
+    ],
+    "source": {
+      "branch": "main",
+      "contents": {
+        "clean-one.txt": "baseline\n",
+        "clean-three.txt": "baseline\n",
+        "clean-two.txt": "baseline\n",
+        "shared-one.txt": "source-one\n",
+        "shared-two.txt": "source-two\n"
+      },
+      "head": "529009a130c461c5e405780c4fb6c61f33ea7b6c",
+      "operation_markers": {
+        "CHERRY_PICK_HEAD": false,
+        "MERGE_HEAD": false,
+        "rebase-apply": false,
+        "rebase-merge": false
+      },
+      "status": "",
+      "unmerged": ""
+    },
+    "workspace_sha256": "008a826699867139aa1073b66678ccf9c2571d153b5a16bfd28249bcbf2faf14"
+  },
+  "after_workspace_metadata": {
+    "agents": [
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-conflicts-r2-a",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-a",
+        "projectBaseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+        "projectId": "conformance-01-multiple-conflicts-r2",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-a/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-conflicts-r2-b",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-b",
+        "projectBaseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+        "projectId": "conformance-01-multiple-conflicts-r2",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-b/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-conflicts-r2-c",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-c",
+        "projectBaseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+        "projectId": "conformance-01-multiple-conflicts-r2",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-c/project-files"
+      }
+    ],
+    "archived": false,
+    "baseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+    "defaultBranch": "main",
+    "githubHtmlUrl": "",
+    "localRoot": "workspace/",
+    "projectId": "conformance-01-multiple-conflicts-r2",
+    "remoteUrl": "",
+    "repoFullName": "conformance-01-multiple-conflicts-r2",
+    "rulesDir": "workspace/project-rules",
+    "sharedDir": "workspace/project-memory",
+    "sourceDir": "source/"
+  },
+  "before_reload": {
+    "bartender_outbox_exists": false,
+    "case": "multiple-conflicts",
+    "fixture_id": "conformance-01-multiple-conflicts-r2",
+    "initial_sha256": "a4c0e41c1dffb60ee9c2921fc7b6545d96024267cda6b08b9f373860dd5c803e",
+    "repeat": 2,
+    "request_file_names": {
+      "delivered": [],
+      "failed": [],
+      "outbox": [],
+      "processing": []
+    },
+    "roles": [
+      {
+        "agent_id": "conformance-01-multiple-conflicts-r2-a",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-conflicts-r2/a",
+          "contents": {
+            "clean-one.txt": "baseline\n",
+            "clean-three.txt": "baseline\n",
+            "clean-two.txt": "baseline\n",
+            "shared-one.txt": "agent-a\n",
+            "shared-two.txt": "baseline\n"
+          },
+          "head": "5a54cab3126e88b46526de1207d9d69a41e8f621",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "55612da155a71091a7e56034e9083ead09a38b1501e320dfdd135964f6d588f4",
+        "role": "a",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      },
+      {
+        "agent_id": "conformance-01-multiple-conflicts-r2-b",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-conflicts-r2/b",
+          "contents": {
+            "clean-one.txt": "baseline\n",
+            "clean-three.txt": "baseline\n",
+            "clean-two.txt": "baseline\n",
+            "shared-one.txt": "baseline\n",
+            "shared-two.txt": "agent-b\n"
+          },
+          "head": "e57eed71ed1a61073498771c04833b36f53caf2e",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "239064e846f5b1c9cf483f56bda6e5db15c8c88d1d615fedaf37f709e73e10d3",
+        "role": "b",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      },
+      {
+        "agent_id": "conformance-01-multiple-conflicts-r2-c",
+        "git": {
+          "branch": "fixture/conformance-01-multiple-conflicts-r2/c",
+          "contents": {
+            "clean-one.txt": "landed-c\n",
+            "clean-three.txt": "baseline\n",
+            "clean-two.txt": "baseline\n",
+            "shared-one.txt": "baseline\n",
+            "shared-two.txt": "baseline\n"
+          },
+          "head": "725583912c0c3fa039e6442a923c14c01415ffa7",
+          "operation_markers": {
+            "CHERRY_PICK_HEAD": false,
+            "MERGE_HEAD": false,
+            "rebase-apply": false,
+            "rebase-merge": false
+          },
+          "status": "",
+          "unmerged": ""
+        },
+        "identity_sha256": "e1bcf04a22b72924c8764bb657a95a5d3d7d831f70674fe1db7c1416e473da4d",
+        "role": "c",
+        "shell_sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+      }
+    ],
+    "source": {
+      "branch": "main",
+      "contents": {
+        "clean-one.txt": "baseline\n",
+        "clean-three.txt": "baseline\n",
+        "clean-two.txt": "baseline\n",
+        "shared-one.txt": "source-one\n",
+        "shared-two.txt": "source-two\n"
+      },
+      "head": "529009a130c461c5e405780c4fb6c61f33ea7b6c",
+      "operation_markers": {
+        "CHERRY_PICK_HEAD": false,
+        "MERGE_HEAD": false,
+        "rebase-apply": false,
+        "rebase-merge": false
+      },
+      "status": "",
+      "unmerged": ""
+    },
+    "workspace_keys": [
+      "agents",
+      "archived",
+      "baseRef",
+      "defaultBranch",
+      "githubHtmlUrl",
+      "localRoot",
+      "projectId",
+      "remoteUrl",
+      "repoFullName",
+      "rulesDir",
+      "sharedDir",
+      "sourceDir"
+    ],
+    "workspace_sha256": "008a826699867139aa1073b66678ccf9c2571d153b5a16bfd28249bcbf2faf14"
+  },
+  "before_workspace_metadata": {
+    "agents": [
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-conflicts-r2-a",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-a",
+        "projectBaseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+        "projectId": "conformance-01-multiple-conflicts-r2",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-a/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-conflicts-r2-b",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-b",
+        "projectBaseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+        "projectId": "conformance-01-multiple-conflicts-r2",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-b/project-files"
+      },
+      {
+        "adapterPath": "",
+        "agentId": "conformance-01-multiple-conflicts-r2-c",
+        "cli": "conformance-disabled",
+        "cwd": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-c",
+        "projectBaseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+        "projectId": "conformance-01-multiple-conflicts-r2",
+        "projectRemote": "",
+        "projectRoot": "workspace/",
+        "rulesDir": "workspace/project-rules",
+        "sharedDir": "workspace/project-memory",
+        "worktreeRoot": "workspace/.agent-workspaces/conformance-01-multiple-conflicts-r2-c/project-files"
+      }
+    ],
+    "archived": false,
+    "baseRef": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+    "defaultBranch": "main",
+    "githubHtmlUrl": "",
+    "localRoot": "workspace/",
+    "projectId": "conformance-01-multiple-conflicts-r2",
+    "remoteUrl": "",
+    "repoFullName": "conformance-01-multiple-conflicts-r2",
+    "rulesDir": "workspace/project-rules",
+    "sharedDir": "workspace/project-memory",
+    "sourceDir": "source/"
+  },
+  "case": "multiple-conflicts",
+  "fixture_id": "conformance-01-multiple-conflicts-r2",
+  "initial": {
+    "agents": [
+      {
+        "agent_id": "conformance-01-multiple-conflicts-r2-a",
+        "branch": "fixture/conformance-01-multiple-conflicts-r2/a",
+        "changed_file": "shared-one.txt",
+        "content": "agent-a\n",
+        "head": "5a54cab3126e88b46526de1207d9d69a41e8f621",
+        "role": "a"
+      },
+      {
+        "agent_id": "conformance-01-multiple-conflicts-r2-b",
+        "branch": "fixture/conformance-01-multiple-conflicts-r2/b",
+        "changed_file": "shared-two.txt",
+        "content": "agent-b\n",
+        "head": "e57eed71ed1a61073498771c04833b36f53caf2e",
+        "role": "b"
+      },
+      {
+        "agent_id": "conformance-01-multiple-conflicts-r2-c",
+        "branch": "fixture/conformance-01-multiple-conflicts-r2/c",
+        "changed_file": "clean-one.txt",
+        "content": "landed-c\n",
+        "head": "725583912c0c3fa039e6442a923c14c01415ffa7",
+        "role": "c"
+      }
+    ],
+    "base": "870c3ea5cb9c70bc88587d635044c43686b59c70",
+    "case": "multiple-conflicts",
+    "fixture_id": "conformance-01-multiple-conflicts-r2",
+    "repeat": 2,
+    "source_head": "529009a130c461c5e405780c4fb6c61f33ea7b6c"
+  },
+  "repetition": 2,
+  "retained_originals": [
+    {
+      "reference": "local-logs/conformance/conformance-01-multiple-conflicts-r2/initial.json",
+      "sha256": "a4c0e41c1dffb60ee9c2921fc7b6545d96024267cda6b08b9f373860dd5c803e"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/observations.json",
+      "sha256": "2c2f19a80973cee1a7c09eeb0875b0ee8d52408662e0f5cf14267e66751afcfa"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-conflicts-r2/workspace.json",
+      "sha256": "008a826699867139aa1073b66678ccf9c2571d153b5a16bfd28249bcbf2faf14"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-conflicts-r2/a-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-conflicts-r2/a-agent.yaml",
+      "sha256": "55612da155a71091a7e56034e9083ead09a38b1501e320dfdd135964f6d588f4"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-conflicts-r2/b-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-conflicts-r2/b-agent.yaml",
+      "sha256": "239064e846f5b1c9cf483f56bda6e5db15c8c88d1d615fedaf37f709e73e10d3"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-conflicts-r2/c-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-before-owner-restart/conformance-01-multiple-conflicts-r2/c-agent.yaml",
+      "sha256": "e1bcf04a22b72924c8764bb657a95a5d3d7d831f70674fe1db7c1416e473da4d"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/observations.json",
+      "sha256": "5df980aedc11897b2619cdf3cbca8e57560d890fe27dec9719a6fdb4546b8180"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-conflicts-r2/workspace.json",
+      "sha256": "008a826699867139aa1073b66678ccf9c2571d153b5a16bfd28249bcbf2faf14"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-conflicts-r2/a-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-conflicts-r2/a-agent.yaml",
+      "sha256": "55612da155a71091a7e56034e9083ead09a38b1501e320dfdd135964f6d588f4"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-conflicts-r2/b-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-conflicts-r2/b-agent.yaml",
+      "sha256": "239064e846f5b1c9cf483f56bda6e5db15c8c88d1d615fedaf37f709e73e10d3"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-conflicts-r2/c-SHELL.yaml",
+      "sha256": "26612eb81ca77451eef95d7fe497e67e102ec6fd94bc1635b2c8d4ec6879a549"
+    },
+    {
+      "reference": "local-logs/setup-probe/batch-after-owner-restart/conformance-01-multiple-conflicts-r2/c-agent.yaml",
+      "sha256": "e1bcf04a22b72924c8764bb657a95a5d3d7d831f70674fe1db7c1416e473da4d"
+    }
+  ]
+}

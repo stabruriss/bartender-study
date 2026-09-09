@@ -538,6 +538,27 @@ pre-request checks, disabled providers, and the exact fixture target. The
 accepted size-field-only metadata exception and stop-on-first-failure rules
 are acknowledged. No conformance request or further restart has been issued.
 
+Conformance result | 2026-09-09T18:38:29Z: The approved retained-fixture
+observations completed in the required order, first repetition 1 then 2.
+`deliverables/conformance-01/summary.csv` contains all eight rows with
+`assertion_status=PASS`; each has two distinct native request ids. The request
+records span 2026-09-09T18:23:42Z through 2026-09-09T18:32:52Z, after revalidation
+had finished. No assertion failed and no timeout, unrun row or extra request
+was recorded. Expected conflicts remained explicit in their native receipts;
+they were not relabeled as successful integrations.
+
+The delivery includes the exact approval/version/review snapshots, per-request
+Git snapshots, request/result projections, fixed assertion tables, unique-id
+actor events, and technical setup projections with hashes of the retained
+before/after originals. The original-file hash audit and privacy review passed.
+Providers remained disabled. The report limits its claims to the specified
+routing/recording observations; successful real-agent repair was not exercised.
+All fixture repositories, original metadata, raw actor logs and native receipts
+remain local. No product/research script, timer or fixture constructor was
+modified by the runner, and no further app restart or cleanup was performed.
+The hourly owner-created reminder remains scheduled with two total runs and
+next check 2026-09-09T18:54:00Z. Maintainer acceptance of this delivery is pending.
+
 ## Q-20260909-04 | 2026-09-09T07:06:16Z | OPEN
 Step: Owner-authorized single-fixture setup and application restart.
 Observed: The temporary `launchctl submit` job intended to survive application

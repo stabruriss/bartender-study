@@ -1,0 +1,41 @@
+{
+  "message": "Synced 3 changes.",
+  "ok": true,
+  "requestId": "sync-00430771a65c445089015cac11360ff0",
+  "result": {
+    "conflicts": [],
+    "message": "Synced 3 changes.",
+    "ok": true,
+    "publishedAgents": [
+      {
+        "agentId": "conformance-01-multiple-clean-r2-a",
+        "commitCount": 1
+      },
+      {
+        "agentId": "conformance-01-multiple-clean-r2-b",
+        "commitCount": 1
+      },
+      {
+        "agentId": "conformance-01-multiple-clean-r2-c",
+        "commitCount": 1
+      }
+    ],
+    "publishedCommitCount": 3,
+    "snapshotCount": 0,
+    "status": {
+      "checkedAt": "2026-09-09T18:32:39.502638+00:00",
+      "defaultBranch": "main",
+      "dirtyAgents": [],
+      "githubBehindCount": 0,
+      "githubChangeCount": 0,
+      "githubInitialPushCommitCount": 0,
+      "githubNeedsInitialPush": false,
+      "message": "Room is in sync.",
+      "projectId": "conformance-01-multiple-clean-r2",
+      "roomChangeCount": 0,
+      "sourceChangeCount": 0,
+      "sourceDir": "source/",
+      "state": "idle"
+    }
+  }
+}
