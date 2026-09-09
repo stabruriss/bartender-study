@@ -208,3 +208,38 @@ Source references:
 - https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src/chrome/ProjectSetupModal.tsx#L129
 - https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src/App.tsx#L1613
 - https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/integrations/mod.rs#L583
+
+Local registration and target-routing review | 2026-09-09T06:28:19Z: The owner
+proposed registering synthetic local project structures, restarting the app to
+load them, and then trying an explicitly targeted cross-project CLI sync. The
+owner also imposed a strict exclusion for an unrelated project. Its identity
+and local operational restriction are retained only in ignored local records;
+no identifying information or contents from that project are exported here.
+
+Installed CLI help exposes `sync --json --project-root <path>`. The reviewed
+`resolve_cli_project_root` gives the explicit path priority over inherited
+project environment and CWD discovery; the sync enqueue path writes its request
+under that target. Source therefore supports cross-project request routing,
+subject to a matching application workspace and active consumer. This has not
+been demonstrated with a live fixture or receipt.
+
+The shared-app restart is not confined to the fixture: startup enumerates all
+registered workspaces, runs adapter migration, and initializes each project's
+Bartender watcher. Workspace enumeration calls preparation routines that may
+normalize/migrate and save metadata. Watcher initialization creates the outbox
+and processes pending requests. App-side resolution of an explicitly targeted
+sync also enumerates/prepares workspaces before selecting its target. The
+explicit CLI target alone therefore does not establish zero access or writes
+to excluded project metadata. The runner did not inspect the excluded project
+to determine its state and did not restart the app, register a fixture, or
+send any sync request.
+
+Question: What reviewed loading and request-resolution procedure can exercise
+the synthetic fixture while respecting the owner's unrelated-project exclusion,
+given these global startup and lookup effects? Conformance remains on HOLD at
+setup; no approval fields or product code have been altered to bypass it.
+Additional source references:
+- https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/bartender.rs#L1839
+- https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/lib.rs#L2012
+- https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/lib.rs#L12444
+- https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/bartender.rs#L359
