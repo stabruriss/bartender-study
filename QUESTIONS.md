@@ -165,6 +165,18 @@ The runner has not modified this task. The owner's explicit five-run limit
 continues to govern despite the older unbounded wording in its text; no further
 text replacement is needed to repair the previously incomplete final sentence.
 
+First recurring exchange | 2026-09-09T08:20:35Z: The execution session received
+the native reminder. Ember reports `runCount=1`, `status=scheduled`, no error,
+`lastRunAt=2026-09-09T08:20:07.633070Z`, and
+`nextRunAt=2026-09-09T10:20:07.633070Z`; the 120-minute interval and five-run cap
+are unchanged. The formal simulation was active. The runner fetched origin and
+read `origin/simulation-pilot:ANSWERS.md` without merging or pushing. No answers
+to the open questions were present. The fetched answer, scheduler state, remote
+commit, and check time are retained under ignored
+`local-logs/study-01-execution/poll-01/`. This technical entry is kept uncommitted
+until execution/collection ends. No scheduler mutation, app sync, fixture action,
+restart, or additional study process was triggered by this reminder.
+
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
 Observed: `validation/conformance-version-m4.json` records the actual running
@@ -469,3 +481,68 @@ confirmation before closing the current application instance. Prior permission,
 silence, or a successful relaunch does not satisfy this requirement. The local
 scope and recovery notes and the proposed reminder prompt now record this
 constraint. No additional restart or schedule mutation occurred in this update.
+
+## Q-20260909-05 | 2026-09-09T09:28:18Z | OPEN
+Step: RUNBOOK.md, step 6, supplied collection and verification for study-01.
+Observed: The unchanged formal command completed with process exit code 0.
+`deliverables/study-01/execution.json` records `status=complete`, `exit_code=0`,
+`started_at=2026-09-09T07:40:10.976022+00:00`, and
+`finished_at=2026-09-09T09:19:56.255898+00:00`. The generated manifest records
+`planned_runs=29700`, `completed_runs=29700`, and `failed_runs=0`. Execution used
+the source commit recorded in the report, with the unchanged approved parameter
+and protocol digests and the pinned runtime. The only tracked-file edit during
+execution was a technical reminder entry in this question file; no merge or
+push occurred then.
+
+The unchanged `handoff.py collect --run-id study-01` command subsequently
+returned process exit code 1. Its generated `verification.json` records
+`status=hold`, `records_seen=29700`, `raw_run_files=29700`, `unique_flows=300`,
+and exactly these issues:
+
+- `paired-differences.csv does not match the per-seed records`
+- `saved grid or parameter digest mismatch`
+
+Collection still produced the archive, artifact index, and HOLD report. The
+generated `artifact-index.json` records `archive_bytes=4200591360` and
+`archive_sha256=2256b0bf734992aa37d1a59f176832f08cce8946fc514dee4f8b87d37e625beb`.
+All listed archive parts and raw outputs remain local. The generated delivery
+is retained unchanged except for completing the runbook-required deviations
+line in RUN_REPORT.md. No data, configuration, code, approval, or expected result
+was altered to bypass these checks, and no run or collection retry was issued.
+
+Static source inspection suggests a possible serialization-order issue, not a
+confirmed explanation of the data differences:
+
+- `bartender_sim/__main__.py:_json` saves configuration with `sort_keys=True`.
+  `bartender_sim/plan.py:cells` traverses `axes.values()` and `axes` in dictionary
+  order. `handoff.py:verify_output` reloads the saved configuration, regenerates
+  that list, and compares it to the saved cells list with order-sensitive
+  equality. Sorted JSON keys can change this traversal order.
+- The run uses in-memory summaries, while summaries.jsonl is written with
+  `sort_keys=True`. `bartender_sim/report.py:summarize` builds paired differences
+  by iterating `clean["metrics"].items()` and preserves insertion order in the
+  contrast rows. Verification reloads those summaries and compares regenerated
+  CSV bytes. This is another place where JSON key sorting can change row order.
+
+The runner has not independently regenerated grids/CSVs, calculated study
+results, established numeric equivalence, or repaired either output. The
+original HOLD status remains authoritative pending review.
+
+Delivery staging observation | 2026-09-09T09:35:59Z: The default
+`git diff --cached --check` reported trailing-whitespace warnings for the
+generated CSV files' CRLF endings. Its original diagnostics are retained under
+ignored `local-logs/study-01-execution/staged-diff-check.txt`. A command-local
+check using `core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol`
+passed, and byte comparison confirmed that every staged delivery file matches
+its working file. No line endings, CSV contents, Git configuration, attributes,
+or scientific checks were changed. This staging-format observation does not
+resolve or change either verification failure above.
+
+Question: Please review both verification failures and provide the approved
+disposition for the preserved study-01 outputs, including whether a reviewed
+verification correction may examine these originals or a newly approved run is
+required, with any necessary code/protocol approval updates and distinct output
+paths before another command is authorized.
+Acknowledgment: HOLD; original data and generated delivery preserved, awaiting
+maintainer instructions through ANSWERS.md. Separate application conformance
+also remains pending its own approval; no fixture sync has been issued.

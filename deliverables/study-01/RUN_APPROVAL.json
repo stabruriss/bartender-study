@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "status": "approved",
+  "approved_by": "study owner",
+  "approved_at": "2026-09-09T04:26:19Z",
+  "run_id": "study-01",
+  "parameters_sha256": "92dc23981ddd5628761f9c88967a408836c68185110469f7fe82f463155145c0",
+  "protocol_sha256": "f7e0530b35d4aae962a2a60cf7c2e3f329aaa06d455871d994b51bbd2c0c5215"
+}
