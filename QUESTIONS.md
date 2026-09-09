@@ -178,3 +178,33 @@ other seven workspaces concerns owner-designated agent workspaces, not seven
 unspecified project roots. The earlier count clarification conflated these
 levels and is superseded by this correction. No other workspace has been
 modified; the concrete fixture/setup mapping remains to be established.
+
+Application loading gap | 2026-09-09T06:20:25Z: The owner reports that the
+current application's normal project-opening UI accepts the authenticated
+owner's GitHub repositories, with no local temporary-repository opening flow.
+The inspected release's `ProjectSetupModal.tsx` prepares projects through
+`prepareGithubProject`. Its backend can enumerate local `workspace.json`
+records, and `App.tsx` loads those records into project tabs during initial
+application loading. This supports a possible manually registered fixture
+path in source, but does not establish an available local-import UI, hot
+discovery of a newly written fixture, or successful fixture activation in the
+currently running app. The source's preparation path may also normalize or
+migrate loaded workspace metadata, which the runbook requires checking before
+observation.
+
+The runbook constructs fixture metadata and then instructs selection of the
+fixture in the running app, without a demonstrated UI refresh/loading step
+between them. The runner's prior explanation overstated the availability of
+that selection step. No manually registered fixture has been loaded or tested,
+and no application restart, metadata injection, or remote repository creation
+has been performed. Conformance remains on HOLD at the setup gate.
+Question: Please provide a reviewed way to make the new local fixture visible
+and activate its Bartender watcher in this installed app while preserving the
+required initial state, or revise and approve the preparation procedure to use
+owner-authorized private GitHub test repositories opened through the normal UI.
+This requests a setup decision; it does not authorize creating remote repos,
+changing product code, or changing the conformance assertions.
+Source references:
+- https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src/chrome/ProjectSetupModal.tsx#L129
+- https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src/App.tsx#L1613
+- https://github.com/stabruriss/kota-app/blob/75eb8fda2b1040c0f1822e0403321a105fec4f6c/app-v2/src-tauri/src/integrations/mod.rs#L583
