@@ -32,8 +32,10 @@ missing choices from previous conversations and does not edit the model or plan.
 ## Environment
 
 - CPython **3.12.4**, with `.python-version` recording the version. Exact patch
-  matching is required for this cross-machine check. If it is unavailable, open
-  a repository question; do not substitute another Python version silently.
+  matching is required for this cross-machine check. Step 2 obtains it through
+  **uv**, including on a machine with no Python installed. The exact requests
+  below match `.python-version`; leave that file unchanged. Do not replace the
+  requested patch with another version.
 - `requirements.lock` intentionally lists **zero third-party packages**. Runtime,
   controls, hashes, compression, and reporting use the standard library. A fresh
   virtual environment isolates them from machine-specific packages.
@@ -92,13 +94,44 @@ question commits as well as validation and delivery commits.
 
 ## 2. Prepare Python and run all control tests
 
+Use the [official uv installer](https://docs.astral.sh/uv/getting-started/installation/)
+and its [unmanaged installation mode](https://docs.astral.sh/uv/reference/installer/).
+The commands pin the bootstrap tool to uv 0.12.11 and put the tool, downloaded
+Python, and cache under the ignored `local-logs/` directory. They do not need
+Homebrew, system Python, shell-profile changes, or a new shell. Run them from the
+repository root. If `.venv` already exists, preserve it and check its version
+before deciding whether a separate environment is needed; do not overwrite it.
+
+First obtain uv and the [specified Python version](https://docs.astral.sh/uv/guides/install-python/):
+
 ```sh
-python3.12 --version
-python3.12 -m venv .venv
-.venv/bin/python -m pip install --no-index --require-hashes -r requirements.lock
+mkdir -p local-logs/uv-bootstrap
+curl -LsSf https://astral.sh/uv/0.12.11/install.sh -o local-logs/uv-bootstrap/install-uv.sh
+env UV_UNMANAGED_INSTALL=local-logs/uv-bootstrap/bin sh local-logs/uv-bootstrap/install-uv.sh
+local-logs/uv-bootstrap/bin/uv --version
+env UV_PYTHON_INSTALL_DIR=local-logs/uv-bootstrap/python UV_CACHE_DIR=local-logs/uv-bootstrap/cache \
+    local-logs/uv-bootstrap/bin/uv python install 3.12.4 --no-bin
+env UV_PYTHON_INSTALL_DIR=local-logs/uv-bootstrap/python UV_CACHE_DIR=local-logs/uv-bootstrap/cache \
+    local-logs/uv-bootstrap/bin/uv venv --managed-python --python 3.12.4 .venv
+.venv/bin/python --version
+```
+
+The Python check must print `Python 3.12.4`. Keep `local-logs/uv-bootstrap/python`
+throughout the run: the virtual environment uses that interpreter. Use uv's pip
+interface to check the dependency lock; the uv-created environment does not need
+its own pip package. A warning that the requirements file has no dependencies is
+expected for this standard-library-only study.
+
+```sh
+env UV_CACHE_DIR=local-logs/uv-bootstrap/cache local-logs/uv-bootstrap/bin/uv pip install \
+    --python .venv/bin/python --no-index --require-hashes -r requirements.lock
 PYTHONHASHSEED=0 .venv/bin/python handoff.py environment --output validation/environment-m4.json
 PYTHONHASHSEED=0 .venv/bin/python handoff.py controls --output validation/controls-m4.json
 ```
+
+If download, architecture detection, or exact-version verification fails, retain
+the local diagnostics and open one technical question. Do not fall back to a
+different Python patch or alter `.python-version` to make the check pass.
 
 The control report must say `pass`, with no failures, errors, or skipped tests.
 The command runs all tests, including the 24 original model/control tests and
