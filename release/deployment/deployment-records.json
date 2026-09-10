@@ -1,0 +1,2836 @@
+{
+  "schema": "bartender.deployment.descriptive.v1",
+  "subject": "Kota development deployment of Bartender",
+  "extracted_at_utc": "2026-09-09T05:41:41.469Z",
+  "observation_window": {
+    "start_inclusive": "2026-06-01T00:00:00Z",
+    "end_exclusive": "2026-09-09T00:00:00Z",
+    "timestamp_basis": "UTC; requests use createdAt, handoffs use actor-log time, Git uses committer time",
+    "selection_reason": "First complete UTC calendar month after backend introduction through the last complete UTC day before extraction. This is not a verified release-to-date census."
+  },
+  "frozen_main": {
+    "reachable_commit_count": 700,
+    "tip_committer_at": "2026-09-05T00:53:25-07:00",
+    "public_identifier": "source-snapshot-01"
+  },
+  "source_coverage": {
+    "receipt_first_created_at": "2026-06-19T08:51:27.589004+00:00",
+    "receipt_last_created_at": "2026-09-05T07:53:23.919324+00:00",
+    "snapshot_first_committer_at": "2026-06-01T17:02:51-07:00",
+    "snapshot_last_committer_at": "2026-08-19T13:36:49-07:00",
+    "handoff_first_materialized_at": "2026-06-12T10:19:06.694899+00:00",
+    "handoff_last_materialized_at": "2026-08-15T06:51:33.314635+00:00",
+    "retained_request_result_pairs_all_dates": 82,
+    "requests_outside_window": 0,
+    "queue_directory_file_counts_at_extraction": {
+      "delivered": 164,
+      "failed": 0,
+      "outbox": 0,
+      "processing": 0
+    },
+    "unmatched_request_or_result_records": 0,
+    "malformed_records": 0,
+    "gui_and_automatic_round_census_available": false
+  },
+  "summary": {
+    "observation_days": 100,
+    "observed_participant_lower_bound": 10,
+    "participants_in_receipts": 7,
+    "participants_in_reachable_snapshots": 9,
+    "participants_in_handoffs": 2,
+    "current_or_departed_status": null,
+    "retained_paired_sync_rounds": 82,
+    "receipt_ok_rounds": 82,
+    "receipt_non_ok_rounds": 0,
+    "rounds_with_published_commits": 67,
+    "rounds_with_no_published_commits": 15,
+    "receipt_snapshot_operations": 5,
+    "receipt_published_commit_operations": 176,
+    "receipt_reported_conflicts": 0,
+    "initiator_counts": {
+      "automatic": null,
+      "agent_requested": null,
+      "user_requested": null,
+      "unknown": 82
+    },
+    "all_sync_rounds": null,
+    "overall_conflict_rate": null,
+    "overall_success_rate": null,
+    "reachable_snapshot_commits": 158,
+    "observed_distinct_conflict_handoff_keys": 3,
+    "observed_conflict_handoff_records": 3,
+    "verified_landed_conflict_patches": 1,
+    "unknown_conflict_outcomes": 2,
+    "known_not_landed_conflicts": null,
+    "human_decision_required_conflicts": null,
+    "total_retries": null,
+    "total_empty_cherry_pick_skips": null,
+    "enqueue_to_status_elapsed_ms": {
+      "n": 82,
+      "minimum": 1373.551,
+      "median": 3281.021,
+      "p95_nearest_rank": 32882.889,
+      "maximum": 66431.172
+    }
+  },
+  "participants": [
+    {
+      "id": "W01",
+      "first_observed_at": "2026-06-01T17:02:51-07:00",
+      "last_observed_at": "2026-09-05T07:53:29.300321+00:00",
+      "evidence_sources": [
+        "reachable_snapshot_commit",
+        "sync_receipt"
+      ],
+      "receipt_rounds": 33,
+      "receipt_commit_operations": 111,
+      "reachable_snapshot_commits": 32,
+      "observed_conflict_handoffs": 0,
+      "current_or_departed": null
+    },
+    {
+      "id": "W02",
+      "first_observed_at": "2026-06-01T22:11:40-07:00",
+      "last_observed_at": "2026-08-29T06:55:28.555226+00:00",
+      "evidence_sources": [
+        "reachable_snapshot_commit",
+        "sync_receipt"
+      ],
+      "receipt_rounds": 4,
+      "receipt_commit_operations": 4,
+      "reachable_snapshot_commits": 13,
+      "observed_conflict_handoffs": 0,
+      "current_or_departed": null
+    },
+    {
+      "id": "W03",
+      "first_observed_at": "2026-06-01T22:11:41-07:00",
+      "last_observed_at": "2026-09-04T23:35:43.578713+00:00",
+      "evidence_sources": [
+        "reachable_snapshot_commit",
+        "sync_receipt"
+      ],
+      "receipt_rounds": 24,
+      "receipt_commit_operations": 22,
+      "reachable_snapshot_commits": 55,
+      "observed_conflict_handoffs": 0,
+      "current_or_departed": null
+    },
+    {
+      "id": "W04",
+      "first_observed_at": "2026-06-02T00:02:36-07:00",
+      "last_observed_at": "2026-06-02T17:22:44-07:00",
+      "evidence_sources": [
+        "reachable_snapshot_commit"
+      ],
+      "receipt_rounds": 0,
+      "receipt_commit_operations": 0,
+      "reachable_snapshot_commits": 5,
+      "observed_conflict_handoffs": 0,
+      "current_or_departed": null
+    },
+    {
+      "id": "W05",
+      "first_observed_at": "2026-06-05T03:30:58-07:00",
+      "last_observed_at": "2026-09-05T07:51:11.819470+00:00",
+      "evidence_sources": [
+        "conflict_handoff",
+        "reachable_snapshot_commit",
+        "sync_receipt"
+      ],
+      "receipt_rounds": 24,
+      "receipt_commit_operations": 31,
+      "reachable_snapshot_commits": 22,
+      "observed_conflict_handoffs": 2,
+      "current_or_departed": null
+    },
+    {
+      "id": "W06",
+      "first_observed_at": "2026-06-06T01:38:35-07:00",
+      "last_observed_at": "2026-06-09T00:33:25-07:00",
+      "evidence_sources": [
+        "reachable_snapshot_commit"
+      ],
+      "receipt_rounds": 0,
+      "receipt_commit_operations": 0,
+      "reachable_snapshot_commits": 4,
+      "observed_conflict_handoffs": 0,
+      "current_or_departed": null
+    },
+    {
+      "id": "W07",
+      "first_observed_at": "2026-06-09T12:59:18-07:00",
+      "last_observed_at": "2026-06-11T20:38:24-07:00",
+      "evidence_sources": [
+        "reachable_snapshot_commit"
+      ],
+      "receipt_rounds": 0,
+      "receipt_commit_operations": 0,
+      "reachable_snapshot_commits": 17,
+      "observed_conflict_handoffs": 0,
+      "current_or_departed": null
+    },
+    {
+      "id": "W08",
+      "first_observed_at": "2026-06-15T23:37:06-07:00",
+      "last_observed_at": "2026-08-19T13:36:49-07:00",
+      "evidence_sources": [
+        "conflict_handoff",
+        "reachable_snapshot_commit",
+        "sync_receipt"
+      ],
+      "receipt_rounds": 1,
+      "receipt_commit_operations": 0,
+      "reachable_snapshot_commits": 3,
+      "observed_conflict_handoffs": 1,
+      "current_or_departed": null
+    },
+    {
+      "id": "W09",
+      "first_observed_at": "2026-06-17T21:16:42-07:00",
+      "last_observed_at": "2026-08-21T05:07:53.606024+00:00",
+      "evidence_sources": [
+        "reachable_snapshot_commit",
+        "sync_receipt"
+      ],
+      "receipt_rounds": 4,
+      "receipt_commit_operations": 4,
+      "reachable_snapshot_commits": 7,
+      "observed_conflict_handoffs": 0,
+      "current_or_departed": null
+    },
+    {
+      "id": "W10",
+      "first_observed_at": "2026-08-29T05:31:29.307979+00:00",
+      "last_observed_at": "2026-08-29T07:21:51.728532+00:00",
+      "evidence_sources": [
+        "sync_receipt"
+      ],
+      "receipt_rounds": 3,
+      "receipt_commit_operations": 4,
+      "reachable_snapshot_commits": 0,
+      "observed_conflict_handoffs": 0,
+      "current_or_departed": null
+    }
+  ],
+  "sync_rounds": [
+    {
+      "id": "R001",
+      "request_created_at": "2026-06-19T08:51:27.589004+00:00",
+      "final_status_checked_at": "2026-06-19T08:51:29.400260+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 1,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W09",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1811.256,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R002",
+      "request_created_at": "2026-06-19T18:07:58.989628+00:00",
+      "final_status_checked_at": "2026-06-19T18:08:00.582036+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 1,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W09",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1592.408,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R003",
+      "request_created_at": "2026-06-20T07:12:13.169384+00:00",
+      "final_status_checked_at": "2026-06-20T07:12:18.876046+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 1,
+      "published_commit_operations": 3,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 2
+        },
+        {
+          "participant": "W08",
+          "commit_operations": 0
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 5706.662,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R004",
+      "request_created_at": "2026-06-20T07:13:52.832043+00:00",
+      "final_status_checked_at": "2026-06-20T07:13:56.519859+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3687.816,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R005",
+      "request_created_at": "2026-06-21T04:15:47.304325+00:00",
+      "final_status_checked_at": "2026-06-21T04:15:52.112449+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 4808.124,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R006",
+      "request_created_at": "2026-06-22T03:55:19.899725+00:00",
+      "final_status_checked_at": "2026-06-22T03:55:22.696685+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2796.96,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R007",
+      "request_created_at": "2026-06-23T09:46:17.058400+00:00",
+      "final_status_checked_at": "2026-06-23T09:46:19.409183+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 9,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 7
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W09",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2350.783,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R008",
+      "request_created_at": "2026-06-23T20:06:05.708919+00:00",
+      "final_status_checked_at": "2026-06-23T20:06:07.202463+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 2,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 2
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1493.544,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R009",
+      "request_created_at": "2026-06-23T21:51:11.398114+00:00",
+      "final_status_checked_at": "2026-06-23T21:51:13.344566+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 2,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 2
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1946.452,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R010",
+      "request_created_at": "2026-06-24T03:09:55.728154+00:00",
+      "final_status_checked_at": "2026-06-24T03:09:57.740564+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 1,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2012.41,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R011",
+      "request_created_at": "2026-06-24T03:24:41.624056+00:00",
+      "final_status_checked_at": "2026-06-24T03:24:44.962352+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3338.296,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R012",
+      "request_created_at": "2026-06-24T03:41:15.401868+00:00",
+      "final_status_checked_at": "2026-06-24T03:41:16.775419+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1373.551,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R013",
+      "request_created_at": "2026-06-24T04:04:20.289284+00:00",
+      "final_status_checked_at": "2026-06-24T04:04:22.086402+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1797.118,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R014",
+      "request_created_at": "2026-06-24T04:30:37.995605+00:00",
+      "final_status_checked_at": "2026-06-24T04:30:48.050401+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 10054.796,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R015",
+      "request_created_at": "2026-06-24T05:10:39.156769+00:00",
+      "final_status_checked_at": "2026-06-24T05:10:41.042205+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1885.436,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R016",
+      "request_created_at": "2026-06-26T05:08:48.206746+00:00",
+      "final_status_checked_at": "2026-06-26T05:08:52.136099+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3929.353,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R017",
+      "request_created_at": "2026-06-27T18:06:39.400102+00:00",
+      "final_status_checked_at": "2026-06-27T18:06:41.573173+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 2,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 2
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2173.071,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R018",
+      "request_created_at": "2026-06-27T18:30:42.247676+00:00",
+      "final_status_checked_at": "2026-06-27T18:30:51.430991+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 9183.315,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R019",
+      "request_created_at": "2026-06-27T20:04:46.360471+00:00",
+      "final_status_checked_at": "2026-06-27T20:04:51.647425+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 5286.954,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R020",
+      "request_created_at": "2026-06-30T06:10:54.321343+00:00",
+      "final_status_checked_at": "2026-06-30T06:10:58.261551+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3940.208,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R021",
+      "request_created_at": "2026-06-30T07:49:13.421848+00:00",
+      "final_status_checked_at": "2026-06-30T07:49:16.726109+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3304.261,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R022",
+      "request_created_at": "2026-06-30T23:10:29.804267+00:00",
+      "final_status_checked_at": "2026-06-30T23:10:31.913892+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 2,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 2
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2109.625,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R023",
+      "request_created_at": "2026-07-01T05:36:20.482195+00:00",
+      "final_status_checked_at": "2026-07-01T05:36:22.228534+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1746.339,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R024",
+      "request_created_at": "2026-07-02T04:49:48.391632+00:00",
+      "final_status_checked_at": "2026-07-02T04:49:50.866257+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 5,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 2
+        },
+        {
+          "participant": "W03",
+          "commit_operations": 3
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2474.625,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R025",
+      "request_created_at": "2026-07-02T05:34:19.989853+00:00",
+      "final_status_checked_at": "2026-07-02T05:34:21.903570+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1913.717,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R026",
+      "request_created_at": "2026-07-02T06:25:37.524547+00:00",
+      "final_status_checked_at": "2026-07-02T06:25:42.219103+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 4694.556,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R027",
+      "request_created_at": "2026-07-02T07:49:24.211690+00:00",
+      "final_status_checked_at": "2026-07-02T07:49:26.163698+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1952.008,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R028",
+      "request_created_at": "2026-07-02T08:06:55.700316+00:00",
+      "final_status_checked_at": "2026-07-02T08:06:57.469914+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1769.598,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R029",
+      "request_created_at": "2026-07-02T19:59:07.440795+00:00",
+      "final_status_checked_at": "2026-07-02T19:59:09.452474+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W02",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2011.679,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R030",
+      "request_created_at": "2026-07-02T20:08:22.411757+00:00",
+      "final_status_checked_at": "2026-07-02T20:08:24.034256+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W02",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1622.499,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R031",
+      "request_created_at": "2026-07-02T20:22:05.926850+00:00",
+      "final_status_checked_at": "2026-07-02T20:22:07.638552+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1711.702,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R032",
+      "request_created_at": "2026-07-02T20:30:53.643408+00:00",
+      "final_status_checked_at": "2026-07-02T20:30:55.198834+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1555.426,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R033",
+      "request_created_at": "2026-07-03T02:03:26.985655+00:00",
+      "final_status_checked_at": "2026-07-03T02:03:28.841637+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1855.982,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R034",
+      "request_created_at": "2026-07-10T06:38:30.020445+00:00",
+      "final_status_checked_at": "2026-07-10T06:38:38.294586+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 4,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 3
+        },
+        {
+          "participant": "W02",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W03",
+          "commit_operations": 0
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 8274.141,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R035",
+      "request_created_at": "2026-07-10T06:38:49.763317+00:00",
+      "final_status_checked_at": "2026-07-10T06:38:54.080831+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 4317.514,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R036",
+      "request_created_at": "2026-07-10T07:11:05.391529+00:00",
+      "final_status_checked_at": "2026-07-10T07:11:09.373375+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W03",
+          "commit_operations": 0
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3981.846,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R037",
+      "request_created_at": "2026-07-11T06:22:59.661454+00:00",
+      "final_status_checked_at": "2026-07-11T06:23:04.680181+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W03",
+          "commit_operations": 0
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 5018.727,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R038",
+      "request_created_at": "2026-07-12T18:46:28.177359+00:00",
+      "final_status_checked_at": "2026-07-12T18:46:33.553459+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 2,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 2
+        },
+        {
+          "participant": "W03",
+          "commit_operations": 0
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 5376.1,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R039",
+      "request_created_at": "2026-07-13T04:07:58.362146+00:00",
+      "final_status_checked_at": "2026-07-13T04:08:06.799464+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 8437.318,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R040",
+      "request_created_at": "2026-07-13T21:14:23.713804+00:00",
+      "final_status_checked_at": "2026-07-13T21:14:25.278788+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1564.984,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R041",
+      "request_created_at": "2026-07-19T02:37:48.271976+00:00",
+      "final_status_checked_at": "2026-07-19T02:37:50.495893+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 4,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 2
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2223.917,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R042",
+      "request_created_at": "2026-07-19T17:19:59.767006+00:00",
+      "final_status_checked_at": "2026-07-19T17:20:01.599670+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1832.664,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R043",
+      "request_created_at": "2026-07-19T23:17:17.080952+00:00",
+      "final_status_checked_at": "2026-07-19T23:17:40.487235+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 23406.283,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R044",
+      "request_created_at": "2026-07-20T08:05:50.338322+00:00",
+      "final_status_checked_at": "2026-07-20T08:05:56.400718+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 4,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 2
+        },
+        {
+          "participant": "W03",
+          "commit_operations": 2
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 0
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 6062.396,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R045",
+      "request_created_at": "2026-07-21T13:16:48.307033+00:00",
+      "final_status_checked_at": "2026-07-21T13:16:50.326579+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 3,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 2
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2019.546,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R046",
+      "request_created_at": "2026-07-22T22:10:53.607680+00:00",
+      "final_status_checked_at": "2026-07-22T22:10:55.277188+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1669.508,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R047",
+      "request_created_at": "2026-07-23T07:38:47.817966+00:00",
+      "final_status_checked_at": "2026-07-23T07:38:50.626012+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 1,
+      "published_commit_operations": 4,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 2
+        },
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2808.046,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R048",
+      "request_created_at": "2026-07-28T06:16:09.863901+00:00",
+      "final_status_checked_at": "2026-07-28T06:16:13.854844+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3990.943,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R049",
+      "request_created_at": "2026-07-30T23:50:33.629494+00:00",
+      "final_status_checked_at": "2026-07-30T23:51:13.637590+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 2,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 40008.096,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R050",
+      "request_created_at": "2026-07-31T03:52:59.625292+00:00",
+      "final_status_checked_at": "2026-07-31T03:53:01.872353+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2247.061,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R051",
+      "request_created_at": "2026-07-31T05:11:09.283781+00:00",
+      "final_status_checked_at": "2026-07-31T05:11:42.166670+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 32882.889,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R052",
+      "request_created_at": "2026-07-31T06:05:55.994839+00:00",
+      "final_status_checked_at": "2026-07-31T06:06:25.250824+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 2,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 29255.985,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R053",
+      "request_created_at": "2026-07-31T07:13:27.973702+00:00",
+      "final_status_checked_at": "2026-07-31T07:13:38.329957+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 10356.255,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R054",
+      "request_created_at": "2026-08-01T06:13:47.824862+00:00",
+      "final_status_checked_at": "2026-08-01T06:14:32.151246+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 44326.384,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R055",
+      "request_created_at": "2026-08-01T06:17:33.114886+00:00",
+      "final_status_checked_at": "2026-08-01T06:18:24.753295+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 51638.409,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R056",
+      "request_created_at": "2026-08-01T07:41:42.069711+00:00",
+      "final_status_checked_at": "2026-08-01T07:41:53.760939+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 11691.228,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R057",
+      "request_created_at": "2026-08-01T07:42:47.215948+00:00",
+      "final_status_checked_at": "2026-08-01T07:42:56.779795+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 9563.847,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R058",
+      "request_created_at": "2026-08-01T08:01:16.229059+00:00",
+      "final_status_checked_at": "2026-08-01T08:01:18.873254+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2644.195,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R059",
+      "request_created_at": "2026-08-03T07:17:14.863422+00:00",
+      "final_status_checked_at": "2026-08-03T07:17:22.607207+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 3,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 3
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 7743.785,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R060",
+      "request_created_at": "2026-08-03T07:17:32.137132+00:00",
+      "final_status_checked_at": "2026-08-03T07:17:38.958214+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 6821.082,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R061",
+      "request_created_at": "2026-08-11T04:04:37.457629+00:00",
+      "final_status_checked_at": "2026-08-11T04:04:39.457680+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2000.051,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R062",
+      "request_created_at": "2026-08-11T04:06:01.546415+00:00",
+      "final_status_checked_at": "2026-08-11T04:06:03.521689+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1975.274,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R063",
+      "request_created_at": "2026-08-11T04:06:09.622568+00:00",
+      "final_status_checked_at": "2026-08-11T04:06:13.454041+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3831.473,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R064",
+      "request_created_at": "2026-08-15T06:54:30.497217+00:00",
+      "final_status_checked_at": "2026-08-15T06:54:33.754997+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3257.78,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R065",
+      "request_created_at": "2026-08-18T08:40:37.225239+00:00",
+      "final_status_checked_at": "2026-08-18T08:40:39.169650+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 3,
+      "published_participants": [
+        {
+          "participant": "W05",
+          "commit_operations": 3
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1944.411,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R066",
+      "request_created_at": "2026-08-21T03:30:59.017722+00:00",
+      "final_status_checked_at": "2026-08-21T03:31:14.664687+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 47,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 44
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 3
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 15646.965,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R067",
+      "request_created_at": "2026-08-21T04:04:00.511616+00:00",
+      "final_status_checked_at": "2026-08-21T04:04:10.253075+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 3,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 2
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 9741.459,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R068",
+      "request_created_at": "2026-08-21T04:04:42.470150+00:00",
+      "final_status_checked_at": "2026-08-21T04:04:50.854139+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 8383.989,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R069",
+      "request_created_at": "2026-08-21T04:26:56.124232+00:00",
+      "final_status_checked_at": "2026-08-21T04:27:02.062367+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 5938.135,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R070",
+      "request_created_at": "2026-08-21T04:48:02.779723+00:00",
+      "final_status_checked_at": "2026-08-21T04:48:18.700243+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 15920.52,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R071",
+      "request_created_at": "2026-08-21T05:06:47.174852+00:00",
+      "final_status_checked_at": "2026-08-21T05:07:53.606024+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 2,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W09",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 66431.172,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R072",
+      "request_created_at": "2026-08-21T08:18:45.811970+00:00",
+      "final_status_checked_at": "2026-08-21T08:18:47.941799+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 5,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 5
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2129.829,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R073",
+      "request_created_at": "2026-08-22T09:54:24.711713+00:00",
+      "final_status_checked_at": "2026-08-22T09:54:30.605336+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 8,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 7
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 5893.623,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R074",
+      "request_created_at": "2026-08-23T07:20:08.407987+00:00",
+      "final_status_checked_at": "2026-08-23T07:20:09.975807+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1567.82,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R075",
+      "request_created_at": "2026-08-24T23:34:35.112683+00:00",
+      "final_status_checked_at": "2026-08-24T23:34:36.524303+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W03",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1411.62,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R076",
+      "request_created_at": "2026-08-29T05:31:27.426938+00:00",
+      "final_status_checked_at": "2026-08-29T05:31:29.307979+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 2,
+      "published_participants": [
+        {
+          "participant": "W10",
+          "commit_operations": 2
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 1881.041,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R077",
+      "request_created_at": "2026-08-29T06:55:26.264356+00:00",
+      "final_status_checked_at": "2026-08-29T06:55:28.555226+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 2,
+      "published_participants": [
+        {
+          "participant": "W02",
+          "commit_operations": 1
+        },
+        {
+          "participant": "W10",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 2290.87,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R078",
+      "request_created_at": "2026-08-29T07:21:47.129401+00:00",
+      "final_status_checked_at": "2026-08-29T07:21:51.728532+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W10",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 4599.131,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R079",
+      "request_created_at": "2026-09-02T07:01:20.483142+00:00",
+      "final_status_checked_at": "2026-09-02T07:01:23.706381+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 0,
+      "published_participants": [],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3223.239,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R080",
+      "request_created_at": "2026-09-04T23:35:40.100276+00:00",
+      "final_status_checked_at": "2026-09-04T23:35:43.578713+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 2,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 2
+        },
+        {
+          "participant": "W03",
+          "commit_operations": 0
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3478.437,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R081",
+      "request_created_at": "2026-09-05T07:51:08.771493+00:00",
+      "final_status_checked_at": "2026-09-05T07:51:11.819470+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 8,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 7
+        },
+        {
+          "participant": "W05",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 3047.977,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    },
+    {
+      "id": "R082",
+      "request_created_at": "2026-09-05T07:53:23.919324+00:00",
+      "final_status_checked_at": "2026-09-05T07:53:29.300321+00:00",
+      "entry_path": "cli_dispatch",
+      "initiator": null,
+      "ok": true,
+      "snapshot_count": 0,
+      "published_commit_operations": 1,
+      "published_participants": [
+        {
+          "participant": "W01",
+          "commit_operations": 1
+        }
+      ],
+      "reported_conflict_count": 0,
+      "enqueue_to_status_elapsed_ms": 5380.997,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "empty_cherry_pick_skips": null
+    }
+  ],
+  "reachable_snapshot_commits": [
+    {
+      "id": "G001",
+      "participant": "W01",
+      "committer_at": "2026-06-01T17:02:51-07:00"
+    },
+    {
+      "id": "G002",
+      "participant": "W02",
+      "committer_at": "2026-06-01T22:11:40-07:00"
+    },
+    {
+      "id": "G003",
+      "participant": "W03",
+      "committer_at": "2026-06-01T22:11:41-07:00"
+    },
+    {
+      "id": "G004",
+      "participant": "W02",
+      "committer_at": "2026-06-01T22:17:21-07:00"
+    },
+    {
+      "id": "G005",
+      "participant": "W03",
+      "committer_at": "2026-06-01T22:17:21-07:00"
+    },
+    {
+      "id": "G006",
+      "participant": "W03",
+      "committer_at": "2026-06-02T00:02:35-07:00"
+    },
+    {
+      "id": "G007",
+      "participant": "W04",
+      "committer_at": "2026-06-02T00:02:36-07:00"
+    },
+    {
+      "id": "G008",
+      "participant": "W04",
+      "committer_at": "2026-06-02T00:36:15-07:00"
+    },
+    {
+      "id": "G009",
+      "participant": "W03",
+      "committer_at": "2026-06-02T00:36:15-07:00"
+    },
+    {
+      "id": "G010",
+      "participant": "W04",
+      "committer_at": "2026-06-02T15:08:55-07:00"
+    },
+    {
+      "id": "G011",
+      "participant": "W04",
+      "committer_at": "2026-06-02T16:29:02-07:00"
+    },
+    {
+      "id": "G012",
+      "participant": "W04",
+      "committer_at": "2026-06-02T17:22:44-07:00"
+    },
+    {
+      "id": "G013",
+      "participant": "W03",
+      "committer_at": "2026-06-02T17:33:36-07:00"
+    },
+    {
+      "id": "G014",
+      "participant": "W02",
+      "committer_at": "2026-06-02T22:10:55-07:00"
+    },
+    {
+      "id": "G015",
+      "participant": "W01",
+      "committer_at": "2026-06-02T23:30:15-07:00"
+    },
+    {
+      "id": "G016",
+      "participant": "W02",
+      "committer_at": "2026-06-02T23:30:15-07:00"
+    },
+    {
+      "id": "G017",
+      "participant": "W03",
+      "committer_at": "2026-06-03T00:07:18-07:00"
+    },
+    {
+      "id": "G018",
+      "participant": "W01",
+      "committer_at": "2026-06-03T00:07:18-07:00"
+    },
+    {
+      "id": "G019",
+      "participant": "W01",
+      "committer_at": "2026-06-03T10:22:14-07:00"
+    },
+    {
+      "id": "G020",
+      "participant": "W03",
+      "committer_at": "2026-06-03T10:37:57-07:00"
+    },
+    {
+      "id": "G021",
+      "participant": "W01",
+      "committer_at": "2026-06-03T12:20:09-07:00"
+    },
+    {
+      "id": "G022",
+      "participant": "W03",
+      "committer_at": "2026-06-03T12:24:03-07:00"
+    },
+    {
+      "id": "G023",
+      "participant": "W03",
+      "committer_at": "2026-06-03T12:48:18-07:00"
+    },
+    {
+      "id": "G024",
+      "participant": "W01",
+      "committer_at": "2026-06-03T14:47:25-07:00"
+    },
+    {
+      "id": "G025",
+      "participant": "W01",
+      "committer_at": "2026-06-03T15:09:53-07:00"
+    },
+    {
+      "id": "G026",
+      "participant": "W01",
+      "committer_at": "2026-06-03T16:24:06-07:00"
+    },
+    {
+      "id": "G027",
+      "participant": "W03",
+      "committer_at": "2026-06-03T21:07:56-07:00"
+    },
+    {
+      "id": "G028",
+      "participant": "W03",
+      "committer_at": "2026-06-03T22:47:18-07:00"
+    },
+    {
+      "id": "G029",
+      "participant": "W03",
+      "committer_at": "2026-06-03T23:55:13-07:00"
+    },
+    {
+      "id": "G030",
+      "participant": "W03",
+      "committer_at": "2026-06-04T00:34:21-07:00"
+    },
+    {
+      "id": "G031",
+      "participant": "W01",
+      "committer_at": "2026-06-04T01:26:21-07:00"
+    },
+    {
+      "id": "G032",
+      "participant": "W03",
+      "committer_at": "2026-06-04T01:49:58-07:00"
+    },
+    {
+      "id": "G033",
+      "participant": "W01",
+      "committer_at": "2026-06-04T01:49:58-07:00"
+    },
+    {
+      "id": "G034",
+      "participant": "W03",
+      "committer_at": "2026-06-04T01:56:08-07:00"
+    },
+    {
+      "id": "G035",
+      "participant": "W03",
+      "committer_at": "2026-06-04T16:28:10-07:00"
+    },
+    {
+      "id": "G036",
+      "participant": "W02",
+      "committer_at": "2026-06-04T17:18:13-07:00"
+    },
+    {
+      "id": "G037",
+      "participant": "W01",
+      "committer_at": "2026-06-04T18:26:57-07:00"
+    },
+    {
+      "id": "G038",
+      "participant": "W03",
+      "committer_at": "2026-06-04T18:26:58-07:00"
+    },
+    {
+      "id": "G039",
+      "participant": "W03",
+      "committer_at": "2026-06-04T18:46:15-07:00"
+    },
+    {
+      "id": "G040",
+      "participant": "W01",
+      "committer_at": "2026-06-05T03:30:58-07:00"
+    },
+    {
+      "id": "G041",
+      "participant": "W03",
+      "committer_at": "2026-06-05T03:30:58-07:00"
+    },
+    {
+      "id": "G042",
+      "participant": "W02",
+      "committer_at": "2026-06-05T03:30:58-07:00"
+    },
+    {
+      "id": "G043",
+      "participant": "W05",
+      "committer_at": "2026-06-05T03:30:58-07:00"
+    },
+    {
+      "id": "G044",
+      "participant": "W01",
+      "committer_at": "2026-06-05T17:28:57-07:00"
+    },
+    {
+      "id": "G045",
+      "participant": "W05",
+      "committer_at": "2026-06-05T17:39:58-07:00"
+    },
+    {
+      "id": "G046",
+      "participant": "W03",
+      "committer_at": "2026-06-05T17:48:15-07:00"
+    },
+    {
+      "id": "G047",
+      "participant": "W03",
+      "committer_at": "2026-06-05T20:32:43-07:00"
+    },
+    {
+      "id": "G048",
+      "participant": "W01",
+      "committer_at": "2026-06-05T23:34:21-07:00"
+    },
+    {
+      "id": "G049",
+      "participant": "W02",
+      "committer_at": "2026-06-05T23:54:21-07:00"
+    },
+    {
+      "id": "G050",
+      "participant": "W03",
+      "committer_at": "2026-06-05T23:54:21-07:00"
+    },
+    {
+      "id": "G051",
+      "participant": "W05",
+      "committer_at": "2026-06-06T00:09:34-07:00"
+    },
+    {
+      "id": "G052",
+      "participant": "W03",
+      "committer_at": "2026-06-06T01:00:56-07:00"
+    },
+    {
+      "id": "G053",
+      "participant": "W06",
+      "committer_at": "2026-06-06T01:38:35-07:00"
+    },
+    {
+      "id": "G054",
+      "participant": "W01",
+      "committer_at": "2026-06-06T02:51:14-07:00"
+    },
+    {
+      "id": "G055",
+      "participant": "W05",
+      "committer_at": "2026-06-06T03:07:04-07:00"
+    },
+    {
+      "id": "G056",
+      "participant": "W03",
+      "committer_at": "2026-06-06T03:20:05-07:00"
+    },
+    {
+      "id": "G057",
+      "participant": "W05",
+      "committer_at": "2026-06-06T13:08:57-07:00"
+    },
+    {
+      "id": "G058",
+      "participant": "W06",
+      "committer_at": "2026-06-06T13:08:57-07:00"
+    },
+    {
+      "id": "G059",
+      "participant": "W02",
+      "committer_at": "2026-06-06T13:08:57-07:00"
+    },
+    {
+      "id": "G060",
+      "participant": "W01",
+      "committer_at": "2026-06-06T13:08:57-07:00"
+    },
+    {
+      "id": "G061",
+      "participant": "W06",
+      "committer_at": "2026-06-06T13:54:13-07:00"
+    },
+    {
+      "id": "G062",
+      "participant": "W05",
+      "committer_at": "2026-06-06T13:54:14-07:00"
+    },
+    {
+      "id": "G063",
+      "participant": "W01",
+      "committer_at": "2026-06-06T14:53:20-07:00"
+    },
+    {
+      "id": "G064",
+      "participant": "W03",
+      "committer_at": "2026-06-06T20:21:09-07:00"
+    },
+    {
+      "id": "G065",
+      "participant": "W01",
+      "committer_at": "2026-06-06T22:18:28-07:00"
+    },
+    {
+      "id": "G066",
+      "participant": "W03",
+      "committer_at": "2026-06-06T23:09:42-07:00"
+    },
+    {
+      "id": "G067",
+      "participant": "W01",
+      "committer_at": "2026-06-06T23:26:29-07:00"
+    },
+    {
+      "id": "G068",
+      "participant": "W03",
+      "committer_at": "2026-06-07T06:22:08-07:00"
+    },
+    {
+      "id": "G069",
+      "participant": "W03",
+      "committer_at": "2026-06-07T08:53:38-07:00"
+    },
+    {
+      "id": "G070",
+      "participant": "W03",
+      "committer_at": "2026-06-07T12:27:15-07:00"
+    },
+    {
+      "id": "G071",
+      "participant": "W01",
+      "committer_at": "2026-06-07T15:41:09-07:00"
+    },
+    {
+      "id": "G072",
+      "participant": "W05",
+      "committer_at": "2026-06-07T15:41:10-07:00"
+    },
+    {
+      "id": "G073",
+      "participant": "W03",
+      "committer_at": "2026-06-07T15:41:10-07:00"
+    },
+    {
+      "id": "G074",
+      "participant": "W02",
+      "committer_at": "2026-06-07T17:17:00-07:00"
+    },
+    {
+      "id": "G075",
+      "participant": "W03",
+      "committer_at": "2026-06-07T17:17:00-07:00"
+    },
+    {
+      "id": "G076",
+      "participant": "W05",
+      "committer_at": "2026-06-07T17:17:01-07:00"
+    },
+    {
+      "id": "G077",
+      "participant": "W03",
+      "committer_at": "2026-06-07T17:23:33-07:00"
+    },
+    {
+      "id": "G078",
+      "participant": "W03",
+      "committer_at": "2026-06-07T20:02:48-07:00"
+    },
+    {
+      "id": "G079",
+      "participant": "W02",
+      "committer_at": "2026-06-07T23:14:12-07:00"
+    },
+    {
+      "id": "G080",
+      "participant": "W03",
+      "committer_at": "2026-06-08T00:06:42-07:00"
+    },
+    {
+      "id": "G081",
+      "participant": "W03",
+      "committer_at": "2026-06-08T12:30:21-07:00"
+    },
+    {
+      "id": "G082",
+      "participant": "W01",
+      "committer_at": "2026-06-08T12:30:21-07:00"
+    },
+    {
+      "id": "G083",
+      "participant": "W01",
+      "committer_at": "2026-06-08T15:10:24-07:00"
+    },
+    {
+      "id": "G084",
+      "participant": "W01",
+      "committer_at": "2026-06-08T16:05:48-07:00"
+    },
+    {
+      "id": "G085",
+      "participant": "W01",
+      "committer_at": "2026-06-08T21:21:30-07:00"
+    },
+    {
+      "id": "G086",
+      "participant": "W05",
+      "committer_at": "2026-06-08T22:19:10-07:00"
+    },
+    {
+      "id": "G087",
+      "participant": "W01",
+      "committer_at": "2026-06-08T23:48:39-07:00"
+    },
+    {
+      "id": "G088",
+      "participant": "W06",
+      "committer_at": "2026-06-09T00:33:25-07:00"
+    },
+    {
+      "id": "G089",
+      "participant": "W03",
+      "committer_at": "2026-06-09T02:33:55-07:00"
+    },
+    {
+      "id": "G090",
+      "participant": "W07",
+      "committer_at": "2026-06-09T12:59:18-07:00"
+    },
+    {
+      "id": "G091",
+      "participant": "W07",
+      "committer_at": "2026-06-09T15:51:20-07:00"
+    },
+    {
+      "id": "G092",
+      "participant": "W07",
+      "committer_at": "2026-06-09T16:03:08-07:00"
+    },
+    {
+      "id": "G093",
+      "participant": "W07",
+      "committer_at": "2026-06-09T16:15:26-07:00"
+    },
+    {
+      "id": "G094",
+      "participant": "W01",
+      "committer_at": "2026-06-09T22:07:55-07:00"
+    },
+    {
+      "id": "G095",
+      "participant": "W07",
+      "committer_at": "2026-06-09T22:36:39-07:00"
+    },
+    {
+      "id": "G096",
+      "participant": "W07",
+      "committer_at": "2026-06-10T00:03:16-07:00"
+    },
+    {
+      "id": "G097",
+      "participant": "W07",
+      "committer_at": "2026-06-10T00:58:52-07:00"
+    },
+    {
+      "id": "G098",
+      "participant": "W03",
+      "committer_at": "2026-06-10T01:01:28-07:00"
+    },
+    {
+      "id": "G099",
+      "participant": "W03",
+      "committer_at": "2026-06-10T01:15:27-07:00"
+    },
+    {
+      "id": "G100",
+      "participant": "W07",
+      "committer_at": "2026-06-10T01:15:27-07:00"
+    },
+    {
+      "id": "G101",
+      "participant": "W07",
+      "committer_at": "2026-06-10T01:47:09-07:00"
+    },
+    {
+      "id": "G102",
+      "participant": "W07",
+      "committer_at": "2026-06-11T00:58:42-07:00"
+    },
+    {
+      "id": "G103",
+      "participant": "W07",
+      "committer_at": "2026-06-11T01:08:55-07:00"
+    },
+    {
+      "id": "G104",
+      "participant": "W07",
+      "committer_at": "2026-06-11T02:24:26-07:00"
+    },
+    {
+      "id": "G105",
+      "participant": "W07",
+      "committer_at": "2026-06-11T02:33:26-07:00"
+    },
+    {
+      "id": "G106",
+      "participant": "W07",
+      "committer_at": "2026-06-11T10:07:17-07:00"
+    },
+    {
+      "id": "G107",
+      "participant": "W07",
+      "committer_at": "2026-06-11T10:32:36-07:00"
+    },
+    {
+      "id": "G108",
+      "participant": "W03",
+      "committer_at": "2026-06-11T14:23:34-07:00"
+    },
+    {
+      "id": "G109",
+      "participant": "W07",
+      "committer_at": "2026-06-11T14:23:34-07:00"
+    },
+    {
+      "id": "G110",
+      "participant": "W07",
+      "committer_at": "2026-06-11T20:38:24-07:00"
+    },
+    {
+      "id": "G111",
+      "participant": "W01",
+      "committer_at": "2026-06-11T21:43:16-07:00"
+    },
+    {
+      "id": "G112",
+      "participant": "W01",
+      "committer_at": "2026-06-12T03:19:04-07:00"
+    },
+    {
+      "id": "G113",
+      "participant": "W05",
+      "committer_at": "2026-06-12T03:22:20-07:00"
+    },
+    {
+      "id": "G114",
+      "participant": "W05",
+      "committer_at": "2026-06-13T00:41:34-07:00"
+    },
+    {
+      "id": "G115",
+      "participant": "W01",
+      "committer_at": "2026-06-13T02:47:19-07:00"
+    },
+    {
+      "id": "G116",
+      "participant": "W03",
+      "committer_at": "2026-06-13T03:26:36-07:00"
+    },
+    {
+      "id": "G117",
+      "participant": "W03",
+      "committer_at": "2026-06-13T03:39:06-07:00"
+    },
+    {
+      "id": "G118",
+      "participant": "W03",
+      "committer_at": "2026-06-13T03:42:36-07:00"
+    },
+    {
+      "id": "G119",
+      "participant": "W03",
+      "committer_at": "2026-06-13T04:14:07-07:00"
+    },
+    {
+      "id": "G120",
+      "participant": "W01",
+      "committer_at": "2026-06-13T04:47:57-07:00"
+    },
+    {
+      "id": "G121",
+      "participant": "W02",
+      "committer_at": "2026-06-13T13:16:34-07:00"
+    },
+    {
+      "id": "G122",
+      "participant": "W03",
+      "committer_at": "2026-06-13T13:16:34-07:00"
+    },
+    {
+      "id": "G123",
+      "participant": "W01",
+      "committer_at": "2026-06-13T13:16:34-07:00"
+    },
+    {
+      "id": "G124",
+      "participant": "W05",
+      "committer_at": "2026-06-13T18:56:16-07:00"
+    },
+    {
+      "id": "G125",
+      "participant": "W03",
+      "committer_at": "2026-06-13T19:42:46-07:00"
+    },
+    {
+      "id": "G126",
+      "participant": "W05",
+      "committer_at": "2026-06-13T19:42:47-07:00"
+    },
+    {
+      "id": "G127",
+      "participant": "W05",
+      "committer_at": "2026-06-13T21:05:01-07:00"
+    },
+    {
+      "id": "G128",
+      "participant": "W03",
+      "committer_at": "2026-06-13T23:20:03-07:00"
+    },
+    {
+      "id": "G129",
+      "participant": "W05",
+      "committer_at": "2026-06-14T03:20:52-07:00"
+    },
+    {
+      "id": "G130",
+      "participant": "W02",
+      "committer_at": "2026-06-14T12:42:00-07:00"
+    },
+    {
+      "id": "G131",
+      "participant": "W02",
+      "committer_at": "2026-06-14T13:03:01-07:00"
+    },
+    {
+      "id": "G132",
+      "participant": "W03",
+      "committer_at": "2026-06-15T00:06:59-07:00"
+    },
+    {
+      "id": "G133",
+      "participant": "W03",
+      "committer_at": "2026-06-15T13:22:03-07:00"
+    },
+    {
+      "id": "G134",
+      "participant": "W08",
+      "committer_at": "2026-06-15T23:37:06-07:00"
+    },
+    {
+      "id": "G135",
+      "participant": "W03",
+      "committer_at": "2026-06-15T23:46:59-07:00"
+    },
+    {
+      "id": "G136",
+      "participant": "W05",
+      "committer_at": "2026-06-16T23:26:25-07:00"
+    },
+    {
+      "id": "G137",
+      "participant": "W01",
+      "committer_at": "2026-06-16T23:42:38-07:00"
+    },
+    {
+      "id": "G138",
+      "participant": "W05",
+      "committer_at": "2026-06-17T00:44:15-07:00"
+    },
+    {
+      "id": "G139",
+      "participant": "W09",
+      "committer_at": "2026-06-17T21:16:42-07:00"
+    },
+    {
+      "id": "G140",
+      "participant": "W08",
+      "committer_at": "2026-06-18T00:33:54-07:00"
+    },
+    {
+      "id": "G141",
+      "participant": "W03",
+      "committer_at": "2026-06-18T13:51:01-07:00"
+    },
+    {
+      "id": "G142",
+      "participant": "W03",
+      "committer_at": "2026-06-18T21:03:52-07:00"
+    },
+    {
+      "id": "G143",
+      "participant": "W09",
+      "committer_at": "2026-06-19T01:51:28-07:00"
+    },
+    {
+      "id": "G144",
+      "participant": "W09",
+      "committer_at": "2026-06-19T11:07:59-07:00"
+    },
+    {
+      "id": "G145",
+      "participant": "W09",
+      "committer_at": "2026-06-19T14:13:08-07:00"
+    },
+    {
+      "id": "G146",
+      "participant": "W03",
+      "committer_at": "2026-06-19T21:09:55-07:00"
+    },
+    {
+      "id": "G147",
+      "participant": "W09",
+      "committer_at": "2026-06-19T21:09:57-07:00"
+    },
+    {
+      "id": "G148",
+      "participant": "W03",
+      "committer_at": "2026-06-19T23:25:01-07:00"
+    },
+    {
+      "id": "G149",
+      "participant": "W03",
+      "committer_at": "2026-06-20T00:12:15-07:00"
+    },
+    {
+      "id": "G150",
+      "participant": "W03",
+      "committer_at": "2026-06-20T00:50:02-07:00"
+    },
+    {
+      "id": "G151",
+      "participant": "W09",
+      "committer_at": "2026-06-20T00:50:03-07:00"
+    },
+    {
+      "id": "G152",
+      "participant": "W05",
+      "committer_at": "2026-06-20T15:44:35-07:00"
+    },
+    {
+      "id": "G153",
+      "participant": "W05",
+      "committer_at": "2026-06-21T18:23:30-07:00"
+    },
+    {
+      "id": "G154",
+      "participant": "W09",
+      "committer_at": "2026-06-23T13:59:17-07:00"
+    },
+    {
+      "id": "G155",
+      "participant": "W05",
+      "committer_at": "2026-07-03T11:32:53-07:00"
+    },
+    {
+      "id": "G156",
+      "participant": "W05",
+      "committer_at": "2026-07-23T00:38:49-07:00"
+    },
+    {
+      "id": "G157",
+      "participant": "W05",
+      "committer_at": "2026-08-14T23:54:31-07:00"
+    },
+    {
+      "id": "G158",
+      "participant": "W08",
+      "committer_at": "2026-08-19T13:36:49-07:00"
+    }
+  ],
+  "conflict_handoff_episodes": [
+    {
+      "id": "H001",
+      "participant": "W05",
+      "handoff_materialized_at": "2026-06-12T10:19:06.694899+00:00",
+      "observed_handoff_record_count": 1,
+      "underlying_conflict_attempts": null,
+      "retries": null,
+      "native_agent_acceptance_at": null,
+      "detection_at": null,
+      "outcome": "unknown",
+      "outcome_evidence": "Original commit object unavailable; nearby same-title publication is insufficient to prove resolution.",
+      "original_commit_object_available": false,
+      "matching_snapshot_record": null,
+      "matching_commit_committer_at": null,
+      "landing_observed_at": null,
+      "handoff_to_commit_time_proxy_ms": null,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "human_decision_required": null
+    },
+    {
+      "id": "H002",
+      "participant": "W08",
+      "handoff_materialized_at": "2026-06-20T07:50:05.138652+00:00",
+      "observed_handoff_record_count": 1,
+      "underlying_conflict_attempts": null,
+      "retries": null,
+      "native_agent_acceptance_at": null,
+      "detection_at": null,
+      "outcome": "unknown",
+      "outcome_evidence": "Original commit object unavailable; nearby same-title publication is insufficient to prove resolution.",
+      "original_commit_object_available": false,
+      "matching_snapshot_record": null,
+      "matching_commit_committer_at": null,
+      "landing_observed_at": null,
+      "handoff_to_commit_time_proxy_ms": null,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "human_decision_required": null
+    },
+    {
+      "id": "H003",
+      "participant": "W05",
+      "handoff_materialized_at": "2026-08-15T06:51:33.314635+00:00",
+      "observed_handoff_record_count": 1,
+      "underlying_conflict_attempts": null,
+      "retries": null,
+      "native_agent_acceptance_at": null,
+      "detection_at": null,
+      "outcome": "landed_patch_verified",
+      "outcome_evidence": "Reachable main commit has matching zero-context stable patch fingerprint; contextual range-diff checked separately.",
+      "original_commit_object_available": true,
+      "matching_snapshot_record": "G157",
+      "matching_commit_committer_at": "2026-08-14T23:54:31-07:00",
+      "landing_observed_at": null,
+      "handoff_to_commit_time_proxy_ms": 177685.365,
+      "active_processing_ms": null,
+      "waiting_ms": null,
+      "human_decision_required": null
+    }
+  ],
+  "limitations": [
+    "Missing means unknown, never an inferred zero. Only zero counts within explicitly observed record sets are reported.",
+    "CLI receipts are a selected retained subset, not all Bartender sync rounds. UI manual/automatic paths share a direct command and do not produce these per-request receipt files. Initiator identity is not stored.",
+    "Receipt and handoff datasets have different coverage. Do not divide conflict handoffs by receipt rounds or infer no conflicts from successful retained receipts.",
+    "Participants are historical distinct worktree identities with positive publication/snapshot/handoff evidence. No current-active filter is used; inactive or retired identities remain included. Undetectable participants are not counted.",
+    "Receipt commit counters count operations, not unique semantic changes. Reachable snapshot commits are not sync rounds and must not be added to receipt counts.",
+    "Handoff keys distinguish target, conflicting commit, and room baseline. Stable-key routing suppresses repeated assignments; these records cannot reveal conflict retries or all internal cherry-pick attempts.",
+    "Actor handoff materialization does not prove native model acceptance. No provider-native logs, private prompt bodies, or unrelated project records are exported.",
+    "One matching patch is reachable in frozen main. Its Git committer timestamp is only a chronology proxy, not an observed main-update timestamp or active repair duration. Waiting, detection, native acceptance, and human decisions are unknown.",
+    "Two original conflict objects are no longer available, so nearby same-title commits do not establish their outcome. Unknown is not failure or non-landing.",
+    "Earliest retained records do not establish when logging or deployment first began; absence of retained failures or queue items does not establish historical absence.",
+    "Single development deployment, evolving software, incomplete retention, no control group. Descriptive only; no causal or general reliability claims."
+  ]
+}

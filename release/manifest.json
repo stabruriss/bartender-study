@@ -1,0 +1,53 @@
+{
+  "scope": "Additional release documents, deployment dataset and explanatory figures; existing study and analysis manifests are separate.",
+  "files": {
+    "release/RELEASE_CHECKLIST.md": {
+      "bytes": 6061,
+      "sha256": "14b142a445f7a9d95978f49a020ada49df2bf57cb22ca83c98b369582ce21ccc"
+    },
+    "release/SOURCE_AUDIT.md": {
+      "bytes": 11582,
+      "sha256": "2ecc934419414e1dad5728dd5134168be916b1581ae21cc2e0f02e2e09ba49c8"
+    },
+    "release/deployment/METHODS.md": {
+      "bytes": 4441,
+      "sha256": "875a678380fe74a37f4cc9dccf4432f357c8387b9db07ba08da84043a3b06f70"
+    },
+    "release/deployment/deployment-records.json": {
+      "bytes": 81204,
+      "sha256": "741c98776abfc216beff11f3004a78bb6337f1777c798b365b9d824dee61caec"
+    },
+    "release/figures/fig1_repair_timelines.pdf": {
+      "bytes": 24778,
+      "sha256": "ed9bd0743f1d91857e7441da085877f5ea0787d48bdf88915336a62fba50ab49"
+    },
+    "release/figures/fig1_repair_timelines.py": {
+      "bytes": 4162,
+      "sha256": "47a9e18e63a41771677f9f1b6306e8b3775bd72d6ab8f47098ededa1db9e54f3"
+    },
+    "release/figures/fig1_repair_timelines.svg": {
+      "bytes": 18474,
+      "sha256": "7619c5264e7d3997e5b0f0b6ebfe57b04720b5caa9f06e1d57a4b8583e1dabd4"
+    },
+    "release/figures/fig2_delay_context.pdf": {
+      "bytes": 29823,
+      "sha256": "ad89238c936697baba10001b81c5335a466c4c64d41106219ab4045dfbb1d490"
+    },
+    "release/figures/fig2_delay_context.py": {
+      "bytes": 6562,
+      "sha256": "0656ea7d97509827802818d427dff5f05ecae522fbf142a89ad5b78e81382d35"
+    },
+    "release/figures/fig2_delay_context.svg": {
+      "bytes": 35570,
+      "sha256": "eba16443dff10e34e03a44918ebde889a49faacab2941d19c9a49d9d6d160539"
+    },
+    "release/figures/figure_style.py": {
+      "bytes": 2753,
+      "sha256": "8e5dfa3aea84d462a78efd956f86748031730b2297c40608e26f1939db7392d4"
+    },
+    "release/figures/requirements.txt": {
+      "bytes": 19,
+      "sha256": "12a0a7bc6e1b1254c2f593a250e6ccff4dbd3cf0b27d6819696a9db86f4e530d"
+    }
+  }
+}

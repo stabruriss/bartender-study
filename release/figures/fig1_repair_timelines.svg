@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="547.2pt" height="270pt" viewBox="0 0 547.2 270" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Clean work first changes the repair ledger</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Clean work first changes the repair ledger</dc:title>
+    <dc:description>Schematic of the four-worktree fixed-batch example. Three author repairs under in-place repair and two under Bartender. Block spacing is not a time or effort scale.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 270 
+L 547.2 270 
+L 547.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 124.56 198.72 
+L 310.32 198.72 
+L 310.32 146.88 
+L 124.56 146.88 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #ffffff; stroke: #626262; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 209.52 96.48 
+Q 216.18 96.48 221.889671 96.48 
+" clip-path="url(#pdab8ab8fdb)" style="fill: none; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 218.689671 94.88 
+L 221.889671 96.48 
+L 218.689671 98.08 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #626262; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 310.32 96.48 
+Q 316.98 96.48 322.689671 96.48 
+" clip-path="url(#pdab8ab8fdb)" style="fill: none; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 319.489671 94.88 
+L 322.689671 96.48 
+L 319.489671 98.08 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #626262; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 411.12 96.48 
+Q 417.78 96.48 423.489671 96.48 
+" clip-path="url(#pdab8ab8fdb)" style="fill: none; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 420.289671 94.88 
+L 423.489671 96.48 
+L 420.289671 98.08 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #626262; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 168.84 181.44 
+Q 171.9 181.44 174.009671 181.44 
+" clip-path="url(#pdab8ab8fdb)" style="fill: none; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 170.809671 179.84 
+L 174.009671 181.44 
+L 170.809671 183.04 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #626262; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 213.48 181.44 
+Q 216.54 181.44 218.649671 181.44 
+" clip-path="url(#pdab8ab8fdb)" style="fill: none; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 215.449671 179.84 
+L 218.649671 181.44 
+L 215.449671 183.04 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #626262; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 258.12 181.44 
+Q 261.18 181.44 263.289671 181.44 
+" clip-path="url(#pdab8ab8fdb)" style="fill: none; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 260.089671 179.84 
+L 263.289671 181.44 
+L 260.089671 183.04 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #626262; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 310.32 172.8 
+Q 316.98 172.8 322.689671 172.8 
+" clip-path="url(#pdab8ab8fdb)" style="fill: none; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 319.489671 171.2 
+L 322.689671 172.8 
+L 319.489671 174.4 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #626262; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 411.12 172.8 
+Q 417.78 172.8 423.489671 172.8 
+" clip-path="url(#pdab8ab8fdb)" style="fill: none; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+    <path d="M 420.289671 171.2 
+L 423.489671 172.8 
+L 420.289671 174.4 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #626262; stroke: #626262; stroke-width: 0.85; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 124.56 122.4 
+L 209.52 122.4 
+L 209.52 70.56 
+L 124.56 70.56 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #f4f4f4; stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 225.36 122.4 
+L 310.32 122.4 
+L 310.32 70.56 
+L 225.36 70.56 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #ffffff; stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 225.36 122.4 
+L 234 122.4 
+L 234 70.56 
+L 225.36 70.56 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: url(#h569c3e7be0); stroke: #202020; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 326.16 122.4 
+L 411.12 122.4 
+L 411.12 70.56 
+L 326.16 70.56 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #ffffff; stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 326.16 122.4 
+L 334.8 122.4 
+L 334.8 70.56 
+L 326.16 70.56 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: url(#hd8b97c17e4); stroke: #202020; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 426.96 122.4 
+L 511.92 122.4 
+L 511.92 70.56 
+L 426.96 70.56 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #ffffff; stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 426.96 122.4 
+L 435.6 122.4 
+L 435.6 70.56 
+L 426.96 70.56 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: url(#h569c3e7be0); stroke: #202020; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 131.76 192.96 
+L 168.48 192.96 
+L 168.48 169.92 
+L 131.76 169.92 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #f4f4f4; stroke: #626262; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 176.4 192.96 
+L 213.12 192.96 
+L 213.12 169.92 
+L 176.4 169.92 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #ffffff; stroke-dasharray: 1.3,0.65; stroke-dashoffset: 0; stroke: #626262; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 221.04 192.96 
+L 257.76 192.96 
+L 257.76 169.92 
+L 221.04 169.92 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #f4f4f4; stroke: #626262; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 265.68 192.96 
+L 302.4 192.96 
+L 302.4 169.92 
+L 265.68 169.92 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #ffffff; stroke-dasharray: 1.3,0.65; stroke-dashoffset: 0; stroke: #626262; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 326.16 198.72 
+L 411.12 198.72 
+L 411.12 146.88 
+L 326.16 146.88 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #ffffff; stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 326.16 198.72 
+L 334.8 198.72 
+L 334.8 146.88 
+L 326.16 146.88 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: url(#h569c3e7be0); stroke: #202020; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 426.96 198.72 
+L 511.92 198.72 
+L 511.92 146.88 
+L 426.96 146.88 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #ffffff; stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 426.96 198.72 
+L 435.6 198.72 
+L 435.6 146.88 
+L 426.96 146.88 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: url(#h569c3e7be0); stroke: #202020; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 18.72 230.4 
+L 32.4 230.4 
+L 32.4 220.32 
+L 18.72 220.32 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: #f4f4f4; stroke: #626262; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 158.4 230.4 
+L 172.08 230.4 
+L 172.08 220.32 
+L 158.4 220.32 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: url(#h569c3e7be0); stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 240.48 230.4 
+L 254.16 230.4 
+L 254.16 220.32 
+L 240.48 220.32 
+z
+" clip-path="url(#pdab8ab8fdb)" style="fill: url(#hd8b97c17e4); stroke: #202020; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13.1px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #202020" x="18.72" y="23.723609" transform="rotate(-0 18.72 23.723609)">Clean work first changes the repair ledger</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #202020" x="18.72" y="44.243437" transform="rotate(-0 18.72 44.243437)">Scan order: A → B → C → D. Initially, A and C are clean; B and D conflict with the base.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #202020" x="18.72" y="92.177344" transform="rotate(-0 18.72 92.177344)">In-place repair</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 12.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #202020" x="18.72" y="113.526438" transform="rotate(-0 18.72 113.526438)">3 repairs</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #202020" x="18.72" y="168.497344" transform="rotate(-0 18.72 168.497344)">Bartender</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 12.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #202020" x="18.72" y="189.846438" transform="rotate(-0 18.72 189.846438)">2 repairs</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="167.04" y="93.534563" transform="rotate(-0 167.04 93.534563)">A lands</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="167.04" y="111.14825" transform="rotate(-0 167.04 111.14825)">No repair</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="272.16" y="89.214562" transform="rotate(-0 272.16 89.214562)">Repair B</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8.1px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="272.16" y="103.755094" transform="rotate(-0 272.16 103.755094)">Already landed</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="272.16" y="117.406219" transform="rotate(-0 272.16 117.406219)">{A}</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="372.96" y="89.214562" transform="rotate(-0 372.96 89.214562)">Repair C</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8.1px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="372.96" y="103.755094" transform="rotate(-0 372.96 103.755094)">Already landed</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="372.96" y="117.406219" transform="rotate(-0 372.96 117.406219)">{A, B}</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="473.76" y="89.214562" transform="rotate(-0 473.76 89.214562)">Repair D</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8.1px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="473.76" y="103.755094" transform="rotate(-0 473.76 103.755094)">Already landed</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="473.76" y="117.406219" transform="rotate(-0 473.76 117.406219)">{A, B, C}</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #626262" x="368.64" y="136.902688" transform="rotate(-0 368.64 136.902688)">B's repair makes C conflict</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="217.44" y="162.378625" transform="rotate(-0 217.44 162.378625)">Automatic pass</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="150.12" y="183.6475" transform="rotate(-0 150.12 183.6475)">A lands</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="194.76" y="183.6475" transform="rotate(-0 194.76 183.6475)">B held</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="239.4" y="183.6475" transform="rotate(-0 239.4 183.6475)">C lands</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="284.04" y="183.6475" transform="rotate(-0 284.04 183.6475)">D held</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="372.96" y="165.534562" transform="rotate(-0 372.96 165.534562)">Repair B</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 8.1px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="372.96" y="180.075094" transform="rotate(-0 372.96 180.075094)">Already landed</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="372.96" y="193.726219" transform="rotate(-0 372.96 193.726219)">{A, C}</text>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="473.76" y="165.534562" transform="rotate(-0 473.76 165.534562)">Repair D</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 8.1px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="473.76" y="180.075094" transform="rotate(-0 473.76 180.075094)">Already landed</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 9.3px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #202020" x="473.76" y="193.726219" transform="rotate(-0 473.76 193.726219)">{A, C, B}</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #202020" x="38.16" y="227.677875" transform="rotate(-0 38.16 227.677875)">Land without repair</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #202020" x="177.84" y="227.677875" transform="rotate(-0 177.84 227.677875)">Repair</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #202020" x="259.92" y="227.677875" transform="rotate(-0 259.92 227.677875)">Repair caused by an earlier repair</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #626262" x="18.72" y="247.782688" transform="rotate(-0 18.72 247.782688)">Already landed: original worktree identities at repair start; every repaired item then lands.</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #626262" x="18.72" y="262.902688" transform="rotate(-0 18.72 262.902688)">Event order only. Spacing does not encode elapsed time or repair effort.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdab8ab8fdb">
+   <rect x="0" y="0" width="547.2" height="270"/>
+  </clipPath>
+ </defs>
+ <defs>
+  <pattern id="h569c3e7be0" patternUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
+   <rect x="0" y="0" width="73" height="73" fill="#e5e5e5"/>
+   <path d="M -36 36 
+L 36 -36 
+M -33 39 
+L 39 -33 
+M -30 42 
+L 42 -30 
+M -27 45 
+L 45 -27 
+M -24 48 
+L 48 -24 
+M -21 51 
+L 51 -21 
+M -18 54 
+L 54 -18 
+M -15 57 
+L 57 -15 
+M -12 60 
+L 60 -12 
+M -9 63 
+L 63 -9 
+M -6 66 
+L 66 -6 
+M -3 69 
+L 69 -3 
+M 0 72 
+L 72 0 
+M 3 75 
+L 75 3 
+M 6 78 
+L 78 6 
+M 9 81 
+L 81 9 
+M 12 84 
+L 84 12 
+M 15 87 
+L 87 15 
+M 18 90 
+L 90 18 
+M 21 93 
+L 93 21 
+M 24 96 
+L 96 24 
+M 27 99 
+L 99 27 
+M 30 102 
+L 102 30 
+M 33 105 
+L 105 33 
+M 36 108 
+L 108 36 
+" style="fill: #202020; stroke: #202020; stroke-width: 0.55; stroke-linecap: butt; stroke-linejoin: miter"/>
+  </pattern>
+  <pattern id="hd8b97c17e4" patternUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
+   <rect x="0" y="0" width="73" height="73" fill="#e5e5e5"/>
+   <path d="M -36 36 
+L 36 -36 
+M -32 40 
+L 40 -32 
+M -28 44 
+L 44 -28 
+M -24 48 
+L 48 -24 
+M -20 52 
+L 52 -20 
+M -16 56 
+L 56 -16 
+M -12 60 
+L 60 -12 
+M -8 64 
+L 64 -8 
+M -4 68 
+L 68 -4 
+M 0 72 
+L 72 0 
+M 4 76 
+L 76 4 
+M 8 80 
+L 80 8 
+M 12 84 
+L 84 12 
+M 16 88 
+L 88 16 
+M 20 92 
+L 92 20 
+M 24 96 
+L 96 24 
+M 28 100 
+L 100 28 
+M 32 104 
+L 104 32 
+M 36 108 
+L 108 36 
+M -36 36 
+L 36 108 
+M -32 32 
+L 40 104 
+M -28 28 
+L 44 100 
+M -24 24 
+L 48 96 
+M -20 20 
+L 52 92 
+M -16 16 
+L 56 88 
+M -12 12 
+L 60 84 
+M -8 8 
+L 64 80 
+M -4 4 
+L 68 76 
+M 0 0 
+L 72 72 
+M 4 -4 
+L 76 68 
+M 8 -8 
+L 80 64 
+M 12 -12 
+L 84 60 
+M 16 -16 
+L 88 56 
+M 20 -20 
+L 92 52 
+M 24 -24 
+L 96 48 
+M 28 -28 
+L 100 44 
+M 32 -32 
+L 104 40 
+M 36 -36 
+L 108 36 
+" style="fill: #202020; stroke: #202020; stroke-width: 0.55; stroke-linecap: butt; stroke-linejoin: miter"/>
+  </pattern>
+ </defs>
+</svg>
