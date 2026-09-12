@@ -1,0 +1,84 @@
+{
+  "study": "study-01",
+  "scope": "Four manuscript displays; accepted aggregate inputs only",
+  "inputs": {
+    "summary.csv": "5209b6b2f833ff958bc9320af9d577cef3453eb94ff185822028da80be7e5505",
+    "paired-differences.csv": "e703f0a7cacdbf4b7f38a82fbb83ed6fd9dd96096495be52ec6208b842327056",
+    "cells.json": "086034341ac0f852c2a6fcb69ec68e2113652b7c74c62a48ad7ff7f71f98ef48"
+  },
+  "input_hashes_unchanged": true,
+  "scripts": {
+    "make_manuscript_figures.py": "305a52d21abe5d5b59e0f3cb4f84d3a323b9e5ef57afab694cd41cb39253893b",
+    "make_figures.py": "d64a628279eab3d33a0204d4a4eb740e6a52538625e534fcb5dd1a6a6103ee0f"
+  },
+  "python": "3.12.4",
+  "matplotlib": "3.10.8",
+  "numpy": "2.5.3",
+  "repair_rows": 15,
+  "paper_repair_rows": 7,
+  "reference_repair_rows": 3,
+  "wait_rows": 36,
+  "ratio_intervals": "not identifiable; source component intervals retained",
+  "outputs": {
+    "NUMBERS.md": {
+      "sha256": "8322e75459400e58a9279b1c398c6f79ad35b1ff3ba7f09ac3a068a89961279b",
+      "bytes": 3648
+    },
+    "fig4_repairs_overlap.pdf": {
+      "sha256": "9c371a4f03792e106db10ee6712cdc1b0ec8befd4d5a69f9c55a58e15111f128",
+      "bytes": 36018
+    },
+    "fig4_repairs_overlap.svg": {
+      "sha256": "59218632f2c603aba3c0d7405c68c83064c30858a9d8168fa6a5843b75f7bbfa",
+      "bytes": 129033
+    },
+    "fig5_sync_interval.pdf": {
+      "sha256": "638635f890ef488d782f90bf27ce602e323e2a0746f67ef3b10a5a516082cbad",
+      "bytes": 28450
+    },
+    "fig5_sync_interval.svg": {
+      "sha256": "482c41b15b55188650cc45f8ab97cdbed6f0b5582c33870fde3b30087dd346bf",
+      "bytes": 93143
+    },
+    "fig6_wait_resolved.pdf": {
+      "sha256": "5b7f78a25511cedba492798ef530e0c7c59a558555ac3fee46955df732857461",
+      "bytes": 25175
+    },
+    "fig6_wait_resolved.svg": {
+      "sha256": "7b9f81e2442593d1de5c64e0dc7737ebb8c330b47ede302c6c95cffaf6af74f3",
+      "bytes": 33266
+    },
+    "fig7_wait_failures.pdf": {
+      "sha256": "a2ab16d8b84dec38569bb0f51c49530e03091f5fee807737e0f6d60eba9b245b",
+      "bytes": 20392
+    },
+    "fig7_wait_failures.svg": {
+      "sha256": "224e3e64abbced5a057527aafbad6f868fd9265459e095beab7139064a41bec9",
+      "bytes": 34962
+    },
+    "repair-all-five-slices.csv": {
+      "sha256": "a31d719279c7df1e44971f37ee75d126417addfcc1ab93309db7b8514c776599",
+      "bytes": 8921
+    },
+    "repair-paper-table.csv": {
+      "sha256": "703814d79a4778aa1c0f26ffa1bf0283d2b7454e32fad55194ca7603bd6f9f60",
+      "bytes": 4953
+    },
+    "repair-reference.csv": {
+      "sha256": "1ac79be5cf6f64ae5c7f4980e9f559da0510ac6c6633d746c1042b91e7bcbf05",
+      "bytes": 2887
+    },
+    "table4-repair-rows.tex": {
+      "sha256": "a59144a6567eb0adb581662b38996e7f8be84541f460a4a7319678ed6c9c0489",
+      "bytes": 357
+    },
+    "table5-wait-rows.tex": {
+      "sha256": "e90839222bb19ada707682121804b3185449d117302b3cec233bd1d020c5df56",
+      "bytes": 247
+    },
+    "wait-reference.csv": {
+      "sha256": "7fa17aadb5f8434be9a5ad4b73253b128177e27b33ee81e98ba87dc764086c4e",
+      "bytes": 16136
+    }
+  }
+}

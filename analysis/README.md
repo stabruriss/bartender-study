@@ -15,6 +15,7 @@ dependencies into the study runtime environment.
 .venv/bin/python -m venv local-logs/analysis-venv
 local-logs/analysis-venv/bin/python -m pip install -r analysis/requirements.lock
 local-logs/analysis-venv/bin/python analysis/make_figures.py
+local-logs/analysis-venv/bin/python analysis/make_manuscript_figures.py
 ```
 
 The script reads precisely three delivery inputs, checks their accepted hashes
@@ -30,7 +31,36 @@ no access to `outputs/`, individual run files, or diagnostic per-seed summaries.
 The earlier acceptance review used the transferred summaries only to verify
 the delivered CSVs; that is separate from these analyses.
 
-## Outputs and display slices
+## Current manuscript displays
+
+`make_manuscript_figures.py` imports the accepted-input reader from
+`make_figures.py` and writes a separate `manuscript/` directory. It does not
+regenerate or alter the original full-scan outputs below. Its manifest records
+both script hashes, the three accepted input hashes, and every new artifact.
+
+| File | Content |
+|---|---|
+| `manuscript/fig4_repairs_overlap.pdf` / `.svg` | Both policies, all five agent/dependency slices. Logarithmic axes retain every positive mean and supplied interval. High-overlap labels divide the in-place mean by the Bartender mean. |
+| `manuscript/fig5_sync_interval.pdf` / `.svg` | Relocation 0 only; three rows separate overlap pairs, first conflicts, and overlap size. The first-order prediction applies only to the overlap-pair row. |
+| `manuscript/fig6_wait_resolved.pdf` / `.svg` | Initial conflicts resolved by the window end, two baseline timings. Immediate dispatch is labeled; the 64-line zero-wait value is 99.7622%, not exactly 100%. |
+| `manuscript/fig7_wait_failures.pdf` / `.svg` | Failed completed attempts divided by completed attempts, with the two unfitted nominal failure probabilities. |
+| `manuscript/repair-reference.csv` | Three overlap values, four agents, no dependency, both policies; means and original intervals. |
+| `manuscript/repair-paper-table.csv` | The paper's seven repair comparison rows; original intervals and paired differences retained. |
+| `manuscript/repair-all-five-slices.csv` | All fifteen reference combinations, including the five high-overlap ratios. |
+| `manuscript/wait-reference.csv` | All 36 requested waiting combinations; ratios, nominal predictions and original component intervals. |
+| `manuscript/table4-repair-rows.tex`, `manuscript/table5-wait-rows.tex` | Reproducible rounded rows for the two numerical manuscript tables. |
+| `manuscript/NUMBERS.md` | Descriptive numbers, the three complete waiting tables, and interpretation limits. |
+
+The relocation knob did not deliver a consistent reduction in conflicts in
+this scan. Its three settings and their numerical differences remain in the
+full tables and supplementary atlases. The 2026-09-11 manuscript display
+revision removes those extra lines from the main synchronization figure and
+splits the waiting outcomes from their mechanism comparison. It does not
+discard the original expectations, negative results, or scanned settings.
+The earlier combined waiting figure, including completed repairs per initial
+conflict, is retained as supplementary material. No new simulations were run.
+
+## Original outputs and full-scan supplements
 
 `results/` contains editable SVG and vector PDF figures, the generating script
 is `make_figures.py`, and `analysis-manifest.json` records input/output hashes
