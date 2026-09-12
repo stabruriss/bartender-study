@@ -1,0 +1,849 @@
+{
+  "status": "PASS_WITH_NOTICES",
+  "checked_at": "2026-09-12",
+  "scope": "Native Darwin/arm64 build with TeX Live packages from the date arXiv documents for its default environment; not an upload or execution on the arXiv service.",
+  "arxiv_environment_source": "https://info.arxiv.org/help/faq/texlive.html",
+  "texlive_snapshot": "2025-08-03",
+  "snapshot_repository": "https://texlive.info/tlnet-archive/2025/08/03/tlnet/",
+  "repository_tlpdb_sha256": "df15a4d92f8a6bf9533a44a428a3bb50359ac98227ac39d3f44871f3bcb5dfdf",
+  "download_note": "Historical repository signature is valid but its signing key is expired; package downloads use the archived repository checksums.",
+  "engine": "pdfTeX 3.141592653-2.6-1.40.28 (TeX Live 2025)",
+  "latex_format": "LaTeX2e 2025-06-01 patch level 1; L3 programming layer 2025-07-20",
+  "commands": {
+    "command": "pdflatex -no-shell-escape -interaction=nonstopmode -halt-on-error -file-line-error -recorder main.tex",
+    "passes": [
+      {
+        "pass": 1,
+        "exit_code": 0,
+        "wall_seconds": 2.737
+      },
+      {
+        "pass": 2,
+        "exit_code": 0,
+        "wall_seconds": 2.257
+      },
+      {
+        "pass": 3,
+        "exit_code": 0,
+        "wall_seconds": 2.261
+      }
+    ]
+  },
+  "source_manifest_sha256": "b5b94bb94875b936832e849b4b5aac4d683c5c77142e06b8b6c830ec781d1963",
+  "source_files_unchanged": true,
+  "supplied_bbl_used": true,
+  "bibtex_or_shell_escape_required": false,
+  "bibliography_entries": 14,
+  "numbered_figures": 7,
+  "numbered_tables": 7,
+  "pdf": {
+    "pages": 34,
+    "bytes": 645577,
+    "sha256": "ca8582f9f61079c710082be81f9ef1b18f3e598759d8707d6ccfc6027021081e",
+    "self_contained_font_resources": 42,
+    "text_outside_pages": 0
+  },
+  "warnings": {
+    "underfull_vbox": 34,
+    "underfull_hbox": 3,
+    "overfull": 0,
+    "unresolved_references_or_citations": 0,
+    "duplicate_labels": 0
+  },
+  "package_notices": [
+    "Package epstopdf Warning: Shell escape feature is not enabled."
+  ],
+  "labels": [
+    {
+      "label": "tab:integration-arrangements",
+      "number": "1",
+      "page": 5
+    },
+    {
+      "label": "fig:sync-loop",
+      "number": "1",
+      "page": 7
+    },
+    {
+      "label": "tab:repair-example",
+      "number": "2",
+      "page": 8
+    },
+    {
+      "label": "fig:repair-order",
+      "number": "2",
+      "page": 9
+    },
+    {
+      "label": "fig:delay-context",
+      "number": "3",
+      "page": 11
+    },
+    {
+      "label": "tab:conformance",
+      "number": "3",
+      "page": 13
+    },
+    {
+      "label": "tab:parameters",
+      "number": "4",
+      "page": 15
+    },
+    {
+      "label": "tab:repair-comparison",
+      "number": "5",
+      "page": 16
+    },
+    {
+      "label": "tab:wait-outcomes",
+      "number": "6",
+      "page": 16
+    },
+    {
+      "label": "fig:repairs-overlap",
+      "number": "4",
+      "page": 17
+    },
+    {
+      "label": "fig:sync-interval",
+      "number": "5",
+      "page": 18
+    },
+    {
+      "label": "fig:wait-resolved",
+      "number": "6",
+      "page": 19
+    },
+    {
+      "label": "fig:wait-failures",
+      "number": "7",
+      "page": 20
+    },
+    {
+      "label": "tab:deployment",
+      "number": "7",
+      "page": 20
+    },
+    {
+      "label": "app:proofs",
+      "number": "A",
+      "page": 22
+    },
+    {
+      "label": "app:objects",
+      "number": "A.1",
+      "page": 22
+    },
+    {
+      "label": "app:equivalence",
+      "number": "A.2",
+      "page": 23
+    },
+    {
+      "label": "prop:clean-integration",
+      "number": "A.1",
+      "page": 23
+    },
+    {
+      "label": "app:clean-items",
+      "number": "A.3",
+      "page": 24
+    },
+    {
+      "label": "prop:repair-waiting",
+      "number": "A.2",
+      "page": 24
+    },
+    {
+      "label": "app:repair-sets",
+      "number": "A.4",
+      "page": 25
+    },
+    {
+      "label": "app:batch-model",
+      "number": "A.4.1",
+      "page": 25
+    },
+    {
+      "label": "app:repair-set-inclusion",
+      "number": "A.4.2",
+      "page": 25
+    },
+    {
+      "label": "thm:repair-inclusion",
+      "number": "A.3",
+      "page": 25
+    },
+    {
+      "label": "app:shared-repair-context",
+      "number": "A.4.3",
+      "page": 26
+    },
+    {
+      "label": "thm:landed-identities",
+      "number": "A.4",
+      "page": 26
+    },
+    {
+      "label": "app:total-effort",
+      "number": "A.4.4",
+      "page": 27
+    },
+    {
+      "label": "app:counterexamples",
+      "number": "A.5",
+      "page": 27
+    },
+    {
+      "label": "app:shrinking-inclusion",
+      "number": "A.5.1",
+      "page": 27
+    },
+    {
+      "label": "app:shrinking-count",
+      "number": "A.5.2",
+      "page": 28
+    },
+    {
+      "label": "app:realized-footprints",
+      "number": "A.5.3",
+      "page": 28
+    },
+    {
+      "label": "app:protocol-limits",
+      "number": "A.5.4",
+      "page": 28
+    },
+    {
+      "label": "app:overlap-pairs",
+      "number": "A.6",
+      "page": 28
+    },
+    {
+      "label": "app:pair-count-law",
+      "number": "A.6.1",
+      "page": 28
+    },
+    {
+      "label": "prop:overlap-pair-rate",
+      "number": "A.5",
+      "page": 29
+    },
+    {
+      "label": "app:pairs-not-repairs",
+      "number": "A.6.2",
+      "page": 29
+    },
+    {
+      "label": "app:context-cost",
+      "number": "A.6.3",
+      "page": 29
+    },
+    {
+      "label": "prop:context-cost",
+      "number": "A.6",
+      "page": 30
+    },
+    {
+      "label": "app:exposure",
+      "number": "A.7",
+      "page": 30
+    },
+    {
+      "label": "app:exposure-timeline",
+      "number": "A.7.1",
+      "page": 30
+    },
+    {
+      "label": "app:fixed-exposure",
+      "number": "A.7.2",
+      "page": 31
+    },
+    {
+      "label": "prop:expected-attempts",
+      "number": "A.7",
+      "page": 31
+    },
+    {
+      "label": "app:random-exposure",
+      "number": "A.7.3",
+      "page": 32
+    },
+    {
+      "label": "app:finite-window",
+      "number": "A.8",
+      "page": 32
+    }
+  ],
+  "page_checks": [
+    {
+      "page": 1,
+      "render_sha256": "15136c17593b6f73d8e639cea6ad44345ac3f157a5fdd6d63f86e94428f4729e",
+      "text_sha256": "e5cb775558f287430ac7607143040d99c3eec600203f4529af491c436c5b79bf",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 2,
+      "render_sha256": "7c60331e724f05494b668f8759458eb4cba6dba7d6e905ca77f96309d9c30c92",
+      "text_sha256": "53320f1b694696cc07b568c77f0f58928324ddb8cbe2ad42222d0851ea1b7507",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 3,
+      "render_sha256": "cee0df1f13c6dd9837ffd512305d0df4c3fcef1f676db67a250327eea8495be9",
+      "text_sha256": "ec6480736312c5e5093f126a41c2d071e383e6709b83ed159e21d3a999d8d506",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 4,
+      "render_sha256": "59a08faa8111c6235a752386dfa4b2fbc7d59a618d20671ccb5e11c555db0987",
+      "text_sha256": "ff21013977693839ab23ec52d5d77da1a8bdb33d8540161b587fe39bacbca3e8",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 5,
+      "render_sha256": "8f7ec339353526dd13c6a1d194c4fd8bba5baa15141b520d0e9910695c3c4e31",
+      "text_sha256": "a5306de90fba00afcfb5433ba06a36e79ac3a47bfc67b94b62ebd549d43fb208",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 6,
+      "render_sha256": "c7820c9e587b5752d34594391f39ede1fe08ef9d9321ee1dcc9f5254aec478ce",
+      "text_sha256": "991cb077a216d2e984624c5f7ccec710845da0edea76afc60fdbb5c4c0e11c22",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 7,
+      "render_sha256": "3a2bc18aa244a7598c978383c669c4fc3415e2eb552cbd8eafb377e782a3905c",
+      "text_sha256": "f7a1f94076a37482a7308835731cde35d2fad454278a1517c0a91d2f78c67f70",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 8,
+      "render_sha256": "7e0e8d7e1ad8768776726030823553f5ac5a81ff17aeadbec387ec7b473dddf4",
+      "text_sha256": "0772f7b1dcb82a2e400ca5b7a0f38482e7dca0582da089327560553493aa6a46",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 9,
+      "render_sha256": "daa16c59bb8e992a4720804596d01279cfcb6928c7117705c9508f8b6aac150e",
+      "text_sha256": "73046402265e4255c1e55cce7b54ad076ec417347c59675d1b6fdb0562ca364c",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": false
+    },
+    {
+      "page": 10,
+      "render_sha256": "f1ce7d6748c379ec70a95c3476d6bd7be0997dbaa933c8e35860c6e662838e0e",
+      "text_sha256": "55e782eefb8773f98c1ea558643dba56c426d8478b9ab8b35faaaefb48eb140e",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 11,
+      "render_sha256": "de84d606fe27d2a4cd602bd35ec7a308fa36998cf68d08f3e2fa65267c95c199",
+      "text_sha256": "d38aa0e9ac53880d052d7d8a47e028024f0c6af077573ad266cb140f7eec798a",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": false
+    },
+    {
+      "page": 12,
+      "render_sha256": "0019e93eda42d52663505fbe03ce629c1b95cad3989681518d7a09946be1a701",
+      "text_sha256": "36771b199e69d7bf982014ec4a2d9358875107465b7fcf3476fe0333397f9d0a",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 13,
+      "render_sha256": "27b686ffbb3a40b220d0fce54fe641b090cc8491a67697cf12c69aaa034f0831",
+      "text_sha256": "157aa75c10331e9d3c479e588a2b86de7f929e8a379cd5b5fd53986eb98d8642",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 14,
+      "render_sha256": "75cffbbe12b49c7c5ca77af19a0093f2a802cc1d49ff2d31aef3868b7aaa68af",
+      "text_sha256": "0529b228a8a52aeab439802d806b98789d61fa2e677785148dac688e51054a9f",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 15,
+      "render_sha256": "cdd3b349eaafeed245697c9a59455e6e4cb26fdad50b6faca2b7d9116ddef35e",
+      "text_sha256": "ceb2d9b885f8622fc005707673b48f15cd451c2f8c8b04e79a338036d776ea2e",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 16,
+      "render_sha256": "6e813b983f48be874af952dd32f5c756948d4e8410bce4b10eb5a3811a22651e",
+      "text_sha256": "46fe7a50f97146b7948c063668cef2670da6c056ecd3ac4685808a60d5fc1bf6",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 17,
+      "render_sha256": "37964d41043680bf2f165882bd7bebe7873e9a78e04b6ec3d4513f3ca0b5d786",
+      "text_sha256": "9a1fcbc8d06d534d3351d451f4e7d4e44174c39be5a164c7be2f0ac42591bea9",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": false
+    },
+    {
+      "page": 18,
+      "render_sha256": "5fbf10af7acd64a34de4bcf4bc5279f5005254600ff084a93e9b868d0787f231",
+      "text_sha256": "f1688d80429f89d107d268bd9fa7dcd2dba21aca8a3dda93d0fb02a074eef304",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": false
+    },
+    {
+      "page": 19,
+      "render_sha256": "d55d69a9891eec96bfda48acd4066639ed845368fb69e35a9bfb4dd5b428cd68",
+      "text_sha256": "f151923d8ccb4085d58ee9cda510046089868768763423a52e071ed6752c297e",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": false
+    },
+    {
+      "page": 20,
+      "render_sha256": "02f154680fb5d77fc0e11fd742d78b85c714b442a28de3c66361c8c4da341d0a",
+      "text_sha256": "d94dfa4fe73adb3c442fa8ea3366db51507d656c95b2d578d55ed17bae92a0dd",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": false
+    },
+    {
+      "page": 21,
+      "render_sha256": "56a3f6d6cd27c288c31a1f644e7ba041e676c68465540f795775cf4798f1f476",
+      "text_sha256": "71d68cbe9c24e0b2bc9afcfd69b2f5c02243ecd1149c276f926ca3f1e6ed66ee",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 22,
+      "render_sha256": "ff266670ecac463c40c667161b600024fddf329fa1af4fc020dadabe9d9c4682",
+      "text_sha256": "de6352e7ab4c1e43640344fc1deccffc5a611cba0115a1552b3c34134d508e62",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 23,
+      "render_sha256": "e5a9ea81906729396096a8af672ade6e6bb3384638eb67dd983e8f2a053a4df8",
+      "text_sha256": "d63caca4bc656d9a9132c3abee661c0566d0a680350d0808191e31776e041a1f",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 24,
+      "render_sha256": "82077e200c525ec3b0b0f7d20230e8c964b006425432eea11c46b1a123445a4c",
+      "text_sha256": "f1730c901ee6695dc071d9be571d1b462354a27248f57c8bbb8eba28734b6b8a",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 25,
+      "render_sha256": "e9b880740bc696ac20adbbfc120d342c29a9d2108166e10418dd80e7e0f3f4d4",
+      "text_sha256": "49d9d4cabf88e0cdc5b081d364eb39171196b15e074de5c5e4077f24fa08068d",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 26,
+      "render_sha256": "4f62a0169d2d802e68b3e05cf8996ebeef4221bc3e00df769c4bb556db436abb",
+      "text_sha256": "0b512f4ee7815a782944d42150dcfa04a3f4e1bad6d0ca2ce12f825ea16ae0e5",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 27,
+      "render_sha256": "da4a8d1fb43c2f72389d5a43b51b95ee5bd511025d3a31647d98dd46a3c43070",
+      "text_sha256": "8f19bb0421d868e82f0d6c75b1b298747709e47a55cdce049e4e0f7150a5a8dc",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 28,
+      "render_sha256": "d91f7b648afcd1e6aa758c6cda2eae229c6855f8b71e68ee9707bc5aa71129b0",
+      "text_sha256": "e9d9851449bfa454157299d72970fa0cfbbc2a3e52b80d0c97e98169f9d55401",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 29,
+      "render_sha256": "e4dda56093fe056be11155f5405ff1cdb77e1177741a06144dfb4b45c79ea866",
+      "text_sha256": "dfe52df59a318bb7a55f0205fbdd66a1d3d5e332926fa90d5e4292308e7abb7c",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 30,
+      "render_sha256": "0474b0411a08f2326d16a12e6375bf5f3defc1c5b7aa836123657ddff80e833e",
+      "text_sha256": "08daa2a3a45f1d13f9c2031ded81ae30584df591d19573f0e051216d80e82afc",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 31,
+      "render_sha256": "840bfab00dfeda25e579e55e29b063f3d151fde26d00228aa064e06b16af7ed7",
+      "text_sha256": "5c65d70184b650fe87d311e6af0f80cad74a49336e4c06743ea53fdfb05bf0ea",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 32,
+      "render_sha256": "9fd01392499a116e27a1fcbc84cb00375e46a22a993d8b5dd87bf1cc2b4c1283",
+      "text_sha256": "3b494c4d6a1fd09c2cf608b980591af7f55064ba4ea7951c686bd9348b57687b",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 33,
+      "render_sha256": "f6d181642d47b103bf07abc8a26473a70b72d2210d46cf80e89a53989ef74a6d",
+      "text_sha256": "a9221102a0002eb7bd83ba1c5aa0471e4f1888b9b02c76ec181e37f71f83ffb8",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    },
+    {
+      "page": 34,
+      "render_sha256": "ef420c370cbf978047122e32ff9c3acd8c01954d61ef1acfd4c91dce15300b31",
+      "text_sha256": "ec9cb51ecc2f0a22af7bf93cb40422fb853d1fdd6fba22f2f0c06827b56af541",
+      "text_matches_TL2026": true,
+      "render_matches_TL2026": true
+    }
+  ],
+  "fonts": [
+    {
+      "name": "FCDLJK+CMR17",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "CGMZHB+CMR12",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "MMOGVD+CMR8",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "PMWADA+CMR7",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "BFEHVB+CMR10",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "FIYWQS+CMBX9",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "CTFCVH+CMR9",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "RQMPZW+CMBX8",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "PEBOCV+CMBX12",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "DXNKIC+CMBX10",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "QPSWNX+CMTI10",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "QQBDOD+CMTT10",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "DZZSIC+Arial-BoldMT",
+      "type": "TrueType",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "",
+      "type": "Type3",
+      "embedded": true,
+      "space_only_type3": true
+    },
+    {
+      "name": "RUSMYM+ArialMT",
+      "type": "TrueType",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "",
+      "type": "Type3",
+      "embedded": true,
+      "space_only_type3": true
+    },
+    {
+      "name": "SEPZKH+ArialMT",
+      "type": "TrueType",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "",
+      "type": "Type3",
+      "embedded": true,
+      "space_only_type3": true
+    },
+    {
+      "name": "VSDZIN+CMSY9",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "ZBMDLG+CMMI10",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "AOHJMP+CMSY10",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "EVICAO+DejaVuSans-Bold",
+      "type": "Type0",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "BMQQDV+DejaVuSans",
+      "type": "Type0",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "IGGTYF+CMEX10",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "XFWTIF+CMSY7",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "TBPEPE+CMMI7",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "EVICAO+DejaVuSans-Bold",
+      "type": "Type0",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "BMQQDV+DejaVuSans",
+      "type": "Type0",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "KZOOVJ+CMMI9",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "YTJMAQ+SFRM1000",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "EYFXTZ+SFRM0900",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "EVICAO+DejaVuSans-Bold",
+      "type": "Type0",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "BMQQDV+DejaVuSans",
+      "type": "Type0",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "BMQQDV+DejaVuSans",
+      "type": "Type0",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "EVICAO+DejaVuSans-Bold",
+      "type": "Type0",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "BMQQDV+DejaVuSans",
+      "type": "Type0",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "BMQQDV+DejaVuSans",
+      "type": "Type0",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "CFMKVC+CMTI9",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "TMHVPV+MSAM10",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "SDYYBV+CMEX9",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "WUSNZW+CMMI5",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    },
+    {
+      "name": "JUVPFS+MSBM10",
+      "type": "Type1",
+      "embedded": true,
+      "space_only_type3": false
+    }
+  ],
+  "public_submission_status": "Author, affiliation and declarations pending; final service preview remains necessary after metadata is filled.",
+  "render_comparison": {
+    "TL2026_text_equal_on_all_pages": true,
+    "figure_input_bytes_unchanged": true,
+    "differences": [
+      {
+        "page": 9,
+        "changed_pixel_fraction": 0.0377893,
+        "maximum_channel_difference": 2,
+        "bounding_box_pixels": [
+          150,
+          111,
+          706,
+          979
+        ]
+      },
+      {
+        "page": 11,
+        "changed_pixel_fraction": 0.01319137,
+        "maximum_channel_difference": 2,
+        "bounding_box_pixels": [
+          150,
+          111,
+          705,
+          978
+        ]
+      },
+      {
+        "page": 17,
+        "changed_pixel_fraction": 0.01421366,
+        "maximum_channel_difference": 2,
+        "bounding_box_pixels": [
+          150,
+          111,
+          705,
+          979
+        ]
+      },
+      {
+        "page": 18,
+        "changed_pixel_fraction": 0.02745556,
+        "maximum_channel_difference": 2,
+        "bounding_box_pixels": [
+          187,
+          111,
+          742,
+          979
+        ]
+      },
+      {
+        "page": 19,
+        "changed_pixel_fraction": 0.03796042,
+        "maximum_channel_difference": 2,
+        "bounding_box_pixels": [
+          150,
+          111,
+          705,
+          979
+        ]
+      },
+      {
+        "page": 20,
+        "changed_pixel_fraction": 0.01945633,
+        "maximum_channel_difference": 2,
+        "bounding_box_pixels": [
+          186,
+          114,
+          742,
+          979
+        ]
+      }
+    ],
+    "note": "Raster differences are confined to the six pages containing imported Matplotlib figure PDFs; both versions use the identical figure files. This is not a byte-identical PDF claim.",
+    "maximum_channel_difference_on_changed_pages": 2,
+    "channel_scale": "0\u2013255"
+  },
+  "visual_review": "Tables, figure/caption page and appendix-to-bibliography transition visually checked; no clipping or overlapping elements observed."
+}

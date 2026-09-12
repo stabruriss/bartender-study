@@ -55,3 +55,7 @@ Route anchors: [manual button](https://github.com/stabruriss/kota-app/blob/75eb8
 ## Relationship to observations and models
 
 The fixed conformance fixtures exercise explicit CLI requests with the app running. They do not test the automatic timer or establish safety under unobserved writes. The synthetic simulation has its own declared arrival, repair, dependency, and queue assumptions; its interval and delay axes are not measurements of this UI scheduler. The deployment dataset records CLI receipts with limited coverage, so it cannot establish the frequency of automatic or explicit user-button synchronization.
+
+## Release-content review
+
+On 2026-09-12 the three subsequent figure/provenance commits and the source-package additions were reviewed for release content; see [CONTENT_AUDIT.md](CONTENT_AUDIT.md). This does not change the application version, source facts or observation limits recorded above.

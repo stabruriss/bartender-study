@@ -11,15 +11,15 @@ The final manuscript and publication metadata are being prepared separately.
 | Pinned execution environment | `.python-version`, `requirements.lock`, `RUNBOOK.md` | CPython 3.12.4; standard-library study runtime. |
 | Approved parameters and seeds | `configs/study-draft.json`; execution copies in `deliverables/study-01/config.json` and `cells.json` | 990 cells; seeds 1000–1029; parameter digest below. |
 | All cell aggregates and paired contrasts | `deliverables/study-01/summary.csv`, `paired-differences.csv` | Original 34,650 metric rows and 11,010 paired rows, unchanged. |
-| Analysis code, exact plotting dependencies and all result figures | `analysis/` | Three main figures, complete tables, 41 supplementary figure pages, numerical summary, manifest and analysis adjustment record. |
+| Analysis code, exact plotting dependencies and all result figures | `analysis/` | Four manuscript result figures, complete tables, 41 supplementary figure pages, coordinate provenance, independent verification and the analysis adjustment record. |
 | Two explanatory diagrams and editable sources | `release/figures/` | Original scripts, shared style, dependency list, PDF and SVG copies. |
 | Execution and verification provenance | `RUN_APPROVAL.json`, `REVALIDATION_APPROVAL.json`, `deliverables/study-01/`, `validation/` | Original HOLD preserved; separately approved verify-02 PASS and independent maintainer acceptance retained. |
 | Application conformance | `RUNBOOK-CONFORMANCE.md`, `CONFORMANCE_APPROVAL.json`, `deliverables/conformance-01/` | Eight fixed fixtures, sixteen requests; v0.1.10 and explicit scope limits. |
-| Raw archive index and checksums | `deliverables/study-01/artifact-index.json` | Present; four raw archive parts remain on the execution machine and need attachment upload at release. |
+| Raw archive index and checksums | `deliverables/study-01/artifact-index.json` | Checksums present; four raw parts retained on the execution machine. Later attachment upload and URLs are tracked in `release/RAW_ARCHIVES.json`; repository publication does not wait for the upload. |
 | Deployment dataset and methods | `release/deployment/deployment-records.json`, `METHODS.md` | Unchanged upstream delivery, exact hashes below. Descriptive, incomplete retained record; no overall reliability estimate. |
 | Public source audit | `release/SOURCE_AUDIT.md` | Present; integration, automatic trigger and explicit routes anchored to v0.1.10, with tree comparison to the original audit commit. |
-| Final manuscript, bibliography and appendix | Manuscript export, prepared separately | Pending author review and final export; the LaTeX scaffold is not the final paper. |
-| Citation metadata and reuse license | Final citation record and license file | Pending final author/affiliation, venue and license choices. |
+| Manuscript source, bibliography and appendix | `release/arxiv/` | Complete text, seven figures and seven tables; twelve-file source draft with compiled `.bbl`. Author, affiliation and declarations remain placeholders. TeX Live 2025 snapshot check is recorded alongside the package. |
+| Citation metadata and reuse license | `release/drafts/CITATION.cff`, `release/drafts/LICENSE` | Reviewable drafts: code MIT; data and figures CC BY 4.0. Author/rights-holder fields pending; third-party template notices preserved. Drafts do not activate a repository license. |
 
 ## Immutable data bindings
 
@@ -45,17 +45,21 @@ the maintainer machine independently checked the transferred summaries.
 
 ## Remaining release tasks
 
-- Freeze the reviewed manuscript, five figures, five tables, references and
-  appendix; set final author/affiliation, citation metadata and reuse license.
+- Fill final author/affiliation and factual declarations in the manuscript,
+  complete the citation and license drafts, and regenerate the seven-figure,
+  seven-table source package. Review the arXiv-generated preview before submission.
 - Preserve the deployment methods' limits. The frozen deployment source is
   labeled `source-snapshot-01`; its exact relation to a public commit and
   upstream retention of the extraction program remain to be documented.
   The public dataset supports aggregate recomputation, not raw-log extraction.
-- Upload the four retained raw archive parts with their exact hashes as release
-  attachments at the coordinated publication point; record stable download URLs.
-- Recheck any commits and files added after the recorded content audit. No
-  history rewrite or new public repository is currently needed on the reviewed
-  history. Publication itself remains a separate author action.
+- After the execution machine uploads the four raw archive parts, verify their
+  exact hashes and record stable download URLs in `release/RAW_ARCHIVES.json`.
+  Source publication may proceed earlier with the existing archive hashes;
+  do not describe the raw archives as downloadable while those URLs are null.
+- The three figure/provenance commits after the initial audit were reviewed on
+  2026-09-12; see `release/CONTENT_AUDIT.md`. Recheck any subsequent additions.
+  No history rewrite or replacement repository is required for the reviewed
+  content. The repository remains private; its visibility change is an owner action.
 - Replace the repository's old short description at publication with:
   `Reproducible synthetic study of continuous worktree integration and author repair`.
   The old project shorthand is unnecessary for readers; it is not a data issue.

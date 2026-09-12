@@ -1,0 +1,49 @@
+{
+  "figures": [
+    {
+      "number": 1,
+      "file": "source/Fig1.pdf",
+      "source": "https://www.kota.place/docs/research/long-term-teammates/v1/",
+      "sha256": "533ee7e2c1e735fb66f328058e7444b88446f37c2fe329c741af5ba8ed3c6572"
+    },
+    {
+      "number": 2,
+      "file": "source/Fig2.pdf",
+      "source": "release/figures/fig1_repair_timelines.pdf",
+      "sha256": "ed9bd0743f1d91857e7441da085877f5ea0787d48bdf88915336a62fba50ab49"
+    },
+    {
+      "number": 3,
+      "file": "source/Fig3.pdf",
+      "source": "release/figures/fig2_delay_context.pdf",
+      "sha256": "ad89238c936697baba10001b81c5335a466c4c64d41106219ab4045dfbb1d490"
+    },
+    {
+      "number": 4,
+      "file": "source/Fig4.pdf",
+      "source": "analysis/manuscript/fig4_repairs_overlap.pdf",
+      "sha256": "9c371a4f03792e106db10ee6712cdc1b0ec8befd4d5a69f9c55a58e15111f128"
+    },
+    {
+      "number": 5,
+      "file": "source/Fig5.pdf",
+      "source": "analysis/manuscript/fig5_sync_interval.pdf",
+      "sha256": "ca9e2fae3e27e666ca73749d71f4d2bd4881b7a61ba8d4591213815d6c294ccd"
+    },
+    {
+      "number": 6,
+      "file": "source/Fig6.pdf",
+      "source": "analysis/manuscript/fig6_wait_resolved.pdf",
+      "sha256": "67f685d7554a605d7bb81e263e8231c8a3202afa934ff3111536e6225516605c"
+    },
+    {
+      "number": 7,
+      "file": "source/Fig7.pdf",
+      "source": "analysis/manuscript/fig7_wait_failures.pdf",
+      "sha256": "9efbc85814994c7c56a4a904a6c6a55c132444be64d0959486d4b963697c3e04"
+    }
+  ],
+  "scientific_point_provenance": "analysis/manuscript/plot-data.csv",
+  "independent_coordinate_verifier": "analysis/verify_plot_data.py",
+  "figure_1_note": "Reproduced from the CC BY 4.0 Kota whitepaper; the PDF is the existing vector export, unchanged in this package."
+}

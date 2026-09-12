@@ -1,0 +1,71 @@
+{
+  "status": "source-draft-author-metadata-and-declarations-pending",
+  "processor": "pdflatex",
+  "files": {
+    "Fig1.pdf": {
+      "bytes": 50056,
+      "sha256": "533ee7e2c1e735fb66f328058e7444b88446f37c2fe329c741af5ba8ed3c6572"
+    },
+    "Fig2.pdf": {
+      "bytes": 24778,
+      "sha256": "ed9bd0743f1d91857e7441da085877f5ea0787d48bdf88915336a62fba50ab49"
+    },
+    "Fig3.pdf": {
+      "bytes": 29823,
+      "sha256": "ad89238c936697baba10001b81c5335a466c4c64d41106219ab4045dfbb1d490"
+    },
+    "Fig4.pdf": {
+      "bytes": 36018,
+      "sha256": "9c371a4f03792e106db10ee6712cdc1b0ec8befd4d5a69f9c55a58e15111f128"
+    },
+    "Fig5.pdf": {
+      "bytes": 28307,
+      "sha256": "ca9e2fae3e27e666ca73749d71f4d2bd4881b7a61ba8d4591213815d6c294ccd"
+    },
+    "Fig6.pdf": {
+      "bytes": 26226,
+      "sha256": "67f685d7554a605d7bb81e263e8231c8a3202afa934ff3111536e6225516605c"
+    },
+    "Fig7.pdf": {
+      "bytes": 22204,
+      "sha256": "9efbc85814994c7c56a4a904a6c6a55c132444be64d0959486d4b963697c3e04"
+    },
+    "main.bbl": {
+      "bytes": 8008,
+      "sha256": "bc6baa9320a73f0c4af10eea09414083760399bb184f468c6c53a806490babc0"
+    },
+    "main.tex": {
+      "bytes": 90122,
+      "sha256": "17380d6499618620e1df4bff79691529dc16ec799d2aebf5836a38a6680a4f43"
+    },
+    "references.bib": {
+      "bytes": 4519,
+      "sha256": "8cb1578d2357d9b08554b0f6bd56276b7a3e7159c0a1ba48ccdebf329826ccba"
+    },
+    "sn-jnl.cls": {
+      "bytes": 55857,
+      "sha256": "36d0c3273a59d48dc6a9c7b080dfa1ec50dc10229d8751568d1f2e490ffa5ecc"
+    },
+    "sn-mathphys-ay.bst": {
+      "bytes": 64023,
+      "sha256": "6a2306683997db76b5e58190acea4dac360c742044114f6a923a4380fbab9008"
+    }
+  },
+  "archive": {
+    "file": "arxiv-source-draft.tar.gz",
+    "bytes": 245570,
+    "sha256": "6c925872ddc7594cc4411c203f7cd5fdf95566e7cf1c16fa4c9422d7789a0834"
+  },
+  "excluded": [
+    "build PDFs",
+    "logs",
+    "auxiliary state",
+    "machine paths",
+    "editor files"
+  ],
+  "third_party": [
+    "sn-jnl.cls",
+    "sn-mathphys-ay.bst"
+  ],
+  "note": "Upstream template notices are preserved. This package does not approve submission."
+}

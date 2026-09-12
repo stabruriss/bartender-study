@@ -1,0 +1,9 @@
+{
+  "status": "VALID_DRAFT_NOT_FINAL_METADATA",
+  "cff_version": "1.2.0",
+  "schema_source": "https://github.com/citation-file-format/citation-file-format/blob/1.2.0/schema.json",
+  "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
+  "citation_file_sha256": "7510efb329610e98929862f3819f09f2506da7da2a0b21811d342cc0f5767c13",
+  "validator": "PyYAML 6.0.2 + jsonschema 4.23.0",
+  "remaining": "Replace author and copyright-holder placeholders; finalize release identifiers and factual declarations."
+}

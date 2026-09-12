@@ -103,8 +103,12 @@ Hashes establish file identity, not model validity. The maintainer independently
 checked the transferred per-seed summaries and aggregation; the full raw
 run/flow archives remain on the execution machine. Their unchanged-file claim
 comes from its approved revalidation, not a new local rehash of the archives.
-The retained archive parts and their checksums must accompany the planned
-publication artifact so reviewers can continue the audit to the raw histories.
+The repository publishes the archive index and checksums. The retained raw
+parts are not yet downloadable; they will be uploaded separately as release
+attachments, with URLs recorded in `release/RAW_ARCHIVES.json`. Publication of
+the source repository need not wait for those uploads. Until the parts are
+available, a reader can reproduce the aggregate-to-figure checks but cannot
+independently replay the full raw-history audit from public downloads.
 
 These checks establish a reproducible correspondence between accepted
 simulation observations and figures. They do not establish that the synthetic

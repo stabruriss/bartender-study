@@ -1,0 +1,35 @@
+{
+  "status": "retained-on-execution-machine-not-yet-uploaded",
+  "source_index": "deliverables/study-01/artifact-index.json",
+  "source_index_sha256": "8d88dbe050a3d9428e4cd0720c429cbed9a67734de64ff5eac0992f41d8ffa70",
+  "archive_bytes": 4200591360,
+  "archive_sha256": "2256b0bf734992aa37d1a59f176832f08cce8946fc514dee4f8b87d37e625beb",
+  "parts": [
+    {
+      "bytes": 1073741824,
+      "path": "archives/study-01/raw.tar.part000",
+      "sha256": "f24ef43b154f961742220d9bdfd871189eb58bce20025cc85505153a5b468b8b",
+      "download_url": null
+    },
+    {
+      "bytes": 1073741824,
+      "path": "archives/study-01/raw.tar.part001",
+      "sha256": "8610d1edd07731f3cfad36edabf2da848f7d7f20741b844e62a8ed75eff1b199",
+      "download_url": null
+    },
+    {
+      "bytes": 1073741824,
+      "path": "archives/study-01/raw.tar.part002",
+      "sha256": "6894e702900e389706bc325a517dd0a954071ec04b95f92568710c1c15e9502c",
+      "download_url": null
+    },
+    {
+      "bytes": 979365888,
+      "path": "archives/study-01/raw.tar.part003",
+      "sha256": "ada383eff4ebbb5c8ee521ce09ff796fed6d97fed9381d3696486144612ee8c7",
+      "download_url": null
+    }
+  ],
+  "identity_basis": "Approved execution-machine verify-02; no new local archive rehash.",
+  "availability": "The source repository and published checksums can be released before the raw attachments. Download URLs will be added after upload; null does not denote an available download."
+}

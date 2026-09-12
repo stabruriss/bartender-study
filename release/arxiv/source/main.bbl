@@ -1,0 +1,240 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{14}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{}{2026}]{bartender-deployment-records}
+\begin{botherref}
+Bartender deployment records.
+Descriptive dataset with methods note, extracted 9 September 2026; released
+  with the reproduction package
+(2026)
+\end{botherref}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Brun et~al.}{2011}]{brun2011-conflicts}
+\begin{bchapter}
+\bauthor{\bsnm{Brun}, \binits{Y.}},
+\bauthor{\bsnm{Holmes}, \binits{R.}},
+\bauthor{\bsnm{Ernst}, \binits{M.D.}},
+\bauthor{\bsnm{Notkin}, \binits{D.}}:
+\bctitle{Proactive detection of collaboration conflicts}.
+In: \bbtitle{Proceedings of ESEC/FSE 2011},
+pp. \bfpage{168}--\blpage{178}
+(\byear{2011}).
+\doiurl{10.1145/2025113.2025139}
+\end{bchapter}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Bird et~al.}{2011}]{bird2011-ownership}
+\begin{bchapter}
+\bauthor{\bsnm{Bird}, \binits{C.}},
+\bauthor{\bsnm{Nagappan}, \binits{N.}},
+\bauthor{\bsnm{Murphy}, \binits{B.}},
+\bauthor{\bsnm{Gall}, \binits{H.}},
+\bauthor{\bsnm{Devanbu}, \binits{P.}}:
+\bctitle{Don't touch my code! examining the effects of ownership on software
+  quality}.
+In: \bbtitle{Proceedings of ESEC/FSE 2011},
+pp. \bfpage{4}--\blpage{14}
+(\byear{2011}).
+\doiurl{10.1145/2025113.2025119}
+\end{bchapter}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Dinella et~al.}{2023}]{dinella2023-deepmerge}
+\begin{barticle}
+\bauthor{\bsnm{Dinella}, \binits{E.}},
+\bauthor{\bsnm{Mytkowicz}, \binits{T.}},
+\bauthor{\bsnm{Svyatkovskiy}, \binits{A.}},
+\bauthor{\bsnm{Bird}, \binits{C.}},
+\bauthor{\bsnm{Naik}, \binits{M.}},
+\bauthor{\bsnm{Lahiri}, \binits{S.}}:
+\batitle{{DeepMerge}: Learning to merge programs}.
+\bjtitle{IEEE Transactions on Software Engineering}
+\bvolume{49}(\bissue{4}),
+\bfpage{1599}--\blpage{1614}
+(\byear{2023})
+\doiurl{10.1109/TSE.2022.3183955}
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Fowler}{2024}]{fowler-continuous-integration}
+\begin{botherref}
+\oauthor{\bsnm{Fowler}, \binits{M.}}:
+Continuous Integration.
+Revised 18 January 2024; originally published 10 September 2000 and rewritten 1
+  May 2006
+(2024).
+\url{https://martinfowler.com/articles/continuousIntegration.html}
+\end{botherref}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{{Git}}{n.d.a}]{git-worktree}
+\begin{botherref}
+\oauthor{\bsnm{{Git}}}:
+{git-worktree}: Manage multiple working trees.
+Live documentation. Accessed 8 September 2026
+(n.d.).
+\url{https://git-scm.com/docs/git-worktree}
+\end{botherref}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{{GitHub Docs}}{n.d.b}]{github-merge-queue}
+\begin{botherref}
+\oauthor{\bsnm{{GitHub Docs}}}:
+Managing a merge queue.
+Accessed 8 September 2026
+(n.d.).
+\url{https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue}
+\end{botherref}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{{GitLab Docs}}{n.d.c}]{gitlab-merge-trains}
+\begin{botherref}
+\oauthor{\bsnm{{GitLab Docs}}}:
+Merge trains.
+Accessed 8 September 2026
+(n.d.).
+\url{https://docs.gitlab.com/ci/pipelines/merge_trains/}
+\end{botherref}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Geng and Neubig}{2026}]{geng2026-asynchronous}
+\begin{botherref}
+\oauthor{\bsnm{Geng}, \binits{J.}},
+\oauthor{\bsnm{Neubig}, \binits{G.}}:
+Effective Strategies for Asynchronous Software Engineering Agents.
+arXiv preprint
+(2026).
+\doiurl{10.48550/arXiv.2603.21489}
+\end{botherref}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{{Kota}}{2026}]{kota-source}
+\begin{botherref}
+\oauthor{\bsnm{{Kota}}}:
+{Kota (kota-app)}: Public source repository.
+Source analysis uses commit \texttt{b3db3c8290d8dae5a1ee5f7f40222d3dcf77f1b7};
+  public control-flow audit accompanies the reproduction package
+(2026).
+\url{https://github.com/stabruriss/kota-app}
+\end{botherref}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Liu et~al.}{2026}]{liu2026-state-management}
+\begin{botherref}
+\oauthor{\bsnm{Liu}, \binits{M.}},
+\oauthor{\bsnm{Chen}, \binits{T.}},
+\oauthor{\bsnm{Xu}, \binits{Z.}},
+\oauthor{\bsnm{Jiang}, \binits{X.}},
+\oauthor{\bsnm{Dong}, \binits{Y.}}:
+Multi-agent Collaboration with State Management.
+arXiv preprint
+(2026).
+\doiurl{10.48550/arXiv.2605.20563}
+\end{botherref}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Lyu et~al.}{2026}]{lyu2026-coagent}
+\begin{botherref}
+\oauthor{\bsnm{Lyu}, \binits{H.}},
+\oauthor{\bsnm{Zhang}, \binits{D.}},
+\oauthor{\bsnm{Wu}, \binits{M.}},
+\oauthor{\bsnm{Wei}, \binits{X.}},
+\oauthor{\bsnm{Chen}, \binits{H.}}:
+{CoAgent}: Concurrency Control for Multi-Agent Systems.
+arXiv preprint
+(2026).
+\doiurl{10.48550/arXiv.2606.15376}
+\end{botherref}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Svyatkovskiy
+  et~al.}{2022}]{svyatkovskiy2022-transformers}
+\begin{bchapter}
+\bauthor{\bsnm{Svyatkovskiy}, \binits{A.}},
+\bauthor{\bsnm{Fakhoury}, \binits{S.}},
+\bauthor{\bsnm{Ghorbani}, \binits{N.}},
+\bauthor{\bsnm{Mytkowicz}, \binits{T.}},
+\bauthor{\bsnm{Dinella}, \binits{E.}},
+\bauthor{\bsnm{Bird}, \binits{C.}},
+\bauthor{\bsnm{Jang}, \binits{J.}},
+\bauthor{\bsnm{Sundaresan}, \binits{N.}},
+\bauthor{\bsnm{Lahiri}, \binits{S.K.}}:
+\bctitle{Program merge conflict resolution via neural transformers}.
+In: \bbtitle{Proceedings of the 30th ACM Joint European Software Engineering
+  Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE
+  2022)},
+pp. \bfpage{822}--\blpage{833}
+(\byear{2022}).
+\doiurl{10.1145/3540250.3549163}
+\end{bchapter}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Wu}{2026}]{wu2026kotalongtermteammates}
+\begin{botherref}
+\oauthor{\bsnm{Wu}, \binits{N.}}:
+{Kota}: {AI} Agents Collaborating as Long-Term Teammates.
+Kota whitepaper, version 1.0.
+14 July 2026. Licensed under CC BY 4.0
+(2026).
+\url{https://www.kota.place/docs/research/long-term-teammates/v1/}
+\end{botherref}
+\endbibitem
+
+\end{thebibliography}
