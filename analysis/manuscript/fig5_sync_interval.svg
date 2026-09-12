@@ -2179,41 +2179,41 @@ L 595.728 438.48
   </g>
   <g id="legend_1">
    <g id="line2d_164">
-    <path d="M 196.425781 58.458438 
-L 206.425781 58.458438 
-L 216.425781 58.458438 
+    <path d="M 173.084375 58.458438 
+L 183.084375 58.458438 
+L 193.084375 58.458438 
 " style="fill: none; stroke-dasharray: 4.44,1.92; stroke-dashoffset: 0; stroke: #808080; stroke-width: 1.2"/>
    </g>
    <g id="text_70">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="224.425781" y="61.958438" transform="rotate(-0 224.425781 61.958438)">First-order model</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="201.084375" y="61.958438" transform="rotate(-0 201.084375 61.958438)">First-order model (theory)</text>
    </g>
    <g id="LineCollection_10">
-    <path d="M 340.250781 63.458438 
-L 340.250781 53.458438 
+    <path d="M 360.45 63.458438 
+L 360.45 53.458438 
 " style="fill: none; stroke: #111111; stroke-width: 0.65"/>
    </g>
    <g id="line2d_165">
     <g>
-     <use xlink:href="#m94df063528" x="340.250781" y="63.458438" style="fill: #111111; stroke: #111111"/>
+     <use xlink:href="#m94df063528" x="360.45" y="63.458438" style="fill: #111111; stroke: #111111"/>
     </g>
    </g>
    <g id="line2d_166">
     <g>
-     <use xlink:href="#m94df063528" x="340.250781" y="53.458438" style="fill: #111111; stroke: #111111"/>
+     <use xlink:href="#m94df063528" x="360.45" y="53.458438" style="fill: #111111; stroke: #111111"/>
     </g>
    </g>
    <g id="line2d_167">
-    <path d="M 330.250781 58.458438 
-L 350.250781 58.458438 
+    <path d="M 350.45 58.458438 
+L 370.45 58.458438 
 " style="fill: none; stroke: #111111; stroke-width: 1.15; stroke-linecap: square"/>
    </g>
    <g id="line2d_168">
     <g>
-     <use xlink:href="#m766cf7c592" x="340.250781" y="58.458438" style="fill: #111111; stroke: #111111"/>
+     <use xlink:href="#m766cf7c592" x="360.45" y="58.458438" style="fill: #111111; stroke: #111111"/>
     </g>
    </g>
    <g id="text_71">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="358.250781" y="61.958438" transform="rotate(-0 358.250781 61.958438)">Bartender</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="378.45" y="61.958438" transform="rotate(-0 378.45 61.958438)">Simulation</text>
    </g>
   </g>
  </g>

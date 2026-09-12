@@ -76,5 +76,13 @@
   "scope": "Accepted aggregates and approved coordinate metadata only; no simulations or raw-output analysis.",
   "component_intervals_preserved": true,
   "ratio_intervals_inferred": false,
-  "full_scan_supplements_unchanged": true
+  "full_scan_supplements_unchanged": true,
+  "legend_revision": {
+    "figure": 5,
+    "simulation_label": "Simulation",
+    "theory_label": "First-order model (theory)",
+    "other_figure_and_numeric_output_hashes_unchanged": true,
+    "plot_region_render_unchanged": true,
+    "pdf_and_svg_contain_no_bartender_text": true
+  }
 }

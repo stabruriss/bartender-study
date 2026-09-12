@@ -103,7 +103,7 @@ def sync_figure(data):
         x = [c["scenario"]["tau"] for c in cells]
         for row, (metric, label) in enumerate(metrics):
             ax = axes[row, col]
-            curve(data, ax, cells, metric, x, "#111111", "o", "-", "Bartender")
+            curve(data, ax, cells, metric, x, "#111111", "o", "-", "Simulation")
             style(ax)
             ax.set_xscale("log", base=2)
             ax.set_xticks(x, [f"{t:g}".removeprefix("0") if t < 1 else f"{t:g}" for t in x])
@@ -114,7 +114,7 @@ def sync_figure(data):
                 ax.set_xlabel("Sync interval τ (model time)", fontsize=9)
         p = cells[0]["p_nominal"]
         axes[0, col].plot(x, [math.comb(4, 2) * p * t for t in x],
-                          "--", color=".5", linewidth=1.2, label="First-order model")
+                          "--", color=".5", linewidth=1.2, label="First-order model (theory)")
         axes[0, col].set_title(f"{length}-line edits\np = {p:.4f}")
     fig.suptitle("Longer sync intervals raise conflict rates\nand can enlarge overlaps", fontsize=13, y=.99)
     fig.legend(*axes[0, 0].get_legend_handles_labels(), loc="upper center",

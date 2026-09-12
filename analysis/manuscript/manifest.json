@@ -8,7 +8,7 @@
   },
   "input_hashes_unchanged": true,
   "scripts": {
-    "make_manuscript_figures.py": "305a52d21abe5d5b59e0f3cb4f84d3a323b9e5ef57afab694cd41cb39253893b",
+    "make_manuscript_figures.py": "1eef0f63e9ef96b78791b7465520e757e46b0332ebab543fc9c560a2d8d676b5",
     "make_figures.py": "d64a628279eab3d33a0204d4a4eb740e6a52538625e534fcb5dd1a6a6103ee0f"
   },
   "python": "3.12.4",
@@ -33,12 +33,12 @@
       "bytes": 129033
     },
     "fig5_sync_interval.pdf": {
-      "sha256": "638635f890ef488d782f90bf27ce602e323e2a0746f67ef3b10a5a516082cbad",
-      "bytes": 28450
+      "sha256": "ca9e2fae3e27e666ca73749d71f4d2bd4881b7a61ba8d4591213815d6c294ccd",
+      "bytes": 28307
     },
     "fig5_sync_interval.svg": {
-      "sha256": "482c41b15b55188650cc45f8ab97cdbed6f0b5582c33870fde3b30087dd346bf",
-      "bytes": 93143
+      "sha256": "32dee7a6cc4f304b88f4593e36aece3cbc298bcf1256605009b4cab2869e6ffa",
+      "bytes": 93117
     },
     "fig6_wait_resolved.pdf": {
       "sha256": "5b7f78a25511cedba492798ef530e0c7c59a558555ac3fee46955df732857461",
