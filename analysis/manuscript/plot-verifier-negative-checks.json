@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "cases": [
+    {
+      "case": "alter_y",
+      "status": "correctly_rejected",
+      "reason": "Coordinate/interval mismatch: ('fig6_wait_resolved', '0', 'Kick-back: base at dispatch', '0') y"
+    },
+    {
+      "case": "wrong_cell",
+      "status": "correctly_rejected",
+      "reason": "Source/style mismatch: ('fig6_wait_resolved', '0', 'Kick-back: base at dispatch', '0') cell_id"
+    },
+    {
+      "case": "missing_point",
+      "status": "correctly_rejected",
+      "reason": "Coordinate coverage mismatch: 1 missing, 0 unexpected"
+    },
+    {
+      "case": "duplicate_point",
+      "status": "correctly_rejected",
+      "reason": "Duplicate displayed coordinate: ('fig6_wait_resolved', '0', 'Kick-back: base at dispatch', '0')"
+    },
+    {
+      "case": "wrong_baseline_style",
+      "status": "correctly_rejected",
+      "reason": "Source/style mismatch: ('fig6_wait_resolved', '0', 'Bartender (immediate dispatch; \u03b4 does not apply)', '0') line_style"
+    }
+  ],
+  "verifier_sha256": "6d0ad47c43163acb2c5ef7fd67e0d0a2856d48eeb2b846a626dc2b50d41e462c",
+  "check_script_sha256": "e1431dbe46d292f8e74c61460aa7b771364b3c36c9c105c3d5ed7a20041ac5bc",
+  "original_plot_data_sha256": "ccab8425e826017e5a50e1789198b5bca0e145038e6a3b7732f0852f17adb1e4",
+  "note": "Temporary copies only; declared plot-data hashes updated before checking coordinate/source/coverage/style failures."
+}

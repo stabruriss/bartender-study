@@ -77,12 +77,39 @@
   "component_intervals_preserved": true,
   "ratio_intervals_inferred": false,
   "full_scan_supplements_unchanged": true,
-  "legend_revision": {
+  "previous_figure5_legend_revision": {
     "figure": 5,
     "simulation_label": "Simulation",
     "theory_label": "First-order model (theory)",
     "other_figure_and_numeric_output_hashes_unchanged": true,
     "plot_region_render_unchanged": true,
     "pdf_and_svg_contain_no_bartender_text": true
+  },
+  "wait_style_revision": {
+    "solid": "Bartender immediate-dispatch operating point, extended as reference; delta does not apply",
+    "comparators": "two dashed kick-back variants",
+    "theory": "thin dotted nominal curves",
+    "figures_4_and_5_bytes_unchanged": true,
+    "existing_numeric_exports_unchanged": true,
+    "text_outside_page": {
+      "fig6_wait_resolved": [],
+      "fig7_wait_failures": []
+    }
+  },
+  "plot_source_verification": {
+    "coordinates": 1434,
+    "fields": 22944,
+    "source_intervals": 123,
+    "result": "pass",
+    "report": "plot-verification.json",
+    "negative_checks": "plot-verifier-negative-checks.json",
+    "all_five_corruptions_rejected": true
+  },
+  "fresh_reproduction": {
+    "status": "pass",
+    "all_manifest_outputs_byte_identical": true,
+    "output_count": 16,
+    "manifest_byte_identical": true,
+    "manifest_sha256": "70f8d5befd7be2f8941afc6d97f1448a561fed9755e10b57bac2a634ee6a27f9"
   }
 }

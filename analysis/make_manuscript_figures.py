@@ -16,14 +16,16 @@ from make_figures import (
     style, write_csv, matplotlib, plt, np,
 )
 from matplotlib.ticker import PercentFormatter, FuncFormatter, NullLocator
+from plot_provenance import tag, tag_errorbar, coordinates
 
 SLICES = [(2, 0.), (4, 0.), (8, 0.), (4, .1), (4, .3)]
 METRICS = [("author_repair_starts", "Repair starts"),
            ("observed_repair_effort", "Observed repair work")]
 POLICIES = [("clean_first", "Bartender", "#111111", "o", "-"),
             ("in_place", "In-place repair", "#777777", "s", "--")]
-READS = [("dispatch", "Read at dispatch", "#111111", "o", "-"),
-         ("start", "Re-read at repair start", "#777777", "s", "-.")]
+READS = [("dispatch", "Kick-back: base at dispatch", "#444444", "o", "--"),
+         ("start", "Kick-back: re-read at repair start", "#888888", "s", "--")]
+BASELINE_LABEL = "Bartender (immediate dispatch; δ does not apply)"
 plt.rcParams.update({"font.size": 10, "axes.labelsize": 10,
                      "axes.titlesize": 10, "xtick.labelsize": 9,
                      "ytick.labelsize": 9,
@@ -50,6 +52,8 @@ def repair_figure(data):
                 if any(number(data.row(c, metric)["ci95_low"]) <= 0 for c in cells):
                     raise ValueError("Log axis would omit a nonpositive interval bound")
                 curve(data, ax, cells, metric, x, color, marker, line, label)
+                tag_errorbar(ax, cells=cells, metric=metric, x_definition="nominal_overlap_probability",
+                             panel=f"agents={agents};dependency={dependency:g};metric={metric}")
                 ax.set_xscale("log")
                 ax.set_yscale("log")
                 ax.set_xlim(x[0] / 1.25, x[-1] * 3.5)
@@ -104,6 +108,8 @@ def sync_figure(data):
         for row, (metric, label) in enumerate(metrics):
             ax = axes[row, col]
             curve(data, ax, cells, metric, x, "#111111", "o", "-", "Simulation")
+            tag_errorbar(ax, cells=cells, metric=metric, x_definition="sync_interval",
+                         panel=f"edit_lines={length};metric={metric}")
             style(ax)
             ax.set_xscale("log", base=2)
             ax.set_xticks(x, [f"{t:g}".removeprefix("0") if t < 1 else f"{t:g}" for t in x])
@@ -113,8 +119,10 @@ def sync_figure(data):
             if row == 2:
                 ax.set_xlabel("Sync interval τ (model time)", fontsize=9)
         p = cells[0]["p_nominal"]
-        axes[0, col].plot(x, [math.comb(4, 2) * p * t for t in x],
-                          "--", color=".5", linewidth=1.2, label="First-order model (theory)")
+        prediction, = axes[0, col].plot(x, [math.comb(4, 2) * p * t for t in x],
+                                      "--", color=".5", linewidth=1.2, label="First-order model (theory)")
+        tag(prediction, cells=cells, formula="nominal_overlap_pair_rate", x_definition="sync_interval",
+            panel=f"edit_lines={length};metric=overlap_pairs_per_time")
         axes[0, col].set_title(f"{length}-line edits\np = {p:.4f}")
     fig.suptitle("Longer sync intervals raise conflict rates\nand can enlarge overlaps", fontsize=13, y=.99)
     fig.legend(*axes[0, 0].get_legend_handles_labels(), loc="upper center",
@@ -164,23 +172,39 @@ def wait_rows(data):
     return rows
 
 
-def wait_figure(rows, failures=False):
-    fig, axes = plt.subplots(1, 3, figsize=(8.4, 3.9), sharey=True)
+def wait_figure(rows, data, failures=False):
+    fig, axes = plt.subplots(1, 3, figsize=(8.4, 4.5), sharey=True)
+    key = "completed_attempt_failure_fraction" if failures else "initial_conflicts_landed_fraction"
+    metrics = ("failed_repair_completions", "author_repair_completions") if failures else (
+        "author_repair_completions", "failed_repair_completions", "conflict_cohort_n")
+    formula = "failed_over_completed" if failures else "completed_minus_failed_over_initial"
     for col, length in enumerate([4, 16, 64]):
         ax = axes[col]
+        zero_rows = [r for r in rows if r["edit_length_lines"] == length and r["wait_in_characteristic_units"] == 0]
+        if len(zero_rows) != 2 or zero_rows[0][key] != zero_rows[1][key]:
+            raise ValueError("Baseline timings disagree at the immediate-dispatch operating point")
+        zero = next(r for r in zero_rows if r["baseline_read_time"] == "dispatch")
+        baseline, = ax.plot([0, 4], [zero[key], zero[key]], color="#111111", linewidth=1.8,
+                            linestyle="-", marker="o", markersize=4.5, markevery=[0], zorder=5,
+                            label=BASELINE_LABEL)
+        tag(baseline, cells=[data.cells[zero["cell_id"]]], formula="zero_wait_reference:" + formula,
+            x_definition="comparator_wait_characteristic_units", panel=f"edit_lines={length}", source_metrics=metrics)
         for refresh, label, color, marker, line in READS:
             selected = [r for r in rows if r["edit_length_lines"] == length and r["baseline_read_time"] == refresh]
             x = [r["wait_in_characteristic_units"] for r in selected]
-            key = "completed_attempt_failure_fraction" if failures else "initial_conflicts_landed_fraction"
             y = [r[key] for r in selected]
-            ax.plot(x, y, color=color, marker=marker, linestyle=line,
-                    markersize=4, linewidth=1.35, label=label)
+            observed, = ax.plot(x, y, color=color, marker=marker, linestyle=line,
+                               markersize=4, linewidth=1.35, label=label)
+            tag(observed, cells=[data.cells[r["cell_id"]] for r in selected], formula=formula,
+                x_definition="wait_in_characteristic_units", panel=f"edit_lines={length}", source_metrics=metrics)
             if failures:
                 fine = np.linspace(0, 4, 201)
                 mu_r = selected[0]["nominal_mu"] * selected[0]["base_repair_time"]
                 q = -np.expm1(-((fine if refresh == "dispatch" else np.zeros_like(fine)) + mu_r))
-                ax.plot(fine, q, color=color, linestyle="--" if refresh == "dispatch" else ":",
-                        linewidth=1.0, label="First-order model (" + ("dispatch" if refresh == "dispatch" else "start") + ")")
+                theory, = ax.plot(fine, q, color=color, linestyle=":", linewidth=1.1,
+                                  label="First-order theory: " + ("dispatch" if refresh == "dispatch" else "repair start"))
+                tag(theory, cells=[data.cells[selected[0]["cell_id"]]], formula="nominal_failure_probability",
+                    x_definition="comparator_wait_characteristic_units", panel=f"edit_lines={length}")
             else:
                 ax.annotate(f"{y[-1]:.1%}", (x[-1], y[-1]), xytext=(-4, -14 if refresh == "dispatch" else 9),
                             textcoords="offset points", ha="right", fontsize=10, fontweight="bold", color=color)
@@ -191,29 +215,34 @@ def wait_figure(rows, failures=False):
         ax.set_ylim(-.045, 1.10 if not failures else 1.045)
         ax.set_xticks([0, .5, 1, 2, 4], ["0", ".5", "1", "2", "4"])
         ax.set_xticks([.25], minor=True)
-        ax.set_xlabel("Wait δ (multiples of 1/μ)", fontsize=9)
+        ax.set_xlabel("Comparator's wait δ after dispatch\n(× 1/μ)", fontsize=8.5)
         ax.yaxis.set_major_formatter(PercentFormatter(1, decimals=0))
         style(ax)
-        if not failures:
-            zero = [r for r in rows if r["edit_length_lines"] == length and r["baseline_read_time"] == "dispatch"][0]
-            ax.annotate("Bartender\n(immediate dispatch)", (0, zero["initial_conflicts_landed_fraction"]),
-                        xytext=(.31, .24), textcoords="axes fraction", ha="center", fontsize=8,
-                        arrowprops={"arrowstyle": "-", "color": ".4", "linewidth": .7})
-    axes[0].set_ylabel("Completed attempts that fail" if failures else "Initial conflicts resolved\nwithin the window")
+    axes[0].set_ylabel("Completed attempts that fail\n(lower is better)" if failures else "Initial conflicts resolved\n(higher is better)")
     title = "Waiting increases re-collision with a dispatch-time baseline" if failures else "Waiting leaves more initial conflicts unresolved"
     fig.suptitle(title, fontsize=13, y=.99)
-    fig.legend(*axes[0].get_legend_handles_labels(), loc="upper center", bbox_to_anchor=(.5, .91),
-               ncol=2, frameon=False, fontsize=8 if failures else 9)
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend([handles[0]], [labels[0]], loc="upper center", bbox_to_anchor=(.5, .923),
+               frameon=False, fontsize=8.5)
+    observed_handles = [(h, label) for h, label in zip(handles, labels) if label.startswith("Kick-back:")]
+    fig.legend([h for h, _ in observed_handles], [label for _, label in observed_handles],
+               loc="upper center", bbox_to_anchor=(.5, .864), ncol=2, frameon=False, fontsize=8)
     if failures:
-        notes = ["First-order q = 1 − exp(−μE): E = δ + R at dispatch; E ≈ R when re-reading. Fixed R = 0.25.",
-                 "Completed attempts are selected by the serial queue and cutoff; these curves do not establish an independent-attempt law."]
+        theory_handles = [(h, label) for h, label in zip(handles, labels) if label.startswith("First-order")]
+        fig.legend([h for h, _ in theory_handles], [label for _, label in theory_handles],
+                   loc="upper center", bbox_to_anchor=(.5, .805), ncol=2, frameon=False, fontsize=8)
+    if failures:
+        notes = ["Horizontal solid line extends the observed δ=0 simulation value as a reference, not additional scan points.",
+                 "Dotted curves: nominal q = 1 − exp(−μE); E = δ + R at dispatch, E ≈ R when re-reading; R = 0.25.",
+                 "Completed attempts are selected by the queue and cutoff. Pooled 30-seed ratios; no ratio intervals inferred."]
     else:
-        notes = ["Four agents; no dependency; relocation 0; fixed repair clock. At zero wait: 100%, 100%, 99.8% across the panels.",
-                 "Pooled finite-window ratios over 30 seeds, not completion-time statistics. Windows are fixed within each p slice."]
+        notes = ["Horizontal solid line extends the observed δ=0 simulation value as a reference, not additional scan points.",
+                 "Immediate dispatch: 100%, 100%, 99.8%. Four agents; no dependency; relocation 0; R = 0.25.",
+                 "Pooled 30-seed ratios; windows fixed within p; no ratio intervals inferred. Dotted vertical line: 1/μ."]
     fig.text(.5, .074, notes[0], ha="center", fontsize=7.5)
     fig.text(.5, .041, notes[1], ha="center", fontsize=7.3)
-    fig.text(.5, .010, "Ratio intervals are not identified by the aggregate inputs. The dotted vertical line marks 1/μ, not a threshold.", ha="center", fontsize=7.5)
-    fig.subplots_adjust(left=.12, right=.985, top=.685 if failures else .72, bottom=.23, wspace=.16)
+    fig.text(.5, .010, notes[2], ha="center", fontsize=7.5)
+    fig.subplots_adjust(left=.12, right=.985, top=.63 if failures else .70, bottom=.26, wspace=.16)
     return fig
 
 
@@ -284,23 +313,27 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     data = Data()
     waits, repairs = wait_rows(data), repair_rows(data)
+    plotted = []
     for stem, fig, title in [
         ("fig4_repairs_overlap", repair_figure(data), "Repair starts and work against overlap probability"),
         ("fig5_sync_interval", sync_figure(data), "Synchronization interval and conflicts"),
-        ("fig6_wait_resolved", wait_figure(waits), "Initial conflicts resolved within the observation window"),
-        ("fig7_wait_failures", wait_figure(waits, failures=True), "Completed repair attempts that collide again"),
+        ("fig6_wait_resolved", wait_figure(waits, data), "Initial conflicts resolved within the observation window"),
+        ("fig7_wait_failures", wait_figure(waits, data, failures=True), "Completed repair attempts that collide again"),
     ]:
+        plotted.extend(coordinates(fig, stem, INPUT_HASHES, data.index))
         save(fig, out, stem, title)
+    write_csv(out / "plot-data.csv", plotted)
     export_tables(repairs, waits, out)
     if {name: digest(SOURCE / name) for name in INPUT_HASHES} != INPUT_HASHES:
         raise ValueError("Accepted input bytes changed during analysis")
     artifacts = [p for p in sorted(out.iterdir()) if p.suffix in [".csv", ".tex", ".svg", ".pdf", ".md"]]
     manifest = {"study": "study-01", "scope": "Four manuscript displays; accepted aggregate inputs only",
                 "inputs": INPUT_HASHES, "input_hashes_unchanged": True,
-                "scripts": {p.name: digest(p) for p in [Path(__file__), Path(__file__).with_name("make_figures.py")]},
+                "scripts": {p.name: digest(p) for p in [Path(__file__), Path(__file__).with_name("make_figures.py"), Path(__file__).with_name("plot_provenance.py")]},
                 "python": platform.python_version(), "matplotlib": matplotlib.__version__, "numpy": np.__version__,
                 "repair_rows": 15, "paper_repair_rows": 7, "reference_repair_rows": 3, "wait_rows": 36,
                 "ratio_intervals": "not identifiable; source component intervals retained",
+                "plot_coordinate_rows": len(plotted),
                 "outputs": {p.name: {"sha256": digest(p), "bytes": p.stat().st_size} for p in artifacts}}
     (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     print(json.dumps({"status": "PASS", "figures": 4, "repair_rows": 15, "wait_rows": 36,

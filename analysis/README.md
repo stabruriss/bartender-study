@@ -16,6 +16,7 @@ dependencies into the study runtime environment.
 local-logs/analysis-venv/bin/python -m pip install -r analysis/requirements.lock
 local-logs/analysis-venv/bin/python analysis/make_figures.py
 local-logs/analysis-venv/bin/python analysis/make_manuscript_figures.py
+python3 analysis/verify_plot_data.py
 ```
 
 The script reads precisely three delivery inputs, checks their accepted hashes
@@ -42,14 +43,21 @@ both script hashes, the three accepted input hashes, and every new artifact.
 |---|---|
 | `manuscript/fig4_repairs_overlap.pdf` / `.svg` | Both policies, all five agent/dependency slices. Logarithmic axes retain every positive mean and supplied interval. High-overlap labels divide the in-place mean by the Bartender mean. |
 | `manuscript/fig5_sync_interval.pdf` / `.svg` | Relocation 0 only; three rows separate overlap pairs, first conflicts, and overlap size. The first-order prediction applies only to the overlap-pair row. |
-| `manuscript/fig6_wait_resolved.pdf` / `.svg` | Initial conflicts resolved by the window end, two baseline timings. Immediate dispatch is labeled; the 64-line zero-wait value is 99.7622%, not exactly 100%. |
-| `manuscript/fig7_wait_failures.pdf` / `.svg` | Failed completed attempts divided by completed attempts, with the two unfitted nominal failure probabilities. |
+| `manuscript/fig6_wait_resolved.pdf` / `.svg` | Initial conflicts resolved by window end. Solid is the immediate-dispatch reference; dashed curves are delayed comparators with two baseline timings. The 64-line zero-wait value is 99.7622%. |
+| `manuscript/fig7_wait_failures.pdf` / `.svg` | Failed completed attempts divided by completed attempts, with the same reference/comparator styles and two thin dotted nominal predictions. |
 | `manuscript/repair-reference.csv` | Three overlap values, four agents, no dependency, both policies; means and original intervals. |
 | `manuscript/repair-paper-table.csv` | The paper's seven repair comparison rows; original intervals and paired differences retained. |
 | `manuscript/repair-all-five-slices.csv` | All fifteen reference combinations, including the five high-overlap ratios. |
 | `manuscript/wait-reference.csv` | All 36 requested waiting combinations; ratios, nominal predictions and original component intervals. |
 | `manuscript/table4-repair-rows.tex`, `manuscript/table5-wait-rows.tex` | Reproducible rounded rows for the two numerical manuscript tables. |
 | `manuscript/NUMBERS.md` | Descriptive numbers, the three complete waiting tables, and interpretation limits. |
+| `manuscript/plot-data.csv`, `manuscript/plot-verification.json` | Actual artist coordinates and an independent source/coverage/interval/style check for all four figures. |
+
+[FIGURE_PROVENANCE.md](FIGURE_PROVENANCE.md) describes the raw-summary-to-figure
+chain, every formula, reproduction commands and its limits. The solid lines
+in Figures 6/7 extend the observed δ=0 simulation value as a fixed reference;
+they are not additional scanned values. The comparator's waiting time does
+not apply to this immediate-dispatch reference.
 
 The relocation knob did not deliver a consistent reduction in conflicts in
 this scan. Its three settings and their numerical differences remain in the

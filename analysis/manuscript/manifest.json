@@ -8,8 +8,9 @@
   },
   "input_hashes_unchanged": true,
   "scripts": {
-    "make_manuscript_figures.py": "1eef0f63e9ef96b78791b7465520e757e46b0332ebab543fc9c560a2d8d676b5",
-    "make_figures.py": "d64a628279eab3d33a0204d4a4eb740e6a52538625e534fcb5dd1a6a6103ee0f"
+    "make_manuscript_figures.py": "b62f26929ad691a217f821d81730cb963c4f801ec5a7a7939883a48d879fecf1",
+    "make_figures.py": "d64a628279eab3d33a0204d4a4eb740e6a52538625e534fcb5dd1a6a6103ee0f",
+    "plot_provenance.py": "e3d289894965a8e3658d9b52f12e8db5c3da3203dc08aaa591b920e93a47fdaa"
   },
   "python": "3.12.4",
   "matplotlib": "3.10.8",
@@ -19,6 +20,7 @@
   "reference_repair_rows": 3,
   "wait_rows": 36,
   "ratio_intervals": "not identifiable; source component intervals retained",
+  "plot_coordinate_rows": 1434,
   "outputs": {
     "NUMBERS.md": {
       "sha256": "8322e75459400e58a9279b1c398c6f79ad35b1ff3ba7f09ac3a068a89961279b",
@@ -41,20 +43,24 @@
       "bytes": 93117
     },
     "fig6_wait_resolved.pdf": {
-      "sha256": "5b7f78a25511cedba492798ef530e0c7c59a558555ac3fee46955df732857461",
-      "bytes": 25175
+      "sha256": "67f685d7554a605d7bb81e263e8231c8a3202afa934ff3111536e6225516605c",
+      "bytes": 26226
     },
     "fig6_wait_resolved.svg": {
-      "sha256": "7b9f81e2442593d1de5c64e0dc7737ebb8c330b47ede302c6c95cffaf6af74f3",
-      "bytes": 33266
+      "sha256": "c95b4f39a7acf45a7680096787700337d90abce8be1cc67de17705fd4c77ed81",
+      "bytes": 34281
     },
     "fig7_wait_failures.pdf": {
-      "sha256": "a2ab16d8b84dec38569bb0f51c49530e03091f5fee807737e0f6d60eba9b245b",
-      "bytes": 20392
+      "sha256": "9efbc85814994c7c56a4a904a6c6a55c132444be64d0959486d4b963697c3e04",
+      "bytes": 22204
     },
     "fig7_wait_failures.svg": {
-      "sha256": "224e3e64abbced5a057527aafbad6f868fd9265459e095beab7139064a41bec9",
-      "bytes": 34962
+      "sha256": "91669719e504a0be3c1244ba044b5bc29ed002f4bf02e0f14361dce11b158578",
+      "bytes": 37681
+    },
+    "plot-data.csv": {
+      "sha256": "ccab8425e826017e5a50e1789198b5bca0e145038e6a3b7732f0852f17adb1e4",
+      "bytes": 457528
     },
     "repair-all-five-slices.csv": {
       "sha256": "a31d719279c7df1e44971f37ee75d126417addfcc1ab93309db7b8514c776599",
