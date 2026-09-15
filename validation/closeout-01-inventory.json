@@ -1,0 +1,1014 @@
+{
+  "schema_version": 1,
+  "inventory_id": "closeout-01",
+  "recorded_at": "2026-09-15T03:30:10.432144Z",
+  "scope": "Post-acceptance preservation inventory only. File hashes, sizes, Git object integrity and queue state were checked; scientific results were not recalculated.",
+  "statuses": {
+    "inventory": "READY",
+    "raw_archive_integrity": "READY",
+    "independent_full_backup": "HOLD",
+    "native_recovery_material_present": "READY",
+    "old_research_polling_closed": "READY",
+    "reclamation": "HOLD"
+  },
+  "checkout": {
+    "branch": "run-m4",
+    "head_before": "4ef0647b288c3b8940a1575f19d99ab34db4f876",
+    "clean_before": true,
+    "unpublished_commits_before": 0,
+    "untracked_files_before": 0,
+    "fast_forward_applied_and_pushed": true,
+    "synchronized_baseline_head": "e8ad5e9172d8fa5b9579556f03d31f9a99cb1947",
+    "new_technical_files": [
+      "validation/closeout-01-inventory.json"
+    ],
+    "technical_acknowledgment_file": "QUESTIONS.md"
+  },
+  "acceptance": {
+    "source": "ANSWERS.md",
+    "decision_at": "2026-09-09T19:06:41Z",
+    "accepted": [
+      "study-01 / verify-02",
+      "conformance-01 within fixed scope"
+    ],
+    "execution_closed": true,
+    "frozen_protocol_edited": false
+  },
+  "raw_archive": {
+    "manifest": "release/RAW_ARCHIVES.json",
+    "manifest_sha256": "27039226ddc11453a7f538ff579afb1b7979559ce23eec53ed1524458fc709b3",
+    "parts": [
+      {
+        "path": "archives/study-01/raw.tar.part000",
+        "exists": true,
+        "expected_bytes": 1073741824,
+        "expected_sha256": "f24ef43b154f961742220d9bdfd871189eb58bce20025cc85505153a5b468b8b",
+        "bytes": 1073741824,
+        "sha256": "f24ef43b154f961742220d9bdfd871189eb58bce20025cc85505153a5b468b8b",
+        "matches": true
+      },
+      {
+        "path": "archives/study-01/raw.tar.part001",
+        "exists": true,
+        "expected_bytes": 1073741824,
+        "expected_sha256": "8610d1edd07731f3cfad36edabf2da848f7d7f20741b844e62a8ed75eff1b199",
+        "bytes": 1073741824,
+        "sha256": "8610d1edd07731f3cfad36edabf2da848f7d7f20741b844e62a8ed75eff1b199",
+        "matches": true
+      },
+      {
+        "path": "archives/study-01/raw.tar.part002",
+        "exists": true,
+        "expected_bytes": 1073741824,
+        "expected_sha256": "6894e702900e389706bc325a517dd0a954071ec04b95f92568710c1c15e9502c",
+        "bytes": 1073741824,
+        "sha256": "6894e702900e389706bc325a517dd0a954071ec04b95f92568710c1c15e9502c",
+        "matches": true
+      },
+      {
+        "path": "archives/study-01/raw.tar.part003",
+        "exists": true,
+        "expected_bytes": 979365888,
+        "expected_sha256": "ada383eff4ebbb5c8ee521ce09ff796fed6d97fed9381d3696486144612ee8c7",
+        "bytes": 979365888,
+        "sha256": "ada383eff4ebbb5c8ee521ce09ff796fed6d97fed9381d3696486144612ee8c7",
+        "matches": true
+      }
+    ],
+    "all_parts_present_and_match": true,
+    "concatenated_bytes": 4200591360,
+    "concatenated_sha256": "2256b0bf734992aa37d1a59f176832f08cce8946fc514dee4f8b87d37e625beb",
+    "concatenated_matches": true
+  },
+  "backup": {
+    "verified_complete_local_archive_sets": 1,
+    "search_scope": "execution-project working storage, no symlink following; not a scan of unrelated projects or remote devices",
+    "independent_off_machine_full_copy_verified": false,
+    "status": "HOLD",
+    "reason": "Only the execution-machine archive set is verified here; raw output directory and archive on the same host are not independent backups.",
+    "unique_material_to_preserve": [
+      "full raw run/flow archive and original outputs",
+      "complete native fixture Git object stores, linked worktrees and their metadata",
+      "original loading/restart/execution records and private actor evidence"
+    ],
+    "same_machine_duplicates_verified": [
+      "native request/receipt files and retained observation copies",
+      "original per-seed summary and equivalent committed gzip transfer"
+    ],
+    "next_action": "Maintainer-directed second independent backup and verification; no upload, repackaging or deletion performed."
+  },
+  "storage": {
+    "checked_at": "2026-09-15T03:27:50.746332+00:00",
+    "free_bytes": 198997540864,
+    "total_bytes": 494384795648,
+    "size_method": "allocated bytes from du -sk; nested components explicitly overlap and must not be summed twice"
+  },
+  "release": {
+    "repository_private": true,
+    "release_count": 0,
+    "upload_permission": "available",
+    "upload_attempted": false,
+    "publication_performed": false
+  },
+  "retained_components": [
+    {
+      "role": "raw-execution-output",
+      "paths": [
+        "outputs/study-01"
+      ],
+      "purpose": "Original compressed run and flow records, per-seed summaries, plan, execution receipt and CSVs.",
+      "allocated_bytes": 4239540224,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Original directory plus verified archive are on the same execution machine; no independent full raw backup verified.",
+      "proposed_disposition": "KEEP until independent archive backup and verification",
+      "action_taken": "retained unchanged",
+      "children": [
+        {
+          "path": "outputs/study-01/runs",
+          "exists": true,
+          "allocated_bytes": 3948871680,
+          "regular_file_count": 29700,
+          "apparent_bytes": 3887456961
+        },
+        {
+          "path": "outputs/study-01/flows",
+          "exists": true,
+          "allocated_bytes": 228556800,
+          "regular_file_count": 300,
+          "apparent_bytes": 227979808
+        },
+        {
+          "path": "outputs/study-01/summaries.jsonl",
+          "exists": true,
+          "allocated_bytes": 56233984,
+          "regular_file_count": 1,
+          "apparent_bytes": 56231286
+        }
+      ]
+    },
+    {
+      "role": "original-hold-and-accepted-revalidation",
+      "paths": [
+        "deliverables/study-01",
+        "validation/controls-m4-revalidation-01.json"
+      ],
+      "purpose": "Immutable first HOLD and index, original execution bindings, separate verify-02 PASS and diagnostic transfer.",
+      "allocated_bytes": 17309696,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Tracked in the synchronized repository; original raw files remain separately retained.",
+      "proposed_disposition": "KEEP immutable accepted provenance",
+      "action_taken": "retained unchanged",
+      "retained_first_status": "hold",
+      "retained_revalidation_status": "pass"
+    },
+    {
+      "role": "per-seed-diagnostic-transfer",
+      "paths": [
+        "deliverables/study-01/diagnostics/summaries.jsonl.gz"
+      ],
+      "purpose": "Existing compressed copy of the original per-seed summary, independently accepted on the reference machine.",
+      "allocated_bytes": 6012928,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Equivalent gzip transfer is committed; original uncompressed file remains under outputs.",
+      "proposed_disposition": "KEEP immutable transfer",
+      "action_taken": "retained unchanged",
+      "included_in": "original-hold-and-accepted-revalidation",
+      "decoded_bytes": 56231286,
+      "decoded_sha256": "47693e36f4b1fc449674337176cf15281c6d0f38153486714364b02ae24c3bfb",
+      "matches_original_summary": true
+    },
+    {
+      "role": "conformance-technical-delivery",
+      "paths": [
+        "deliverables/conformance-01"
+      ],
+      "purpose": "Accepted neutral technical projections and retained-original hashes.",
+      "allocated_bytes": 811008,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Tracked repository copy; not a substitute for complete native fixture repositories and private actor records.",
+      "proposed_disposition": "KEEP accepted delivery",
+      "action_taken": "retained unchanged"
+    },
+    {
+      "role": "native-conformance-source-and-observations",
+      "paths": [
+        "local-logs/conformance"
+      ],
+      "purpose": "Eight source Git repositories, initial records, role snapshots, native request/receipt copies and raw observation evidence.",
+      "allocated_bytes": 3874816,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Only verified complete source Git object databases are local; selected native files have matching same-machine copies.",
+      "proposed_disposition": "KEEP; prepare a private recoverable archive only when separately directed",
+      "action_taken": "retained unchanged",
+      "overlap_note": "Includes the per-fixture local evidence/source sizes listed below; external fixture workspaces are additional."
+    },
+    {
+      "role": "single-fixture-loading-probe",
+      "paths": [
+        "local-logs/setup-probe"
+      ],
+      "purpose": "Before/after loading snapshots, exact constructor copy and recovery notes. The probe is single-clean-r1, already one of the eight fixtures.",
+      "allocated_bytes": 536576,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Original setup and restart evidence only verified on the execution machine.",
+      "proposed_disposition": "KEEP for private archive",
+      "action_taken": "retained unchanged",
+      "fixture_reference": "conformance-01-single-clean-r1",
+      "additional_fixture_count": 0
+    },
+    {
+      "role": "retired-restart-helper",
+      "paths": [
+        "local-logs/setup-probe/restart-kota-once.sh",
+        "local-logs/setup-probe/restart-launchd-before-removal.txt",
+        "local-logs/setup-probe/restart.stderr.log",
+        "local-logs/setup-probe/restart.stdout.log",
+        "local-logs/setup-probe/RECOVERY.md"
+      ],
+      "purpose": "Preserved one-time restart helper, deviation diagnostics and recovery instructions.",
+      "allocated_bytes": 28672,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Local original deviation logs; retired helper must not be reused without a new explicit authorization.",
+      "proposed_disposition": "KEEP as inactive private evidence",
+      "action_taken": "retained unchanged",
+      "included_in": "single-fixture-loading-probe",
+      "launchd_job_loaded": false
+    },
+    {
+      "role": "release-binary-anchor",
+      "paths": [
+        "local-logs/conformance-version"
+      ],
+      "purpose": "Original conformance release DMG and empty former read-only mount directory.",
+      "allocated_bytes": 30973952,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Public release asset is reproducible by checksum; retained copy anchors the original observed release.",
+      "proposed_disposition": "KEEP until version binding is backed up",
+      "action_taken": "retained unchanged",
+      "dmg_sha256": "acfc6b583256be3a4a8536c27e954dafe7684ef2eaf47cfe3e58996845e0903f",
+      "matches_retained_version_record": true,
+      "mount_directory_empty": true
+    },
+    {
+      "role": "public-source-object-anchor",
+      "paths": [
+        "local-logs/kota-public"
+      ],
+      "purpose": "Local Git object store for the original source audit and release-tag binding.",
+      "allocated_bytes": 25448448,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Public source objects, but retain this binding with the private recovery set before considering reclamation.",
+      "proposed_disposition": "KEEP version anchor; no index or working-tree repair",
+      "action_taken": "retained unchanged",
+      "head": "b3db3c8290d8dae5a1ee5f7f40222d3dcf77f1b7",
+      "index_present": false,
+      "materialized_worktree_entries": 0,
+      "observed_status_code_counts": {
+        "D ": 465
+      },
+      "required_anchor_commits_present": {
+        "75eb8fda2b1040c0f1822e0403321a105fec4f6c": true,
+        "b3db3c8290d8dae5a1ee5f7f40222d3dcf77f1b7": true
+      }
+    },
+    {
+      "role": "execution-runtime",
+      "paths": [
+        ".venv",
+        "local-logs/uv-bootstrap/python"
+      ],
+      "purpose": "Pinned interpreter and linked virtual environment required by the recorded reproduction commands.",
+      "allocated_bytes": 56832000,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Reinstallable runtime, not unique scientific data; .venv depends on the retained interpreter location.",
+      "proposed_disposition": "Conditional reclamation candidate after recovery package and explicit cleanup decision",
+      "action_taken": "retained unchanged",
+      "python": "Python 3.12.4"
+    },
+    {
+      "role": "runtime-bootstrap-tools",
+      "paths": [
+        "local-logs/uv-bootstrap/bin"
+      ],
+      "purpose": "Pinned bootstrap executables.",
+      "allocated_bytes": 36839424,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Reinstallable tools.",
+      "proposed_disposition": "Conditional reclamation candidate; no deletion performed",
+      "action_taken": "retained unchanged"
+    },
+    {
+      "role": "runtime-download-cache",
+      "paths": [
+        "local-logs/uv-bootstrap/cache"
+      ],
+      "purpose": "Interpreter metadata and bootstrap cache.",
+      "allocated_bytes": 16384,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "No unique study original identified.",
+      "proposed_disposition": "Conditional reclamation candidate; no deletion performed",
+      "action_taken": "retained unchanged"
+    },
+    {
+      "role": "retained-timing-pilot",
+      "paths": [
+        "benchmarks"
+      ],
+      "purpose": "Committed timing-only pilot log and its fixed method.",
+      "allocated_bytes": 98304,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Tracked timing log; full temporary pilot records were not retained by the documented original method.",
+      "proposed_disposition": "KEEP committed timing provenance",
+      "action_taken": "retained unchanged",
+      "full_temporary_pilot_records_expected": false
+    },
+    {
+      "role": "formal-execution-logs",
+      "paths": [
+        "local-logs/study-01-execution"
+      ],
+      "purpose": "Original formal execution/collection stdout, stderr, preflight and exchange receipts.",
+      "allocated_bytes": 8323072,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Only verified local operational originals; not claimed to be contained in the raw-output tar.",
+      "proposed_disposition": "KEEP for private archive",
+      "action_taken": "retained unchanged"
+    },
+    {
+      "role": "revalidation-execution-logs",
+      "paths": [
+        "local-logs/revalidation-verify-02"
+      ],
+      "purpose": "Original verify-02 command logs and local receipts.",
+      "allocated_bytes": 28672,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Only verified local operational originals.",
+      "proposed_disposition": "KEEP for private archive",
+      "action_taken": "retained unchanged"
+    },
+    {
+      "role": "repository-exchange-records",
+      "paths": [
+        "local-logs/repository-checks"
+      ],
+      "purpose": "Retained local technical exchange receipts.",
+      "allocated_bytes": 53248,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Local operational records; no scientific recomputation input.",
+      "proposed_disposition": "KEEP private until closeout is archived",
+      "action_taken": "retained unchanged"
+    },
+    {
+      "role": "inactive-scheduler-proposal",
+      "paths": [
+        "local-logs/scheduler-proposal"
+      ],
+      "purpose": "Never-enabled fallback proposal and original schedule observations.",
+      "allocated_bytes": 20480,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Local original operating records; proposal is not an active task.",
+      "proposed_disposition": "KEEP inactive private evidence",
+      "action_taken": "retained unchanged",
+      "launchd_job_loaded": false
+    },
+    {
+      "role": "historical-controls",
+      "paths": [
+        "validation/history"
+      ],
+      "purpose": "Earlier control records retained as provenance.",
+      "allocated_bytes": 16384,
+      "separately_registered_as_app_project": false,
+      "active_task_observed": false,
+      "unique_material_status": "Tracked repository records.",
+      "proposed_disposition": "KEEP immutable history",
+      "action_taken": "retained unchanged"
+    }
+  ],
+  "fixtures": [
+    {
+      "fixture": "conformance-01-single-clean-r1",
+      "case": "single-clean",
+      "repetition": 1,
+      "source_repository": "local-logs/conformance/conformance-01-single-clean-r1/source",
+      "workspace_location": {
+        "root_role": "conformance-01-single-clean-r1-workspace",
+        "relative_path": "."
+      },
+      "workspace_allocated_bytes": 69632,
+      "source_and_local_evidence_allocated_bytes": 335872,
+      "registration": {
+        "workspace_metadata_present": true,
+        "archived": false,
+        "metadata_matches_final_observation": true,
+        "current_ui_visibility": "not verified; accessibility access unavailable"
+      },
+      "roles": [
+        {
+          "role": "a",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "170363b2d2d57637d15ba6e9d92ceaa41eeec00b",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        }
+      ],
+      "source_git": {
+        "head": "170363b2d2d57637d15ba6e9d92ceaa41eeec00b",
+        "branch": "main",
+        "clean": true,
+        "operation_markers": [],
+        "head_matches_final_observation": true,
+        "fsck_exit_code": 0,
+        "all_initial_commits_present": true
+      },
+      "native_requests": {
+        "outbox": 0,
+        "processing": 0,
+        "failed": 0,
+        "delivered_requests": 2,
+        "delivered_receipts": 2,
+        "saved_native_copies_match": true
+      },
+      "actor_log": {
+        "present": false,
+        "matches_final_observation": true
+      },
+      "active_provider_process_observed": false,
+      "originals": "Complete native source Git/worktree state only verified on this execution machine; preserve both roots together.",
+      "proposed_disposition": "KEEP for private recoverable archive; no workspace removal authorized"
+    },
+    {
+      "fixture": "conformance-01-multiple-clean-r1",
+      "case": "multiple-clean",
+      "repetition": 1,
+      "source_repository": "local-logs/conformance/conformance-01-multiple-clean-r1/source",
+      "workspace_location": {
+        "root_role": "conformance-01-multiple-clean-r1-workspace",
+        "relative_path": "."
+      },
+      "workspace_allocated_bytes": 118784,
+      "source_and_local_evidence_allocated_bytes": 532480,
+      "registration": {
+        "workspace_metadata_present": true,
+        "archived": false,
+        "metadata_matches_final_observation": true,
+        "current_ui_visibility": "not verified; accessibility access unavailable"
+      },
+      "roles": [
+        {
+          "role": "a",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "6034b83ef419d50bdd3dc9e94196684145efc521",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        },
+        {
+          "role": "b",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "6034b83ef419d50bdd3dc9e94196684145efc521",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        },
+        {
+          "role": "c",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "6034b83ef419d50bdd3dc9e94196684145efc521",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        }
+      ],
+      "source_git": {
+        "head": "6034b83ef419d50bdd3dc9e94196684145efc521",
+        "branch": "main",
+        "clean": true,
+        "operation_markers": [],
+        "head_matches_final_observation": true,
+        "fsck_exit_code": 0,
+        "all_initial_commits_present": true
+      },
+      "native_requests": {
+        "outbox": 0,
+        "processing": 0,
+        "failed": 0,
+        "delivered_requests": 2,
+        "delivered_receipts": 2,
+        "saved_native_copies_match": true
+      },
+      "actor_log": {
+        "present": false,
+        "matches_final_observation": true
+      },
+      "active_provider_process_observed": false,
+      "originals": "Complete native source Git/worktree state only verified on this execution machine; preserve both roots together.",
+      "proposed_disposition": "KEEP for private recoverable archive; no workspace removal authorized"
+    },
+    {
+      "fixture": "conformance-01-one-conflict-r1",
+      "case": "one-conflict",
+      "repetition": 1,
+      "source_repository": "local-logs/conformance/conformance-01-one-conflict-r1/source",
+      "workspace_location": {
+        "root_role": "conformance-01-one-conflict-r1-workspace",
+        "relative_path": "."
+      },
+      "workspace_allocated_bytes": 102400,
+      "source_and_local_evidence_allocated_bytes": 475136,
+      "registration": {
+        "workspace_metadata_present": true,
+        "archived": false,
+        "metadata_matches_final_observation": true,
+        "current_ui_visibility": "not verified; accessibility access unavailable"
+      },
+      "roles": [
+        {
+          "role": "a",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "cd41e668ea5cff211d501e55c89f07612194dee5",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        },
+        {
+          "role": "b",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "deabb1738f9d7ef9585a279d4fb4aee8595ecb01",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        }
+      ],
+      "source_git": {
+        "head": "deabb1738f9d7ef9585a279d4fb4aee8595ecb01",
+        "branch": "main",
+        "clean": true,
+        "operation_markers": [],
+        "head_matches_final_observation": true,
+        "fsck_exit_code": 0,
+        "all_initial_commits_present": true
+      },
+      "native_requests": {
+        "outbox": 0,
+        "processing": 0,
+        "failed": 0,
+        "delivered_requests": 2,
+        "delivered_receipts": 2,
+        "saved_native_copies_match": true
+      },
+      "actor_log": {
+        "present": true,
+        "matches_final_observation": true
+      },
+      "active_provider_process_observed": false,
+      "originals": "Complete native source Git/worktree state only verified on this execution machine; preserve both roots together.",
+      "proposed_disposition": "KEEP for private recoverable archive; no workspace removal authorized"
+    },
+    {
+      "fixture": "conformance-01-multiple-conflicts-r1",
+      "case": "multiple-conflicts",
+      "repetition": 1,
+      "source_repository": "local-logs/conformance/conformance-01-multiple-conflicts-r1/source",
+      "workspace_location": {
+        "root_role": "conformance-01-multiple-conflicts-r1-workspace",
+        "relative_path": "."
+      },
+      "workspace_allocated_bytes": 135168,
+      "source_and_local_evidence_allocated_bytes": 577536,
+      "registration": {
+        "workspace_metadata_present": true,
+        "archived": false,
+        "metadata_matches_final_observation": true,
+        "current_ui_visibility": "not verified; accessibility access unavailable"
+      },
+      "roles": [
+        {
+          "role": "a",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "77b33b72463032a816b0de39bc2f72649079e3a4",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        },
+        {
+          "role": "b",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "9cb30186c113c67b82d2ee04b35204bba2634410",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        },
+        {
+          "role": "c",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "d5a3a2308b856ea64600030fa0459fa1cf05df57",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        }
+      ],
+      "source_git": {
+        "head": "d5a3a2308b856ea64600030fa0459fa1cf05df57",
+        "branch": "main",
+        "clean": true,
+        "operation_markers": [],
+        "head_matches_final_observation": true,
+        "fsck_exit_code": 0,
+        "all_initial_commits_present": true
+      },
+      "native_requests": {
+        "outbox": 0,
+        "processing": 0,
+        "failed": 0,
+        "delivered_requests": 2,
+        "delivered_receipts": 2,
+        "saved_native_copies_match": true
+      },
+      "actor_log": {
+        "present": true,
+        "matches_final_observation": true
+      },
+      "active_provider_process_observed": false,
+      "originals": "Complete native source Git/worktree state only verified on this execution machine; preserve both roots together.",
+      "proposed_disposition": "KEEP for private recoverable archive; no workspace removal authorized"
+    },
+    {
+      "fixture": "conformance-01-single-clean-r2",
+      "case": "single-clean",
+      "repetition": 2,
+      "source_repository": "local-logs/conformance/conformance-01-single-clean-r2/source",
+      "workspace_location": {
+        "root_role": "conformance-01-single-clean-r2-workspace",
+        "relative_path": "."
+      },
+      "workspace_allocated_bytes": 53248,
+      "source_and_local_evidence_allocated_bytes": 335872,
+      "registration": {
+        "workspace_metadata_present": true,
+        "archived": false,
+        "metadata_matches_final_observation": true,
+        "current_ui_visibility": "not verified; accessibility access unavailable"
+      },
+      "roles": [
+        {
+          "role": "a",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "cf29de3ef5b11f40f36705b10169fab35ecc4c40",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        }
+      ],
+      "source_git": {
+        "head": "cf29de3ef5b11f40f36705b10169fab35ecc4c40",
+        "branch": "main",
+        "clean": true,
+        "operation_markers": [],
+        "head_matches_final_observation": true,
+        "fsck_exit_code": 0,
+        "all_initial_commits_present": true
+      },
+      "native_requests": {
+        "outbox": 0,
+        "processing": 0,
+        "failed": 0,
+        "delivered_requests": 2,
+        "delivered_receipts": 2,
+        "saved_native_copies_match": true
+      },
+      "actor_log": {
+        "present": false,
+        "matches_final_observation": true
+      },
+      "active_provider_process_observed": false,
+      "originals": "Complete native source Git/worktree state only verified on this execution machine; preserve both roots together.",
+      "proposed_disposition": "KEEP for private recoverable archive; no workspace removal authorized"
+    },
+    {
+      "fixture": "conformance-01-multiple-clean-r2",
+      "case": "multiple-clean",
+      "repetition": 2,
+      "source_repository": "local-logs/conformance/conformance-01-multiple-clean-r2/source",
+      "workspace_location": {
+        "root_role": "conformance-01-multiple-clean-r2-workspace",
+        "relative_path": "."
+      },
+      "workspace_allocated_bytes": 118784,
+      "source_and_local_evidence_allocated_bytes": 532480,
+      "registration": {
+        "workspace_metadata_present": true,
+        "archived": false,
+        "metadata_matches_final_observation": true,
+        "current_ui_visibility": "not verified; accessibility access unavailable"
+      },
+      "roles": [
+        {
+          "role": "a",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "54984f5498ccf22c43ce8689a240fc1a789de763",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        },
+        {
+          "role": "b",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "54984f5498ccf22c43ce8689a240fc1a789de763",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        },
+        {
+          "role": "c",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "54984f5498ccf22c43ce8689a240fc1a789de763",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        }
+      ],
+      "source_git": {
+        "head": "54984f5498ccf22c43ce8689a240fc1a789de763",
+        "branch": "main",
+        "clean": true,
+        "operation_markers": [],
+        "head_matches_final_observation": true,
+        "fsck_exit_code": 0,
+        "all_initial_commits_present": true
+      },
+      "native_requests": {
+        "outbox": 0,
+        "processing": 0,
+        "failed": 0,
+        "delivered_requests": 2,
+        "delivered_receipts": 2,
+        "saved_native_copies_match": true
+      },
+      "actor_log": {
+        "present": false,
+        "matches_final_observation": true
+      },
+      "active_provider_process_observed": false,
+      "originals": "Complete native source Git/worktree state only verified on this execution machine; preserve both roots together.",
+      "proposed_disposition": "KEEP for private recoverable archive; no workspace removal authorized"
+    },
+    {
+      "fixture": "conformance-01-one-conflict-r2",
+      "case": "one-conflict",
+      "repetition": 2,
+      "source_repository": "local-logs/conformance/conformance-01-one-conflict-r2/source",
+      "workspace_location": {
+        "root_role": "conformance-01-one-conflict-r2-workspace",
+        "relative_path": "."
+      },
+      "workspace_allocated_bytes": 102400,
+      "source_and_local_evidence_allocated_bytes": 475136,
+      "registration": {
+        "workspace_metadata_present": true,
+        "archived": false,
+        "metadata_matches_final_observation": true,
+        "current_ui_visibility": "not verified; accessibility access unavailable"
+      },
+      "roles": [
+        {
+          "role": "a",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "e6cfd3ce8446f56a2ed4681bf8f033a9777b5793",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        },
+        {
+          "role": "b",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "135171884fd1fdda360384e8ba86e4b394d5f5a9",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        }
+      ],
+      "source_git": {
+        "head": "135171884fd1fdda360384e8ba86e4b394d5f5a9",
+        "branch": "main",
+        "clean": true,
+        "operation_markers": [],
+        "head_matches_final_observation": true,
+        "fsck_exit_code": 0,
+        "all_initial_commits_present": true
+      },
+      "native_requests": {
+        "outbox": 0,
+        "processing": 0,
+        "failed": 0,
+        "delivered_requests": 2,
+        "delivered_receipts": 2,
+        "saved_native_copies_match": true
+      },
+      "actor_log": {
+        "present": true,
+        "matches_final_observation": true
+      },
+      "active_provider_process_observed": false,
+      "originals": "Complete native source Git/worktree state only verified on this execution machine; preserve both roots together.",
+      "proposed_disposition": "KEEP for private recoverable archive; no workspace removal authorized"
+    },
+    {
+      "fixture": "conformance-01-multiple-conflicts-r2",
+      "case": "multiple-conflicts",
+      "repetition": 2,
+      "source_repository": "local-logs/conformance/conformance-01-multiple-conflicts-r2/source",
+      "workspace_location": {
+        "root_role": "conformance-01-multiple-conflicts-r2-workspace",
+        "relative_path": "."
+      },
+      "workspace_allocated_bytes": 135168,
+      "source_and_local_evidence_allocated_bytes": 577536,
+      "registration": {
+        "workspace_metadata_present": true,
+        "archived": false,
+        "metadata_matches_final_observation": true,
+        "current_ui_visibility": "not verified; accessibility access unavailable"
+      },
+      "roles": [
+        {
+          "role": "a",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "5a54cab3126e88b46526de1207d9d69a41e8f621",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        },
+        {
+          "role": "b",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "e57eed71ed1a61073498771c04833b36f53caf2e",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        },
+        {
+          "role": "c",
+          "lifecycle_metadata": "active",
+          "provider_disabled": true,
+          "head": "5807527d0d4d71f3629d404e6d310ded7d0498a1",
+          "clean": true,
+          "operation_markers": [],
+          "git_pointer_present": true,
+          "head_and_identity_match_final_observation": true
+        }
+      ],
+      "source_git": {
+        "head": "5807527d0d4d71f3629d404e6d310ded7d0498a1",
+        "branch": "main",
+        "clean": true,
+        "operation_markers": [],
+        "head_matches_final_observation": true,
+        "fsck_exit_code": 0,
+        "all_initial_commits_present": true
+      },
+      "native_requests": {
+        "outbox": 0,
+        "processing": 0,
+        "failed": 0,
+        "delivered_requests": 2,
+        "delivered_receipts": 2,
+        "saved_native_copies_match": true
+      },
+      "actor_log": {
+        "present": true,
+        "matches_final_observation": true
+      },
+      "active_provider_process_observed": false,
+      "originals": "Complete native source Git/worktree state only verified on this execution machine; preserve both roots together.",
+      "proposed_disposition": "KEEP for private recoverable archive; no workspace removal authorized"
+    }
+  ],
+  "native_recovery_requirements": [
+    "Keep each source repository including .git objects, refs, reflogs and .git/worktrees alongside its mapped fixture workspace.",
+    "Keep linked worktree files and .git pointers, workspace.json, role identity/provider files, original requests/results, actor logs and before/after snapshots.",
+    "Retain private absolute root mapping locally; relocation may require a separately authorized worktree-link repair.",
+    "Native logs and raw workspace metadata are private archive material and must not be copied into public release attachments."
+  ],
+  "liveness": {
+    "checked_at": "2026-09-15T03:23:15.062934+00:00",
+    "matching_research_or_fixture_process_count": 0,
+    "disabled_fixture_provider_count": 18,
+    "pending_fixture_request_count": 0,
+    "metadata_active_is_not_running": "Role lifecycle metadata remains active; providers are disabled and no matching process or pending native request was observed. App-internal idle watcher activity was not measured."
+  },
+  "polling_closeout": {
+    "checked_at": "2026-09-15T03:20:58.408297+00:00",
+    "native_project_schedule_count": 0,
+    "remaining_research_poll_count": 0,
+    "cancellation_performed": false,
+    "observed_state": "No current project schedule exists; no absent schedule was recreated or deleted.",
+    "historical_expiration_or_deletion_cause": "not inferred from empty list",
+    "fallback_poll_job_loaded": false,
+    "retired_restart_job_loaded": false,
+    "unrelated_tasks_changed": false
+  },
+  "core_retained_file_hashes": [
+    {
+      "path": "deliverables/study-01/verification.json",
+      "bytes": 253,
+      "sha256": "367c3f5f68a191044e7da2e3776ac4b85521e9c5a5d5daf5049e184f219f8141"
+    },
+    {
+      "path": "deliverables/study-01/RUN_REPORT.md",
+      "bytes": 1594,
+      "sha256": "0961b918a7e7e225281e3b541fcc0d8152303901b619c85dbb13bdaa338108d1"
+    },
+    {
+      "path": "deliverables/study-01/artifact-index.json",
+      "bytes": 5395931,
+      "sha256": "8d88dbe050a3d9428e4cd0720c429cbed9a67734de64ff5eac0992f41d8ffa70"
+    },
+    {
+      "path": "deliverables/study-01/execution.json",
+      "bytes": 1436,
+      "sha256": "0b61a48b47a62dc35002e473ae75a7bf2053522b63a8fdf981b1db4b74aed46b"
+    },
+    {
+      "path": "deliverables/study-01/RUN_APPROVAL.json",
+      "bytes": 327,
+      "sha256": "9ed6604c4df2958eaa340f4e4760c804d1cc32ac6a540ede2f627dbb1c278075"
+    },
+    {
+      "path": "deliverables/study-01/rechecks/verify-02/verification.json",
+      "bytes": 1335,
+      "sha256": "bcb21b8e7883a97f887792df532a9de9e6bbdfa8eb35017e87dd1ae6affcfeb6"
+    },
+    {
+      "path": "deliverables/study-01/rechecks/verify-02/REVALIDATION_REPORT.md",
+      "bytes": 765,
+      "sha256": "da14ab1d61057a650fb764fa113b1b6c46d45ce0ec313ce7fc9cd10db38e2534"
+    },
+    {
+      "path": "REVALIDATION_APPROVAL.json",
+      "bytes": 954,
+      "sha256": "826ec383a99f9a7ddce58786e9077b1a41619fd3f46e0394330d89d9c655a72a"
+    }
+  ],
+  "actions_not_performed": [
+    "scientific simulation or collect",
+    "application sync or fixture execution",
+    "workspace or artifact removal",
+    "application restart or package change",
+    "archive recompression or overwrite",
+    "release upload or publication",
+    "new reminder creation"
+  ]
+}

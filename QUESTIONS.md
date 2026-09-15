@@ -277,6 +277,27 @@ are retained under ignored `local-logs/repository-checks/20260909T185420Z/`.
 This reminder changes only technical exchange records. No script or timer was
 modified and no experiment, fixture, sync, dummy provider or restart was begun.
 
+Closure acknowledgment | 2026-09-15T03:31:38Z: Received the formal acceptance and
+execution-closure answers dated 2026-09-09T19:06:41Z. Both `study-01 / verify-02`
+and the fixed-scope `conformance-01` observation are accepted; Q-01 through Q-05
+are resolved by those dated answers. The original HOLD and all originals remain
+preserved. No new simulation, collection or fixture request is authorized.
+
+The clean `run-m4` checkout had no unpublished commits or untracked files. It
+was fast-forwarded from `4ef0647` to `e8ad5e9` and pushed. The current native
+project scheduler returned an empty list at 2026-09-15T03:20:58Z: no remaining
+repository-exchange task exists, so no cancellation or recreation was performed.
+Absence does not establish the historical expiry/deletion mechanism. The unused
+fallback poll job and retired restart job are not loaded. There is no next
+scheduled research check, and unrelated tasks were left unchanged.
+
+`validation/closeout-01-inventory.json` records the preservation inventory:
+all four raw parts and the concatenated byte stream match the release checksums;
+native fixture recovery materials are present, with empty pending queues.
+An independent off-machine full backup remains unverified, so originals and
+fixtures remain retained. This technical inventory recalculates no scientific
+results and changes no research script, scheduler configuration or frozen protocol.
+
 ## Q-20260909-03 | 2026-09-09T05:42:07Z | OPEN
 Step: RUNBOOK-CONFORMANCE.md, steps 1-2, installed version and separate approval.
 Observed: `validation/conformance-version-m4.json` records the actual running
