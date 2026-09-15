@@ -10,8 +10,8 @@
       "sha256": "5dd39356810d187253907a5e79789400b45e141641d75a9b8e8316be86ef29b9"
     },
     "release/ARXIV_SOURCE_GUIDE.md": {
-      "bytes": 3556,
-      "sha256": "c2cead81110bcbd819ee27f60bda184afe64b72e406c59323a55c674242affc5"
+      "bytes": 3674,
+      "sha256": "f7aace075f6f88a6f49ff97bc58af4f6afac028270ee6762293a3e90c385e3da"
     },
     "release/CONTENT_AUDIT.md": {
       "bytes": 3644,
@@ -30,8 +30,8 @@
       "sha256": "719d67f1cdcd481eae0dd6ed362d3328a2d9c977ce1665846e648909547229ca"
     },
     "release/RELEASE_CHECKLIST.md": {
-      "bytes": 6933,
-      "sha256": "6f6137415a13095ded2d31ea258e1652506d46f06b808489e7a57e4de0baadf4"
+      "bytes": 6926,
+      "sha256": "2df39ad25958e3b65cb74d5162db9af9c8b337089c7e7eb83f01c0ccf098e67e"
     },
     "release/SOURCE_AUDIT.md": {
       "bytes": 11878,

@@ -11,8 +11,10 @@ The package contains the complete text and appendix, seven figures, seven
 numbered tables and fourteen references. Nan Wu is the author, with the
 Independent Researcher affiliation, contact email and ORCID. The confirmed
 funding, competing-interests and data-availability statements are included.
-The package is ready for arXiv processing and preview; repository publication
-does not mean the paper has been submitted or announced by arXiv.
+The author submitted the paper to arXiv on 15 September 2026 UTC and reported
+a matching 34-page service-generated preview. The public identifier is pending.
+The web-form abstract uses ASCII punctuation; the supplied manuscript source
+and figures are unchanged.
 
 ## Compile and inspect
 

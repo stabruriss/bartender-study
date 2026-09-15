@@ -2,9 +2,10 @@
 
 The repository and raw archive downloads are public. The existing study and
 its fixed application observations have been accepted. Final manuscript
-metadata and reuse terms are filled; the source package is ready for arXiv
-processing and preview. This record does not represent an arXiv submission
-or announcement and does not authorize a new study run or data changes.
+metadata and reuse terms are filled. The author completed arXiv submission on
+15 September 2026 UTC and reported a matching 34-page preview; the public
+identifier is pending. This record does not authorize a new study run or data
+changes.
 
 | Component | Repository-relative location | State |
 |---|---|---|
@@ -50,9 +51,9 @@ recorded in this repository, without changing the archived snapshot.
 
 ## Remaining release tasks
 
-- Upload `release/arxiv/arxiv-source.tar.gz`, select TeX Live 2025 / pdflatex,
-  and review the arXiv-generated preview before submission. Record the assigned
-  identifier after announcement and add it to the citation metadata.
+- arXiv submission and author inspection of the service-generated preview are
+  complete. After announcement, record the public identifier and add the paper
+  as the preferred citation in `CITATION.cff`.
 - Preserve the deployment methods' limits. The frozen deployment source is
   labeled `source-snapshot-01`; its exact relation to a public commit and
   upstream retention of the extraction program remain to be documented.
