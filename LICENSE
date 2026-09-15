@@ -1,8 +1,4 @@
-DRAFT — COPYRIGHT HOLDER AND FINAL AUTHOR METADATA PENDING
-
-This is a proposed reuse notice, not the repository's active license.
-Replace the holder placeholder, confirm the attribution record, and place the
-final notice at repository root when preparing publication.
+Bartender reproduction package reuse terms
 
 1. Original code and associated technical documentation: MIT
 
@@ -13,7 +9,7 @@ and third-party files identified below.
 
 MIT License
 
-Copyright (c) 2026 [COPYRIGHT HOLDER TO BE CONFIRMED]
+Copyright (c) 2026 Nan Wu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,12 +34,12 @@ Reference: https://opensource.org/license/mit
 2. Study data and generated figures: CC BY 4.0
 
 The accepted study data, aggregate tables, published raw study archives,
-deployment dataset and generated study figures are proposed for release under
+deployment dataset and generated study figures are licensed under
 Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-Copyright (c) 2026 [RIGHTS HOLDER / ATTRIBUTION TO BE CONFIRMED]
-Attribution: [FINAL AUTHORS], Bartender reproduction package, release version
-and permanent identifier to be supplied. Preserve the associated methods and
+Copyright (c) 2026 Nan Wu
+Attribution: Nan Wu, Bartender reproduction package,
+https://github.com/stabruriss/bartender-study. Preserve the associated methods and
 provenance information and indicate modifications.
 
 License: https://creativecommons.org/licenses/by/4.0/
@@ -59,5 +55,5 @@ Figure 1 of the manuscript reproduces the sync-loop illustration from Nan Wu,
 https://www.kota.place/docs/research/long-term-teammates/v1/
 Its attribution remains attached to the figure and manuscript caption.
 
-This draft does not select a license for manuscript prose or grant rights in
+This notice does not select a license for manuscript prose or grant rights in
 cited publications, third-party software, product names or trademarks.

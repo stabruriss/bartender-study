@@ -21,14 +21,13 @@
 \newtheorem{lemma}[theorem]{Lemma}
 \theoremstyle{thmstylethree}
 \newtheorem{definition}{Definition}[section]
-\newcommand{\DraftPlaceholder}[1]{\par\noindent\textit{Draft placeholder: #1}\par}
-\hypersetup{pdftitle={Bartender: Continuous Worktree Reconciliation with Author-Routed Conflict Handback for Resident Multi-Agent Development},pdfauthor={}}
+\hypersetup{pdftitle={Bartender: Continuous Worktree Reconciliation with Author-Routed Conflict Handback for Resident Multi-Agent Development},pdfauthor={Nan Wu}}
 \raggedbottom
 
 \begin{document}
 \title[Bartender]{Bartender: Continuous Worktree Reconciliation with Author-Routed Conflict Handback for Resident Multi-Agent Development}
-\author[1]{\fnm{Author} \sur{TBD}}
-\affil[1]{\orgname{Affiliation TBD}}
+\author*[1]{\fnm{Nan} \sur{Wu}}\email{chris@chriswu.xyz}
+\affil[1]{\orgname{Independent Researcher}\\ORCID: \href{https://orcid.org/0009-0001-4129-9569}{0009-0001-4129-9569}}
 \abstract{When several coding agents edit one codebase, current tools use one of two arrangements. A shared working copy keeps every agent on the same state but lets them overwrite each other. Per-agent Git worktrees isolate work but are merged only on demand, one worktree at a time, and discarded afterwards, so branches drift apart between merges. This paper describes Bartender, the synchronization mechanism of Kota, an open-source environment for resident coding agents---agents that persist in a workspace across tasks and sessions. Bartender keeps a persistent worktree for each agent and synchronizes all worktrees frequently: it integrates every worktree that applies cleanly onto the shared branch, holds the ones that conflict, and hands each conflict back to the agent that authored it, together with the current base and the failing commit. We state the mechanism's premises and give a mathematical account of why it is designed this way. A discrete-event simulation then tests the expected benefits of frequent synchronization, and of real-time conflict resolution by the owning agent, against on-demand synchronization and human review. In the simulation, in-place repair needs up to 2.8 times as many repairs and 12 times as much repair work as Bartender at high overlap, and repairing each conflict at once keeps virtually every conflict resolvable within the observation window, where a wait of four characteristic times leaves 48--73 percent unresolved.}
 \keywords{multi-agent systems, software integration, version control, conflict repair}
 \maketitle
@@ -449,13 +448,11 @@ In the model, the conventional arrangement, in-place repair, needed up to 2.8 ti
 The deployment record shows the mechanism in routine use over 100 days; what those records can and cannot support is stated in Section~\ref{sec:deployment}. Code, configurations, seeds, aggregates, and the deployment dataset are released with the paper.
 \section*{Statements and Declarations}
 \subsection*{Funding}
-\DraftPlaceholder{Author to supply the factual funding statement.}
+This work received no external funding.
 \subsection*{Competing interests}
-\DraftPlaceholder{Author to supply the factual declaration.}
-\subsection*{Author contributions}
-\DraftPlaceholder{Author to supply contributions and applicable tool-use disclosures.}
+The author develops Kota, the system in which Bartender is implemented.
 \subsection*{Data and code availability}
-\DraftPlaceholder{Insert final stable artifact and archive URLs after the release has been frozen.}
+Simulation code, configurations, seeds, per-cell aggregates, paired differences, supplementary figures, the conformance fixtures and results, and the deployment dataset with its methods note are available at \url{https://github.com/stabruriss/bartender-study}. The raw simulation record archive (4.2 GB in four parts) is identified by SHA-256 in that repository's \texttt{release/RAW\_ARCHIVES.json}, which also gives its current download location. The Kota source analyzed is public at \url{https://github.com/stabruriss/kota-app} at the commit cited in Section~\ref{sec:mechanism}.
 \begin{appendices}
 \section{Proofs and derivations (supplementary)}\label{app:proofs}
 

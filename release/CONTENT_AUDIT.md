@@ -1,8 +1,8 @@
 # Release content review — 2026-09-12
 
 **The reviewed research history can be retained for publication. No history
-rewrite or replacement repository is required.** Repository visibility remains
-private; changing it is a separate owner action.
+rewrite or replacement repository is required.** Visibility was private at
+the initial review; the owner subsequently made the repository public.
 
 The previous review ended at `ce8b5b8b57e6bfb10e4f0f925e0d698009bbad0a`.
 The incremental review covers `9e3b6db`, `d76ffeb` and `c87593a`, ending at
@@ -29,8 +29,8 @@ approval files and acceptance records are unchanged. This review does not
 upgrade any scientific claim or replace the scope limits of the acceptance
 and plotting checks.
 
-Citation and reuse terms are drafts until the author and rights-holder fields
-are filled. Raw archive identity is supported by the retained verification
+The initial citation and reuse drafts have been replaced by the completed
+repository-root files. Raw archive identity is supported by the retained verification
 record and checksums. The dated addendum below records public download checks.
 Future commits and uploaded archive files require their own review before
 publication.
@@ -51,3 +51,10 @@ four raw parts also match the concatenated archive checksum. The new download
 receipt records public URLs, file identities and verification scope only.
 No private preservation bundle is part of that public folder. See
 `RAW_DOWNLOAD_VERIFICATION.json` for the exact checks.
+
+The final source package includes the confirmed author, affiliation, ORCID,
+contact email and three declarations. Those public attribution fields and the
+repository-root citation and reuse terms were reviewed as intentional content.
+The twelve-file archive contains no build logs, local paths or editorial notes;
+publisher notices are preserved. The final TeX Live 2025 check identifies this
+package, with no changes to the seven figure files or accepted scientific data.

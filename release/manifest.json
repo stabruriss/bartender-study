@@ -1,21 +1,37 @@
 {
-  "scope": "Release documents, source package, citation/license drafts, deployment dataset and explanatory figures. Original execution and analysis manifests remain separate.",
+  "scope": "Release documents, manuscript source package, citation and license metadata, deployment dataset and explanatory figures. Original execution and analysis manifests remain separate.",
   "files": {
+    "CITATION.cff": {
+      "bytes": 962,
+      "sha256": "86def055ab71c13872e2c7412633fa0408131934884e260bfb4a4b718018ef38"
+    },
+    "LICENSE": {
+      "bytes": 2757,
+      "sha256": "5dd39356810d187253907a5e79789400b45e141641d75a9b8e8316be86ef29b9"
+    },
     "release/ARXIV_SOURCE_GUIDE.md": {
-      "bytes": 3460,
-      "sha256": "0e141f9fedb9666d117d47b0ff0f514c7289e4ac5eeefd8176762111e414e227"
+      "bytes": 3556,
+      "sha256": "c2cead81110bcbd819ee27f60bda184afe64b72e406c59323a55c674242affc5"
     },
     "release/CONTENT_AUDIT.md": {
-      "bytes": 3146,
-      "sha256": "12fdc743dafe8c4878433ad36b444ed46ba919cda10a99ac038a7e9df06e0f31"
+      "bytes": 3644,
+      "sha256": "ab46ca3f7ffc8db80f89bc6cc5b6880f1b01585708440d27ad94def4ae6556d8"
+    },
+    "release/METADATA_VALIDATION.json": {
+      "bytes": 911,
+      "sha256": "225215352103c4ec5de4e5d764528c99614f405d89effdd3f9e3cf386bdaa51a"
     },
     "release/RAW_ARCHIVES.json": {
       "bytes": 2731,
       "sha256": "e4a7b15a7dd062080f9c28faaa616a74dddc3fe08ea390f7320a32e5f18304cb"
     },
+    "release/RAW_DOWNLOAD_VERIFICATION.json": {
+      "bytes": 8965,
+      "sha256": "719d67f1cdcd481eae0dd6ed362d3328a2d9c977ce1665846e648909547229ca"
+    },
     "release/RELEASE_CHECKLIST.md": {
-      "bytes": 6991,
-      "sha256": "7c233096b52cc033efa25385b8c14a5f9fa66b36a4408e37500f0e002c99d040"
+      "bytes": 6933,
+      "sha256": "6f6137415a13095ded2d31ea258e1652506d46f06b808489e7a57e4de0baadf4"
     },
     "release/SOURCE_AUDIT.md": {
       "bytes": 11878,
@@ -26,20 +42,20 @@
       "sha256": "920bbb3bb37b3329f03140adba154a0d5e0c6bc982565e0e716b5475e9fad354"
     },
     "release/arxiv/MANIFEST.json": {
-      "bytes": 2132,
-      "sha256": "b5b94bb94875b936832e849b4b5aac4d683c5c77142e06b8b6c830ec781d1963"
+      "bytes": 2104,
+      "sha256": "5885b2c7fd6c2ba0bc0846c19c0b76edaaa1500f355676213985d3476f07bfd5"
     },
     "release/arxiv/TEMPLATE_PROVENANCE.json": {
       "bytes": 909,
       "sha256": "374855e4b784d6d82fe7411295f420e55cba815a97e2a50bb437cf9b3eb79b42"
     },
     "release/arxiv/TEXLIVE2025_CHECK.json": {
-      "bytes": 22872,
-      "sha256": "5073942d777bc924eb7389987b6be24aea3e9304f8f9643e711801a3703ca00f"
+      "bytes": 20976,
+      "sha256": "e182ec9a9ba2d5d85d330e061b3cb683bbb9d8f85f3aeead4e0980aa7b799d02"
     },
-    "release/arxiv/arxiv-source-draft.tar.gz": {
-      "bytes": 245570,
-      "sha256": "6c925872ddc7594cc4411c203f7cd5fdf95566e7cf1c16fa4c9422d7789a0834"
+    "release/arxiv/arxiv-source.tar.gz": {
+      "bytes": 245731,
+      "sha256": "3234c1b3b3a19280c15eb5f894153e2344111b4468e1a5277f69ba7b6b76825f"
     },
     "release/arxiv/source/Fig1.pdf": {
       "bytes": 50056,
@@ -74,8 +90,8 @@
       "sha256": "bc6baa9320a73f0c4af10eea09414083760399bb184f468c6c53a806490babc0"
     },
     "release/arxiv/source/main.tex": {
-      "bytes": 90122,
-      "sha256": "17380d6499618620e1df4bff79691529dc16ec799d2aebf5836a38a6680a4f43"
+      "bytes": 90494,
+      "sha256": "3210a007f9cd14707e6f76c7f9a28162ae873b85794e85c94a1813a1c4e47559"
     },
     "release/arxiv/source/references.bib": {
       "bytes": 4519,
@@ -96,18 +112,6 @@
     "release/deployment/deployment-records.json": {
       "bytes": 81204,
       "sha256": "741c98776abfc216beff11f3004a78bb6337f1777c798b365b9d824dee61caec"
-    },
-    "release/drafts/CITATION.cff": {
-      "bytes": 888,
-      "sha256": "7510efb329610e98929862f3819f09f2506da7da2a0b21811d342cc0f5767c13"
-    },
-    "release/drafts/LICENSE": {
-      "bytes": 3081,
-      "sha256": "4d52c1b73fb8cf1323b4a370e8594dbce7095db5d50db73177343042c212cc02"
-    },
-    "release/drafts/VALIDATION.json": {
-      "bytes": 536,
-      "sha256": "cf5105671f629e5eb30f6fcc75acd0065973cd946936e7b6ae8382c1a5eea3b6"
     },
     "release/figures/fig1_repair_timelines.pdf": {
       "bytes": 24778,
@@ -142,12 +146,8 @@
       "sha256": "12a0a7bc6e1b1254c2f593a250e6ccff4dbd3cf0b27d6819696a9db86f4e530d"
     },
     "release/prepare_arxiv.py": {
-      "bytes": 3168,
-      "sha256": "a7072546c6f2460d677e11933aecff7da91c504687ab69f1c16c4af457b32a6b"
-    },
-    "release/RAW_DOWNLOAD_VERIFICATION.json": {
-      "bytes": 8965,
-      "sha256": "719d67f1cdcd481eae0dd6ed362d3328a2d9c977ce1665846e648909547229ca"
+      "bytes": 3315,
+      "sha256": "7fdf150624be7dd91240bc0f7c21c720ec0579c60ccb1c2464c5ff294be8266d"
     }
   }
 }

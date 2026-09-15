@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-15T05:11:58.176607+00:00",
+  "author": "Nan Wu",
+  "cff_version": "1.2.0",
+  "schema_source": "https://github.com/citation-file-format/citation-file-format/blob/1.2.0/schema.json",
+  "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
+  "validator": "PyYAML 6.0.2 + jsonschema 4.23.0",
+  "files": {
+    "CITATION.cff": {
+      "bytes": 962,
+      "sha256": "86def055ab71c13872e2c7412633fa0408131934884e260bfb4a4b718018ef38"
+    },
+    "LICENSE": {
+      "bytes": 2757,
+      "sha256": "5dd39356810d187253907a5e79789400b45e141641d75a9b8e8316be86ef29b9"
+    }
+  },
+  "license_scopes": {
+    "original_code_and_technical_documentation": "MIT",
+    "study_data_and_generated_figures": "CC BY 4.0",
+    "third_party_files": "Original notices retained; no relicensing",
+    "manuscript_prose": "Outside the repository reuse grant"
+  }
+}

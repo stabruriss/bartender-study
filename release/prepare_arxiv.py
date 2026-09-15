@@ -22,6 +22,8 @@ def main():
     args = parser.parse_args()
     payload = {name: (args.source_dir / name).read_bytes() for name in FILES}
     tex = payload["main.tex"].decode("utf-8")
+    if re.search(r"DraftPlaceholder|Author TBD|Affiliation TBD|Author to supply", tex):
+        raise ValueError("Fill manuscript metadata and declarations before packaging")
     if re.search(r"^\s*\\(?:input|include)\s*\{", tex, re.M):
         raise ValueError("Expected one flat manuscript, with no source includes")
     figures = re.findall(r"\\includegraphics(?:\[[^\]]*\])?\{([^}]+)\}", tex)
@@ -36,7 +38,7 @@ def main():
         raise ValueError("Unexpected files in source export: " + ", ".join(sorted(unexpected)))
     for name, data in payload.items():
         (source / name).write_bytes(data)
-    archive = args.output_dir / "arxiv-source-draft.tar.gz"
+    archive = args.output_dir / "arxiv-source.tar.gz"
     with archive.open("wb") as raw:
         with gzip.GzipFile(filename="", mode="wb", fileobj=raw, mtime=0) as compressed:
             with tarfile.open(fileobj=compressed, mode="w", format=tarfile.USTAR_FORMAT) as tar:
@@ -48,7 +50,7 @@ def main():
                     entry.uname = entry.gname = ""
                     tar.addfile(entry, io.BytesIO(payload[name]))
     manifest = {
-        "status": "source-draft-author-metadata-and-declarations-pending",
+        "status": "ready-for-arxiv-service-preview",
         "processor": "pdflatex",
         "files": {name: {"bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()}
                   for name, data in sorted(payload.items())},

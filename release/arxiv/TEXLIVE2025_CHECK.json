@@ -1,6 +1,6 @@
 {
   "status": "PASS_WITH_NOTICES",
-  "checked_at": "2026-09-12",
+  "checked_at": "2026-09-15",
   "scope": "Native Darwin/arm64 build with TeX Live packages from the date arXiv documents for its default environment; not an upload or execution on the arXiv service.",
   "arxiv_environment_source": "https://info.arxiv.org/help/faq/texlive.html",
   "texlive_snapshot": "2025-08-03",
@@ -15,21 +15,21 @@
       {
         "pass": 1,
         "exit_code": 0,
-        "wall_seconds": 2.737
+        "wall_seconds": 2.594
       },
       {
         "pass": 2,
         "exit_code": 0,
-        "wall_seconds": 2.257
+        "wall_seconds": 2.359
       },
       {
         "pass": 3,
         "exit_code": 0,
-        "wall_seconds": 2.261
+        "wall_seconds": 3.134
       }
     ]
   },
-  "source_manifest_sha256": "b5b94bb94875b936832e849b4b5aac4d683c5c77142e06b8b6c830ec781d1963",
+  "source_manifest_sha256": "5885b2c7fd6c2ba0bc0846c19c0b76edaaa1500f355676213985d3476f07bfd5",
   "source_files_unchanged": true,
   "supplied_bbl_used": true,
   "bibtex_or_shell_escape_required": false,
@@ -38,8 +38,8 @@
   "numbered_tables": 7,
   "pdf": {
     "pages": 34,
-    "bytes": 645577,
-    "sha256": "ca8582f9f61079c710082be81f9ef1b18f3e598759d8707d6ccfc6027021081e",
+    "bytes": 647467,
+    "sha256": "046fdecd18bf0c303db0dfb9389a46a04af1c25525037e6cd4475435d8807ecd",
     "self_contained_font_resources": 42,
     "text_outside_pages": 0
   },
@@ -278,8 +278,8 @@
   "page_checks": [
     {
       "page": 1,
-      "render_sha256": "15136c17593b6f73d8e639cea6ad44345ac3f157a5fdd6d63f86e94428f4729e",
-      "text_sha256": "e5cb775558f287430ac7607143040d99c3eec600203f4529af491c436c5b79bf",
+      "render_sha256": "67e1fb6a3471c49480661b8293db1794454f3839194849801cec5fc3be78b53f",
+      "text_sha256": "36e1d6d552c6cfd7a60cfe7fcc02038110c748459f20fca8047fe644b0e3d16c",
       "text_matches_TL2026": true,
       "render_matches_TL2026": true
     },
@@ -425,15 +425,15 @@
     },
     {
       "page": 22,
-      "render_sha256": "ff266670ecac463c40c667161b600024fddf329fa1af4fc020dadabe9d9c4682",
-      "text_sha256": "de6352e7ab4c1e43640344fc1deccffc5a611cba0115a1552b3c34134d508e62",
+      "render_sha256": "23399112b57e529f63afeae88bbd9ae7c09453791a0bc875d404caffb20653ca",
+      "text_sha256": "4a35f915e667f57fa2885d5aa5ca8af2af6106314ec23256c4569db67dec4d44",
       "text_matches_TL2026": true,
       "render_matches_TL2026": true
     },
     {
       "page": 23,
-      "render_sha256": "e5a9ea81906729396096a8af672ade6e6bb3384638eb67dd983e8f2a053a4df8",
-      "text_sha256": "d63caca4bc656d9a9132c3abee661c0566d0a680350d0808191e31776e041a1f",
+      "render_sha256": "01ff573468445319a56673badad6293cb5e51904ea11c695456f77fcf346bf96",
+      "text_sha256": "7e5fd9091b76a1baeda024d98feb55a82ef8dfdca61373b64fbde885cebed846",
       "text_matches_TL2026": true,
       "render_matches_TL2026": true
     },
@@ -523,13 +523,13 @@
       "space_only_type3": false
     },
     {
-      "name": "CGMZHB+CMR12",
+      "name": "NEIEZV+CMR12",
       "type": "Type1",
       "embedded": true,
       "space_only_type3": false
     },
     {
-      "name": "MMOGVD+CMR8",
+      "name": "GHWESC+CMR8",
       "type": "Type1",
       "embedded": true,
       "space_only_type3": false
@@ -541,7 +541,7 @@
       "space_only_type3": false
     },
     {
-      "name": "BFEHVB+CMR10",
+      "name": "JJWRCI+CMR10",
       "type": "Type1",
       "embedded": true,
       "space_only_type3": false
@@ -577,13 +577,13 @@
       "space_only_type3": false
     },
     {
-      "name": "QPSWNX+CMTI10",
+      "name": "KSJRZB+CMTI10",
       "type": "Type1",
       "embedded": true,
       "space_only_type3": false
     },
     {
-      "name": "QQBDOD+CMTT10",
+      "name": "IRJOHE+CMTT10",
       "type": "Type1",
       "embedded": true,
       "space_only_type3": false
@@ -769,81 +769,5 @@
       "space_only_type3": false
     }
   ],
-  "public_submission_status": "Author, affiliation and declarations pending; final service preview remains necessary after metadata is filled.",
-  "render_comparison": {
-    "TL2026_text_equal_on_all_pages": true,
-    "figure_input_bytes_unchanged": true,
-    "differences": [
-      {
-        "page": 9,
-        "changed_pixel_fraction": 0.0377893,
-        "maximum_channel_difference": 2,
-        "bounding_box_pixels": [
-          150,
-          111,
-          706,
-          979
-        ]
-      },
-      {
-        "page": 11,
-        "changed_pixel_fraction": 0.01319137,
-        "maximum_channel_difference": 2,
-        "bounding_box_pixels": [
-          150,
-          111,
-          705,
-          978
-        ]
-      },
-      {
-        "page": 17,
-        "changed_pixel_fraction": 0.01421366,
-        "maximum_channel_difference": 2,
-        "bounding_box_pixels": [
-          150,
-          111,
-          705,
-          979
-        ]
-      },
-      {
-        "page": 18,
-        "changed_pixel_fraction": 0.02745556,
-        "maximum_channel_difference": 2,
-        "bounding_box_pixels": [
-          187,
-          111,
-          742,
-          979
-        ]
-      },
-      {
-        "page": 19,
-        "changed_pixel_fraction": 0.03796042,
-        "maximum_channel_difference": 2,
-        "bounding_box_pixels": [
-          150,
-          111,
-          705,
-          979
-        ]
-      },
-      {
-        "page": 20,
-        "changed_pixel_fraction": 0.01945633,
-        "maximum_channel_difference": 2,
-        "bounding_box_pixels": [
-          186,
-          114,
-          742,
-          979
-        ]
-      }
-    ],
-    "note": "Raster differences are confined to the six pages containing imported Matplotlib figure PDFs; both versions use the identical figure files. This is not a byte-identical PDF claim.",
-    "maximum_channel_difference_on_changed_pages": 2,
-    "channel_scale": "0\u2013255"
-  },
-  "visual_review": "Tables, figure/caption page and appendix-to-bibliography transition visually checked; no clipping or overlapping elements observed."
+  "public_submission_status": "Confirmed author, affiliation, contact and three declarations are included; the arXiv service-generated preview and final submission remain pending."
 }

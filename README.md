@@ -13,9 +13,10 @@ The original collection HOLD is preserved; independently approved collect-only
 the delivered summaries and application evidence in
 [the acceptance record](validation/delivery-acceptance-m1.json).
 The four manuscript result figures, complete tables and numerical summary are in
-[analysis/](analysis/README.md). Repository visibility remains private; code,
-configurations, seeds and the complete scan record are intended for release
-with the full manuscript submission.
+[analysis/](analysis/README.md). Code, configurations, seeds and the accepted
+scan record are public. The manuscript source package is in
+[release/arxiv/](release/arxiv/); arXiv submission status is separate from
+repository availability.
 
 The raw simulation archive is now publicly downloadable in four parts. See
 [the archive index](release/RAW_ARCHIVES.json) for current URLs and SHA-256
@@ -234,5 +235,6 @@ count inequality. These assertions do not constrain the dynamic study.
 Other tests check nonblocking clean work, successful commit prefixes, dependency
 rescue and in-place blocking, zero-delay policy identity, both baseline-read
 times, nonzero repair exposure, interval probability, input pairing, censoring,
-and the execution/parameter approval boundary. There are no obtained study
-curves or product validation results in this repository yet.
+and the execution/parameter approval boundary. The accepted study figures
+and bounded application observations are linked above; the controls alone do
+not establish product performance or repair correctness.

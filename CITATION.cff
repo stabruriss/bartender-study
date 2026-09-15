@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite this reproduction package when using the code or data."
+type: software
+title: "Bartender: Continuous Worktree Reconciliation with Author-Routed Conflict Handback for Resident Multi-Agent Development"
+authors:
+  - family-names: "Wu"
+    given-names: "Nan"
+    affiliation: "Independent Researcher"
+    orcid: "https://orcid.org/0009-0001-4129-9569"
+    email: "chris@chriswu.xyz"
+repository-code: "https://github.com/stabruriss/bartender-study"
+version: "1.0.0"
+date-released: "2026-09-15"
+abstract: >-
+  Reproduction code, fixed configurations, seeds, accepted aggregates,
+  analysis scripts and figures for a synthetic study of continuous worktree
+  integration and author repair. Original code is MIT licensed; study data
+  and generated figures are CC BY 4.0. See LICENSE for the separate scopes
+  and preserved third-party notices.
+keywords:
+  - software integration
+  - multi-agent systems
+  - reproducible research

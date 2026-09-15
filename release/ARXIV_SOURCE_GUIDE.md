@@ -1,6 +1,6 @@
 # Manuscript source package
 
-`arxiv/arxiv-source-draft.tar.gz` contains twelve flat files: `main.tex`,
+`arxiv/arxiv-source.tar.gz` contains twelve flat files: `main.tex`,
 `main.bbl`, `references.bib`, the unmodified Springer Nature class and
 bibliography style, and `Fig1.pdf` through `Fig7.pdf`. The editable source is
 also present in `arxiv/source/`. `arxiv/MANIFEST.json` records every checksum.
@@ -8,13 +8,15 @@ Only listed files enter the archive; build PDFs, logs, auxiliary state and
 editor files are excluded.
 
 The package contains the complete text and appendix, seven figures, seven
-numbered tables and fourteen references. Author, affiliation and four factual
-declarations remain explicit placeholders. This is a reviewable source draft,
-not a completed submission.
+numbered tables and fourteen references. Nan Wu is the author, with the
+Independent Researcher affiliation, contact email and ORCID. The confirmed
+funding, competing-interests and data-availability statements are included.
+The package is ready for arXiv processing and preview; repository publication
+does not mean the paper has been submitted or announced by arXiv.
 
 ## Compile and inspect
 
-As checked on 12 September 2026, arXiv offers TeX Live 2025 by default, using
+As checked on 15 September 2026 UTC, arXiv offers TeX Live 2025 by default, using
 its 3 August 2025 package state; it also offers TeX Live 2023.
 [arXiv environment documentation](https://info.arxiv.org/help/faq/texlive.html).
 
@@ -36,8 +38,7 @@ seven supplied figures are already PDF, so no conversion is needed. Retain
 the compiled `.bbl` in the upload. arXiv does not run BibTeX automatically.
 [arXiv TeX submission instructions](https://info.arxiv.org/help/submit_tex.html).
 
-After filling metadata and declarations, rebuild and inspect the package,
-select **TeX Live 2025 / pdflatex** in arXiv, and inspect the service-generated
+Select **TeX Live 2025 / pdflatex** in arXiv and inspect the service-generated
 preview before final submission. Template files retain their upstream notices.
 
 ## Regenerate the package
@@ -54,11 +55,11 @@ Re-run the compilation and release-content checks after a source change.
 
 ## Citation, reuse and raw data
 
-`drafts/CITATION.cff` passes the CFF 1.2.0 schema but retains an explicit author
-placeholder. `drafts/LICENSE` separates original code (MIT) from data and
-generated figures (CC BY 4.0); it preserves third-party template and whitepaper
-notices. Neither draft is active release metadata. Complete those fields and
-place the final versions at repository root before publication.
+The repository-root `CITATION.cff` passes the CFF 1.2.0 schema and identifies
+Nan Wu. The root `LICENSE` separates original code (MIT) from data and
+generated figures (CC BY 4.0), preserving third-party template and whitepaper
+notices. These terms do not relicense the manuscript prose. An arXiv identifier
+will be added to the citation metadata after announcement.
 
 The source repository includes raw archive hashes, not the archive volumes.
 `RAW_ARCHIVES.json` records the four public download URLs and immutable hashes.

@@ -1,5 +1,5 @@
 {
-  "status": "source-draft-author-metadata-and-declarations-pending",
+  "status": "ready-for-arxiv-service-preview",
   "processor": "pdflatex",
   "files": {
     "Fig1.pdf": {
@@ -35,8 +35,8 @@
       "sha256": "bc6baa9320a73f0c4af10eea09414083760399bb184f468c6c53a806490babc0"
     },
     "main.tex": {
-      "bytes": 90122,
-      "sha256": "17380d6499618620e1df4bff79691529dc16ec799d2aebf5836a38a6680a4f43"
+      "bytes": 90494,
+      "sha256": "3210a007f9cd14707e6f76c7f9a28162ae873b85794e85c94a1813a1c4e47559"
     },
     "references.bib": {
       "bytes": 4519,
@@ -52,9 +52,9 @@
     }
   },
   "archive": {
-    "file": "arxiv-source-draft.tar.gz",
-    "bytes": 245570,
-    "sha256": "6c925872ddc7594cc4411c203f7cd5fdf95566e7cf1c16fa4c9422d7789a0834"
+    "file": "arxiv-source.tar.gz",
+    "bytes": 245731,
+    "sha256": "3234c1b3b3a19280c15eb5f894153e2344111b4468e1a5277f69ba7b6b76825f"
   },
   "excluded": [
     "build PDFs",

@@ -1,9 +1,10 @@
 # Reproduction package release inventory
 
-Preparation only; the repository remains private. This checklist does not
-authorize publication, a new repository, a new study run, or data changes.
-The existing study and its fixed application observations have been accepted.
-The final manuscript and publication metadata are being prepared separately.
+The repository and raw archive downloads are public. The existing study and
+its fixed application observations have been accepted. Final manuscript
+metadata and reuse terms are filled; the source package is ready for arXiv
+processing and preview. This record does not represent an arXiv submission
+or announcement and does not authorize a new study run or data changes.
 
 | Component | Repository-relative location | State |
 |---|---|---|
@@ -18,8 +19,8 @@ The final manuscript and publication metadata are being prepared separately.
 | Raw archive index, checksums and downloads | `deliverables/study-01/artifact-index.json`; `release/RAW_ARCHIVES.json` | Four public archive parts downloaded independently on a second machine; all part hashes and the concatenated archive hash match. See `release/RAW_DOWNLOAD_VERIFICATION.json`. |
 | Deployment dataset and methods | `release/deployment/deployment-records.json`, `METHODS.md` | Unchanged upstream delivery, exact hashes below. Descriptive, incomplete retained record; no overall reliability estimate. |
 | Public source audit | `release/SOURCE_AUDIT.md` | Present; integration, automatic trigger and explicit routes anchored to v0.1.10, with tree comparison to the original audit commit. |
-| Manuscript source, bibliography and appendix | `release/arxiv/` | Complete text, seven figures and seven tables; twelve-file source draft with compiled `.bbl`. Author, affiliation and declarations remain placeholders. TeX Live 2025 snapshot check is recorded alongside the package. |
-| Citation metadata and reuse license | `release/drafts/CITATION.cff`, `release/drafts/LICENSE` | Reviewable drafts: code MIT; data and figures CC BY 4.0. Author/rights-holder fields pending; third-party template notices preserved. Drafts do not activate a repository license. |
+| Manuscript source, bibliography and appendix | `release/arxiv/` | Complete text, seven figures, seven tables and fourteen references; twelve-file source package with compiled `.bbl`, confirmed author metadata and three declarations. TeX Live 2025 snapshot check is recorded alongside the package. |
+| Citation metadata and reuse license | `CITATION.cff`, `LICENSE` | Nan Wu; code MIT; data and figures CC BY 4.0. Third-party template and whitepaper notices preserved. CFF 1.2.0 validation passed. |
 
 ## Immutable data bindings
 
@@ -49,9 +50,9 @@ recorded in this repository, without changing the archived snapshot.
 
 ## Remaining release tasks
 
-- Fill final author/affiliation and factual declarations in the manuscript,
-  complete the citation and license drafts, and regenerate the seven-figure,
-  seven-table source package. Review the arXiv-generated preview before submission.
+- Upload `release/arxiv/arxiv-source.tar.gz`, select TeX Live 2025 / pdflatex,
+  and review the arXiv-generated preview before submission. Record the assigned
+  identifier after announcement and add it to the citation metadata.
 - Preserve the deployment methods' limits. The frozen deployment source is
   labeled `source-snapshot-01`; its exact relation to a public commit and
   upstream retention of the extraction program remain to be documented.
@@ -62,8 +63,8 @@ recorded in this repository, without changing the archived snapshot.
 - The three figure/provenance commits after the initial audit were reviewed on
   2026-09-12; see `release/CONTENT_AUDIT.md`. Recheck any subsequent additions.
   No history rewrite or replacement repository is required for the reviewed
-  content. The repository remains private; its visibility change is an owner action.
-- Replace the repository's old short description at publication with:
+  content. The repository's owner has made it public.
+- The repository description has been updated to:
   `Reproducible synthetic study of continuous worktree integration and author repair`.
   The old project shorthand is unnecessary for readers; it is not a data issue.
 
