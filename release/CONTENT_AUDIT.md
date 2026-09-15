@@ -31,5 +31,23 @@ and plotting checks.
 
 Citation and reuse terms are drafts until the author and rights-holder fields
 are filled. Raw archive identity is supported by the retained verification
-record and checksums; downloads are not yet available. Future commits and
-uploaded archive files require their own review before publication.
+record and checksums. The dated addendum below records public download checks.
+Future commits and uploaded archive files require their own review before
+publication.
+
+## Addendum — 15 September 2026 UTC
+
+The release additions through `e8ad5e9` and the closeout increment `9751537`
+were reviewed. The latter adds only the execution closeout response and a
+neutral preservation inventory; no private machine paths or coordination
+identifiers were found in that increment. Existing scientific artifacts and
+their acceptance records were unchanged.
+
+The public closeout folder contains fourteen files. Its research snapshot
+matches the 276 files exported from `e8ad5e9`; the raw archive hashes match the
+accepted artifact index. All fourteen files were subsequently downloaded on a
+second machine without authentication and checked by size and SHA-256. The
+four raw parts also match the concatenated archive checksum. The new download
+receipt records public URLs, file identities and verification scope only.
+No private preservation bundle is part of that public folder. See
+`RAW_DOWNLOAD_VERIFICATION.json` for the exact checks.

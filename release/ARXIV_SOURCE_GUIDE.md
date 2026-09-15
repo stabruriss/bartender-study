@@ -61,7 +61,9 @@ notices. Neither draft is active release metadata. Complete those fields and
 place the final versions at repository root before publication.
 
 The source repository includes raw archive hashes, not the archive volumes.
-`RAW_ARCHIVES.json` records retained parts and null download URLs until the
-execution machine uploads them. Source publication can precede that upload;
-full raw-history reproduction from public downloads cannot. Aggregate-to-figure
-reproduction is available from the included data and analysis scripts.
+`RAW_ARCHIVES.json` records the four public download URLs and immutable hashes.
+`RAW_DOWNLOAD_VERIFICATION.json` records independent anonymous downloads of all
+four parts and a matching concatenated archive hash. Archive identity follows
+the approved execution-machine verification; this download check did not rerun
+the simulation or replace scientific acceptance. Aggregate-to-figure reproduction
+is available from the included data and analysis scripts.

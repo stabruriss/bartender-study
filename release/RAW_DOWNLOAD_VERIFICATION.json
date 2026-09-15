@@ -1,0 +1,158 @@
+{
+  "started_at": "2026-09-15T04:54:57.610944+00:00",
+  "completed_at": "2026-09-15T04:56:39.296481+00:00",
+  "folder_url": "https://drive.google.com/drive/folders/10KMlAJh3q9nZumNa5sk5YMoCoS6SNOuB",
+  "authentication": "No login, no browser cookies, no authorization header; public HTTP requests",
+  "sha256sums_sha256": "30ea489e1d652aab9faa422efec8d541715d9741f208861bf8aac7c5afbb89e5",
+  "files": [
+    {
+      "name": "COMMIT.txt",
+      "bytes": 41,
+      "sha256": "981c0f2e581f2b1c3fa49e9c404697e0e23da3bf6c77450e5ce39b513df5467f",
+      "expected_sha256": "981c0f2e581f2b1c3fa49e9c404697e0e23da3bf6c77450e5ce39b513df5467f",
+      "status": "PASS",
+      "file_id": "1NPGcIDfrUX_7_7xVAinfSa_PkR2HFDwX",
+      "view_url": "https://drive.google.com/file/d/1NPGcIDfrUX_7_7xVAinfSa_PkR2HFDwX/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1NPGcIDfrUX_7_7xVAinfSa_PkR2HFDwX&export=download&confirm=t"
+    },
+    {
+      "name": "CONTENT-AUDIT.json",
+      "bytes": 1928,
+      "sha256": "cf2c4ab82a24477098a6a5e74fb9d45ca38849ca43064b6e0973fe7493b10224",
+      "expected_sha256": "cf2c4ab82a24477098a6a5e74fb9d45ca38849ca43064b6e0973fe7493b10224",
+      "status": "PASS",
+      "file_id": "1kXMgGBpDkuwXn6mFEkV4aKM5iUm0e3DF",
+      "view_url": "https://drive.google.com/file/d/1kXMgGBpDkuwXn6mFEkV4aKM5iUm0e3DF/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1kXMgGBpDkuwXn6mFEkV4aKM5iUm0e3DF&export=download&confirm=t"
+    },
+    {
+      "name": "FILELIST.json",
+      "bytes": 2061,
+      "sha256": "fca22e89202c0c5d343610ab5d50e824a5dbbf108f69cfd7b9c73b86a91cd8e5",
+      "expected_sha256": "fca22e89202c0c5d343610ab5d50e824a5dbbf108f69cfd7b9c73b86a91cd8e5",
+      "status": "PASS",
+      "file_id": "1Izf0pSZEqeDH8oKpuDgGJRAmj71ImyFq",
+      "view_url": "https://drive.google.com/file/d/1Izf0pSZEqeDH8oKpuDgGJRAmj71ImyFq/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1Izf0pSZEqeDH8oKpuDgGJRAmj71ImyFq&export=download&confirm=t"
+    },
+    {
+      "name": "RAW_ARCHIVES.json",
+      "bytes": 1451,
+      "sha256": "27039226ddc11453a7f538ff579afb1b7979559ce23eec53ed1524458fc709b3",
+      "expected_sha256": "27039226ddc11453a7f538ff579afb1b7979559ce23eec53ed1524458fc709b3",
+      "status": "PASS",
+      "file_id": "1rTNuzq0PvhxAp1LA8Edvsi7VpLjsVaOE",
+      "view_url": "https://drive.google.com/file/d/1rTNuzq0PvhxAp1LA8Edvsi7VpLjsVaOE/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1rTNuzq0PvhxAp1LA8Edvsi7VpLjsVaOE&export=download&confirm=t"
+    },
+    {
+      "name": "README.md",
+      "bytes": 2837,
+      "sha256": "52a49215aa3f18c97ecac206bd0679123f5655c2fe3ca913affe57d347256bbb",
+      "expected_sha256": "52a49215aa3f18c97ecac206bd0679123f5655c2fe3ca913affe57d347256bbb",
+      "status": "PASS",
+      "file_id": "1ouh0k7-yALOTF9CJVehIUvTYkR0ZODl4",
+      "view_url": "https://drive.google.com/file/d/1ouh0k7-yALOTF9CJVehIUvTYkR0ZODl4/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1ouh0k7-yALOTF9CJVehIUvTYkR0ZODl4&export=download&confirm=t"
+    },
+    {
+      "name": "RESTORE-VERIFICATION.json",
+      "bytes": 1899,
+      "sha256": "cef976f8d87323f4ab366032e10787004de4480e9704811ddf2f28d9bcfeb909",
+      "expected_sha256": "cef976f8d87323f4ab366032e10787004de4480e9704811ddf2f28d9bcfeb909",
+      "status": "PASS",
+      "file_id": "1xL4OENTTcFKbdb3TuN3CIF3gznU6QBTl",
+      "view_url": "https://drive.google.com/file/d/1xL4OENTTcFKbdb3TuN3CIF3gznU6QBTl/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1xL4OENTTcFKbdb3TuN3CIF3gznU6QBTl&export=download&confirm=t"
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 1079,
+      "sha256": "30ea489e1d652aab9faa422efec8d541715d9741f208861bf8aac7c5afbb89e5",
+      "expected_sha256": "30ea489e1d652aab9faa422efec8d541715d9741f208861bf8aac7c5afbb89e5",
+      "status": "PASS",
+      "file_id": "12-KlMX9geebpqfo9quVB7d8KqWobVmsn",
+      "view_url": "https://drive.google.com/file/d/12-KlMX9geebpqfo9quVB7d8KqWobVmsn/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=12-KlMX9geebpqfo9quVB7d8KqWobVmsn&export=download&confirm=t"
+    },
+    {
+      "name": "SOURCE-FILES.json",
+      "bytes": 75518,
+      "sha256": "87a33586e93ca4d0fbee7612a13f23e47a381e15db8d7f4178d551de3fedf5c7",
+      "expected_sha256": "87a33586e93ca4d0fbee7612a13f23e47a381e15db8d7f4178d551de3fedf5c7",
+      "status": "PASS",
+      "file_id": "1iYCVz8uxhxZP1AqevH2yy63oApjX2pfu",
+      "view_url": "https://drive.google.com/file/d/1iYCVz8uxhxZP1AqevH2yy63oApjX2pfu/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1iYCVz8uxhxZP1AqevH2yy63oApjX2pfu&export=download&confirm=t"
+    },
+    {
+      "name": "artifact-index.json",
+      "bytes": 5395931,
+      "sha256": "8d88dbe050a3d9428e4cd0720c429cbed9a67734de64ff5eac0992f41d8ffa70",
+      "expected_sha256": "8d88dbe050a3d9428e4cd0720c429cbed9a67734de64ff5eac0992f41d8ffa70",
+      "status": "PASS",
+      "file_id": "1uP3PtznLKVTyWSa8YUyPlND7o-laCuZm",
+      "view_url": "https://drive.google.com/file/d/1uP3PtznLKVTyWSa8YUyPlND7o-laCuZm/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1uP3PtznLKVTyWSa8YUyPlND7o-laCuZm&export=download&confirm=t"
+    },
+    {
+      "name": "raw.tar.part000",
+      "bytes": 1073741824,
+      "sha256": "f24ef43b154f961742220d9bdfd871189eb58bce20025cc85505153a5b468b8b",
+      "expected_sha256": "f24ef43b154f961742220d9bdfd871189eb58bce20025cc85505153a5b468b8b",
+      "status": "PASS",
+      "file_id": "1BL0sJ4w1O5ojFOjbytRSOAYpwUCTglDP",
+      "view_url": "https://drive.google.com/file/d/1BL0sJ4w1O5ojFOjbytRSOAYpwUCTglDP/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1BL0sJ4w1O5ojFOjbytRSOAYpwUCTglDP&export=download&confirm=t"
+    },
+    {
+      "name": "raw.tar.part001",
+      "bytes": 1073741824,
+      "sha256": "8610d1edd07731f3cfad36edabf2da848f7d7f20741b844e62a8ed75eff1b199",
+      "expected_sha256": "8610d1edd07731f3cfad36edabf2da848f7d7f20741b844e62a8ed75eff1b199",
+      "status": "PASS",
+      "file_id": "1-5JAPURW7YvF2Xgz1w_MBFsKt74haH1f",
+      "view_url": "https://drive.google.com/file/d/1-5JAPURW7YvF2Xgz1w_MBFsKt74haH1f/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1-5JAPURW7YvF2Xgz1w_MBFsKt74haH1f&export=download&confirm=t"
+    },
+    {
+      "name": "raw.tar.part002",
+      "bytes": 1073741824,
+      "sha256": "6894e702900e389706bc325a517dd0a954071ec04b95f92568710c1c15e9502c",
+      "expected_sha256": "6894e702900e389706bc325a517dd0a954071ec04b95f92568710c1c15e9502c",
+      "status": "PASS",
+      "file_id": "1Kky9Yj7F-nOe5ORVog8U9kFHOQ3Yt9I2",
+      "view_url": "https://drive.google.com/file/d/1Kky9Yj7F-nOe5ORVog8U9kFHOQ3Yt9I2/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1Kky9Yj7F-nOe5ORVog8U9kFHOQ3Yt9I2&export=download&confirm=t"
+    },
+    {
+      "name": "raw.tar.part003",
+      "bytes": 979365888,
+      "sha256": "ada383eff4ebbb5c8ee521ce09ff796fed6d97fed9381d3696486144612ee8c7",
+      "expected_sha256": "ada383eff4ebbb5c8ee521ce09ff796fed6d97fed9381d3696486144612ee8c7",
+      "status": "PASS",
+      "file_id": "1PF1xOc9-BoK0r0kDmifdWtcjQ9pExoZd",
+      "view_url": "https://drive.google.com/file/d/1PF1xOc9-BoK0r0kDmifdWtcjQ9pExoZd/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1PF1xOc9-BoK0r0kDmifdWtcjQ9pExoZd&export=download&confirm=t"
+    },
+    {
+      "name": "research-e8ad5e9.tar",
+      "bytes": 32440320,
+      "sha256": "76231a46ededb96de6c421334a654c08dadae4dd442e8daf8c3174a70e0dcf71",
+      "expected_sha256": "76231a46ededb96de6c421334a654c08dadae4dd442e8daf8c3174a70e0dcf71",
+      "status": "PASS",
+      "file_id": "1pKmmo_yq0us9x1F3hJGg52XkwtatCh8r",
+      "view_url": "https://drive.google.com/file/d/1pKmmo_yq0us9x1F3hJGg52XkwtatCh8r/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1pKmmo_yq0us9x1F3hJGg52XkwtatCh8r&export=download&confirm=t"
+    }
+  ],
+  "status": "PASS",
+  "raw_archive": {
+    "bytes": 4200591360,
+    "sha256": "2256b0bf734992aa37d1a59f176832f08cce8946fc514dee4f8b87d37e625beb",
+    "matches": true
+  },
+  "scope": "Public download availability and byte identity only. Scientific acceptance remains recorded separately in deliverables and validation; no simulation was rerun.",
+  "verification_method": "Downloaded each listed file with unauthenticated HTTP requests, checked bytes and SHA-256 against the previously reviewed manifest, then streamed raw.tar.part000 through raw.tar.part003 in numeric order into one SHA-256 calculation without modifying the files.",
+  "frozen_snapshot_note": "The downloaded folder is an immutable closeout snapshot, including a historical RAW_ARCHIVES.json with no download URLs. Consult release/RAW_ARCHIVES.json in the current repository for availability."
+}

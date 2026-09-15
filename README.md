@@ -12,10 +12,15 @@ The original collection HOLD is preserved; independently approved collect-only
 `verify-02` passed with original data unchanged. Maintainer acceptance checked
 the delivered summaries and application evidence in
 [the acceptance record](validation/delivery-acceptance-m1.json).
-The three draft result figures, complete tables and numerical summary are in
+The four manuscript result figures, complete tables and numerical summary are in
 [analysis/](analysis/README.md). Repository visibility remains private; code,
 configurations, seeds and the complete scan record are intended for release
 with the full manuscript submission.
+
+The raw simulation archive is now publicly downloadable in four parts. See
+[the archive index](release/RAW_ARCHIVES.json) for current URLs and SHA-256
+values, and [the download check](release/RAW_DOWNLOAD_VERIFICATION.json) for
+independent verification of all part hashes and the complete archive hash.
 
 The completed execution procedure is [RUNBOOK.md](RUNBOOK.md).
 It specifies the pinned environment, file-only communication, cross-machine

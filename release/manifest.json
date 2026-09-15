@@ -2,20 +2,20 @@
   "scope": "Release documents, source package, citation/license drafts, deployment dataset and explanatory figures. Original execution and analysis manifests remain separate.",
   "files": {
     "release/ARXIV_SOURCE_GUIDE.md": {
-      "bytes": 3306,
-      "sha256": "c0f2d4f9b2e60c4e065540656763bed01bf2ad16bafa98940a1d11fd89e07be1"
+      "bytes": 3460,
+      "sha256": "0e141f9fedb9666d117d47b0ff0f514c7289e4ac5eeefd8176762111e414e227"
     },
     "release/CONTENT_AUDIT.md": {
-      "bytes": 2160,
-      "sha256": "4da45e3aabbd2718dfeb4cb577f5712b77e846338d1f91cca90a522447903e0f"
+      "bytes": 3146,
+      "sha256": "12fdc743dafe8c4878433ad36b444ed46ba919cda10a99ac038a7e9df06e0f31"
     },
     "release/RAW_ARCHIVES.json": {
-      "bytes": 1451,
-      "sha256": "27039226ddc11453a7f538ff579afb1b7979559ce23eec53ed1524458fc709b3"
+      "bytes": 2731,
+      "sha256": "e4a7b15a7dd062080f9c28faaa616a74dddc3fe08ea390f7320a32e5f18304cb"
     },
     "release/RELEASE_CHECKLIST.md": {
-      "bytes": 6774,
-      "sha256": "3bcdb3c9f1a539c801525a577bf69b57b5d8358568c432dbcc9166a7b9a71325"
+      "bytes": 6991,
+      "sha256": "7c233096b52cc033efa25385b8c14a5f9fa66b36a4408e37500f0e002c99d040"
     },
     "release/SOURCE_AUDIT.md": {
       "bytes": 11878,
@@ -144,6 +144,10 @@
     "release/prepare_arxiv.py": {
       "bytes": 3168,
       "sha256": "a7072546c6f2460d677e11933aecff7da91c504687ab69f1c16c4af457b32a6b"
+    },
+    "release/RAW_DOWNLOAD_VERIFICATION.json": {
+      "bytes": 8965,
+      "sha256": "719d67f1cdcd481eae0dd6ed362d3328a2d9c977ce1665846e648909547229ca"
     }
   }
 }

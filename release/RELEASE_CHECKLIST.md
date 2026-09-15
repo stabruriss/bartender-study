@@ -15,7 +15,7 @@ The final manuscript and publication metadata are being prepared separately.
 | Two explanatory diagrams and editable sources | `release/figures/` | Original scripts, shared style, dependency list, PDF and SVG copies. |
 | Execution and verification provenance | `RUN_APPROVAL.json`, `REVALIDATION_APPROVAL.json`, `deliverables/study-01/`, `validation/` | Original HOLD preserved; separately approved verify-02 PASS and independent maintainer acceptance retained. |
 | Application conformance | `RUNBOOK-CONFORMANCE.md`, `CONFORMANCE_APPROVAL.json`, `deliverables/conformance-01/` | Eight fixed fixtures, sixteen requests; v0.1.10 and explicit scope limits. |
-| Raw archive index and checksums | `deliverables/study-01/artifact-index.json` | Checksums present; four raw parts retained on the execution machine. Later attachment upload and URLs are tracked in `release/RAW_ARCHIVES.json`; repository publication does not wait for the upload. |
+| Raw archive index, checksums and downloads | `deliverables/study-01/artifact-index.json`; `release/RAW_ARCHIVES.json` | Four public archive parts downloaded independently on a second machine; all part hashes and the concatenated archive hash match. See `release/RAW_DOWNLOAD_VERIFICATION.json`. |
 | Deployment dataset and methods | `release/deployment/deployment-records.json`, `METHODS.md` | Unchanged upstream delivery, exact hashes below. Descriptive, incomplete retained record; no overall reliability estimate. |
 | Public source audit | `release/SOURCE_AUDIT.md` | Present; integration, automatic trigger and explicit routes anchored to v0.1.10, with tree comparison to the original audit commit. |
 | Manuscript source, bibliography and appendix | `release/arxiv/` | Complete text, seven figures and seven tables; twelve-file source draft with compiled `.bbl`. Author, affiliation and declarations remain placeholders. TeX Live 2025 snapshot check is recorded alongside the package. |
@@ -38,10 +38,14 @@ The final manuscript and publication metadata are being prepared separately.
 | `raw.tar.part003` | 979,365,888 | `ada383eff4ebbb5c8ee521ce09ff796fed6d97fed9381d3696486144612ee8c7` |
 
 Verify the individual parts, concatenate in numeric order, verify the whole tar,
-then extract into a new directory. Raw attachments are not in Git. Their remote
-storage/upload has not been performed by this checklist. File-by-file identity
-was checked on the execution machine by the approved collect-only verifier;
-the maintainer machine independently checked the transferred summaries.
+then extract into a new directory. Raw attachments are not in Git. The public
+download URLs are in `release/RAW_ARCHIVES.json`. On 15 September 2026 UTC,
+the maintainer independently downloaded all fourteen files from the public
+folder without authentication, checked every hash and size, and verified the
+concatenated raw archive. File-by-file identity within the archive remains
+bound to the approved execution-machine collect-only verification. The frozen
+research snapshot in that folder predates the upload; current availability is
+recorded in this repository, without changing the archived snapshot.
 
 ## Remaining release tasks
 
@@ -52,10 +56,9 @@ the maintainer machine independently checked the transferred summaries.
   labeled `source-snapshot-01`; its exact relation to a public commit and
   upstream retention of the extraction program remain to be documented.
   The public dataset supports aggregate recomputation, not raw-log extraction.
-- After the execution machine uploads the four raw archive parts, verify their
-  exact hashes and record stable download URLs in `release/RAW_ARCHIVES.json`.
-  Source publication may proceed earlier with the existing archive hashes;
-  do not describe the raw archives as downloadable while those URLs are null.
+- Public archive upload and independent download verification are complete.
+  Keep `release/RAW_ARCHIVES.json` current if hosting changes; preserve the
+  content hashes and the dated download-verification record.
 - The three figure/provenance commits after the initial audit were reviewed on
   2026-09-12; see `release/CONTENT_AUDIT.md`. Recheck any subsequent additions.
   No history rewrite or replacement repository is required for the reviewed
