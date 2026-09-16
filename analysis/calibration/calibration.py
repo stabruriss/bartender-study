@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Invert published pair-conflict rates into independent overlap p.
+"""Position published conflict rates under an independence mapping.
 
-This is a transparent arithmetic check. It does not read simulation outputs,
-run a model, or fill missing workload summaries with guessed values.
+The output is an effective per-cross-unit collision probability, not the
+simulation's p and not an empirical calibration. It does not read simulation
+outputs, run a model, or fill missing workload summaries with guessed values.
 """
 import argparse, csv, math
 
@@ -18,13 +19,13 @@ def main():
     args = ap.parse_args()
     with open(args.input, newline='') as f:
         rows = list(csv.DictReader(f))
-    fields = ['source','metric','conflict_rate','numerator','denominator','unit','m1','m2','p','status']
+    fields = ['source','metric','conflict_rate','numerator','denominator','unit','m1','m2','p_eff','status']
     out = []
     for r in rows:
         m1 = float(r['m1']) if r['m1'] else None
         m2 = float(r['m2']) if r['m2'] else None
         p = invert(float(r['conflict_rate']), m1, m2) if m1 and m2 else None
-        out.append({**{k:r.get(k,'') for k in fields[:7]}, 'p': '' if p is None else f'{p:.12g}', 'status': 'pending workload summary' if p is None else 'computed'})
+        out.append({**{k:r.get(k,'') for k in fields[:7]}, 'p_eff': '' if p is None else f'{p:.12g}', 'status': 'pending workload summary' if p is None else 'computed'})
     with open(args.output, 'w', newline='') as f:
         w = csv.DictWriter(f, fieldnames=fields); w.writeheader(); w.writerows(out)
 

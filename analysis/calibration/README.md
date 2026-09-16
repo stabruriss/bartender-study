@@ -1,13 +1,14 @@
-# External workload calibration
+# External workload range positioning
 
-This directory maps published agentic pull-request conflict rates to the
-per-edit overlap probability used by the synthetic study. It is an external
-calibration, separate from the first-order curves already plotted in the main
-analysis.
+This directory positions published agentic pull-request conflict rates against
+an effective per-cross-unit collision probability. It is a scenario-based
+range-positioning exercise, separate from the first-order curves already
+plotted in the main analysis; it is not an empirical calibration of the
+synthetic parameter `p`.
 
-The current artifact is an input-and-assumptions package. The hunk/file
-summaries needed to instantiate `m1` and `m2` are recorded as pending until
-they are transcribed from the cited papers and checked by a second reader.
+The current artifact is an input-and-assumptions package. The cited papers and
+their replication packages do not provide the required final-diff hunk
+distribution for the exact replay samples, so `m1` and `m2` remain pending.
 No simulation is rerun by the calibration script.
 
 Run:
@@ -16,7 +17,8 @@ Run:
 python3 calibration.py --input published-rates.csv --output calibration-results.csv
 ```
 
-The script reports one p interval for each published rate and each supplied
-editor-unit sensitivity case. It never combines the 19.8% and 41.7% Xu et al.
-rates. AgenticFlict's PR-to-base rate is reported separately because its second
-side is a concurrent landed base rather than another PR.
+The script reports one effective `p_eff` value for each published rate and
+each explicitly supplied editor-unit scenario. It never combines the 19.8%
+and 41.7% Xu et al. rates. AgenticFlict's PR-to-base rate is reported
+separately because its second side is an observed or reconstructed base, not
+another PR.
