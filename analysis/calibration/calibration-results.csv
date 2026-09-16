@@ -1,0 +1,4 @@
+source,metric,conflict_rate,numerator,denominator,unit,m1,m2,p,status
+Xu et al. (2026),same-agent PR pair,0.198,119,601,PR pair,,,,pending workload summary
+Xu et al. (2026),cross-agent PR pair,0.417,48,115,PR pair,,,,pending workload summary
+AgenticFlict (2026),PR against base,0.277,,,PR-to-base,,,,pending workload summary
