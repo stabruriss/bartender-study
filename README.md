@@ -23,6 +23,10 @@ The raw simulation archive is now publicly downloadable in four parts. See
 values, and [the download check](release/RAW_DOWNLOAD_VERIFICATION.json) for
 independent verification of all part hashes and the complete archive hash.
 
+The v1 preprint is archived on Zenodo at
+[10.5281/zenodo.22802897](https://zenodo.org/records/22802897); the concept DOI
+is [10.5281/zenodo.22802896](https://zenodo.org/records/22802896).
+
 The completed execution procedure is [RUNBOOK.md](RUNBOOK.md).
 It specifies the pinned environment, file-only communication, cross-machine
 checks, approval gates, raw-data retention, and required delivery. The handoff

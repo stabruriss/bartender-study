@@ -21,3 +21,12 @@ keywords:
   - software integration
   - multi-agent systems
   - reproducible research
+preferred-citation:
+  type: article
+  title: "Bartender: Continuous Worktree Reconciliation with Author-Routed Conflict Handback for Resident Multi-Agent Development"
+  authors:
+    - family-names: "Wu"
+      given-names: "Nan"
+  doi: "10.5281/zenodo.22802897"
+  year: 2026
+  url: "https://zenodo.org/records/22802897"
