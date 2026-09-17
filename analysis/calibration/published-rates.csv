@@ -1,4 +1,4 @@
 source,metric,conflict_rate,numerator,denominator,unit,m1,m2,notes
-Xu et al. (2026),same-agent PR pair,0.198,119,601,PR pair,,,Separate intra-agent estimate; hunk counts pending transcription
-Xu et al. (2026),cross-agent PR pair,0.417,48,115,PR pair,,,Separate cross-agent estimate; hunk counts pending transcription
+Xu et al. (2026),same-type/model PR pair,0.198,119,601,PR pair,,,Separate same agent-type/model estimate; exact-sample current-head hunk products are in workload-summary.csv; review HOLD
+Xu et al. (2026),cross-type/model PR pair,0.417,48,115,PR pair,,,Separate cross agent-type/model estimate; exact-sample current-head hunk products are in workload-summary.csv; review HOLD
 AgenticFlict (2026),PR against base,0.2767,29609,107026,PR-to-base,,,PR head replayed against observed or reconstructed base; base-side landed edit count is unobserved; do not equate with PR-pair rates

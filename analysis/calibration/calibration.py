@@ -25,9 +25,9 @@ def main():
         m1 = float(r['m1']) if r['m1'] else None
         m2 = float(r['m2']) if r['m2'] else None
         p = invert(float(r['conflict_rate']), m1, m2) if m1 and m2 else None
-        out.append({**{k:r.get(k,'') for k in fields[:7]}, 'p_eff': '' if p is None else f'{p:.12g}', 'status': 'pending workload summary' if p is None else 'computed'})
+        out.append({**{k:r.get(k,'') for k in fields[:8]}, 'p_eff': '' if p is None else f'{p:.12g}', 'status': 'scenario inputs not supplied; see range-positioning.csv' if p is None else 'computed'})
     with open(args.output, 'w', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=fields); w.writeheader(); w.writerows(out)
+        w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n'); w.writeheader(); w.writerows(out)
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,70 @@
+{
+  "counts_sha256": "667db8c0c82776a6250a47ff9e58174e1a446eb3330992ff67dcebf81a9d95e8",
+  "current_retrieval_failures": {
+    "API_NOT_FOUND_A": 1
+  },
+  "expected_source_unavailable": {
+    "UNAVAIL_fetch": 25,
+    "UNAVAIL_nobase": 6
+  },
+  "extraction_complete": true,
+  "full_current_retrieval": false,
+  "head_oid_drifts": 0,
+  "pair_mapping": {
+    "count_rows": 747,
+    "count_unique_keys": 747,
+    "duplicate_count_keys": 0,
+    "duplicate_source_keys": 0,
+    "extra_keys": [],
+    "missing_keys": [],
+    "one_to_one": true,
+    "source_rows": 747,
+    "source_unique_keys": 747
+  },
+  "pair_mapping_pass": true,
+  "pass": false,
+  "quantile_method": "type 7 linear interpolation over positive products",
+  "review_status": "HOLD pending second-eye review",
+  "scan": {
+    "maximum": 0.06872332143144783,
+    "minimum": 0.003435063819150432
+  },
+  "source_checks_pass": true,
+  "source_headline_checks": {
+    "cross": {
+      "actual": {
+        "conflict": 48,
+        "evaluable": 115,
+        "rows": 122
+      },
+      "expected": {
+        "conflict": 48,
+        "evaluable": 115,
+        "rows": 122
+      },
+      "pass": true
+    },
+    "same": {
+      "actual": {
+        "conflict": 119,
+        "evaluable": 601,
+        "rows": 625
+      },
+      "expected": {
+        "conflict": 119,
+        "evaluable": 601,
+        "rows": 625
+      },
+      "pass": true
+    }
+  },
+  "source_pairs_sha256": "a6a3f3e88f6b8445a07d5b43bb8c6d4583cfffb33bd25f650a766a096baaef3c",
+  "source_unavailable_pass": true,
+  "status_counts": {
+    "API_NOT_FOUND_A": 1,
+    "OK": 715,
+    "UNAVAIL_fetch": 25,
+    "UNAVAIL_nobase": 6
+  },
+  "zero_products": "reported in workload-summary.csv and excluded from inversion because N must be positive"
+}

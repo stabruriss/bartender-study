@@ -1,0 +1,5 @@
+stratum,measure,retrievable_pairs,positive_pairs,zero_pairs,minimum_positive,q1_type7,median_type7,q3_type7,maximum
+same,hunk_product,600,525,75,1,12,102,1292,1146328200
+same,file_product,600,525,75,1,4,19,121,28561734
+cross,hunk_product,115,110,5,1,492.0,3407.0,19798.0,36670380
+cross,file_product,115,110,5,1,39.25,453.0,1751.5,1355084
