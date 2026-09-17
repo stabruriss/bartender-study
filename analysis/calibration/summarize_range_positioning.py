@@ -23,6 +23,9 @@ EXPECTED_SOURCE = {
     "cross": {"rows": 122, "evaluable": 115, "conflict": 48},
 }
 EXPECTED_SOURCE_UNAVAILABLE = {"UNAVAIL_fetch": 25, "UNAVAIL_nobase": 6}
+REVIEWED_SOURCE_SHA256 = "a6a3f3e88f6b8445a07d5b43bb8c6d4583cfffb33bd25f650a766a096baaef3c"
+REVIEWED_COUNTS_SHA256 = "667db8c0c82776a6250a47ff9e58174e1a446eb3330992ff67dcebf81a9d95e8"
+REVIEWED_CURRENT_FAILURES = {"API_NOT_FOUND_A": 1}
 EXPECTED_CELLS_SHA256 = "086034341ac0f852c2a6fcb69ec68e2113652b7c74c62a48ad7ff7f71f98ef48"
 EXPECTED_SUMMARY_SHA256 = "5209b6b2f833ff958bc9320af9d577cef3453eb94ff185822028da80be7e5505"
 SYNC_METRICS = (
@@ -556,22 +559,42 @@ def main() -> None:
     write_csv(args.sync_grid, grid)
     write_csv(args.reference_cells, reference_cells)
 
+    source_sha = sha256(args.source_pairs)
+    counts_sha = sha256(args.counts)
     cells_sha = sha256(args.cells)
     summary_sha = sha256(args.study_summary)
     accepted_study_inputs_pass = (
         cells_sha == EXPECTED_CELLS_SHA256
         and summary_sha == EXPECTED_SUMMARY_SHA256
     )
+    reviewed_inputs_pass = (
+        source_sha == REVIEWED_SOURCE_SHA256
+        and counts_sha == REVIEWED_COUNTS_SHA256
+        and accepted_study_inputs_pass
+        and source_checks_pass
+        and mapping_pass
+        and field_mapping_pass
+        and extraction_complete
+        and source_unavailable_pass
+        and current_retrieval_failures == REVIEWED_CURRENT_FAILURES
+        and head_oid_drifts == 0
+    )
 
     validation = {
-        "source_pairs_sha256": sha256(args.source_pairs),
-        "counts_sha256": sha256(args.counts),
+        "source_pairs_sha256": source_sha,
+        "counts_sha256": counts_sha,
         "cells_sha256": cells_sha,
         "study_summary_sha256": summary_sha,
         "accepted_study_inputs": {
             "expected_cells_sha256": EXPECTED_CELLS_SHA256,
             "expected_summary_sha256": EXPECTED_SUMMARY_SHA256,
             "pass": accepted_study_inputs_pass,
+        },
+        "reviewed_inputs": {
+            "expected_source_pairs_sha256": REVIEWED_SOURCE_SHA256,
+            "expected_counts_sha256": REVIEWED_COUNTS_SHA256,
+            "expected_current_retrieval_failures": REVIEWED_CURRENT_FAILURES,
+            "pass": reviewed_inputs_pass,
         },
         "source_headline_checks": checks,
         "pair_mapping": mapping,
@@ -591,8 +614,12 @@ def main() -> None:
         "dimensionless_mapping": "E=N*[1-(1-q)^(1/N)] under fixed-N independent Bernoulli overlap, compared with p*(lambda*tau)^2 through an event-definition and workload-scale analogy; the Poisson/rare-event limit is used only to interpret -ln(1-q), not to compute E or target tau",
         "sync_grid_cells": len(grid),
         "reference_cells": len(reference_cells),
-        "scientific_review_pass": True,
-        "review_status": "Scoped PASS for current-retrievable scenario positioning; full-current-retrieval remains false because one source-clean pair is now 404",
+        "scientific_review_pass": reviewed_inputs_pass,
+        "review_status": (
+            "Scoped PASS for current-retrievable scenario positioning; full-current-retrieval remains false because one source-clean pair is now 404"
+            if reviewed_inputs_pass
+            else "UNREVIEWED/HOLD: inputs or mechanical checks differ from the reviewed artifact set"
+        ),
         "pass": (
             source_checks_pass
             and mapping_pass

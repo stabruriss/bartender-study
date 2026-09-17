@@ -36,6 +36,14 @@
   "quantile_method": "type 7 linear interpolation over all currently retrievable OK-pair products, including zero",
   "reference_cells": 18,
   "review_status": "Scoped PASS for current-retrievable scenario positioning; full-current-retrieval remains false because one source-clean pair is now 404",
+  "reviewed_inputs": {
+    "expected_counts_sha256": "667db8c0c82776a6250a47ff9e58174e1a446eb3330992ff67dcebf81a9d95e8",
+    "expected_current_retrieval_failures": {
+      "API_NOT_FOUND_A": 1
+    },
+    "expected_source_pairs_sha256": "a6a3f3e88f6b8445a07d5b43bb8c6d4583cfffb33bd25f650a766a096baaef3c",
+    "pass": true
+  },
   "scan": {
     "maximum": 0.06872332143144783,
     "minimum": 0.003435063819150432

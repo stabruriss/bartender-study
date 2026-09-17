@@ -2,6 +2,8 @@
 
 Status: **Scoped PASS for current-retrievable scenario positioning**. Full
 current retrieval remains false because one source-clean pair now returns 404.
+This status is bound to the reviewed source, count, cell and summary hashes in
+`VALIDATION.json`; changed inputs automatically return to `UNREVIEWED/HOLD`.
 
 This is **scenario-based range positioning**, not empirical calibration. The
 output is an effective per-cross-unit collision probability (`p_eff`) under a
