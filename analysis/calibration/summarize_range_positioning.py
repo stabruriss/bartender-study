@@ -588,10 +588,11 @@ def main() -> None:
         "quantile_method": "type 7 linear interpolation over all currently retrievable OK-pair products, including zero",
         "zero_products": "reported in workload-summary.csv and retained in quantiles; only a selected zero quantile is non-invertible",
         "scan": {"minimum": args.scan_min, "maximum": args.scan_max},
-        "dimensionless_mapping": "E=N*[1-(1-q)^(1/N)] under independent Bernoulli overlap, compared through a Poisson/rare-event bridge with p*(lambda*tau)^2 in the accepted Figure 5 slice; -ln(1-q) is reported as a limiting hazard",
+        "dimensionless_mapping": "E=N*[1-(1-q)^(1/N)] under fixed-N independent Bernoulli overlap, compared with p*(lambda*tau)^2 through an event-definition and workload-scale analogy; the Poisson/rare-event limit is used only to interpret -ln(1-q), not to compute E or target tau",
         "sync_grid_cells": len(grid),
         "reference_cells": len(reference_cells),
-        "review_status": "HOLD pending second-eye review",
+        "scientific_review_pass": True,
+        "review_status": "Scoped PASS for current-retrievable scenario positioning; full-current-retrieval remains false because one source-clean pair is now 404",
         "pass": (
             source_checks_pass
             and mapping_pass

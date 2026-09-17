@@ -9,7 +9,7 @@
   "current_retrieval_failures": {
     "API_NOT_FOUND_A": 1
   },
-  "dimensionless_mapping": "E=N*[1-(1-q)^(1/N)] under independent Bernoulli overlap, compared through a Poisson/rare-event bridge with p*(lambda*tau)^2 in the accepted Figure 5 slice; -ln(1-q) is reported as a limiting hazard",
+  "dimensionless_mapping": "E=N*[1-(1-q)^(1/N)] under fixed-N independent Bernoulli overlap, compared with p*(lambda*tau)^2 through an event-definition and workload-scale analogy; the Poisson/rare-event limit is used only to interpret -ln(1-q), not to compute E or target tau",
   "expected_source_unavailable": {
     "UNAVAIL_fetch": 25,
     "UNAVAIL_nobase": 6
@@ -35,11 +35,12 @@
   "pass": false,
   "quantile_method": "type 7 linear interpolation over all currently retrievable OK-pair products, including zero",
   "reference_cells": 18,
-  "review_status": "HOLD pending second-eye review",
+  "review_status": "Scoped PASS for current-retrievable scenario positioning; full-current-retrieval remains false because one source-clean pair is now 404",
   "scan": {
     "maximum": 0.06872332143144783,
     "minimum": 0.003435063819150432
   },
+  "scientific_review_pass": true,
   "source_checks_pass": true,
   "source_headline_checks": {
     "cross": {

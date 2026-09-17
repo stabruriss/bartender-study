@@ -1,7 +1,7 @@
 # Feasibility check for exact-sample hunk derivation
 
-Date: 2026-09-16. Status: **bounded read-only extraction complete; result
-review pending**.
+Date: 2026-09-16. Status: **bounded read-only extraction and scoped scientific
+review complete**.
 
 The Zenodo replication package for Xu et al. (record
 `10.5281/zenodo.21186464`) was downloaded and its `rq3_merge_replay_full.csv`
@@ -36,5 +36,6 @@ read-only, retained only pair keys, conflict-scope flags, OIDs and hunk/file
 counts, and did not run the Bartender simulation. It produced 715 count rows,
 preserved 31 source-unavailable rows, and recorded one new current 404. The
 747-key mapping is complete, and no API/fetched-head OID drift was observed.
-Scientific use remains on hold until the row mapping, failures, distributions
-and inversion table receive second-eye review.
+The row mapping, failures, distributions and inversion table passed scoped
+second-eye review for current-retrievable scenario positioning. Full current
+retrieval remains false because one source-clean pair now returns 404.

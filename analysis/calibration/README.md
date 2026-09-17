@@ -52,7 +52,7 @@ The summary retains three pair-level textual-conflict readings instead of
 silently choosing one: structural-inclusive, any conflict containing a content
 component, and content-only. It propagates Wilson intervals and the observed
 Q1/median/Q3 distribution of `m1*m2`. File products are a sensitivity reading;
-hunk products are the main editor-unit reading.
+hunk products are the main edit-unit reading.
 
 The “any content component” scope is the closest of the three to the
 simulation's at-least-one line-range overlap, but is not identical to it.
@@ -64,8 +64,9 @@ are not pair-weighted estimates over all co-active pairs.
 The committed extraction result contains all 747 source keys: 715 pairs with
 derived counts, 31 source-unavailable rows, and one additional current 404.
 See `RESULTS.md` for the held interpretation and `VALIDATION.json` for the
-mechanical checks. The result remains under second-eye review and must not be
-described as calibration or validation.
+mechanical checks. The result has scoped second-eye approval for
+current-retrievable scenario positioning and must not be described as
+calibration or validation.
 
 `dimensionless-positioning.csv` reports the independent-Bernoulli expected
 overlap count `E = N*p_eff = N*[1-(1-q)^(1/N)]` at the observed hunk-product
@@ -75,9 +76,11 @@ the same formula and labeled transformed intervals. The file also reports
 and `E`; the two agree only in the small-`p_eff` limit.
 
 The first-order model counterpart is `p*(lambda*tau)^2` per agent pair in one
-synchronization interval. Comparing it with external `E` uses an explicit
-Poisson/rare-event bridge. Dividing the model quantity by `tau` and summing
-over agent pairs gives the Figure 5 rate
+synchronization interval. The numerical comparison uses the fixed-`N`
+independent-Bernoulli mapping plus an event-definition and workload-scale
+analogy. The Poisson/rare-event limit is used only to interpret `-ln(1-q)`, not
+to compute `E` or target `tau`. Dividing the model quantity by `tau` and
+summing over agent pairs gives the Figure 5 rate
 `C(n,2)*p*lambda^2*tau`.
 
 `sync-grid-positioning.csv` reads all 21 accepted Figure 5 coordinate cells
@@ -97,7 +100,7 @@ python3 calibration.py --input published-rates.csv --output calibration-results.
 ```
 
 The script reports one effective `p_eff` value for each published rate and
-each explicitly supplied editor-unit scenario. It never combines the 19.8%
+each explicitly supplied edit-unit scenario. It never combines the 19.8%
 and 41.7% Xu et al. rates. AgenticFlict's PR-to-base rate is reported
 separately because its second side is an observed or reconstructed base, not
 another PR.

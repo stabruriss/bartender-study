@@ -1,6 +1,7 @@
 # External range-positioning assumptions and hold points
 
-Status: **HOLD pending second-eye review**. Workload derivation is complete.
+Status: **Scoped PASS for current-retrievable scenario positioning**. Full
+current retrieval remains false because one source-clean pair now returns 404.
 
 This is **scenario-based range positioning**, not empirical calibration. The
 output is an effective per-cross-unit collision probability (`p_eff`) under a
@@ -13,7 +14,7 @@ The positioning uses the independent-edit approximation
 
 Here `p_eff` is the effective collision probability under this mapping and
 `m1`, `m2` are
-counts of editor units in the two sides. An editor unit would be a changed
+counts of edit units in the two sides. An edit unit would be a changed
 hunk, because a hunk is closer to the model's line-range edit than a whole
 file. Changed-file products provide a coarser alternative-unit sensitivity;
 they are not an unconditional upper bound on edit counts or `p_eff`.
@@ -58,7 +59,7 @@ rather than being guessed.
 
 ## Unit-free positioning
 
-The per-hunk inversion depends strongly on the editor unit: the observed PRs
+The per-hunk inversion depends strongly on the edit unit: the observed PRs
 contain many more hunk pairs than one synthetic edit per agent per interval.
 For each observed hunk-product Q1, median and Q3, we therefore report the
 independent-Bernoulli expected overlap count
@@ -69,12 +70,15 @@ The quantity `-ln(1-q) = -N*ln(1-p_eff)` is retained only as the
 Poisson-equivalent hazard. It converges to `E` when `p_eff` is small; the output
 reports their point difference rather than assuming equality. The first-order
 synthetic counterpart per agent pair and synchronization interval is
-`p*(lambda*tau)^2`. Comparing the two uses a Poisson/rare-event bridge. The
-Figure 5 rate divides the model quantity by `tau` and sums over the `C(n,2)`
-agent pairs.
+`p*(lambda*tau)^2`. The numerical comparison uses the fixed-`N`
+independent-Bernoulli mapping plus an event-definition and workload-scale
+analogy. The Poisson/rare-event limit is used only to interpret `-ln(1-q)`, not
+to compute `E` or target `tau`. The Figure 5 rate divides the model quantity by
+`tau` and sums over the `C(n,2)` agent pairs.
 
 This comparison removes the arbitrary hunk unit but not the independence,
-Poisson, textual-conflict, current-head or workload-selection assumptions. It
+event-definition analogy, textual-conflict, current-head or workload-selection
+assumptions. It
 also distinguishes the continuous parameter envelope from the 21 actually
 sampled `(p,tau)` points. A target `tau` inside the envelope is not an observed
 cell unless that exact `tau` occurs in `cells.json`; nearest and bracketing
@@ -92,11 +96,14 @@ authorize a rerun: a second reader must first approve the workload mapping and
 decide whether any additional cells are scientifically useful; the owner must
 then approve at most ten additional cells with 30 seeds each.
 
-The hold is released only after: (1) source locations and denominators are
-checked, (2) exact-row-key current-head final-diff hunk/file sensitivity values
-are reviewed, (3) an independent second-eye review passes, and (4) the coverage decision
-is recorded in this file. The legacy scenario calculator remains blank and
-points readers to `range-positioning.csv`.
+The scientific review gate is complete: source locations and denominators,
+exact-row-key current-head final-diff hunk/file sensitivities, interval
+transforms and accepted-grid lookups passed independent second-eye review. No
+additional simulation cell is added because the existing grid already
+separates continuous-envelope coverage, exact interval hits and bracketing;
+post-hoc target-`tau` sampling would not turn this analogy into calibration or
+validation. The legacy scenario calculator remains blank and points readers
+to `range-positioning.csv`.
 
 ## Execution gate
 
@@ -107,8 +114,8 @@ and diff parameters; retain counts and OID metadata rather than diff contents;
 keep the 31 source-unavailable rows separate; and obtain second-eye review
 before pushing the result branch. The implementation follows the source
 replay's depth-80 fetch with a depth-600 retry and fixes the diff algorithm and
-rename setting explicitly. The output is still **HOLD** until the completed
-validation record is reviewed.
+rename setting explicitly. The scientific review is complete; the mechanical
+full-retrieval field remains false solely because of the recorded current 404.
 
 ## Completed extraction record
 
@@ -129,9 +136,8 @@ selected quantile that itself equals zero would be non-invertible. This
 handling is stated in `VALIDATION.json`, `workload-summary.csv` and
 `RESULTS.md`.
 
-Unresolved gate: an independent second reviewer must review the 747-key
-mapping, the current-head scope, the three conflict definitions and denominators,
-full-distribution quantile handling,
-Wilson interval propagation, dimensionless transformation, accepted-grid
-lookup, and the conclusion about scan coverage. No additional simulation has
-been run or approved.
+Review resolution: an independent second reviewer accepted the 747-key and
+field mapping, current-head scope, three conflict definitions and denominators,
+full-distribution quantiles, Wilson interval propagation, dimensionless
+transformation, accepted-grid lookup and scan-coverage wording. No additional
+simulation was run or approved.

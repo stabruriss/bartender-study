@@ -1,6 +1,8 @@
 # External workload range-positioning result
 
-Status: **HOLD pending second-eye review**. Date: 2026-09-16/17 UTC.
+Status: **Scoped PASS for current-retrievable scenario positioning**. Full
+current retrieval remains false because one source-clean pair now returns 404.
+Date: 2026-09-16/17 UTC.
 
 This is a scenario-based range-positioning exercise. It is not an empirical
 calibration or validation of the simulation, and `p_eff` below is not the
@@ -45,8 +47,11 @@ co-active pairs, and the Wilson intervals apply only to this selected sample.
 For hunk products `N = m1*m2`, the all-pair Q1/median/Q3 values are
 4/59/880 across 600 retrievable same-type/model pairs and
 295/2,972/19,442 across 115 cross-type/model pairs. These quantiles include
-the 75 and 5 zero-product pairs, respectively, so their support remains aligned
-with the published-rate population. None of the selected quantiles is zero.
+the 75 and 5 zero-product pairs, respectively, so their support remains as
+closely aligned with the published-rate population as current retrieval
+permits. The same-type/model `q` denominator has 601 pairs while `N` has 600
+because of the new 404, and the retrieved heads are not frozen source-study
+OIDs. None of the selected quantiles is zero.
 File-product sensitivity values are 2/12/91 and 31.5/252/1,661; files are a
 coarser alternative unit, not an unconditional upper bound.
 
@@ -68,8 +73,10 @@ Under `q = 1 - (1 - p_eff)^N`, the main hunk-product readings are:
 All hunk-product Q3 readings are below the scan. In the file-product
 sensitivity, the same-type/model medians and cross-type/model Q1 readings are
 inside; same-type/model Q1 is above or partly above, and the remaining medians
-and Q3 readings are below. Thus, per hunk, the external agent-PR workload lies
-at the scan's low-`p` end or below it. This statement positions ranges only;
+and Q3 readings are below. Thus, median-and-larger hunk scenarios lie at the
+low end or below, while same-type/model Q1 scenarios lie inside the scanned
+continuous `p` envelope. The envelope is not a claim that every `p` value was
+sampled as a discrete cell. This statement positions ranges only;
 clustered edits, structural conflicts, current rather than frozen heads, and
 the unavailable rows prevent direct parameter identification.
 
@@ -97,8 +104,11 @@ event, median-`N` `E` is 0.195734 (0.161740–0.236055) for same type/model and
 median readings are 0.158107 and 0.375461. All Q1/median/Q3 scopes and
 transformed intervals remain in `dimensionless-positioning.csv`.
 
-Comparing external `E` with the model quantity `p*(lambda*tau)^2` requires a
-Poisson/rare-event bridge. At median `N`, the external point corresponds to
+The numerical comparison of external `E` with the model quantity
+`p*(lambda*tau)^2` uses the fixed-`N` independent-Bernoulli mapping plus an
+event-definition and workload-scale analogy. The Poisson/rare-event limit is
+used only to interpret `-ln(1-q)`, not to compute `E` or target `tau`. At median
+`N`, the external point corresponds to
 `tau` 8.01/3.76/1.79 for the three scanned `p` values in the same-type/model
 stratum, and 12.54/5.89/2.80 in the cross-type/model stratum. All target values
 are inside the study's continuous `tau` range, but the discrete grid contains
@@ -107,7 +117,7 @@ for the same-type/model structural reading (`p=0.003435`, `tau=8`) and no exact
 hit for the cross-type/model structural reading. The latter is bracketed by
 sampled cells; it must not be described as directly observed at the target.
 
-The relevant accepted Figure 5 cells give these three observed means across
+Selected relevant accepted Figure 5 cells give these three observed means across
 30 seeds; full intervals and all 21 cells are in `sync-grid-positioning.csv`:
 
 | Cell | p | tau | p*(lambda*tau)^2 | Overlap pairs/time | First conflicts/time | Lines at first conflict |
@@ -118,8 +128,9 @@ The relevant accepted Figure 5 cells give these three observed means across
 | `a7a47b831a79b459` | 0.015562 | 8 | 0.995988 | 0.6762 | 0.5760 | 8.672 |
 | `0573c77147ccd4ce` | 0.068723 | 2 | 0.274893 | 0.8173 | 0.6698 | 36.684 |
 
-Accordingly, the per-hunk view places external agent PRs at the scan's low
-end or below it. The expected-overlap view places the external points inside
+Accordingly, median-and-larger per-hunk scenarios lie at the scan's low end or
+below it, while same-type/model Q1 scenarios lie inside the continuous
+envelope. The expected-overlap view places the external points inside
 the continuous `(p,tau)` parameter envelope; the sampled grid exactly covers
 the same-type/model broad and any-content intervals. For cross type/model it
 brackets both the broad and the closest any-content intervals; only the strict
@@ -131,9 +142,10 @@ larger integration unit creates more cross-unit pair opportunities at the same
 per-hunk probability. This unit dependence does not change any Result 1
 number; it belongs in the threats-to-validity interpretation.
 
-## Gate
+## Review status
 
-No supplementary simulation cell has been run. Scientific use and any rerun
-decision remain on hold until the second reader accepts the row mapping,
-conflict scopes, full-distribution quantiles, transformed intervals,
-dimensionless bridge, accepted-grid lookup and stated current-head boundary.
+No supplementary simulation cell was run. Independent second-eye review
+accepted the row and field mapping, conflict scopes, full-distribution
+quantiles, transformed intervals, modeled-count analogy, accepted-grid lookup
+and stated current-head boundary. No target-`tau` cells are added: they would
+be post-hoc samples and would not remove the mapping and selection limits.
