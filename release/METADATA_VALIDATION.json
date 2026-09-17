@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "checked_at": "2026-09-17T07:26:07.860807+00:00",
+  "checked_at": "2026-09-17T22:55:18.661622+00:00",
   "author": "Nan Wu",
   "cff_version": "1.2.0",
   "schema_source": "https://github.com/citation-file-format/citation-file-format/blob/1.2.0/schema.json",
@@ -8,8 +8,8 @@
   "validator": "PyYAML 6.0.2 + jsonschema 4.23.0",
   "files": {
     "CITATION.cff": {
-      "bytes": 1281,
-      "sha256": "9235183de787a11721e04c1f8d9065389151e9a34e76f84bad49eafad1fe5977"
+      "bytes": 1312,
+      "sha256": "feaa39b53a11ca9409fc0583822d632e85aa7e1d795df5e77712d73879843668"
     },
     "LICENSE": {
       "bytes": 2757,
@@ -20,8 +20,8 @@
       "sha256": "57e5b581ea910784364594cf0cd9912a27cbfbff3ebeb67e9ff55124e295a4c1"
     }
   },
-  "zenodo_checks": "JSON syntax and software/version/author/ORCID/citation separation passed; server-side deposit processing has not occurred.",
-  "software_doi": "not yet issued",
+  "zenodo_checks": "Published Software record 1.0.0, creator, ORCID and license scopes verified; downloaded ZIP contents match all 297 release files. See SOFTWARE_ARCHIVE_VERIFICATION.json.",
+  "software_doi": "10.5281/zenodo.22820987",
   "article_version_doi": "10.5281/zenodo.22802897",
   "license_scopes": {
     "original_code_and_technical_documentation": "MIT",

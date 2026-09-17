@@ -38,9 +38,13 @@ The external workload analysis is in
 scenario range positioning, not calibration or validation. The additional
 current 404 and the source-unavailable rows remain explicit.
 
-The paper DOI above identifies the preprint, not a software archive. Software
-archival metadata is prepared in `.zenodo.json`; a software DOI will be added
-only after its deposit is published. The software ZIP contains the raw archive
+The software snapshot is archived separately at
+[10.5281/zenodo.22820987](https://zenodo.org/records/22820987), version 1.0.0
+(concept DOI [10.5281/zenodo.22820986](https://zenodo.org/records/22820986)).
+The paper DOI above identifies the preprint. The software archive was downloaded
+and all 297 file contents matched the release commit;
+[the verification record](release/SOFTWARE_ARCHIVE_VERIFICATION.json) records
+the version, metadata, download identity and comparison scope. The software ZIP contains the raw archive
 index and checksums, not the 4.2 GB raw archive bytes. Their separately hosted
 URLs and verified hashes remain in `release/RAW_ARCHIVES.json`.
 

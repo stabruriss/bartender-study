@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-17T22:53:36.525037+00:00",
+  "record_url": "https://zenodo.org/records/22820987",
+  "version_doi": "10.5281/zenodo.22820987",
+  "concept_doi": "10.5281/zenodo.22820986",
+  "resource_type": "software",
+  "creator": {
+    "name": "Wu, Nan",
+    "affiliation": "Independent Researcher",
+    "orcid": "0009-0001-4129-9569"
+  },
+  "version": "1.0.0",
+  "license_id": "mit-license",
+  "license_scopes": "Original code and technical documentation MIT; data and generated figures CC BY 4.0; third-party and manuscript scopes preserved in LICENSE.",
+  "zenodo_publication_date": "2026-09-18",
+  "github_release_published_at": "2026-09-17T22:51:38Z",
+  "github_release_url": "https://github.com/stabruriss/bartender-study/releases/tag/v1.0.0",
+  "release_commit": "a20e306db59529d1a20355c06cbf5139b28d877c",
+  "downloaded_file": {
+    "key": "stabruriss/bartender-study-v1.0.0.zip",
+    "bytes": 11628098,
+    "md5": "f67b0f04e346b389fbf2a5c299d2a823",
+    "sha256": "7ea137cb17db42459ff78c0d3759293f04c16e0a6848d350af41914f01af5d91",
+    "download_url": "https://zenodo.org/api/records/22820987/files/stabruriss/bartender-study-v1.0.0.zip/content"
+  },
+  "archive_validation": {
+    "zip_crc_pass": true,
+    "tracked_file_count": 297,
+    "exact_relative_file_set_match": true,
+    "all_file_sha256_match": true,
+    "comparison": "Original v1.0.0 software-archive-manifest.json for the release commit; root-directory prefix ignored.",
+    "raw_archive_bytes_included": false
+  },
+  "note": "The Zenodo GitHub-integration ZIP differs bytewise from the separately prepared git-archive ZIP; all 297 file contents match. GitHub release and Zenodo publication date are recorded separately as reported."
+}

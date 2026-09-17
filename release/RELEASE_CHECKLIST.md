@@ -22,7 +22,7 @@ does not authorize a new study run or data changes.
 | Public source audit | `release/SOURCE_AUDIT.md` | Present; integration, automatic trigger and explicit routes anchored to v0.1.10, with tree comparison to the original audit commit. |
 | Historical v1 manuscript source, bibliography and appendix | `release/arxiv/` | Complete text, seven figures, seven tables and fourteen references; twelve-file source package with compiled `.bbl`, confirmed author metadata and three declarations. TeX Live 2025 snapshot check is recorded alongside the package. |
 | External workload positioning | `analysis/calibration/` | Scoped second-eye PASS: 747 source keys, 715 retrievable count pairs, 31 source-unavailable and one current 404. No new simulation; not empirical calibration. |
-| Software archival metadata | `.zenodo.json`, `release/V1.0.0.md` | Versioned software metadata, license scopes and relation to the preprint; software DOI is separate and added only after publication. |
+| Software archival metadata | `.zenodo.json`, `release/V1.0.0.md` | Software v1.0.0 archived as DOI 10.5281/zenodo.22820987; download and 297-file identity PASS in `SOFTWARE_ARCHIVE_VERIFICATION.json`. |
 | Citation metadata and reuse license | `CITATION.cff`, `LICENSE` | Nan Wu; code MIT; data and figures CC BY 4.0. Third-party template and whitepaper notices preserved. CFF 1.2.0 validation passed. |
 
 ## Immutable data bindings
@@ -53,11 +53,11 @@ recorded in this repository, without changing the archived snapshot.
 
 ## Remaining release tasks
 
-- The preprint version DOI is recorded in `CITATION.cff` as the preferred
-  article citation. Publish the software deposit after enabling repository
-  archiving, or upload the exact version ZIP manually. Record the resulting
-  software DOI at the root of `CITATION.cff`; preserve the article DOI under
-  `preferred-citation`. Neither identifier substitutes for the other.
+- Software v1.0.0 is published at `10.5281/zenodo.22820987`. The software DOI
+  is at the root of `CITATION.cff`; the preprint DOI remains under
+  `preferred-citation`. The release tag remains pinned to `a20e306`; subsequent
+  citation and verification records document that frozen archive without
+  changing it. Neither DOI substitutes for the other.
 - Preserve the deployment methods' limits. The frozen deployment source is
   labeled `source-snapshot-01`; its exact relation to a public commit and
   upstream retention of the extraction program remain to be documented.

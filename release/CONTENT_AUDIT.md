@@ -83,3 +83,13 @@ inventory hashes only. The fixed simulation code, approved parameters, accepted
 scientific CSVs, result figures and raw archive index are unchanged. The source
 ZIP includes tracked files only; raw archive bytes remain separately hosted.
 The earlier arXiv source package is retained as a historical manuscript version.
+
+### Software DOI completion — 17 September 2026 UTC
+
+The post-release increment adds the published software DOI to citation and
+reader entry points, plus a verification receipt containing public record
+metadata, download hashes and the 297-file comparison. No credentials, local
+paths or private coordination data are part of these additions. The release
+tag remains at `a20e306`; neither the archived file contents nor the accepted
+scientific data have been changed. The existing inventory was refreshed for
+these documentation and metadata changes.

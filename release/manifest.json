@@ -6,8 +6,8 @@
       "sha256": "57e5b581ea910784364594cf0cd9912a27cbfbff3ebeb67e9ff55124e295a4c1"
     },
     "CITATION.cff": {
-      "bytes": 1281,
-      "sha256": "9235183de787a11721e04c1f8d9065389151e9a34e76f84bad49eafad1fe5977"
+      "bytes": 1312,
+      "sha256": "feaa39b53a11ca9409fc0583822d632e85aa7e1d795df5e77712d73879843668"
     },
     "LICENSE": {
       "bytes": 2757,
@@ -18,12 +18,12 @@
       "sha256": "f7aace075f6f88a6f49ff97bc58af4f6afac028270ee6762293a3e90c385e3da"
     },
     "release/CONTENT_AUDIT.md": {
-      "bytes": 5190,
-      "sha256": "68f8a4ba854ab6610d0aaca1e2fa6d1038d07453d2e9eee1ef85e159b4ea0ebe"
+      "bytes": 5744,
+      "sha256": "73666f4447715ab2b48d6f89cd6a639840f1e3455867ac377f43d32df3ff6ea3"
     },
     "release/METADATA_VALIDATION.json": {
-      "bytes": 1278,
-      "sha256": "7c8086abc00496b65fac2b8d7a8561afb14f8b853e6735e633b13d39439fb9de"
+      "bytes": 1334,
+      "sha256": "3d32d0e53e65568966b808c3b0fa91478bde148bc8284df1faa8cce8b3e68972"
     },
     "release/RAW_ARCHIVES.json": {
       "bytes": 2731,
@@ -34,16 +34,20 @@
       "sha256": "719d67f1cdcd481eae0dd6ed362d3328a2d9c977ce1665846e648909547229ca"
     },
     "release/RELEASE_CHECKLIST.md": {
-      "bytes": 7622,
-      "sha256": "14e9905a3d5f960696ec5ae23c440068a96bd62528c81c088589026ed8df5001"
+      "bytes": 7603,
+      "sha256": "5ac39973261c45fb7e5f17dd0d18054b2ebf296983aa728c0b888bad6dcb5d6a"
+    },
+    "release/SOFTWARE_ARCHIVE_VERIFICATION.json": {
+      "bytes": 1740,
+      "sha256": "125170a807592675eccda47156b6cded6e9ec914f811de2f9d0ffc051eaef5b3"
     },
     "release/SOURCE_AUDIT.md": {
       "bytes": 11878,
       "sha256": "c7fb540902218626bbfb59126e3177231a239ebc591fc272df91c9d323a598f9"
     },
     "release/V1.0.0.md": {
-      "bytes": 2095,
-      "sha256": "4ef86963e7b63af2b289ecc724861d2447bea5446eb6b403fc986d8be2547b8d"
+      "bytes": 2363,
+      "sha256": "b779048fd7bebfcafe2800b4f8a519e789a1e63a7626a832b64f2bcaa9a2244c"
     },
     "release/arxiv/FIGURE_MANIFEST.json": {
       "bytes": 1781,
