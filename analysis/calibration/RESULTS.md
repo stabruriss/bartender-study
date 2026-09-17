@@ -29,16 +29,26 @@ not an exact replay of the source study. The count-table SHA-256 is
 The original denominators remain 601 evaluable same-type/model pairs and 115
 evaluable cross-type/model pairs. Structural-inclusive conflict is 119/601
 (19.80%, Wilson 95% interval 16.81%–23.17%) and 48/115 (41.74%,
-33.14%–50.88%), respectively. The content-only readings are 88/601 (14.64%,
-12.04%–17.69%) and 36/115 (31.30%, 23.55%–40.27%). The intermediate
-“any content component” readings remain in `range-positioning.csv`.
+33.14%–50.88%), respectively. Conflict with any content component is 107/601
+(17.80%, 14.95%–21.06%) and 47/115 (40.87%, 32.32%–50.01%); this is the
+closest available scope to at-least-one line-range overlap, but remains a Git
+textual-conflict outcome. Content-only is the stricter event-definition lower
+sensitivity at 88/601 (14.64%, 12.04%–17.69%) and 36/115 (31.30%,
+23.55%–40.27%); it excludes mixed structural/content events.
 
-For hunk products `N = m1*m2`, the positive-pair Q1/median/Q3 values are
-12/102/1,292 for 525 of 600 retrievable same-type/model pairs, and
-492/3,407/19,798 for 110 of 115 cross-type/model pairs. The remaining 75 and
-5 pairs have zero hunk product and are reported but excluded from inversion,
-because the mapping requires positive `N`. File-product sensitivity values are
-4/19/121 and 39.25/453/1,751.5.
+These are selected-repository-pair rates. The same-type/model stratum begins
+with 625 seeded repositories and the cross-type/model stratum uses all 122
+eligible repositories, selecting the first qualifying co-active pair per
+repository in each stratum. They are not pair-weighted rates over all 580,913
+co-active pairs, and the Wilson intervals apply only to this selected sample.
+
+For hunk products `N = m1*m2`, the all-pair Q1/median/Q3 values are
+4/59/880 across 600 retrievable same-type/model pairs and
+295/2,972/19,442 across 115 cross-type/model pairs. These quantiles include
+the 75 and 5 zero-product pairs, respectively, so their support remains aligned
+with the published-rate population. None of the selected quantiles is zero.
+File-product sensitivity values are 2/12/91 and 31.5/252/1,661; files are a
+coarser alternative unit, not an unconditional upper bound.
 
 ## Range position
 
@@ -46,27 +56,84 @@ Under `q = 1 - (1 - p_eff)^N`, the main hunk-product readings are:
 
 | Stratum and outcome | N scenario | p_eff (Wilson-mapped interval) | Position vs scan 0.003435–0.06872 |
 |---|---:|---:|---|
-| same type/model, structural-inclusive | Q1 12 | 0.01822 (0.01522–0.02173) | inside |
-| same type/model, structural-inclusive | median 102 | 0.002161 (0.001803–0.002581) | below |
-| same type/model, content-only | Q1 12 | 0.01311 (0.01063–0.01610) | inside |
-| same type/model, content-only | median 102 | 0.001551 (0.001257–0.001907) | below |
-| cross type/model, structural-inclusive | Q1 492 | 0.001097 (0.000818–0.001444) | below |
-| cross type/model, structural-inclusive | median 3,407 | 0.0001586 (0.0001181–0.0002086) | below |
-| cross type/model, content-only | Q1 492 | 0.0007629 (0.0005456–0.001047) | below |
-| cross type/model, content-only | median 3,407 | 0.0001102 (0.00007881–0.0001512) | below |
+| same type/model, structural-inclusive | Q1 4 | 0.05367 (0.04497–0.06378) | inside |
+| same type/model, structural-inclusive | median 59 | 0.003733 (0.003115–0.004458) | partly overlaps |
+| same type/model, content-only | Q1 4 | 0.03881 (0.03156–0.04751) | inside |
+| same type/model, content-only | median 59 | 0.002680 (0.002172–0.003295) | below |
+| cross type/model, structural-inclusive | Q1 295 | 0.001830 (0.001364–0.002407) | below |
+| cross type/model, structural-inclusive | median 2,972 | 0.0001818 (0.0001354–0.0002391) | below |
+| cross type/model, content-only | Q1 295 | 0.001272 (0.0009098–0.001745) | below |
+| cross type/model, content-only | median 2,972 | 0.0001263 (0.00009035–0.0001734) | below |
 
 All hunk-product Q3 readings are below the scan. In the file-product
-sensitivity, all Q1 readings and the same-type/model medians are inside the
-scan; the cross-type/model medians and all Q3 readings are below it. Thus the
-scan covers some small-changeset scenarios, while the independence mapping for
-median and larger hunk products yields lower effective per-pair probabilities.
-This statement positions ranges only; clustered edits, structural conflicts,
-current rather than frozen heads, and the unavailable rows prevent a direct
-parameter identification.
+sensitivity, the same-type/model medians and cross-type/model Q1 readings are
+inside; same-type/model Q1 is above or partly above, and the remaining medians
+and Q3 readings are below. Thus, per hunk, the external agent-PR workload lies
+at the scan's low-`p` end or below it. This statement positions ranges only;
+clustered edits, structural conflicts, current rather than frozen heads, and
+the unavailable rows prevent direct parameter identification.
+
+## Expected overlap pairs per concurrent work-unit pair
+
+To reduce dependence on the hunk unit, the second output uses the independent
+Bernoulli expectation
+`E = N*p_eff = N*[1-(1-q)^(1/N)]`. Wilson intervals for `q` are transformed
+through the same monotone formula. The Poisson-equivalent hazard
+`-ln(1-q)` is shown only as a small-`p_eff` limit. This compact table uses the
+broad structural-inclusive scope:
+
+| Stratum | N scenario | E (transformed 95% interval) | −ln(1−q) | E minus hazard |
+|---|---:|---:|---:|---:|
+| same type/model | Q1 4 | 0.214675 (0.179880–0.255124) | 0.220651 | −0.005975 |
+| same type/model | median 59 | 0.220239 (0.183763–0.263035) | 0.220651 | −0.000412 |
+| same type/model | Q3 880 | 0.220623 (0.184031–0.263584) | 0.220651 | −0.000028 |
+| cross type/model | Q1 295 | 0.539745 (0.402238–0.709969) | 0.540240 | −0.000494 |
+| cross type/model | median 2,972 | 0.540190 (0.402485–0.710740) | 0.540240 | −0.000049 |
+| cross type/model | Q3 19,442 | 0.540232 (0.402508–0.710812) | 0.540240 | −0.000008 |
+
+For the “any content component” scope, which is closer to the simulation
+event, median-`N` `E` is 0.195734 (0.161740–0.236055) for same type/model and
+0.525378 (0.390375–0.693225) for cross type/model. The stricter content-only
+median readings are 0.158107 and 0.375461. All Q1/median/Q3 scopes and
+transformed intervals remain in `dimensionless-positioning.csv`.
+
+Comparing external `E` with the model quantity `p*(lambda*tau)^2` requires a
+Poisson/rare-event bridge. At median `N`, the external point corresponds to
+`tau` 8.01/3.76/1.79 for the three scanned `p` values in the same-type/model
+stratum, and 12.54/5.89/2.80 in the cross-type/model stratum. All target values
+are inside the study's continuous `tau` range, but the discrete grid contains
+only 0.125, 0.25, 0.5, 1, 2, 8 and 32. It therefore has one exact interval hit
+for the same-type/model structural reading (`p=0.003435`, `tau=8`) and no exact
+hit for the cross-type/model structural reading. The latter is bracketed by
+sampled cells; it must not be described as directly observed at the target.
+
+The relevant accepted Figure 5 cells give these three observed means across
+30 seeds; full intervals and all 21 cells are in `sync-grid-positioning.csv`:
+
+| Cell | p | tau | p*(lambda*tau)^2 | Overlap pairs/time | First conflicts/time | Lines at first conflict |
+|---|---:|---:|---:|---:|---:|---:|
+| `cc3faf54a13c1e38` | 0.003435 | 8 | 0.219844 | 0.1500 | 0.1438 | 2.300 |
+| `e2d2846d32941999` | 0.003435 | 32 | 3.517505 | 0.6014 | 0.4870 | 2.402 |
+| `8e389ad71c19e48e` | 0.015562 | 2 | 0.062249 | 0.1833 | 0.1768 | 8.296 |
+| `a7a47b831a79b459` | 0.015562 | 8 | 0.995988 | 0.6762 | 0.5760 | 8.672 |
+| `0573c77147ccd4ce` | 0.068723 | 2 | 0.274893 | 0.8173 | 0.6698 | 36.684 |
+
+Accordingly, the per-hunk view places external agent PRs at the scan's low
+end or below it. The expected-overlap view places the external points inside
+the continuous `(p,tau)` parameter envelope; the sampled grid exactly covers
+the same-type/model broad and any-content intervals. For cross type/model it
+brackets both the broad and the closest any-content intervals; only the strict
+content-only sensitivity has an exact sampled-grid hit. Neither view is a
+calibration or validation.
+
+Result 1 fixes `tau=1` and has one expected edit per agent per interval. A
+larger integration unit creates more cross-unit pair opportunities at the same
+per-hunk probability. This unit dependence does not change any Result 1
+number; it belongs in the threats-to-validity interpretation.
 
 ## Gate
 
 No supplementary simulation cell has been run. Scientific use and any rerun
 decision remain on hold until the second reader accepts the row mapping,
-conflict scopes, positive-product quantiles, Wilson propagation and stated
-current-head boundary.
+conflict scopes, full-distribution quantiles, transformed intervals,
+dimensionless bridge, accepted-grid lookup and stated current-head boundary.

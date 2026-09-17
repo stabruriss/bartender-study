@@ -22,8 +22,9 @@ The completed extraction did the following for every one of the 747 rows:
 
 1. record the row key (`repo`, `prA`, `prB`, `stratum`, `label`);
 2. query and record the current head OIDs and base OIDs for both PRs;
-3. fetch the two PR heads and compute their merge base with a pinned Git/diff
-   version and documented rename, binary and whitespace rules;
+3. fetch the two PR heads and compute their merge base while recording the Git
+   version and specifying the diff algorithm, rename, binary and whitespace
+   rules;
 4. count final-diff hunks for both clean and conflict rows, while retaining
    unavailable rows separately;
 5. record whether the OIDs are historical or only currently retrievable.

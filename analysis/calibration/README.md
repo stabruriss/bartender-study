@@ -40,6 +40,11 @@ python3 summarize_range_positioning.py \
   --counts pr-pair-diff-counts.csv \
   --workload-summary workload-summary.csv \
   --positioning range-positioning.csv \
+  --cells ../../deliverables/study-01/cells.json \
+  --study-summary ../../deliverables/study-01/summary.csv \
+  --dimensionless dimensionless-positioning.csv \
+  --sync-grid sync-grid-positioning.csv \
+  --reference-cells dimensionless-reference-cells.csv \
   --validation VALIDATION.json
 ```
 
@@ -49,11 +54,41 @@ component, and content-only. It propagates Wilson intervals and the observed
 Q1/median/Q3 distribution of `m1*m2`. File products are a sensitivity reading;
 hunk products are the main editor-unit reading.
 
+The “any content component” scope is the closest of the three to the
+simulation's at-least-one line-range overlap, but is not identical to it.
+Structural-inclusive is broader; content-only excludes mixed events and is a
+strict event-definition lower sensitivity. The source rates select one first
+qualifying pair per repository within each stratum, so their Wilson intervals
+are not pair-weighted estimates over all co-active pairs.
+
 The committed extraction result contains all 747 source keys: 715 pairs with
 derived counts, 31 source-unavailable rows, and one additional current 404.
 See `RESULTS.md` for the held interpretation and `VALIDATION.json` for the
 mechanical checks. The result remains under second-eye review and must not be
 described as calibration or validation.
+
+`dimensionless-positioning.csv` reports the independent-Bernoulli expected
+overlap count `E = N*p_eff = N*[1-(1-q)^(1/N)]` at the observed hunk-product
+Q1, median and Q3. Wilson intervals for `q` are mapped monotonically through
+the same formula and labeled transformed intervals. The file also reports
+`-ln(1-q)` as a Poisson-equivalent hazard and the small difference between it
+and `E`; the two agree only in the small-`p_eff` limit.
+
+The first-order model counterpart is `p*(lambda*tau)^2` per agent pair in one
+synchronization interval. Comparing it with external `E` uses an explicit
+Poisson/rare-event bridge. Dividing the model quantity by `tau` and summing
+over agent pairs gives the Figure 5 rate
+`C(n,2)*p*lambda^2*tau`.
+
+`sync-grid-positioning.csv` reads all 21 accepted Figure 5 coordinate cells
+for four agents, zero dependency and relocation, and the `clean_first`
+selection convention. For each cell it records `p*(lambda*tau)^2` and the
+accepted means and intervals for overlap-pair rate, first-conflict rate and
+first-conflict overlap lines. `dimensionless-reference-cells.csv` identifies
+the nearest sampled `tau` for every median-`N` conflict scope, stratum and
+scanned `p` value. These are read-only lookups from the
+accepted `cells.json` and `summary.csv`; no interpolation is reported as an
+observation and no simulation is rerun.
 
 The earlier scenario-only calculator remains available:
 

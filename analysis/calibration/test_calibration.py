@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import importlib.util
+import math
 from pathlib import Path
 import subprocess
 import tempfile
@@ -73,6 +74,15 @@ class PositioningTests(unittest.TestCase):
         self.assertAlmostEqual(1 - (1 - p_eff) ** n, q)
         self.assertAlmostEqual(calibration.invert(q, 4, 4), p_eff)
 
+    def test_dimensionless_intensity_round_trip(self):
+        q = 119 / 601
+        theta = summarize.overlap_intensity(q)
+        self.assertAlmostEqual(1 - math.exp(-theta), q)
+        self.assertEqual(summarize.point_position(theta, theta - 0.01, theta + 0.01), "inside interval")
+        expected = summarize.bernoulli_expected_overlaps(q, 102)
+        self.assertAlmostEqual(expected, 102 * summarize.invert(q, 102))
+        self.assertLess(abs(expected - theta), 0.001)
+
     def test_wilson_and_type7_quantiles(self):
         low, high = summarize.wilson(119, 601)
         self.assertTrue(0.168 < low < 0.169)
@@ -119,6 +129,34 @@ class PositioningTests(unittest.TestCase):
         self.assertEqual(rates[0], ("structural-inclusive textual conflict", 1, 2))
         self.assertEqual(rates[1], ("conflict with any content component", 1, 2))
         self.assertEqual(rates[2], ("content-only conflict", 1, 2))
+
+    def test_mapping_checks_labels_and_derived_content_flags(self):
+        source = [
+            {
+                "stratum": "same",
+                "repo": "owner/repo",
+                "prA": "1",
+                "prB": "2",
+                "label": "CONFLICT",
+                "types": "content|modify/delete",
+            }
+        ]
+        counts = [
+            {
+                "stratum": "same",
+                "repo": "owner/repo",
+                "prA": "1",
+                "prB": "2",
+                "label": "CONFLICT",
+                "conflict_has_content": "true",
+                "conflict_is_content_only": "false",
+            }
+        ]
+        self.assertTrue(summarize.validate_mapping(source, counts)["fields_match"])
+        counts[0]["conflict_is_content_only"] = "true"
+        result = summarize.validate_mapping(source, counts)
+        self.assertFalse(result["fields_match"])
+        self.assertEqual(result["field_mismatches"][0]["field"], "conflict_is_content_only")
 
 
 if __name__ == "__main__":

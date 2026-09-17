@@ -1,13 +1,21 @@
 {
+  "accepted_study_inputs": {
+    "expected_cells_sha256": "086034341ac0f852c2a6fcb69ec68e2113652b7c74c62a48ad7ff7f71f98ef48",
+    "expected_summary_sha256": "5209b6b2f833ff958bc9320af9d577cef3453eb94ff185822028da80be7e5505",
+    "pass": true
+  },
+  "cells_sha256": "086034341ac0f852c2a6fcb69ec68e2113652b7c74c62a48ad7ff7f71f98ef48",
   "counts_sha256": "667db8c0c82776a6250a47ff9e58174e1a446eb3330992ff67dcebf81a9d95e8",
   "current_retrieval_failures": {
     "API_NOT_FOUND_A": 1
   },
+  "dimensionless_mapping": "E=N*[1-(1-q)^(1/N)] under independent Bernoulli overlap, compared through a Poisson/rare-event bridge with p*(lambda*tau)^2 in the accepted Figure 5 slice; -ln(1-q) is reported as a limiting hazard",
   "expected_source_unavailable": {
     "UNAVAIL_fetch": 25,
     "UNAVAIL_nobase": 6
   },
   "extraction_complete": true,
+  "field_mapping_pass": true,
   "full_current_retrieval": false,
   "head_oid_drifts": 0,
   "pair_mapping": {
@@ -16,6 +24,8 @@
     "duplicate_count_keys": 0,
     "duplicate_source_keys": 0,
     "extra_keys": [],
+    "field_mismatches": [],
+    "fields_match": true,
     "missing_keys": [],
     "one_to_one": true,
     "source_rows": 747,
@@ -23,7 +33,8 @@
   },
   "pair_mapping_pass": true,
   "pass": false,
-  "quantile_method": "type 7 linear interpolation over positive products",
+  "quantile_method": "type 7 linear interpolation over all currently retrievable OK-pair products, including zero",
+  "reference_cells": 18,
   "review_status": "HOLD pending second-eye review",
   "scan": {
     "maximum": 0.06872332143144783,
@@ -66,5 +77,7 @@
     "UNAVAIL_fetch": 25,
     "UNAVAIL_nobase": 6
   },
-  "zero_products": "reported in workload-summary.csv and excluded from inversion because N must be positive"
+  "study_summary_sha256": "5209b6b2f833ff958bc9320af9d577cef3453eb94ff185822028da80be7e5505",
+  "sync_grid_cells": 21,
+  "zero_products": "reported in workload-summary.csv and retained in quantiles; only a selected zero quantile is non-invertible"
 }
