@@ -1,0 +1,29 @@
+{
+  "title": "Bartender reproduction package: continuous worktree integration and author repair",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "access_right": "open",
+  "license": "mit",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Wu, Nan",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0001-4129-9569"
+    }
+  ],
+  "description": "Reproduction code, fixed configurations, seeds, accepted aggregates, plotting and verification tools, bounded application observations, deployment data, and external workload scenario range positioning. Original code and technical documentation are MIT licensed. Study data and generated figures are CC BY 4.0; preserved third-party notices and manuscript prose are governed separately as stated in LICENSE. This software snapshot includes the four-part raw archive index, URLs, and hashes, but not the externally hosted 4.2 GB raw archive bytes. It is distinct from the article preprint DOI.",
+  "keywords": [
+    "software integration",
+    "multi-agent systems",
+    "discrete-event simulation",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22802897",
+      "scheme": "doi",
+      "relation": "isSupplementTo"
+    }
+  ]
+}

@@ -14,9 +14,9 @@ the delivered summaries and application evidence in
 [the acceptance record](validation/delivery-acceptance-m1.json).
 The four manuscript result figures, complete tables and numerical summary are in
 [analysis/](analysis/README.md). Code, configurations, seeds and the accepted
-scan record are public. The manuscript source package is in
-[release/arxiv/](release/arxiv/); arXiv submission status is separate from
-repository availability.
+scan record are public. The historical v1 manuscript source package is in
+[release/arxiv/](release/arxiv/); it predates the later external workload
+range-positioning analysis and is not the current journal submission.
 
 The raw simulation archive is now publicly downloadable in four parts. See
 [the archive index](release/RAW_ARCHIVES.json) for current URLs and SHA-256
@@ -26,6 +26,23 @@ independent verification of all part hashes and the complete archive hash.
 The v1 preprint is archived on Zenodo at
 [10.5281/zenodo.22802897](https://zenodo.org/records/22802897); the concept DOI
 is [10.5281/zenodo.22802896](https://zenodo.org/records/22802896).
+
+## Versioned reproduction snapshot
+
+The `v1.0.0` reproduction snapshot includes the model, approved configurations,
+seeds, accepted summaries, analysis and plotting programs, application evidence,
+deployment dataset, and release checks. Its inventory is in
+[release/RELEASE_CHECKLIST.md](release/RELEASE_CHECKLIST.md).
+The external workload analysis is in
+[analysis/calibration/](analysis/calibration/README.md): current-retrievable
+scenario range positioning, not calibration or validation. The additional
+current 404 and the source-unavailable rows remain explicit.
+
+The paper DOI above identifies the preprint, not a software archive. Software
+archival metadata is prepared in `.zenodo.json`; a software DOI will be added
+only after its deposit is published. The software ZIP contains the raw archive
+index and checksums, not the 4.2 GB raw archive bytes. Their separately hosted
+URLs and verified hashes remain in `release/RAW_ARCHIVES.json`.
 
 The completed execution procedure is [RUNBOOK.md](RUNBOOK.md).
 It specifies the pinned environment, file-only communication, cross-machine

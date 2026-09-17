@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "checked_at": "2026-09-15T05:11:58.176607+00:00",
+  "checked_at": "2026-09-17T07:26:07.860807+00:00",
   "author": "Nan Wu",
   "cff_version": "1.2.0",
   "schema_source": "https://github.com/citation-file-format/citation-file-format/blob/1.2.0/schema.json",
@@ -8,14 +8,21 @@
   "validator": "PyYAML 6.0.2 + jsonschema 4.23.0",
   "files": {
     "CITATION.cff": {
-      "bytes": 962,
-      "sha256": "86def055ab71c13872e2c7412633fa0408131934884e260bfb4a4b718018ef38"
+      "bytes": 1281,
+      "sha256": "9235183de787a11721e04c1f8d9065389151e9a34e76f84bad49eafad1fe5977"
     },
     "LICENSE": {
       "bytes": 2757,
       "sha256": "5dd39356810d187253907a5e79789400b45e141641d75a9b8e8316be86ef29b9"
+    },
+    ".zenodo.json": {
+      "bytes": 1258,
+      "sha256": "57e5b581ea910784364594cf0cd9912a27cbfbff3ebeb67e9ff55124e295a4c1"
     }
   },
+  "zenodo_checks": "JSON syntax and software/version/author/ORCID/citation separation passed; server-side deposit processing has not occurred.",
+  "software_doi": "not yet issued",
+  "article_version_doi": "10.5281/zenodo.22802897",
   "license_scopes": {
     "original_code_and_technical_documentation": "MIT",
     "study_data_and_generated_figures": "CC BY 4.0",

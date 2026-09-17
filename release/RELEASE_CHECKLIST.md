@@ -2,10 +2,10 @@
 
 The repository and raw archive downloads are public. The existing study and
 its fixed application observations have been accepted. Final manuscript
-metadata and reuse terms are filled. The author completed arXiv submission on
-15 September 2026 UTC and reported a matching 34-page preview; the public
-identifier is pending. This record does not authorize a new study run or data
-changes.
+metadata and reuse terms are filled. The v1 preprint is available at
+https://doi.org/10.5281/zenodo.22802897. The historical arXiv source snapshot
+is retained for provenance; it has no public arXiv identifier. This record
+does not authorize a new study run or data changes.
 
 | Component | Repository-relative location | State |
 |---|---|---|
@@ -20,7 +20,9 @@ changes.
 | Raw archive index, checksums and downloads | `deliverables/study-01/artifact-index.json`; `release/RAW_ARCHIVES.json` | Four public archive parts downloaded independently on a second machine; all part hashes and the concatenated archive hash match. See `release/RAW_DOWNLOAD_VERIFICATION.json`. |
 | Deployment dataset and methods | `release/deployment/deployment-records.json`, `METHODS.md` | Unchanged upstream delivery, exact hashes below. Descriptive, incomplete retained record; no overall reliability estimate. |
 | Public source audit | `release/SOURCE_AUDIT.md` | Present; integration, automatic trigger and explicit routes anchored to v0.1.10, with tree comparison to the original audit commit. |
-| Manuscript source, bibliography and appendix | `release/arxiv/` | Complete text, seven figures, seven tables and fourteen references; twelve-file source package with compiled `.bbl`, confirmed author metadata and three declarations. TeX Live 2025 snapshot check is recorded alongside the package. |
+| Historical v1 manuscript source, bibliography and appendix | `release/arxiv/` | Complete text, seven figures, seven tables and fourteen references; twelve-file source package with compiled `.bbl`, confirmed author metadata and three declarations. TeX Live 2025 snapshot check is recorded alongside the package. |
+| External workload positioning | `analysis/calibration/` | Scoped second-eye PASS: 747 source keys, 715 retrievable count pairs, 31 source-unavailable and one current 404. No new simulation; not empirical calibration. |
+| Software archival metadata | `.zenodo.json`, `release/V1.0.0.md` | Versioned software metadata, license scopes and relation to the preprint; software DOI is separate and added only after publication. |
 | Citation metadata and reuse license | `CITATION.cff`, `LICENSE` | Nan Wu; code MIT; data and figures CC BY 4.0. Third-party template and whitepaper notices preserved. CFF 1.2.0 validation passed. |
 
 ## Immutable data bindings
@@ -51,9 +53,11 @@ recorded in this repository, without changing the archived snapshot.
 
 ## Remaining release tasks
 
-- arXiv submission and author inspection of the service-generated preview are
-  complete. After announcement, record the public identifier and add the paper
-  as the preferred citation in `CITATION.cff`.
+- The preprint version DOI is recorded in `CITATION.cff` as the preferred
+  article citation. Publish the software deposit after enabling repository
+  archiving, or upload the exact version ZIP manually. Record the resulting
+  software DOI at the root of `CITATION.cff`; preserve the article DOI under
+  `preferred-citation`. Neither identifier substitutes for the other.
 - Preserve the deployment methods' limits. The frozen deployment source is
   labeled `source-snapshot-01`; its exact relation to a public commit and
   upstream retention of the extraction program remain to be documented.
@@ -63,8 +67,8 @@ recorded in this repository, without changing the archived snapshot.
   content hashes and the dated download-verification record.
 - The three figure/provenance commits after the initial audit were reviewed on
   2026-09-12; see `release/CONTENT_AUDIT.md`. Recheck any subsequent additions.
-  No history rewrite or replacement repository is required for the reviewed
-  content. The repository's owner has made it public.
+  The 17 September increment is recorded there as well. No history rewrite
+  or replacement repository is required for the reviewed content. The repository's owner has made it public.
 - The repository description has been updated to:
   `Reproducible synthetic study of continuous worktree integration and author repair`.
   The old project shorthand is unnecessary for readers; it is not a data issue.

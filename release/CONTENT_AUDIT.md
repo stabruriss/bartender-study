@@ -58,3 +58,28 @@ repository-root citation and reuse terms were reviewed as intentional content.
 The twelve-file archive contains no build logs, local paths or editorial notes;
 publisher notices are preserved. The final TeX Live 2025 check identifies this
 package, with no changes to the seven figure files or accepted scientific data.
+
+## Addendum — 17 September 2026 UTC
+
+The reachable increment after `9751537`, through
+`cfd1249564d40e248d3b5bdf7e5fcc3e2f49d188`, was scanned and reviewed together
+with the v1.0.0 software metadata, updated release inventory and archive notes.
+The history increment contains 72 unique blobs. Recursive inspection of the
+source tar archive and PDF text yielded 89 inspected text/PDF leaves including
+the metadata additions and commit messages (1,279,508 expanded bytes).
+No uninspected binary remained. No private user paths, private coordination
+identifiers, planning content or credential-shaped values were found. Public
+PR repository names and commit OIDs are intentional scientific provenance;
+confirmed author attribution remains intentional public metadata.
+
+The external positioning commit retains a scoped scientific PASS bound to its
+reviewed inputs, while the complete-current-retrieval field remains false for
+the documented additional 404. Neither the content audit nor software archiving
+upgrades that scope to calibration or validation. The reviewed source CSV
+is obtained separately from its cited archive, not silently repackaged.
+
+This release increment changes documentation, citation/archival metadata and
+inventory hashes only. The fixed simulation code, approved parameters, accepted
+scientific CSVs, result figures and raw archive index are unchanged. The source
+ZIP includes tracked files only; raw archive bytes remain separately hosted.
+The earlier arXiv source package is retained as a historical manuscript version.

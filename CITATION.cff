@@ -10,7 +10,7 @@ authors:
     email: "chris@chriswu.xyz"
 repository-code: "https://github.com/stabruriss/bartender-study"
 version: "1.0.0"
-date-released: "2026-09-15"
+date-released: "2026-09-17"
 abstract: >-
   Reproduction code, fixed configurations, seeds, accepted aggregates,
   analysis scripts and figures for a synthetic study of continuous worktree

@@ -13,8 +13,11 @@ heads that GitHub can retrieve at extraction time. Its output is a
 current-retrievable-subset sensitivity analysis, not an exact replay. No
 simulation is rerun by these scripts.
 
-Download the Xu et al. replication package from its archived record and pass
-its `rq3_merge_replay_full.csv` to the read-only extractor:
+Download the Xu et al. replication package from
+[10.5281/zenodo.21186464](https://doi.org/10.5281/zenodo.21186464) and pass
+its `rq3_merge_replay_full.csv` to the read-only extractor. The reviewed source
+file digest is recorded in `VALIDATION.json`; the source CSV is not repackaged
+here:
 
 ```sh
 python3 extract_pr_diff_counts.py \
