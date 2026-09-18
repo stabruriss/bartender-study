@@ -7,6 +7,23 @@ https://doi.org/10.5281/zenodo.22802897. The historical arXiv source snapshot
 is retained for provenance; it has no public arXiv identifier. This record
 does not authorize a new study run or data changes.
 
+## Journal submission — 17 September 2026
+
+The author submitted the manuscript to PeerJ Computer Science as
+**CS-2026:09:149308**. The author-reported status is **Checking**; this is not
+an acceptance decision. The submitted package is frozen, with further
+manuscript changes limited to responses to review comments.
+
+- Submitted PDF: 36 pages; SHA-256
+  `ad54b71ea46f63345aaac8f698299773fa4c6b95fe344fb2107b6d3aea2b2c6c`.
+- Submitted flat source ZIP: SHA-256
+  `76ef6f72c9f83ca6dbc00a2ac0bba96f54d22d661fb42983cfe405b31258c0a9`.
+
+This status record leaves `CITATION.cff`, software release v1.0.0, and the
+submitted manuscript files unchanged.
+
+## Package inventory
+
 | Component | Repository-relative location | State |
 |---|---|---|
 | Model and aggregation code | `bartender_sim/`, `handoff.py`, `tests/` | Present; original execution and revised verification versions are retained in history. |
