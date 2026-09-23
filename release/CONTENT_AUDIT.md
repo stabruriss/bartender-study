@@ -114,3 +114,12 @@ positioning outputs. These checks do not expand the scientific claims.
 The existing v1.0.0 tag and archive remain immutable. The v1.0.1 tag's citation
 uses the software concept DOI until the archive service mints its version DOI;
 post-release branch metadata will record that identifier without retagging.
+
+### v1.0.1 DOI completion
+
+The post-release metadata adds software version DOI 10.5281/zenodo.22907187
+and a public-download verification receipt: all 300 file contents match
+`b1793e8a5decb81bc7655b323d26d10d49865fff`. The new record contains public
+archive metadata and hashes only. No local paths, credentials or private
+coordination context are included. The tag, data and research programs are
+unchanged; only branch documentation, citation and inventory records are updated.

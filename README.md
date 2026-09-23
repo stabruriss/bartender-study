@@ -407,6 +407,10 @@ is [10.5281/zenodo.22802896](https://zenodo.org/records/22802896).
 
 The current reproduction release is
 [v1.0.1](https://github.com/stabruriss/bartender-study/releases/tag/v1.0.1).
+It is archived as software version DOI
+[10.5281/zenodo.22907187](https://doi.org/10.5281/zenodo.22907187).
+An independent download matched all 300 file bodies to the tag commit; see
+[the v1.0.1 archive verification](release/SOFTWARE_ARCHIVE_VERIFICATION-v1.0.1.json).
 The software concept DOI, identifying the version family, is
 [10.5281/zenodo.22820986](https://doi.org/10.5281/zenodo.22820986).
 [CITATION.cff](CITATION.cff) supplies machine-readable software metadata and

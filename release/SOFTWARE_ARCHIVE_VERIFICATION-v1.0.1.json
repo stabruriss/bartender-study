@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-09-23T00:46:37.272055+00:00",
+  "software_version_doi": "10.5281/zenodo.22907187",
+  "software_concept_doi": "10.5281/zenodo.22820986",
+  "record_url": "https://zenodo.org/records/22907187",
+  "version": "1.0.1",
+  "resource_type": "Software",
+  "creator": {
+    "name": "Wu, Nan",
+    "affiliation": "Independent Researcher",
+    "orcid": "0009-0001-4129-9569"
+  },
+  "archive_license": "MIT; study data and generated figures are separately CC BY 4.0 as described in LICENSE",
+  "publication_date": "2026-09-23",
+  "release_tag": "v1.0.1",
+  "release_commit": "b1793e8a5decb81bc7655b323d26d10d49865fff",
+  "archive": {
+    "file_key": "stabruriss/bartender-study-v1.0.1.zip",
+    "download_url": "https://zenodo.org/api/records/22907187/files/stabruriss/bartender-study-v1.0.1.zip/content",
+    "bytes": 11637974,
+    "sha256": "a07478c146120be8291609579dd29a4c3ea282df7dad7dc0eff64cbfb33c2c4b",
+    "zenodo_md5": "md5:9f8f705736e376dd64f58a32814eeb29",
+    "zip_root": "stabruriss-bartender-study-cd9bb5e/"
+  },
+  "comparison": {
+    "method": "Download without authentication; compare every archive file body with the complete tracked-file inventory at the tag commit. Directory entries and ZIP container metadata are excluded.",
+    "tracked_files": 300,
+    "archive_files": 300,
+    "missing": [],
+    "extra": [],
+    "different": [],
+    "all_file_contents_match": true
+  },
+  "scope": "The archive contains raw-archive indexes and hashes, not the external raw bytes. This verifies software-snapshot identity, not new scientific results. The immutable tag CFF uses the software concept DOI; subsequent branch metadata records the minted version DOI."
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-09-23T00:47:33.764737+00:00",
+  "version": "1.0.1",
+  "cff_version": "1.2.0",
+  "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
+  "validator": "PyYAML 6.0.2 + jsonschema 4.23.0",
+  "software_version_doi": "10.5281/zenodo.22907187",
+  "software_concept_doi": "10.5281/zenodo.22820986",
+  "preferred_article_doi": "10.5281/zenodo.22802897",
+  "files": {
+    "CITATION.cff": {
+      "bytes": 1312,
+      "sha256": "cf3c2309469e60cbb732b07f3dd8f14db89cc04dac0a84baa19c95bccbd9802a"
+    },
+    "LICENSE": {
+      "bytes": 2757,
+      "sha256": "5dd39356810d187253907a5e79789400b45e141641d75a9b8e8316be86ef29b9"
+    },
+    ".zenodo.json": {
+      "bytes": 1258,
+      "sha256": "62ff131477cace85b1331c1020a8651b67460e9955d047ad858b273b8e79bf59"
+    }
+  },
+  "archive_verification": "SOFTWARE_ARCHIVE_VERIFICATION-v1.0.1.json",
+  "tag_citation_scope": "Immutable tag uses software concept DOI; current branch CFF records minted version DOI."
+}

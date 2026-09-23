@@ -28,8 +28,10 @@ Version v1.0.1 reorganizes the README and makes the existing reproduction
 procedures explicit. The accepted results, data, simulation/analysis programs
 and execution approvals are unchanged. See `V1.0.1.md` and
 `REPRODUCTION_CHECK-v1.0.1.json`. The tag uses software concept DOI
-10.5281/zenodo.22820986; its version DOI is recorded on the branch after
-archiving, without moving the tag. The original submitted manuscript and
+10.5281/zenodo.22820986. The published version DOI is
+10.5281/zenodo.22907187; a public download matched all 300 file contents to
+the tag commit. See `SOFTWARE_ARCHIVE_VERIFICATION-v1.0.1.json`. This branch
+records that identifier without moving the tag. The original submitted manuscript and
 v1.0.0 archive remain historical records, distinct from this documentation
 release.
 
@@ -50,7 +52,7 @@ release.
 | Public source audit | `release/SOURCE_AUDIT.md` | Present; integration, automatic trigger and explicit routes anchored to v0.1.10, with tree comparison to the original audit commit. |
 | Historical v1 manuscript source, bibliography and appendix | `release/arxiv/` | Complete text, seven figures, seven tables and fourteen references; twelve-file source package with compiled `.bbl`, confirmed author metadata and three declarations. TeX Live 2025 snapshot check is recorded alongside the package. |
 | External workload positioning | `analysis/calibration/` | Scoped second-eye PASS: 747 source keys, 715 retrievable count pairs, 31 source-unavailable and one current 404. No new simulation; not empirical calibration. |
-| Software archival metadata | `.zenodo.json`, `release/V1.0.1.md` | Current documentation release v1.0.1; concept DOI 10.5281/zenodo.22820986. Earlier v1.0.0 archive DOI 10.5281/zenodo.22820987 and its 297-file verification remain in `SOFTWARE_ARCHIVE_VERIFICATION.json`. |
+| Software archival metadata | `.zenodo.json`, `release/V1.0.1.md` | Current documentation release v1.0.1: DOI 10.5281/zenodo.22907187, 300-file archive identity PASS. Concept DOI 10.5281/zenodo.22820986. Earlier v1.0.0 archive DOI 10.5281/zenodo.22820987 and its 297-file verification remain in `SOFTWARE_ARCHIVE_VERIFICATION.json`. |
 | Citation metadata and reuse license | `CITATION.cff`, `LICENSE` | Nan Wu; code MIT; data and figures CC BY 4.0. Third-party template and whitepaper notices preserved. CFF 1.2.0 validation passed. |
 
 ## Immutable data bindings
