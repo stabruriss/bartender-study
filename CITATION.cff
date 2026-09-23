@@ -9,9 +9,9 @@ authors:
     orcid: "https://orcid.org/0009-0001-4129-9569"
     email: "chris@chriswu.xyz"
 repository-code: "https://github.com/stabruriss/bartender-study"
-doi: "10.5281/zenodo.22820987"
-version: "1.0.0"
-date-released: "2026-09-17"
+doi: "10.5281/zenodo.22820986"
+version: "1.0.1"
+date-released: "2026-09-23"
 abstract: >-
   Reproduction code, fixed configurations, seeds, accepted aggregates,
   analysis scripts and figures for a synthetic study of continuous worktree

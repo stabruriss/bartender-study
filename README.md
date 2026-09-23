@@ -1,5 +1,11 @@
 # Bartender scheduling study
 
+## Title
+
+Bartender: Continuous Worktree Reconciliation with Author-Routed Conflict Handback for Resident Multi-Agent Development
+
+## Description
+
 This repository contains a synthetic discrete-event model of continuous worktree
 integration and author repair. The simulator does not run Kota, Git conflict
 resolution, or an LLM. A separate application conformance procedure is described
@@ -18,35 +24,179 @@ scan record are public. The historical v1 manuscript source package is in
 [release/arxiv/](release/arxiv/); it predates the later external workload
 range-positioning analysis and is not the current journal submission.
 
+The `v1.0.1` release reorganizes this guide and adds dataset, code, environment,
+reproduction and contribution instructions. It does not change the accepted
+study inputs, outcomes, analysis programs or execution protocol.
+
+## Dataset Information
+
+| Dataset | Location and contents |
+|---|---|
+| Synthetic study, `study-01` | [summary.csv](deliverables/study-01/summary.csv): 990 cells, 30 seeds per cell, 34,650 cell/metric rows with means, intervals and valid counts. [cells.json](deliverables/study-01/cells.json) supplies the approved coordinates. |
+| Paired policy differences | [paired-differences.csv](deliverables/study-01/paired-differences.csv): 11,010 contrasts, calculated within seed before aggregation. See [the analysis guide](analysis/README.md) for denominators and uncertainty conventions. |
+| Application observations, `conformance-01` | [deliverables/conformance-01/](deliverables/conformance-01/) contains the bounded fixture observations and run report; [validation/](validation/) retains the version anchors, controls and acceptance records. These observations are separate from the synthetic simulation. |
+| Deployment record | [deployment-records.json](release/deployment/deployment-records.json) and [METHODS.md](release/deployment/METHODS.md) contain the de-identified record, observation window, inclusion rules and coverage limits. |
+| External workload inputs | [published-rates.csv](analysis/calibration/published-rates.csv) records reported conflict rates; [pr-pair-diff-counts.csv](analysis/calibration/pr-pair-diff-counts.csv) records 747 source keys, with 715 retrievable pairs, 31 source-unavailable pairs and one current 404. The source replication CSV is obtained separately as described below. |
+| External workload outputs | [analysis/calibration/](analysis/calibration/README.md) contains workload summaries, effective-probability and expected-count positioning tables, accepted-grid lookups, assumptions and a hash-bound validation record. The directory name is historical: this is current-retrievable scenario range positioning, not empirical calibration or validation. |
+| Plot data and full tables | [analysis/manuscript/](analysis/manuscript/) contains the four manuscript result figures, tables and point-level provenance; [analysis/results/](analysis/results/) retains the full-scan tables and supplementary figures, including negative results. |
+| Raw simulation archive | [RAW_ARCHIVES.json](release/RAW_ARCHIVES.json) lists four separately hosted parts and their SHA-256 hashes. The raw bytes are not included in the software ZIP. |
+
 The raw simulation archive is now publicly downloadable in four parts. See
 [the archive index](release/RAW_ARCHIVES.json) for current URLs and SHA-256
 values, and [the download check](release/RAW_DOWNLOAD_VERIFICATION.json) for
 independent verification of all part hashes and the complete archive hash.
 
-The v1 preprint is archived on Zenodo at
-[10.5281/zenodo.22802897](https://zenodo.org/records/22802897); the concept DOI
-is [10.5281/zenodo.22802896](https://zenodo.org/records/22802896).
+The accepted aggregate files are sufficient to regenerate the result figures
+and tables. Rechecking the original event-level records additionally requires
+the raw archive. [FIGURE_PROVENANCE.md](analysis/FIGURE_PROVENANCE.md) describes
+that distinction and the path from accepted aggregates to individual plot marks.
 
-## Versioned reproduction snapshot
+## Code Information
 
-The `v1.0.0` reproduction snapshot includes the model, approved configurations,
-seeds, accepted summaries, analysis and plotting programs, application evidence,
-deployment dataset, and release checks. Its inventory is in
-[release/RELEASE_CHECKLIST.md](release/RELEASE_CHECKLIST.md).
-The external workload analysis is in
-[analysis/calibration/](analysis/calibration/README.md): current-retrievable
-scenario range positioning, not calibration or validation. The additional
-current 404 and the source-unavailable rows remain explicit.
+- [bartender_sim/](bartender_sim/) implements the deterministic synthetic model,
+  parameter grid, event replay and aggregation; policy comparisons reuse the
+  same exogenous proposal streams.
+- [handoff.py](handoff.py) enforces the completed study's configuration and
+  protocol approvals, controls, execution receipts and collection checks.
+- [analysis/](analysis/README.md) contains deterministic Matplotlib programs for
+  full-scan and manuscript figures, numerical tables and point-level provenance;
+  [verify_plot_data.py](analysis/verify_plot_data.py) independently checks the
+  plotted values against accepted CSV inputs and declared model formulas.
+- [validation/](validation/) retains execution, conformance and acceptance
+  evidence, together with the delivery review script;
+  [tests/](tests/) contains constructed control cases and collector checks.
+- [analysis/calibration/](analysis/calibration/README.md) contains the read-only
+  public-PR metadata extractor, published-rate inputs, positioning calculator
+  and input-bound review checks. It does not run additional simulation cells.
 
-The software snapshot is archived separately at
-[10.5281/zenodo.22820987](https://zenodo.org/records/22820987), version 1.0.0
-(concept DOI [10.5281/zenodo.22820986](https://zenodo.org/records/22820986)).
-The paper DOI above identifies the preprint. The software archive was downloaded
-and all 297 file contents matched the release commit;
-[the verification record](release/SOFTWARE_ARCHIVE_VERIFICATION.json) records
-the version, metadata, download identity and comparison scope. The software ZIP contains the raw archive
-index and checksums, not the 4.2 GB raw archive bytes. Their separately hosted
-URLs and verified hashes remain in `release/RAW_ARCHIVES.json`.
+The actual application implementation is in the separate
+[Kota public source repository](https://github.com/stabruriss/kota-app); the
+version-specific static audit is [SOURCE_AUDIT.md](release/SOURCE_AUDIT.md).
+
+## Usage Instructions
+
+Run these commands from the repository root. Use a fresh checkout for installing
+environments; keep an existing study environment and accepted outputs intact.
+Generated reproduction files below go to the ignored `local-logs/` directory.
+
+### Install the pinned environments
+
+Obtain CPython 3.12.4 using the explicit uv 0.12.11 bootstrap and
+`.python-version` instructions in [RUNBOOK.md, environment setup](RUNBOOK.md#2-prepare-python-and-run-all-control-tests).
+The bootstrap installs uv below `local-logs/uv-bootstrap/bin/`; these commands
+then create a separate runtime and plotting environment:
+
+```sh
+env UV_PYTHON_INSTALL_DIR=local-logs/uv-bootstrap/python UV_CACHE_DIR=local-logs/uv-bootstrap/cache \
+  local-logs/uv-bootstrap/bin/uv venv --managed-python --python 3.12.4 .venv
+.venv/bin/python -c 'import platform; assert platform.python_implementation() == "CPython" and platform.python_version() == "3.12.4"'
+env UV_CACHE_DIR=local-logs/uv-bootstrap/cache \
+  local-logs/uv-bootstrap/bin/uv pip install --python .venv/bin/python -r requirements.lock
+.venv/bin/python -m venv local-logs/analysis-venv
+local-logs/analysis-venv/bin/python -m pip install -r analysis/requirements.lock
+```
+
+### Inspect the approved plan and run controls
+
+```sh
+.venv/bin/python -m bartender_sim plan --config configs/study-draft.json
+.venv/bin/python -m unittest discover -s tests -v
+```
+
+`plan --cells` also prints every fully resolved configuration, including the
+derived response delays and observation windows. Planning generates no edit
+stream and performs no simulation. Tests use hand-constructed streams, finite
+control models, and a temporary zero-edit output check; they are not study runs.
+
+### Reproduce and verify figures and tables
+
+```sh
+local-logs/analysis-venv/bin/python analysis/make_figures.py \
+  --output-dir local-logs/reproduction/full-scan
+local-logs/analysis-venv/bin/python analysis/make_manuscript_figures.py \
+  --output-dir local-logs/reproduction/manuscript
+.venv/bin/python analysis/verify_plot_data.py \
+  --directory local-logs/reproduction/manuscript \
+  --report local-logs/reproduction/manuscript/plot-verification.json
+```
+
+The first command includes the complete supplementary atlases; add `--main-only`
+for the smaller main-analysis set. The scripts read accepted `summary.csv`,
+`paired-differences.csv` and coordinate metadata `cells.json`; they do not read
+raw events, call a model, or rerun the study. The independent verifier checks
+CSV and formula-derived plot values, not the visual meaning of the schematic
+mechanism figures. See [the analysis guide](analysis/README.md) for output names.
+
+### Reproduce external workload range positioning
+
+Download the Xu et al. replication package from
+[10.5281/zenodo.21186464](https://doi.org/10.5281/zenodo.21186464), and place its
+`rq3_merge_replay_full.csv` in `local-logs/external-inputs/`. Its reviewed SHA-256
+is `a6a3f3e88f6b8445a07d5b43bb8c6d4583cfffb33bd25f650a766a096baaef3c`.
+The source CSV is not repackaged here. Reuse the released hunk/file counts to
+reproduce the reviewed output without new GitHub requests:
+
+```sh
+.venv/bin/python analysis/calibration/summarize_range_positioning.py \
+  --source-pairs local-logs/external-inputs/rq3_merge_replay_full.csv \
+  --counts analysis/calibration/pr-pair-diff-counts.csv \
+  --workload-summary local-logs/reproduction/positioning/workload-summary.csv \
+  --positioning local-logs/reproduction/positioning/range-positioning.csv \
+  --cells deliverables/study-01/cells.json \
+  --study-summary deliverables/study-01/summary.csv \
+  --dimensionless local-logs/reproduction/positioning/dimensionless-positioning.csv \
+  --sync-grid local-logs/reproduction/positioning/sync-grid-positioning.csv \
+  --reference-cells local-logs/reproduction/positioning/dimensionless-reference-cells.csv \
+  --validation local-logs/reproduction/positioning/VALIDATION.json
+```
+
+The reviewed output has `scientific_review_pass: true` for the stated scope,
+while `full_current_retrieval: false` and the mechanical `pass: false` retain
+one additional unavailable pair. These are different checks, not a suppressed
+failure. Changed inputs do not inherit the reviewed status. A new public-PR
+extraction is optional and changes the retrieval date; use the separate
+[extractor instructions and rate-limit rules](analysis/calibration/README.md),
+write new output files, and do not describe current heads as frozen original
+replay revisions.
+
+## Requirements
+
+| Component | Requirement |
+|---|---|
+| Simulation, controls, collection and positioning | CPython **3.12.4**, fixed by [.python-version](.python-version). [requirements.lock](requirements.lock) declares the standard-library-only runtime. |
+| Figure generation | Matplotlib **3.10.8** and all transitive dependencies pinned in [analysis/requirements.lock](analysis/requirements.lock), installed in the separate analysis environment. |
+| Environment bootstrap | uv 0.12.11, with explicit download and Python installation commands in [RUNBOOK.md](RUNBOOK.md). |
+| New public-PR extraction only | Git and the authenticated GitHub CLI (`gh`) with access to public repositories. The released extraction records Git 2.50.1 (Apple Git-155), fetched OIDs and explicit diff options; these are not required to recompute positioning from the released count table. |
+| Application conformance only | A running Kota application at the recorded version plus the separately approved [conformance procedure](RUNBOOK-CONFORMANCE.md). No application or LLM is needed to reproduce the simulation result figures. |
+
+The formal simulation used CPython 3.12.4 on an Apple M3 machine with eight
+logical CPUs, 16 GiB RAM and macOS 26.2, executing serially with one worker.
+Its 29,700 runs took 5,985.214742 seconds of execution wall time, excluding
+subsequent collection and archive work; see
+[execution.json](deliverables/study-01/execution.json) and
+[environment-m4.json](validation/environment-m4.json).
+
+## Methodology
+
+1. Fix the synthetic geometry, proposal streams, seeds, policy rules and grid;
+   check the constructed controls and cross-machine determinism.
+2. Execute the approved 990 cells with 30 seeds each, retaining all runs,
+   failures, censored outcomes and metadata.
+3. Verify and accept the delivered aggregates and bounded application
+   observations. Preserve the initial collection HOLD and the approved
+   collect-only correction; the recheck did not change raw data or CSV values.
+4. Generate result figures and complete tables from the accepted aggregates,
+   then independently verify their point-level data provenance.
+5. Position external PR conflict rates against the declared model scenarios
+   using recorded current-retrievable hunk/file counts, transformed intervals
+   and explicit event/unit assumptions. This is range positioning, not a
+   fitted calibration or a validation of the synthetic model; no cells were added.
+
+The relocation (historically named avoidance) knob did not provide a consistent
+reduction in the reported conflict measures. All three settings remain in the
+released full scan and supplementary outputs.
+
+### Completed execution and timing records
 
 The completed execution procedure is [RUNBOOK.md](RUNBOOK.md).
 It specifies the pinned environment, file-only communication, cross-machine
@@ -61,21 +211,6 @@ at v0.1.10 / public commit `75eb8fda2b1040c0f1822e0403321a105fec4f6c`.
 The observations do not establish real-agent repair, performance, or wider
 scenario coverage. Execution and its recurring file exchange are closed;
 the dated dispositions and retained-original requirements are in `ANSWERS.md`.
-
-## Inspect and test
-
-The current execution handoff requires CPython 3.12.4 and the standard library
-only. `requirements.lock` records that there are no third-party dependencies.
-
-```sh
-python3 -m bartender_sim plan --config configs/study-draft.json
-python3 -m unittest discover -s tests -v
-```
-
-`plan --cells` also prints every fully resolved configuration, including the
-derived response delays and observation windows. Planning generates no edit
-stream and performs no simulation. Tests use hand-constructed streams, finite
-control models, and a temporary zero-edit output check; they are not study runs.
 
 Maintainers have recorded study-owner parameter approval in the configuration's
 `approval` object: status `approved`, role, timestamp, and
@@ -98,7 +233,7 @@ scan at roughly 5.8 hours on an M1 MacBook Air, with an 8–10 hour planning all
 Its 90 reserved-seed invocations retain timing only, not scientific outcomes;
 they do not approve or replace the study runs.
 
-## Approved numerical plan
+### Approved numerical plan
 
 Time is measured in units of one agent's mean inter-edit time. It is not a
 calibrated number of minutes. The edit rate is 1 per agent per unit time.
@@ -144,7 +279,7 @@ Total: **990 cells, 29,700 planned runs**. The longest observation window is
 `mu_nominal = p_nominal (n-1) rate` assumes prompt background landing only for
 axis scaling. Actual landings are endogenous and are recorded.
 
-## What the dynamic model does
+### What the dynamic model does
 
 Each actor generates Poisson arrivals independently. Arrival times, locations,
 alternative locations, and dependency candidates are drawn before policy replay
@@ -193,7 +328,7 @@ this model cannot measure Git overhead or establish zero wall-clock cost.
 Arrivals occur in `[0, H)`; completions and scheduled ticks at `H` count. There
 is no extra drain period or forced final synchronization.
 
-## Repair snapshot and cost assumptions
+### Repair snapshot and cost assumptions
 
 Two repair protocols are explicit. Reading at dispatch leaves a stale window
 of response delay plus repair duration. Reading again at repair start absorbs
@@ -212,7 +347,7 @@ The earliest failed-edit-to-start delay may also include queueing. Each repair
 record stores dispatch, start, read revision/time, duration, context, and outcome,
 so that queue delay, attention delay, and the stale window can be distinguished.
 
-## Counters, censoring, and reporting
+### Counters, censoring, and reporting
 
 Count overlapping concurrent **edit pairs**, edits that ever fail, failed
 application attempts, dispatches, author repair starts, and completed repairs
@@ -245,11 +380,11 @@ The output directory contains the exact config, complete cell list, code hashes,
 Python/OS versions, Git revision/dirty flag, compressed input flows, per-edit and
 per-repair records, per-seed summaries, aggregate CSV, and paired contrasts.
 All failed runs remain listed; partial scans retain an interrupted status.
-Unexpected and negative results stay in the full scan record. Figures will be
-made only after the approved runs, with the full tables retained even when a
-figure is not selected for the main paper.
+Unexpected and negative results stay in the full scan record. The published
+figures were generated after acceptance of the runs; the full tables are retained
+even when a figure is not selected for the main paper.
 
-## Deterministic checks and interpretation boundary
+### Deterministic checks and interpretation boundary
 
 The separate fixed-batch control keeps conflict edges unchanged and makes each
 repair succeed immediately. Tests enumerate all 1–4 item graphs and initial
@@ -263,3 +398,52 @@ times, nonzero repair exposure, interval probability, input pairing, censoring,
 and the execution/parameter approval boundary. The accepted study figures
 and bounded application observations are linked above; the controls alone do
 not establish product performance or repair correctness.
+
+## Citations
+
+The v1 preprint is archived on Zenodo at
+[10.5281/zenodo.22802897](https://zenodo.org/records/22802897); the concept DOI
+is [10.5281/zenodo.22802896](https://zenodo.org/records/22802896).
+
+The current reproduction release is
+[v1.0.1](https://github.com/stabruriss/bartender-study/releases/tag/v1.0.1).
+The software concept DOI, identifying the version family, is
+[10.5281/zenodo.22820986](https://doi.org/10.5281/zenodo.22820986).
+[CITATION.cff](CITATION.cff) supplies machine-readable software metadata and
+keeps the article's preferred citation distinct from the software archive.
+
+### Earlier version and archive verification
+
+The `v1.0.0` reproduction snapshot includes the model, approved configurations,
+seeds, accepted summaries, analysis and plotting programs, application evidence,
+deployment dataset, and release checks. Its inventory is in
+[release/RELEASE_CHECKLIST.md](release/RELEASE_CHECKLIST.md).
+The external workload analysis is in
+[analysis/calibration/](analysis/calibration/README.md): current-retrievable
+scenario range positioning, not calibration or validation. The additional
+current 404 and the source-unavailable rows remain explicit.
+
+The software snapshot is archived separately at
+[10.5281/zenodo.22820987](https://zenodo.org/records/22820987), version 1.0.0
+(concept DOI [10.5281/zenodo.22820986](https://zenodo.org/records/22820986)).
+The paper DOI above identifies the preprint. The software archive was downloaded
+and all 297 file contents matched the release commit;
+[the verification record](release/SOFTWARE_ARCHIVE_VERIFICATION.json) records
+the version, metadata, download identity and comparison scope. The software ZIP contains the raw archive
+index and checksums, not the 4.2 GB raw archive bytes. Their separately hosted
+URLs and verified hashes remain in `release/RAW_ARCHIVES.json`.
+
+## License & Contribution Guidelines
+
+Original code and technical documentation are **MIT** licensed. Study data and
+generated figures are **CC BY 4.0**. Third-party notices remain in force, and
+manuscript prose has its own publication terms; see [LICENSE](LICENSE) for the
+exact scopes. Cite the software version used and the article separately.
+
+Issues and pull requests for reproducibility problems, corrections and clearer
+instructions are welcome through this repository's GitHub issue/PR interface.
+Include the release tag, command, environment and a minimal reproducible example;
+omit personal information, credentials and private logs. Proposed model or
+parameter changes must be identified as new work. Accepted study data, approval
+records and published tags are retained as historical evidence; corrections
+must be explicit and must not silently replace those records.

@@ -93,3 +93,24 @@ paths or private coordination data are part of these additions. The release
 tag remains at `a20e306`; neither the archived file contents nor the accepted
 scientific data have been changed. The existing inventory was refreshed for
 these documentation and metadata changes.
+
+
+## Addendum — 23 September 2026 UTC: v1.0.1
+
+The documentation increment after `ecc6cbf` reorganizes the README, updates
+software version metadata and records reproduction checks. The new text and
+release records were reviewed for private machine paths, credentials and private
+coordination context; none were found. Public author attribution is intentional.
+
+All pre-existing files outside README.md, CITATION.cff and .zenodo.json retained
+their bytes before adding these dated release records. In particular, the
+simulation, approved configurations/seeds/protocol, accepted data, analysis
+code, source audit, existing figure assets and raw-archive indexes are unchanged.
+`REPRODUCTION_CHECK-v1.0.1.json` records 34 passing control tests, regeneration of
+the full 990-cell analysis, independent verification of 1,434 plot coordinates
+and 22,944 fields, and byte-identical regeneration of all six external
+positioning outputs. These checks do not expand the scientific claims.
+
+The existing v1.0.0 tag and archive remain immutable. The v1.0.1 tag's citation
+uses the software concept DOI until the archive service mints its version DOI;
+post-release branch metadata will record that identifier without retagging.

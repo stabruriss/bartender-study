@@ -3,23 +3,27 @@
   "files": {
     ".zenodo.json": {
       "bytes": 1258,
-      "sha256": "57e5b581ea910784364594cf0cd9912a27cbfbff3ebeb67e9ff55124e295a4c1"
+      "sha256": "62ff131477cace85b1331c1020a8651b67460e9955d047ad858b273b8e79bf59"
     },
     "CITATION.cff": {
       "bytes": 1312,
-      "sha256": "feaa39b53a11ca9409fc0583822d632e85aa7e1d795df5e77712d73879843668"
+      "sha256": "e66e03fc4691c987e6d4bb02bff66525dc7510a93bd1764fe1a983e64347b064"
     },
     "LICENSE": {
       "bytes": 2757,
       "sha256": "5dd39356810d187253907a5e79789400b45e141641d75a9b8e8316be86ef29b9"
+    },
+    "README.md": {
+      "bytes": 27822,
+      "sha256": "567de51508c39781a4320282447369bdcb5f630cbc506dfcdcfadc2bff6f7c81"
     },
     "release/ARXIV_SOURCE_GUIDE.md": {
       "bytes": 3674,
       "sha256": "f7aace075f6f88a6f49ff97bc58af4f6afac028270ee6762293a3e90c385e3da"
     },
     "release/CONTENT_AUDIT.md": {
-      "bytes": 5744,
-      "sha256": "73666f4447715ab2b48d6f89cd6a639840f1e3455867ac377f43d32df3ff6ea3"
+      "bytes": 6961,
+      "sha256": "c1d46ce9bb134ea0bafd3a7dfb7e839ccfd7dbde12303fe752ab3134fbdd137e"
     },
     "release/METADATA_VALIDATION.json": {
       "bytes": 1334,
@@ -34,8 +38,12 @@
       "sha256": "719d67f1cdcd481eae0dd6ed362d3328a2d9c977ce1665846e648909547229ca"
     },
     "release/RELEASE_CHECKLIST.md": {
-      "bytes": 8272,
-      "sha256": "3fc0a4bc2ff5b0a051719ee6388a2fdb9b0a4693acb6e263e437d76231e33c09"
+      "bytes": 8958,
+      "sha256": "084b3bdda39af29f9b754944132836fe049971f4e40ee2b22f354a3b692aeefe"
+    },
+    "release/REPRODUCTION_CHECK-v1.0.1.json": {
+      "bytes": 4454,
+      "sha256": "2f7109f57bcbae2ffbf412f04dd9a32d7f8ae63d09ba24ad879f2194e14d0eac"
     },
     "release/SOFTWARE_ARCHIVE_VERIFICATION.json": {
       "bytes": 1740,
@@ -48,6 +56,10 @@
     "release/V1.0.0.md": {
       "bytes": 2363,
       "sha256": "b779048fd7bebfcafe2800b4f8a519e789a1e63a7626a832b64f2bcaa9a2244c"
+    },
+    "release/V1.0.1.md": {
+      "bytes": 1327,
+      "sha256": "33fd94100b3ab6fe23ed20d9f0db8b5b07653004be8a5a120beee0c0baf2292c"
     },
     "release/arxiv/FIGURE_MANIFEST.json": {
       "bytes": 1781,

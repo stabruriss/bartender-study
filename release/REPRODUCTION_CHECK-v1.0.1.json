@@ -1,0 +1,104 @@
+{
+  "scope": "Documentation-release verification; no new scientific runs",
+  "checked_at_utc": "2026-09-23T00:42:15.959920+00:00",
+  "baseline_commit": "ecc6cbf3ea65cee27a9e42edbcab33651f768e06",
+  "release_version": "1.0.1",
+  "checks": {
+    "readme_required_sections": 9,
+    "readme_relative_links_missing": [],
+    "original_control_tests": {
+      "passed": 34,
+      "failed": 0
+    },
+    "full_scan_figure_regeneration": {
+      "cells": 990,
+      "summary_rows": 34650,
+      "paired_rows": 11010,
+      "supplement_pages": {
+        "f1": 21,
+        "f2": 10,
+        "f3": 10
+      }
+    },
+    "manuscript_plot_verification": {
+      "status": "pass",
+      "coordinates_checked": 1434,
+      "fields_checked": 22944,
+      "figure_counts": {
+        "fig4_repairs_overlap": 60,
+        "fig5_sync_interval": 84,
+        "fig6_wait_resolved": 42,
+        "fig7_wait_failures": 1248
+      },
+      "formula_counts": {
+        "summary_mean": 123,
+        "nominal_overlap_pair_rate": 21,
+        "zero_wait_reference:completed_minus_failed_over_initial": 6,
+        "completed_minus_failed_over_initial": 36,
+        "zero_wait_reference:failed_over_completed": 6,
+        "failed_over_completed": 36,
+        "nominal_failure_probability": 1206
+      },
+      "issues": [],
+      "source_hashes": {
+        "summary.csv": "5209b6b2f833ff958bc9320af9d577cef3453eb94ff185822028da80be7e5505",
+        "paired-differences.csv": "e703f0a7cacdbf4b7f38a82fbb83ed6fd9dd96096495be52ec6208b842327056",
+        "cells.json": "086034341ac0f852c2a6fcb69ec68e2113652b7c74c62a48ad7ff7f71f98ef48"
+      },
+      "plot_data_sha256": "ccab8425e826017e5a50e1789198b5bca0e145038e6a3b7732f0852f17adb1e4",
+      "plot_manifest_sha256": "70f8d5befd7be2f8941afc6d97f1448a561fed9755e10b57bac2a634ee6a27f9",
+      "verifier_sha256": "6d0ad47c43163acb2c5ef7fd67e0d0a2856d48eeb2b846a626dc2b50d41e462c",
+      "source_intervals_checked": 123,
+      "ratio_intervals_inferred": false,
+      "comparison_tolerance": {
+        "relative": 1e-12,
+        "absolute": 1e-12
+      },
+      "scope": "Actual exported Matplotlib artist coordinates versus accepted aggregates and approved metadata; no raw-output read or simulation rerun."
+    },
+    "manuscript_plot_data_matches_released_bytes": true,
+    "external_positioning_regeneration": {
+      "VALIDATION.json": {
+        "matches_released_bytes": true,
+        "sha256": "f623206f0c4d42e91ffafea742230aa4d9d7fefec56e2d9b7d7f34c9ef66b609"
+      },
+      "dimensionless-positioning.csv": {
+        "matches_released_bytes": true,
+        "sha256": "9a16085a991fff8dc3f9e4af4c0aeb8bfd8a930b05b252e65d2ce74bf16265f6"
+      },
+      "dimensionless-reference-cells.csv": {
+        "matches_released_bytes": true,
+        "sha256": "7f4c875c3689a5136cd5b2e75371d033910ab3b0e4b441fdd206b0404f94c0ff"
+      },
+      "range-positioning.csv": {
+        "matches_released_bytes": true,
+        "sha256": "a024fbea2ce2615ce1e228ca0aa13407ee96caf1aa8575a46d2bba95f8f81241"
+      },
+      "sync-grid-positioning.csv": {
+        "matches_released_bytes": true,
+        "sha256": "52038e355140079cc5999a4f9ebc08d78505d1ba5952ae88a8fb8537c13a17a0"
+      },
+      "workload-summary.csv": {
+        "matches_released_bytes": true,
+        "sha256": "3c643220abf587f3b07a14c070513c36bf3a34fcca6f23f22171912b5131371f"
+      }
+    },
+    "preexisting_changed_files_before_release_records": [
+      ".zenodo.json",
+      "CITATION.cff",
+      "README.md"
+    ],
+    "all_other_preexisting_tracked_file_bytes_unchanged": true,
+    "protocol_code_parameters_seeds_and_accepted_data_unchanged": true,
+    "public_content_review": "New README, citation/version metadata and release notes contain no private machine paths, credentials or private coordination context. Existing intentional author metadata is preserved.",
+    "citation_metadata": {
+      "cff_1_2_0_schema_pass": true,
+      "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
+      "validator": "PyYAML 6.0.2 + jsonschema 4.23.0",
+      "version": "1.0.1",
+      "tag_cff_doi_scope": "Software concept DOI; version DOI is minted after release publication",
+      "preferred_citation_unchanged": true
+    }
+  },
+  "interpretation": "Plot checks validate provenance from accepted aggregates, not the original event archive. Positioning retains scoped scientific review and full_current_retrieval=false; no empirical calibration claim is added."
+}
